@@ -1,3 +1,4 @@
+```
 1.0 Banco de Señales Biomédicas
     1.1 Gestión del Proyecto
         1.1.1 Acta de constitución del proyecto
@@ -26,6 +27,7 @@
         1.4.1 Reporte de pruebas unitarias
         1.4.2 Reporte de pruebas de integración y aceptación
 	1.5 Sistema desplegado en ambiente de producción
+```
 
 ```mermaid
 flowchart LR
