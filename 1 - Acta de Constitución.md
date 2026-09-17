@@ -115,17 +115,11 @@ El proyecto **"BioSignal"** consiste en desarrollar una plataforma web para la c
   * Conexión física o captura en tiempo real desde equipamiento de hardware biomédico.
   * Módulos de diagnóstico automático, algoritmos de detección clínica o toma de decisiones médicas (uso 100% educativo).
   * Sustitución de software de procesamiento médico avanzado certificado para uso hospitalario.
-
 ### **Entregables Clave**
 1. **Módulo de Autenticación:** para el control de acceso de usuarios.
 2. **Modulo de Gestion de Señales**: Alta, baja y modificacion de señales.
 3. **Visor Web de Señales:** Interfaz web con controles de paneo, zoom y amplitud.
-4. **Módulo de Anotaciones:** Sistema para creación, edición y guardado de anotaciones clínicas sobre la onda.
-
----
-
-## 9. _Riesgos, Supuestos y Dependencias_
-
+## 9. Riesgos, Supuestos y Dependencias
 * **Supuestos:**
   * Los usuarios finales disponen de conexión a internet estable y dispositivos con navegadores web modernos.
   * El grupo de administradores de Bioingeniería proveerán archivos de señal biomédica de prueba debidamente anonimizados de manera oportuna.
@@ -137,31 +131,20 @@ El proyecto **"BioSignal"** consiste en desarrollar una plataforma web para la c
   * **R1 (Retraso en entrega de datos):** Demora en la provisión de archivos EDF reales por parte del grupo de administradores de Bioingenieria para la etapa de pruebas. *Mitigación:* Obtener señales de otras fuentes desde el Hito 1.
   * **R2 (Rendimiento del visualizador):** Latencia o congelamiento del navegador al graficar registros muy extensos. *Mitigación:* Utilizar parseo por bloques (chunking) y renderizado acelerado con HTML5 Canvas/WebGL.
   * **R3 (Disponibilidad del equipo):** Reducción de horas de desarrollo durante períodos de exámenes. *Mitigación:* Planificar un margen de flexibilidad en el cronograma entre los Hitos 2 y 3.
+## 10. Cronograma de Hitos
 
----
-
-## 10. _Cronograma de Hitos_
-
-| Hito | Período | Esfuerzo Est. | Entregable Clave |
-| :--- | :--- | :--- | :--- |
-| **Hito 1: Arquitectura Base** | 01/Ago - 14/Ago | ~35 hs | Entorno de desarrollo, repositorio inicial y prueba de concepto de lectura de señales vía consola mediante librería WFDB (Wave Form Data Base). |
-| **Hito 2: Desarrollo del Motor Backend** | 15/Ago - 11/Sep | ~80 hs | API REST completa para conversión y streaming de muestras biomédicas en formato JSON con metadatos. |
-| **Hito 3: Visor Frontend de Señales** | 12/Sep - 23/Oct | ~120 hs | Interfaz web interactiva funcional con renderizado (Canvas/WebGL), controles de zoom, paneo y amplitud. |
-| **Hito 4: Módulo Anotaciones** | 24/Oct - 10/Nov | ~35 hs | Módulo de lectura/escritura de marcadores de eventos fisiológicos persistentes en base de datos. |
-| **Hito 5: QA, Optimización y Entrega Final** | 11/Nov - 27/Nov | ~40 hs | Pruebas de estrés, corrección de bugs, despliegue en servidor de producción (Release 1.0) y entrega de documentación. |
-
----
-
+| Hito                                     | Período | Esfuerzo Estimado | Descripción                                                                                             |
+| :--------------------------------------- | :------ | :---------------- | :------------------------------------------------------------------------------------------------------ |
+| **Hito 1: Arquitectura Base**            |         |                   | Entorno de desarrollo, repositorio inicial.                                                             |
+| **Hito 2: Desarrollo del Motor Backend** |         |                   | API REST completa para conversión y streaming de muestras biomédicas en formato JSON con metadatos.     |
+| **Hito 3: Visor Frontend de Señales**    |         |                   | Interfaz web interactiva funcional con renderizado (Canvas/WebGL), controles de zoom, paneo y amplitud. |
+|                                          |         |                   |                                                                                                         |
+|                                          |         |                   |                                                                                                         |
 ## 11. _Estimación de Costos y Recursos_
-
 ### **Presupuesto Financiero y Sostenibilidad**
 * **Costo Directo del Proyecto:** $0 USD.
 * **Infraestructura:** Esquema $0 costo recurrente mediante utilización de servidores UNViMe / cuentas gratuitas de despliegue cloud (Vercel/Render).
 * **Derechos de publicidad:** El equipo de desarrollo se queda con las ganancias generadas por la publicidad del sistema.
-
-
----
-
 ## 12. _Interesados Clave (Stakeholders)_
 1. **Patrocinador Institucional (Sponsor):** Escuela de Ingenierica y Ciencias Ambientales (EICA) - Alejandro Rosas.
 2. **Colaboradores de Carga de Datos:** Grupo de administradores de Bioingeniería.
@@ -196,7 +179,7 @@ El proyecto **"BioSignal"** consiste en desarrollar una plataforma web para la c
 
 Con la firma de este documento se autoriza formalmente el inicio del proyecto **BioSignal** y se otorga al Director del Proyecto la autoridad para aplicar los recursos organizacionales asignados a las actividades del mismo.
 
-| Firma del Patrocinador | Rol | Fecha |
-| :--- | :--- | :--- |
-| **Rosas, Alejandro** | Director de EICA | 1 de Agosto de 2026 |
+| Firma del Patrocinador     | Rol                        | Fecha               |
+| :------------------------- | :------------------------- | :------------------ |
+| **Rosas, Alejandro**       | Director de EICA           | 1 de Agosto de 2026 |
 | **Astudillo, Mateo Tomás** | Director del Proyecto (PM) | 1 de Agosto de 2026 |
