@@ -11,13 +11,13 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 
 ## 2. Requisitos de los Interesados (_Stakeholder Requirements_)
 
-| Interesado                       | ID        | Necesidad / Expectativa                                                                                                                                                                                                        |
-| -------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Universidad (UNViMe)**         | **RI-01** | Disponer de un desarrollo tecnológico propio con impacto en la comunidad académica que sirva como modelo de extensión, docencia y captación regional.                                                                          |
-| **GAB (Grupo de Bioingeniería)** | **RI-02** | Contar con un canal estandarizado y centralizado para persistir y organizar las bioseñales recolectadas en hospitales e instituciones sanitarias asociadas.                                                                    |
-| **Estudiantes (ECS / EMA)**      | **RI-03** | Disponer de una plataforma web accesible desde navegadores estándar para inspeccionar y ejercitar el análisis de señales clínicas sin depender de programas de escritorio con licencias comerciales o instalaciones complejas. |
-| **Docentes de Cátedra**          | **RI-04** | Contar con un repositorio ordenado de casos biomédicos con patologías clasificadas para formular actividades prácticas de evaluación y análisis.                                                                               |
-| **Equipo de Desarrollo**         | **RI-05** | • **Desarrollo de competencias profesionales:** Aplicar ingeniería de software, seguridad de datos médicos y procesamiento digital de señales en un caso real.<br>                                                             |
+| Interesado                       | ID        | Necesidad / Expectativa                                                                                                                                            |
+| -------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Universidad (UNViMe)**         | **RI-01** | Disponer de un desarrollo tecnológico propio con impacto en la comunidad académica que sirva como modelo de extensión y docencia.                                  |
+| **GAB (Grupo de Bioingeniería)** | **RI-02** | Poder persistir y organizar las bioseñales recolectadas en hospitales e instituciones sanitarias asociadas.                                                        |
+| **Estudiantes (ECS / EMA)**      | **RI-03** | Inspeccionar y ejercitar el análisis de señales clínicas sin depender de programas de escritorio con licencias comerciales o instalaciones complejas.              |
+| **Docentes de Cátedra**          | **RI-04** | Contar con un repositorio ordenado de casos biomédicos con patologías clasificadas para formular actividades prácticas de evaluación y análisis.                   |
+| **Equipo de Desarrollo**         | **RI-05** | • **Desarrollo de competencias profesionales:** Aplicar ingeniería de software, seguridad de datos médicos y procesamiento digital de señales en un caso real.<br> |
 
 • **Precedente académico vinculante:** Consolidar el proyecto como antecedente formal curricular, proyecto de extensión o base para trabajo final de graduación.
 
