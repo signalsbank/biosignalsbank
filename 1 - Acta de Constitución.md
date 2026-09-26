@@ -132,13 +132,15 @@ El proyecto **"BioSignal"** consiste en desarrollar una plataforma web para la c
 
 ## 10. Cronograma de Hitos
 
-1. Aprobación del Acta de constitución
-2. Documento de requisitos aprobado
-3. Módulo de autenticación listo
-4. Módulo de gestión de señales listo
-5. Visualizador de señales listo
-6. Despliegue
-7. Aprobación del Acta de cierre
+| Hito                                                | Fecha Objetivo |
+| --------------------------------------------------- | -------------- |
+| **Aprobación del Acta de Constitución**             | 02/11/2026     |
+| Documento de Requisitos Aprobado                    | 09/11/2026     |
+| Módulo de Autenticación Listo                       | 07/12/2026     |
+| Módulo de Gestión de Señales Listo                  | 01/02/2027     |
+| Visualizador de Señales Listo _(paralelo/traslape)_ | 01/02/2027     |
+| Pruebas Integradas y Despliegue en Producción       | 15/02/2027     |
+| **Aprobación del Acta de Cierre**                   | 15/02/2027     |
 
 ## 11. Estimación de Costos y Recursos
 
