@@ -1,17 +1,15 @@
 ## 1.1.1 Acta de constitucion
----
 
-1.1.1.1 Actividad 1: Toma de requerimientos iniciales para identificar la necesidad de los interesados. 
+1.1.1.1 Actividad 1: Toma de requerimientos iniciales para identificar la necesidad de los interesados.
 1.1.1.2 Actividad 2: Redaccion del acta de constitucion v1 por el pm.
 1.1.1.3 Actividad 3: negociacion del acta de constitucion v1 o las que hagan falta.
-1.1.1.4 Actividad 4: Aceptacion del acta de constitucion. 
+1.1.1.4 Actividad 4: Aceptacion del acta de constitucion.
 
 ## 1.1.2 Especificacion de requisitos
 
-
-1.1.2.1 Atividad 1: Identificar interesados iniciales. 
-1.1.2.2Actividad 2: Reuniones para la identificacion de requisitos con la partes interesadas, para realizar una primera version del documento. 
-1.1.2.3 Actividad 3: Validacion y verificacion de la primera version. 
+1.1.2.1 Atividad 1: Identificar interesados iniciales.
+1.1.2.2Actividad 2: Reuniones para la identificacion de requisitos con la partes interesadas, para realizar una primera version del documento.
+1.1.2.3 Actividad 3: Validacion y verificacion de la primera version.
 1.1.2.4 Actividad 4: Control gestion de cambios.
 
 ## 1.3.1 Plan para la direccion del proyecto
@@ -39,7 +37,7 @@
 1.1.4.8 Registrar acciones correctivas o preventivas.
 1.1.4.9 Actualizar el seguimiento del proyecto.
 
-## 1.1.5  Acta de constitucion del cierre
+## 1.1.5 Acta de constitucion del cierre
 
 1.1.5.1 Verificar el cumplimiento de los objetivos.
 1.1.5.2 Verificar la aceptación de los entregables.
