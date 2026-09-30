@@ -15,10 +15,7 @@
   - Asignación y redistribución de tareas dentro del equipo.
   - Punto de contacto formal para escalamiento de riesgos y coordinación con las autoridades de la UNViMe.
 - **Responsabilidad:**
-  - Garantizar la entrega de todos los módulos del proyecto.
-  - Coordinar el seguimiento de hitos
-  - Coordinar control de riesgos
-  - A cargo de la elaboración de la documentación del proyecto.
+  - Gestionar el proyecto
 
 ### Equipo del Proyecto
 
@@ -78,19 +75,20 @@ Desarrollar e implementar una plataforma web centralizada para la carga, gestió
 | **3. Clientes / Usuarios Finales (Escuela de Ciencias de la Salud y Medicina)** | Que al menos 50 estudiantes o docentes puedan buscar, visualizar y realizar anotaciones en las señales en menos de 10 minutos sin requerir soporte técnico ni software adicional. |
 | **4. Equipo de Desarrollo del Proyecto (PM y Devs)**                            | Concluir el alcance planificado dentro del rango de 260 a 360 horas de trabajo.                                                                                                   |
 
-## 7. Requisitos de Alto Nivel (REVISAR ANTES EL DOCUMENTO DE REQUISITOS)
+## 7. Requisitos de Alto Nivel
 
-- **Requisitos Funcionales (RF):**
-  - **RF-01 (Autenticación y Roles):** Sistema de control de acceso diferenciando roles (Administrador/Bioingeniería vs. Estudiante/Docente de Salud).
-  - **RF-02 (Ingesta y Parseo):** Módulo de carga de archivos biomédicos en formato ".edf" con extracción automática de frecuencia de muestreo y número de canales.
-  - **RF-03 (Visualización Interactiva):** Visor gráfico con herramientas de desplazamiento (paneo), zoom temporal, ajuste de amplitud y selección de canales.
-  - **RF-04 (Módulo Scribe):** Sistema de marcado de eventos fisiológicos sobre la señal con almacenamiento persistente en la base de datos.
-  - **RF-05 (Exportación):** Función para descargar registros de señales en formato estandarizado EDF.
-- **Requisitos No Funcionales (RNF):**
-  - **RNF-01 (Usabilidad):** Interfaz limpia e intuitiva adaptada a usuarios sin conocimientos de programación.
-  - **RNF-02 (Rendimiento):** Renderizado fluido de curvas biomédicas sin congelamiento de pantalla (mínimo 30 FPS durante el desplazamiento continuo de la señal).
-  - **RNF-03 (Compatibilidad):** Compatibilidad garantizada en las últimas versiones de Google Chrome, Mozilla Firefox y Microsoft Edge.
-  - **RNF-04 (Privacidad):** Garantía estricta de anonimización de datos médicos previo al almacenamiento definitivo.
+### 1. Objetivos del Negocio y Justificación
+
+- **Autonomía y Soberanía de Datos:** Proveer a la UNViMe de una plataforma propia y centralizada para almacenar, catalogar y gobernar registros biomédicos bajo control institucional directo.
+- **Integración Académica y Curricular:** Incorporar la plataforma como herramienta pedagógica formal en cátedras de procesamiento de bioseñales a partir del primer semestre de 2027.
+- **Divulgación Institucional:** Servir como canal público interactivo para visibilizar la oferta académica de Bioingeniería y carreras de la salud afines.
+- **Comunidad Académica (Docentes y Estudiantes):** Acceso ágil a un banco de casos clínicos para docencia y práctica.
+- **Grupo de Investigación (GAB):** Infraestructura segura y estandarizada para centralizar, preservar y organizar registros biomédicos hospitalarios.
+- **Seguridad y Control de Acceso:** Autenticación por roles (Administrador y Consultor) y un portal público demostrativo sin autenticación.
+- **Ingesta y Anonimización Conforme a la Ley:** Carga y validación estructural de registros en formato estándar `.edf`/`.edf+`, con anonimización irreversible obligatoria de datos sensibles del paciente (Ley 25.326).
+- **Visualizador de Bioseñales:** Interfaz interactiva multicanal con capacidades de zoom, paneo, calibración de escalas clínicas estándar.
+- **Gestión y Exportación:** Catalogación con metadatos docentes/clínicos y descarga de archivos autorizados.
+- **Fecha Deseada:** Puesta en producción el **15 de febrero de 2027** para el inicio del ciclo lectivo.
 
 ## 8. Descripción, Límites y Entregables Claves
 
