@@ -30,12 +30,12 @@
 
 ## 2. Patrocinadores y Autorizadores
 
-- **Patrocinador Institucional (Sponsor):** Escuela de Ingeniería y Ciencias Ambientales (EICA) - (Director de escuela: Alejandro Rosas).
+- **Patrocinador Institucional (Sponsor):** Universidad Nacional de Villa Mercedes (UNViMe), a través de la Escuela de Ingeniería y Ciencias Ambientales (EICA), representada por su director, Ing. Alejandro Rosas.
 
 ## 3. Necesidades del Cliente
 
 - **Necesidad del grupo de administradores de Bioingeniería:**
-  - **Plataforma de carga centralizada:** Disponer de un repositorio web único para almacenar y organizar señales biomédicas fisiológicas.
+  - **Plataforma de carga centralizada:** Disponer de un repositorio único para almacenar y organizar señales biomédicas fisiológicas.
   - **Gestión de datos:** Interfaz de administración para cargar datos del registro (frecuencia de muestreo, canales, unidades).
   - **Compatibilidad con EDF (European Data Format):** Verificación automática de formato ".edf" para asegurar que el visor gráfico pueda interpretarlos sin errores.
 - **Necesidad del Usuario Final / Consumidor (Estudiantes y Docentes de Medicina y Salud):**
