@@ -9,6 +9,7 @@
     1.2 Infraestructura y Entorno
         1.2.1 Servidores y base de datos configurados
         1.2.2 Entornos de desarrollo y pruebas
+        1.2.3 Aprovisionamiento y carga de dataset semilla
     1.3 Software: Banco de Señales
         1.3.1 Módulo de autenticación y seguridad
             1.3.1.1 Interfaz de inicio de sesión
@@ -19,7 +20,7 @@
             1.3.2.1 Formulario y procesador de carga (alta)
             1.3.2.2 Interfaz de edición de metadatos (modificación)
             1.3.2.3 Mecanismo de baja lógica (baja)
-        1.3.3 Módulo de consulta y visualización
+        1.3.3 Módulo de consulta y visualización pública
             1.3.3.1 Motor de búsqueda y filtrado por metadatos
             1.3.3.2 Renderizador interactivo de señales
             1.3.3.3 Herramienta de exportación de registros
