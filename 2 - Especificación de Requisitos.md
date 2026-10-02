@@ -68,8 +68,8 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 
 - **RNF-07 (Compatibilidad de Navegadores):** La plataforma debe funcionar sin fallas ni plugins adicionales en las dos versiones estables más recientes de los navegadores basados en Chromium (Google Chrome, Microsoft Edge, Brave), Gecko (Mozilla Firefox) y WebKit (Apple Safari). ^rnf-07
 - **RNF-08 (Adaptabilidad a Dispositivos):** ^rnf-08
-- **Escritorio y Portátiles (ancho de pantalla ≥ 1024 px):** Modo completo multicanal con visualización simultánea de hasta 32 canales.
-- **Dispositivos Móviles (smartphones y tablets con pantallas < 768 px):** Interfaz adaptativa que restrinja por defecto la vista a 1 o 2 canales seleccionados por el usuario, evitando sobrecarga de memoria gráfica y optimizando el espacio visual táctil.
+	- **Escritorio y Portátiles (ancho de pantalla ≥ 1024 px):** Modo completo multicanal con visualización simultánea de hasta 32 canales.
+	- **Dispositivos Móviles (smartphones y tablets con pantallas < 768 px):** Interfaz adaptativa que restrinja por defecto la vista a 1 o 2 canales seleccionados por el usuario, evitando sobrecarga de memoria gráfica y optimizando el espacio visual táctil.
 
 ### 4.4. Usabilidad
 

@@ -37,7 +37,7 @@
 - **Necesidad del grupo de administradores de Bioingeniería:**
   - **Plataforma de carga centralizada:** Disponer de un repositorio único para almacenar y organizar señales biomédicas fisiológicas.
   - **Gestión de datos:** Interfaz de administración para cargar datos del registro (frecuencia de muestreo, canales, unidades).
-  - **Compatibilidad con EDF (European Data Format):** Verificación automática de formato ".edf" para asegurar que el visor gráfico pueda interpretarlos sin errores.
+  - **Compatibilidad con EDF (European Data Format):** Compatibilidad ".edf" para asegurar que el visor gráfico pueda interpretarlos sin errores.
 - **Necesidad del Usuario Final / Consumidor (Estudiantes y Docentes de Medicina y Salud):**
   - **Entorno web:** Acceso directo vía navegador web a señales clínicas reales para ejercitación académica.
   - **Visualización interactiva:** Capacidad de analizar registros gráficos.
