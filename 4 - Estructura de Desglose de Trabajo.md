@@ -9,7 +9,7 @@
     1.2 Infraestructura y Entorno
         1.2.1 Servidores y base de datos configurados
         1.2.2 Entornos de desarrollo y pruebas
-        1.2.3 Aprovisionamiento y carga de dataset semilla
+        1.2.3 Aprovisionamiento y carga de dataset
     1.3 Software: Banco de Señales
         1.3.1 Módulo de autenticación y seguridad
             1.3.1.1 Interfaz de inicio de sesión
