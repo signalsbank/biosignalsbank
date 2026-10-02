@@ -1,18 +1,22 @@
-## 1.1.1 Acta de constitucion
+## 1.1.1 Acta de constitucion (SIN TIEMPO)
 
-1.1.1.1 Actividad 1: Toma de requerimientos iniciales para identificar la necesidad de los interesados.
-1.1.1.2 Actividad 2: Redaccion del acta de constitucion v1 por el pm.
-1.1.1.3 Actividad 3: negociacion del acta de constitucion v1 o las que hagan falta.
-1.1.1.4 Actividad 4: Aceptacion del acta de constitucion.
+| Código  | Actividad                | Alcance                                                                                                                                          | Cálculo de<br>tiempo estimado<br>Estimación por tres valores (promedio simple) | Tiempo estimado | Costo estimado<br>(h x $) | Riesgo            | Probabilidad<br>de ocurrencia | Impacto | P x I | Mitigación | Tiempo adicional<br>si ocurre | Costo de gestión<br>del riesgo | Costo de contingencia<br>si ocurre | Costo total |
+| ------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | --------------- | ------------------------- | ----------------- | ----------------------------- | ------- | ----- | ---------- | ----------------------------- | ------------------------------ | ---------------------------------- | ----------- |
+| 1.1.1.A | Reunión                  | Reunión con el sponsor y los de la idea (GAB y UNViMe) para la toma de requerimientos iniciales para identificar la necesidad de los interesados | TO 1h<br>TM 2h<br>TP 3h                                                        | 2h              |                           |                   |                               |         |       |            |                               |                                |                                    |             |
+| 1.1.1.B | Redaccion del documento  | Redaccion del acta de constitucion por el pm.                                                                                                    |                                                                                | 6h              |                           |                   |                               |         |       |            |                               |                                |                                    |             |
+| 1.1.1.C | Negociación y aprobación |                                                                                                                                                  |                                                                                | 2h              |                           | Que no se apruebe |                               |         |       |            |                               |                                |                                    |             |
 
 ## 1.1.2 Especificacion de requisitos
 
-1.1.2.1 Atividad 1: Identificar interesados iniciales.
-1.1.2.2Actividad 2: Reuniones para la identificacion de requisitos con la partes interesadas, para realizar una primera version del documento.
-1.1.2.3 Actividad 3: Validacion y verificacion de la primera version.
-1.1.2.4 Actividad 4: Control gestion de cambios.
+| Código  | Actividad                        | Alcance                                                 | Cálculo de<br>tiempo estimado<br>Estimación por tres valores (promedio simple) | Tiempo estimado | Costo estimado<br>(h x $) | Riesgo                                                                 | Probabilidad<br>de ocurrencia | Impacto | P x I | Mitigación | Tiempo adicional<br>si ocurre | Costo de gestión<br>del riesgo | Costo de contingencia<br>si ocurre | Costo total |
+| ------- | -------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ | --------------- | ------------------------- | ---------------------------------------------------------------------- | ----------------------------- | ------- | ----- | ---------- | ----------------------------- | ------------------------------ | ---------------------------------- | ----------- |
+| 1.1.2.A | Reunión con la UNViMe            | identificacion de requisitos                            |                                                                                | 2h              |                           | que no tengan las necesidades claras<br>(que se requiera otra reunión) |                               |         |       |            | 2h                            |                                |                                    |             |
+| 1.1.2.B | Reunión con GAB                  | identificacion de requisitos                            |                                                                                | 2h              |                           | -                                                                      |                               |         |       |            |                               |                                |                                    |             |
+| 1.1.2.C | Reunión con Equipo de desarrollo | identificacion de requisitos                            |                                                                                | 4h              |                           |                                                                        |                               |         |       |            |                               |                                |                                    |             |
+| 1.1.2.D | Elaboración del documento        | Validacion y verificacion<br>Control gestion de cambios |                                                                                | 10h             |                           |                                                                        |                               |         |       |            |                               |                                |                                    |             |
+| 1.1.2.E | Aprobación                       |                                                         |                                                                                | 1h              |                           | que no se apruebe                                                      |                               |         |       |            | 2h                            |                                |                                    |             |
 
-## 1.3.1 Plan para la direccion del proyecto
+## 1.1.3 Plan para la direccion del proyecto
 
 1.1.3.1 Definir la estrategia general de ejecución del proyecto.
 1.1.3.2 Definir la gestión del alcance.
@@ -39,7 +43,7 @@
 
 ## 1.1.5 Acta de constitucion del cierre
 
-1.1.5.1 Verificar el cumplimiento de los objetivos.
+1.1.5.1 Vrificear el cumplimiento de los objetivos.
 1.1.5.2 Verificar la aceptación de los entregables.
 1.1.5.3 Verificar el cumplimiento del alcance.
 1.1.5.4 Identificar actividades pendientes.

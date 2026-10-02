@@ -56,8 +56,7 @@
 
 ## 5. Propósito del Proyecto
 
-Desarrollar e implementar una plataforma web centralizada para la carga, gestión, visualización interactiva y análisis académico de señales biomédicas en la Universidad Nacional de Villa Mercedes (UNViMe).
-
+Mejorar la experiencia de los estudiantes y docentes de carreras a la salud a la hora de analizar señales biomédicas.
 ## 6. Objetivos Medibles del Proyecto y Criterios de Éxito
 
 ### Objetivos Medibles (Criterios SMART)

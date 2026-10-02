@@ -2,7 +2,7 @@
 | :-------------------------- | :---------: | :---------------------------------------------------------------------------------: | :-------------------------------------------------------: | :----------------------------------------------------: |
 | **Alta**                    | _Zona Baja_ |               **R3** (Disponibilidad por exámenes)<br>_(Nivel Medio)_               |   **R2** (Rendimiento del visor web)<br>_(Nivel Alto)_    |                     _Zona Crítica_                     |
 | **Media**                   | _Zona Baja_ | **R1** (Demora en datos EDF)<br>**R6** (Baja adopción académica)<br>_(Nivel Medio)_ | **R5** (Límites infraestructura $0 USD)<br>_(Nivel Alto)_ |                     _Zona Crítica_                     |
-| **Baja**                    | _Zona Baja_ |                                     _Zona Baja_                                     |                       _Zona Media_                        | **R4** (Filtración datos Ley 25.326)<br>_(Nivel Alto)_ |
+| **Baja** 1                  | _Zona Baja_ |                                     _Zona Baja_                                     |                       _Zona Media_                        | **R4** (Filtración datos Ley 25.326)<br>_(Nivel Alto)_ |
 Probabilidad = 2, Imapcato = 3 Total = P x I (para determinar un valor, más valor más riesgo)
 ## Clasificación de Severidad y Niveles de Acción
 
