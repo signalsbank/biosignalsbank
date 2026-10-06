@@ -3,10 +3,9 @@ configuration:
   pageTitleSuffix: "grupo: biosignals"
   enableSPA: true
   enablePopovers: true
-  analytics:
-    provider: plausible
-  locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  analytics: null
+  locale: es-ES
+  baseUrl: https://biosignalsbank.onrender.com/
   ignorePatterns:
     - private
     - templates
@@ -40,15 +39,6 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
-  - source: "@quartz-community/created-modified-date"
-    enabled: true
-    options:
-      defaultDateType: modified
-      priority:
-        - frontmatter
-        - git
-        - filesystem
-    order: 10
   - source: "@quartz-community/syntax-highlighting"
     enabled: true
     options:
