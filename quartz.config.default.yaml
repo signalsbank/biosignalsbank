@@ -10,6 +10,8 @@ configuration:
     - private
     - templates
     - .obsidian
+    - "borradores"
+    - "borradores/**"
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
