@@ -10,9 +10,7 @@ title: Banco de Señales
 
 [[4 - Estructura de Desglose de Trabajo]]
 
-[[4.1 - Diccionario del EDT]]
-
-5 - 
+[[5 - Diccionario del EDT]]
 
 [[6 - Gestión de las Comunicaciones]]
 
