@@ -2,7 +2,7 @@
 
 - **Objetivo:** Diseñar una interfaz clara y autoexplicativa que permita a un usuario sin formación previa buscar, abrir y configurar una señal en menos de 5 minutos.
 - **Responsabilidades:**
-  - Garantizar la usabilidad y la coherencia visual de la plataforma. (¿COMO SE GARANTIZA?)
+  - Garantizar la usabilidad y la coherencia visual de la plataforma.
   - Asegurar el diseño adaptativo (escritorio ≥ 1024 px y móvil < 768 px).
 - **Funciones:**
   - Crear wireframes, prototipos y guía de estilos.

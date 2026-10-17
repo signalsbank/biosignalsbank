@@ -13,3 +13,4 @@ quartz/cli/tui/dist/
 node_modules/
 public/
 .quartz-cache/
+.helix/
