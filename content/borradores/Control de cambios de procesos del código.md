@@ -1,13 +1,6 @@
 ---
 project: BioSignals
 ---
-
-# Control de cambios del código
-
-**Versión del documento:** 1.0  
-**Fecha:** 16/10/2026  
-**Responsable:** _(DevOps / PM)_
-
 ## 1. Objetivo
 
 Definir cómo se registran, revisan, aprueban e integran los cambios en el código del repositorio, de modo que cada modificación sea trazable, esté verificada por pruebas automáticas y revisada por otro integrante antes de llegar a producción.
