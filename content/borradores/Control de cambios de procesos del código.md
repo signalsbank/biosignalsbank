@@ -1,6 +1,9 @@
+---
+project: BioSignals
+---
+
 # Control de cambios del código
 
-**QAProyecto:** _(nombre del proyecto)_  
 **Versión del documento:** 1.0  
 **Fecha:** 16/10/2026  
 **Responsable:** _(DevOps / PM)_
@@ -40,11 +43,11 @@ Cada commit lleva un prefijo que indica el tipo de cambio, seguido de una descri
 <tipo>: <descripción>
 ```
 
-|   |   |   |
-|---|---|---|
-|Tipo|Uso|Ejemplo|
-|`feat`|Nueva funcionalidad|`feat: algo del login`|
-|`fix`|Corrección de un error|`fix: username por email`|
+|        |                        |                           |
+| ------ | ---------------------- | ------------------------- |
+| Tipo   | Uso                    | Ejemplo                   |
+| `feat` | Nueva funcionalidad    | `feat: algo del login`    |
+| `fix`  | Corrección de un error | `fix: username por email` |
 
 Buenas prácticas:
 
@@ -60,11 +63,11 @@ Buenas prácticas:
 2. **Desarrollar** haciendo commits con la convención del punto 4.
 3. **Subir la rama** al repositorio remoto y abrir un pull request hacia `dev`.
 4. **Tests de integración automáticos:** se ejecutan al subir la rama.
-    - Si fallan, el autor corrige y vuelve a subir. El pull request no avanza.
-    - Si pasan, continúa a la revisión.
+   - Si fallan, el autor corrige y vuelve a subir. El pull request no avanza.
+   - Si pasan, continúa a la revisión.
 5. **Revisión de código:** la realiza otro integrante del equipo, nunca el autor.
-    - Si hay observaciones, el autor las resuelve y se repite desde el paso 4.
-    - Si se aprueba, continúa al merge.
+   - Si hay observaciones, el autor las resuelve y se repite desde el paso 4.
+   - Si se aprueba, continúa al merge.
 6. **Merge a `dev`** y eliminación de la rama temporal.
 
 ### 5.2 Desde `dev` hasta `main`
@@ -103,23 +106,23 @@ Un merge de `dev` a `main` requiere además que el paquete del EDT correspondien
 
 ## 7. Roles y responsabilidades
 
-|   |   |
-|---|---|
-|Rol|Responsabilidad en el control de cambios|
-|Programador (autor)|Crea la rama, desarrolla, escribe commits claros, resuelve observaciones.|
-|Revisor (otro integrante)|Revisa el código, aprueba o solicita cambios.|
-|QA|Mantiene los tests de integración y verifica que cubran el cambio.|
-|DevOps|Mantiene la ejecución automática de los tests y la protección de las ramas.|
-|PM|Confirma que el paquete del EDT está completo antes del merge a `main`.|
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| Rol                       | Responsabilidad en el control de cambios                                    |
+| Programador (autor)       | Crea la rama, desarrolla, escribe commits claros, resuelve observaciones.   |
+| Revisor (otro integrante) | Revisa el código, aprueba o solicita cambios.                               |
+| QA                        | Mantiene los tests de integración y verifica que cubran el cambio.          |
+| DevOps                    | Mantiene la ejecución automática de los tests y la protección de las ramas. |
+| PM                        | Confirma que el paquete del EDT está completo antes del merge a `main`.     |
 
 ## 8. Registro de cambios
 
 Cada merge a `main` se registra con el siguiente formato:
 
-|   |   |   |   |   |
-|---|---|---|---|---|
-|Fecha|Versión|Paquete del EDT|Cambios incluidos|Responsable|
-|_dd/mm/aaaa_|_x.y.z_|_código y nombre_|`feat: ...`, `fix: ...`|_nombre_|
+|              |         |                   |                         |             |
+| ------------ | ------- | ----------------- | ----------------------- | ----------- |
+| Fecha        | Versión | Paquete del EDT   | Cambios incluidos       | Responsable |
+| _dd/mm/aaaa_ | _x.y.z_ | _código y nombre_ | `feat: ...`, `fix: ...` | _nombre_    |
 
 ## 9. Ejemplo completo
 
@@ -127,8 +130,8 @@ Cambio: función de login del backend.
 
 1. Se crea la rama `feat-login` desde `dev`.
 2. Commits:
-    - `feat: algo del login`
-    - `fix: username por email`
+   - `feat: algo del login`
+   - `fix: username por email`
 3. Se sube la rama y se abre el pull request hacia `dev`.
 4. Pasan los tests de integración automáticos.
 5. Otro integrante revisa y aprueba.
