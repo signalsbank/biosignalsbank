@@ -1,3 +1,10 @@
+---
+project: Banco de Señales Biomédicas ("BioSignalsBank")
+version: 1
+title: 5. Diccionario del EDT
+aliases: Diccionario del EDT
+---
+
 ## 1.1 Gestión del Proyecto
 
 ### Paquete de Trabajo: 1.1.1 ^p-111
@@ -135,16 +142,18 @@
 - **Supuestos:** Licencias y herramientas DevOps disponibles sin restricciones operativas.
 
 #### Paquete de Trabajo: 1.2.3 ^p-123
+
 - **Código:** 1.2.3
-- **Denominación:** Aprovisionamiento y carga de dataset semilla 
+- **Denominación:** Aprovisionamiento y carga de dataset semilla
 - **Objetivo:**
-- **Descripción:** 
+- **Descripción:**
 - **Prerequisitos:**
 - **Actividades:**
 
-- **Fechas:** 
-- **Criterios de aceptación:** 
-- **Supuestos:** 
+- **Fechas:**
+- **Criterios de aceptación:**
+- **Supuestos:**
+
 ## 1.3 Software: Banco de Señales
 
 ### 1.3.1 Módulo de autenticación y seguridad

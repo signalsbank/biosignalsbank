@@ -1,8 +1,10 @@
 ---
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
-title: Plan de Gestión de la Configuración y Control de Cambios
+title: 11. Plan de Gestión de la Configuración y Control de Cambios
+aliases: Plan de Gestión de la Configuración y Control de Cambios
 ---
+
 ## 1. Marco General del Plan de Gestión de la Configuración (SCM)
 
 ### 1.1. Propósito y Objetivos del Plan

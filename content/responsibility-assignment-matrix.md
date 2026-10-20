@@ -1,3 +1,10 @@
+---
+project: Banco de Señales Biomédicas ("BioSignalsBank")
+version: 1
+title: 10. Matriz de Competencias
+aliases: Matriz de Competencias
+---
+
 ## 1. Diseñador UX/UI
 
 - **Objetivo:** Diseñar una interfaz clara y autoexplicativa que permita a un usuario sin formación previa buscar, abrir y configurar una señal en menos de 5 minutos.
@@ -12,9 +19,9 @@
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - *Conocimientos:* Principios de usabilidad, accesibilidad web, diseño responsive, herramienta: Figma.
-  - *Habilidades:* Pensamiento visual, comunicación, empatía con el usuario, trabajo en equipo.
-  - *Experiencia:* +1 año en proyectos web; no excluyente: visualización de datos.
+  - _Conocimientos:_ Principios de usabilidad, accesibilidad web, diseño responsive, herramienta: Figma.
+  - _Habilidades:_ Pensamiento visual, comunicación, empatía con el usuario, trabajo en equipo.
+  - _Experiencia:_ +1 año en proyectos web; no excluyente: visualización de datos.
 
 ## 2. Programador Frontend (semi-senior)
 
@@ -30,9 +37,9 @@
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - *Conocimientos:* HTML5, CSS, JavaScript/TypeScript, framework:  nextjs, Canvas/WebGL, Git.
-  - *Habilidades:* Optimización de rendimiento, resolución de problemas, trabajo colaborativo.
-  - *Experiencia:* +2 años en desarrollo frontend, no excluyente: con gráficos o datos en tiempo real.
+  - _Conocimientos:_ HTML5, CSS, JavaScript/TypeScript, framework: nextjs, Canvas/WebGL, Git.
+  - _Habilidades:_ Optimización de rendimiento, resolución de problemas, trabajo colaborativo.
+  - _Experiencia:_ +2 años en desarrollo frontend, no excluyente: con gráficos o datos en tiempo real.
 
 ## 3. Programador Backend (semi-senior)
 
@@ -50,9 +57,9 @@
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-	- *Conocimientos:* Lenguaje y framework: FastApi con python, APIs REST, autenticación/sesiones, seguridad web, formato EDF, Git.
-  - *Habilidades:* Lógica, trabajo colaborativo.
-  - *Experiencia:* +2 años en backend; no excluyente: datos biomédicos o archivos binarios.
+  - _Conocimientos:_ Lenguaje y framework: FastApi con python, APIs REST, autenticación/sesiones, seguridad web, formato EDF, Git.
+  - _Habilidades:_ Lógica, trabajo colaborativo.
+  - _Experiencia:_ +2 años en backend; no excluyente: datos biomédicos o archivos binarios.
 
 ## 4. DBA (Administrador de Base de Datos)
 
@@ -69,9 +76,9 @@
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - *Conocimientos:* SQL, modelado relacional, motor de base de datos: PostgreSQL, backup/recuperación, seguridad de datos.
-  - *Habilidades:* Análisis, rigurosidad, comunicación con el backend.
-  - *Experiencia:* +3 años en administración o diseño de bases de datos.
+  - _Conocimientos:_ SQL, modelado relacional, motor de base de datos: PostgreSQL, backup/recuperación, seguridad de datos.
+  - _Habilidades:_ Análisis, rigurosidad, comunicación con el backend.
+  - _Experiencia:_ +3 años en administración o diseño de bases de datos.
 
 ## 5. DevOps
 
@@ -86,9 +93,9 @@
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - *Conocimientos:* Linux, Docker, CI/CD, Git, redes, HTTPS/TLS, herramientas open source de monitoreo.
-  - *Habilidades:* Resolución de problemas, proactividad, comunicación interinstitucional.
-  - *Experiencia:* +1 años en despliegue y administración de servidores.
+  - _Conocimientos:_ Linux, Docker, CI/CD, Git, redes, HTTPS/TLS, herramientas open source de monitoreo.
+  - _Habilidades:_ Resolución de problemas, proactividad, comunicación interinstitucional.
+  - _Experiencia:_ +1 años en despliegue y administración de servidores.
 
 ## 6. PM (Project Manager)
 
@@ -105,9 +112,9 @@
 - **Reporta a:** Patrocinador del proyecto (UNViMe).
 - **Supervisa a:** APM, diseñador UX/UI, frontend, backend, DBA, DevOps y QA
 - **Requisitos:**
-  - *Conocimientos:* PMBOK 7, metodologías ágiles e híbridas, gestión de riesgos, ciclo de vida del software.
-  - *Habilidades:* Liderazgo, comunicación, negociación, toma de decisiones.
-  - *Experiencia:* Gestión de proyectos de software de al menos 3 años.
+  - _Conocimientos:_ PMBOK 7, metodologías ágiles e híbridas, gestión de riesgos, ciclo de vida del software.
+  - _Habilidades:_ Liderazgo, comunicación, negociación, toma de decisiones.
+  - _Experiencia:_ Gestión de proyectos de software de al menos 3 años.
 
 ## 7. APM (Ayudante del Project Manager)
 
@@ -124,9 +131,9 @@
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - *Conocimientos:* Fundamentos de gestión de proyectos, herramientas de planificación, documentación.
-  - *Habilidades:* Organización, comunicación escrita, proactividad.
-  - *Experiencia:* No excluyente; se valora haber participado en proyectos académicos o de software.
+  - _Conocimientos:_ Fundamentos de gestión de proyectos, herramientas de planificación, documentación.
+  - _Habilidades:_ Organización, comunicación escrita, proactividad.
+  - _Experiencia:_ No excluyente; se valora haber participado en proyectos académicos o de software.
 
 ## 8. QA (Testing)
 
@@ -143,6 +150,6 @@
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - *Conocimientos:* Técnicas de testing, pruebas de carga, DevTools, automatización de pruebas.
-  - *Habilidades:* Atención al detalle, pensamiento analítico, comunicación clara de defectos.
-  - *Experiencia:* +1 años en testing de aplicaciones web.
+  - _Conocimientos:_ Técnicas de testing, pruebas de carga, DevTools, automatización de pruebas.
+  - _Habilidades:_ Atención al detalle, pensamiento analítico, comunicación clara de defectos.
+  - _Experiencia:_ +1 años en testing de aplicaciones web.

@@ -1,3 +1,10 @@
+---
+project: Banco de Señales Biomédicas ("BioSignalsBank")
+version: 1
+title: 9. Matriz de Riesgos
+aliases: Matriz de Riesgos
+---
+
 <table style="width: 100%; border-collapse: collapse; font-family: inherit;">
   <thead>
     <tr style="background-color: #1e293b;">

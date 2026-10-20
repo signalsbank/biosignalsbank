@@ -1,3 +1,11 @@
+---
+project: Banco de Señales Biomédicas ("BioSignalsBank")
+version: 1
+title: 2. Especificación de Requisitos
+aliases:
+  - Especificación de Requisitos
+authors: Mateo Astudillo, Ignacio Ávila
+---
 ## 1. Requisitos de Negocio
 
 Definen los objetivos estratégicos, la justificación institucional y el valor verificable que la solución entrega a la organización.

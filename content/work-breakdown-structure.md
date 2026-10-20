@@ -1,3 +1,10 @@
+---
+project: Banco de Señales Biomédicas ("BioSignalsBank")
+version: 1
+title: 4. Estructura de Desglose de Trabajo
+aliases: Estructura de Desglose de Trabajo
+---
+
 ```
 1.0 Banco de Señales Biomédicas
     1.1 Gestión del Proyecto

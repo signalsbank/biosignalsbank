@@ -1,3 +1,11 @@
+---
+project: Banco de Señales Biomédicas ("BioSignalsBank")
+version: 1
+title: 3. Enunciado del Alcance del Proyecto
+aliases:
+  - Enunciado del Alcance del Proyecto
+---
+
 # Enunciado del Alcance del Proyecto
 
 ## 1. Descripción del Proyecto

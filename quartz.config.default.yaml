@@ -173,9 +173,8 @@ plugins:
     options:
       includeAll: false
       includedProperties:
-        - description
-        - tags
-        - aliases
+        - version
+        - authors
       excludedProperties: []
       hidePropertiesView: false
       delimiters: ---

@@ -1,3 +1,12 @@
+---
+project: Banco de Señales Biomédicas ("BioSignalsBank")
+version: 1
+title: 1. Acta de Constitución
+aliases:
+  - Acta de Constitución
+authors: Mateo Astudillo, Ignacio Ávila
+---
+
 # **Acta de Constitución del Proyecto**
 
 **Nombre del Proyecto:** Banco de Señales Biomédicas ("BioSignal")
@@ -57,6 +66,7 @@
 ## 5. Propósito del Proyecto
 
 Mejorar la experiencia de los estudiantes y docentes de carreras a la salud a la hora de analizar señales biomédicas.
+
 ## 6. Objetivos Medibles del Proyecto y Criterios de Éxito
 
 ### Objetivos Medibles (Criterios SMART)
