@@ -1,3 +1,13 @@
+---
+title: 12. Gestión del Conocimiento
+aliases:
+  - Gestión del Conocimiento
+project: Banco de Señales Biomédicas ("BioSignalsBank")
+version: 1
+authors: Mateo Astudillo, Ignacio Ávila
+date: 2026-10-22
+---
+
 # Plan de Gestión del Conocimiento
 
 **Ámbito de Aplicación:** Marco universal corporativo para organizaciones de tecnología, equipos de desarrollo de software y gestión de proyectos  
