@@ -1,24 +1,16 @@
 ---
 title: Índice
 ---
-## [[project-charter|Acta de Constitución]]
-
-## [[requirements-documentation|Especificación de Requisitos]]
-
-## [[project-scope-statement|Enunciado del Alcance del Proyecto]]
-
-## [[work-breakdown-structure|Estructura de Desglose de Trabajo]]
-
-## [[wbs-dictionary|Diccionario del EDT]]
-
-## [[communications-management-plan|Gestión de las comunicaciones]]
-
-## [[stakeholder-engagement-plan|Gestión de las Partes Interesadas]]
-
-## [[requirements-traceability-matrix|Matriz de Trazabilidad de Requisitos]]
-
-## [[probability-and-impact-matrix|Matriz de Riesgos]]
-
-## [[responsibility-assignment-matrix|Matriz de Competencias]]
-
-## [[change-control-plan|Plan de Gestión de la Configuración y Control de Cambios]]
+- [[project-charter|Acta de Constitución]]
+- [[requirements-documentation|Especificación de Requisitos]]
+- [[project-scope-statement|Enunciado del Alcance del Proyecto]]
+- [[work-breakdown-structure|Estructura de Desglose de Trabajo]]
+- [[wbs-dictionary|Diccionario del EDT]]
+- [[communications-management-plan|Gestión de las comunicaciones]]
+- [[stakeholder-engagement-plan|Gestión de las Partes Interesadas]]
+- [[requirements-traceability-matrix|Matriz de Trazabilidad de Requisitos]]
+- [[probability-and-impact-matrix|Matriz de Riesgos]]
+- [[responsibility-assignment-matrix|Matriz de Competencias]]
+- [[change-control-plan|Plan de Gestión de la Configuración y Control de Cambios]]
+- [[procurement-management|Gestión de Adquisiciones]]
+- [[knowledge-management-plan|Gestión del Conocimiento]]

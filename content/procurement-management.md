@@ -1,3 +1,11 @@
+---
+aliases:
+  - Gestión de Adquisiciones
+title: 12. Gestión de Asquisiciones
+project: Banco de Señales Biomédicas ("BioSignalsBank")
+version: 1
+---
+
 ## 1. Lista de Insumos y Productos a Comprar (Análisis de Hacer o Comprar)
 
 ### 1.1. Contexto Metodológico y Restricción Financiera
