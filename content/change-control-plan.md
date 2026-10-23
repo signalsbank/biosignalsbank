@@ -72,8 +72,7 @@ Todo cambio en el proyecto debe seguir el siguiente circuito secuencial:
 
 ### 2.1. Alcance de la Documentación
 
-Comprende todos los archivos Markdown (`.md`), PDF y documentos formales generados en el proyecto (Acta de Constitución, Requisitos, Alcance, EDT, Matriz de Riesgos, Adquisiciones, SCM).
-
+Esto comprende todos los documentos vivos del proyecto y para los documentos estáticos (como el acta de constitución) se requiere una reunión directa con el patrocinador del proyecto y una aprobación con los integrantes del proyecto.
 ### 2.2. Roles y Flujo de Aprobación Documental
 
 1. **Elaboración:** El integrante responsable redacta la modificación propuesta sobre el archivo `.md`.
