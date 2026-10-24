@@ -1,1 +1,0 @@
-ISO 33.000 y 12.507 (para estudiar)

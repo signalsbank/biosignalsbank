@@ -14,3 +14,4 @@ title: Índice
 - [[change-control-plan|Plan de Gestión de la Configuración y Control de Cambios]]
 - [[procurement-management|Gestión de Adquisiciones]]
 - [[knowledge-management-plan|Gestión del Conocimiento]]
+- [[evaluaciones/00-indice|Evaluaciones de Desempeño]]

@@ -30,12 +30,12 @@ authors: Mateo Astudillo, Ignacio Ávila
 
 | Nombre                            | Rol y Responsabilidad                      |
 | :-------------------------------- | :----------------------------------------- |
-| **Astudillo, Mateo**              | Director del Proyecto (PM)                 |
+| **Astudillo, Mateo Tomás**        | Director del Proyecto (PM)                 |
 | **Ávila Gelbes, Ignacio Nicolás** | Asistente del Director del Proyecto        |
 | **Herrera, Germán Ezequiel**      | Desarrollador Backend / QA                 |
 | **Mosainer, Martín David**        | Desarrollador Full-Stack / Soporte Técnico |
 | **Chiecher, Eber Blas**           | Desarrollador Backend / Infraestructura    |
-| **Pereyra, Rocío**                | Desarrolladora Frontend                    |
+| **Pereyra, Rocío Valentina**      | Desarrolladora Frontend                    |
 
 ## 2. Patrocinadores y Autorizadores
 
