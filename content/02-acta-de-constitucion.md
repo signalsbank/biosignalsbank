@@ -1,7 +1,7 @@
 ---
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
-title: 1. Acta de Constitución
+title: 2. Acta de Constitución
 aliases:
   - Acta de Constitución
 authors: Mateo Astudillo, Ignacio Ávila

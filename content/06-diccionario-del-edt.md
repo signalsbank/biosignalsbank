@@ -1,7 +1,7 @@
 ---
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
-title: 5. Diccionario del EDT
+title: 6. Diccionario del EDT
 aliases: Diccionario del EDT
 ---
 

@@ -1,7 +1,7 @@
 ---
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
-title: Índice de evaluaciones de desempeño
+title: 13. Evaluaciones de Desempeño
 aliases:
   - Evaluaciones de desempeño
 authors: Mateo Astudillo, Ignacio Ávila

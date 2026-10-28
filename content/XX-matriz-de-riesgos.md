@@ -1,7 +1,7 @@
 ---
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
-title: 9. Matriz de Riesgos
+title: Matriz de Riesgos
 aliases: Matriz de Riesgos
 ---
 

@@ -1,7 +1,7 @@
 ---
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
-title: 10. Matriz de Competencias
+title: 11. Matriz de Competencias
 aliases: Matriz de Competencias
 ---
 

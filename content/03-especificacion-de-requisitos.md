@@ -1,7 +1,7 @@
 ---
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
-title: 2. Especificación de Requisitos
+title: 3. Especificación de Requisitos
 aliases:
   - Especificación de Requisitos
 authors: Mateo Astudillo, Ignacio Ávila

@@ -1,7 +1,7 @@
 ---
 aliases:
   - Gestión de Adquisiciones
-title: 12. Gestión de Asquisiciones
+title: 8. Gestión de Asquisiciones
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
 ---

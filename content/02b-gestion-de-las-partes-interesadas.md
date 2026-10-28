@@ -1,7 +1,7 @@
 ---
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
-title: 7. Gestión de las Partes Interesadas
+title: 2b. Gestión de las Partes Interesadas
 aliases: Gestión de las Partes Interesadas
 ---
 

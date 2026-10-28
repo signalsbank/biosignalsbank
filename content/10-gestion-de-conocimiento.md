@@ -1,5 +1,5 @@
 ---
-title: 13. Gestión del Conocimiento
+title: 10. Gestión del Conocimiento
 aliases:
   - Gestión del Conocimiento
 project: Banco de Señales Biomédicas ("BioSignalsBank")

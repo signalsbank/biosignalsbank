@@ -1,7 +1,7 @@
 ---
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
-title: 6. Gestión de las comunicaciones
+title: 2b. Gestión de las comunicaciones
 aliases: Gestión de las comunicaciones
 ---
 
