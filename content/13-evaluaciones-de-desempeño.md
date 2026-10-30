@@ -14,7 +14,7 @@ date: 2026-10-23
 **Fecha de evaluación:** 23/10/2026
 **Escala:** 1 a 5, con `N/A` cuando el criterio no aplica (se excluye del cálculo)
 
-El formato de cada instrumento sigue el documento [Evaluaciones de desempeño](../borradores/Evaluaciones%20de%20desempeño.md).
+El formato de cada instrumento sigue el documento [13-formato-evaluaciones-de-desempeño](13-formato-evaluaciones-de-desempeño.md).
 
 ## Autoevaluaciones
 
@@ -38,15 +38,15 @@ El formato de cada instrumento sigue el documento [Evaluaciones de desempeño](.
 
 ## Evaluación del cliente
 
-| Evaluado | Evaluador | Archivo | Promedio | Puntaje |
-|---|---|---|:---:|:---:|
-| Mateo Astudillo | Ing. Alejandro Rosas (EICA — UNViMe) | [cliente-mateo-astudillo.md](cliente-mateo-astudillo.md) | 4,40 | 88,0 % |
-| Ignacio Ávila | Ing. Alejandro Rosas (EICA — UNViMe) | [cliente-ignacio-avila.md](cliente-ignacio-avila.md) | 4,56 | 91,1 % |
+| Evaluado        | Evaluador                            | Archivo                                                  | Promedio | Puntaje |
+| --------------- | ------------------------------------ | -------------------------------------------------------- | :------: | :-----: |
+| Mateo Astudillo | Ing. Alejandro Rosas (EICA — UNViMe) | [cliente-mateo-astudillo.md](cliente-mateo-astudillo.md) |   4,40   | 88,0 %  |
+| Ignacio Ávila   | Ing. Alejandro Rosas (EICA — UNViMe) | [cliente-ignacio-avila.md](cliente-ignacio-avila.md)     |   4,56   | 91,1 %  |
 
 ## Evaluación del responsable del servicio (RDS)
 
-| Documento | Evaluador | Archivo |
-|---|---|---|
+| Documento                                           | Evaluador     | Archivo                                                              |
+| --------------------------------------------------- | ------------- | -------------------------------------------------------------------- |
 | Equipo de desarrollo (Martín, Germán, Rocío y Eber) | Ignacio Ávila | [rds-ignacio-equipo-desarrollo.md](rds-ignacio-equipo-desarrollo.md) |
 
 ## Fichas integrales individuales

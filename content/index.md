@@ -1,14 +1,16 @@
 ---
 title: Índice
 ---
+
 - [[02-acta-de-constitucion]]
 - [[02b-gestion-de-las-comunicaciones]]
-- [[02b-gestion-de-las-partes-interesadas]] 
+- [[02b-gestion-de-las-partes-interesadas]]
 - [[03-especificacion-de-requisitos]]
-- [[04_Informes_de_Calidad]]
-- [[05_Analisis_PMBOK7_y_Correcciones]]
+- [[04-enunciado-del-alance-del-proyecto]]
+- [[05-estructura-de-desglose-detrabajo]]
 - [[06-diccionario-del-edt]]
 - [[07-matriz-de-trazabilidad-de-requisitos]]
+- [[XX-matriz-de-riesgos]]
 - [[08-gestion-de-adquisiciones]]
 - [[09-gestion-y-control-de-cambios]]
 - [[10-gestion-de-conocimiento]]

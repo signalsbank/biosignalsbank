@@ -40,8 +40,6 @@ Para superar la desorganización, esta guía establece tres principios universal
 2. **Estructura en Bloques Escalables:** La información se organiza en macro-categorías lógicas e independientes del tamaño del proyecto o la cantidad de clientes.
 3. **Mantenimiento Automatizado:** Se priorizan herramientas y mecanismos que validen y actualicen la documentación mediante automatizaciones y modelos de asistencia.
 
----
-
 ## 2. Estrategia de Gestión del Conocimiento Explícito
 
 El **conocimiento explícito** es aquel que se encuentra codificado, estructurado y formalizado en soportes tangibles (archivos, repositorios, diagramas y especificaciones). Su gestión requiere una taxonomía clara y un enfoque de mantenimiento continuo.
@@ -98,20 +96,18 @@ Uno de los puntos más vulnerables en la gestión explícita es la degradación 
 2. **Verificación por el Nuevo Integrante:** Cada vez que una persona se suma al equipo, su primera tarea obligatoria es seguir el `SETUP.md` al pie de la letra sin asistencia verbal. Si detecta un paso fallido o desactualizado, **es su responsabilidad corregir el documento y enviar la actualización**.
 3. **Automatización con Contenedores:** Se debe reducir la fricción en la instalación mediante el uso de infraestructura como código (Docker / Docker-Compose), permitiendo que el entorno se ejecute con un único comando estandarizado.
 
----
-
 ## 3. Estrategia de Gestión del Conocimiento Tácito
 
 El **conocimiento tácito** es aquel que reside en la mente de los profesionales: la experiencia práctica, la intuición técnica, las lecciones aprendidas ante situaciones complejas y el "saber hacer" (_know-how_). Al ser difícil de codificar directamente, la empresa debe implementar rutinas para transformarlo en conocimiento explícito o transferirlo entre personas.
 
 ### 3.1. Adaptación del Modelo SECI en Software
 
-|Fase del Modelo SECI|Acción en el Equipo de Desarrollo|Resultado Obtenido|
-|---|---|---|
-|**Socialización** _(De Tácito a Tácito)_|Programación en Pareja (_Pair Programming_) y sesiones de trabajo colaborativo ante incidentes críticos.|Transferencia directa de lógica de resolución de problemas entre desarrolladores Senior y Junior.|
-|**Exteriorización** _(De Tácito a Explícito)_|Redacción de Registros de Decisiones de Arquitectura (_ADR — Architecture Decision Records_) y artículos técnicos tras resolver un reto.|Conversión de la intuición técnica en un documento `.md` consultable.|
-|**Combinación** _(De Explícito a Explícito)_|Consolidación de documentos individuales en guías generales, manuales de buenas prácticas o librerías de _prompts_.|Creación de un marco estándar corporativo reutilizable.|
-|**Interiorización** _(De Explícito a Tácito)_|Lectura de guías, ejecución de ejercicios prácticos (_Spikes_) y estudio de decisiones de arquitectura previas.|Absorción del conocimiento por parte de nuevos integrantes, convirtiéndolo en nueva experiencia personal.|
+| Fase del Modelo SECI                          | Acción en el Equipo de Desarrollo                                                                                                        | Resultado Obtenido                                                                                        |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Socialización** _(De Tácito a Tácito)_      | Programación en Pareja (_Pair Programming_) y sesiones de trabajo colaborativo ante incidentes críticos.                                 | Transferencia directa de lógica de resolución de problemas entre desarrolladores Senior y Junior.         |
+| **Exteriorización** _(De Tácito a Explícito)_ | Redacción de Registros de Decisiones de Arquitectura (_ADR — Architecture Decision Records_) y artículos técnicos tras resolver un reto. | Conversión de la intuición técnica en un documento `.md` consultable.                                     |
+| **Combinación** _(De Explícito a Explícito)_  | Consolidación de documentos individuales en guías generales, manuales de buenas prácticas o librerías de _prompts_.                      | Creación de un marco estándar corporativo reutilizable.                                                   |
+| **Interiorización** _(De Explícito a Tácito)_ | Lectura de guías, ejecución de ejercicios prácticos (_Spikes_) y estudio de decisiones de arquitectura previas.                          | Absorción del conocimiento por parte de nuevos integrantes, convirtiéndolo en nueva experiencia personal. |
 
 ### 3.2. Mecanismos Operativos para Retener el Conocimiento Humano
 
@@ -119,10 +115,8 @@ El **conocimiento tácito** es aquel que reside en la mente de los profesionales
 2. **Sesiones de Transferencia Técnica (_Tech Talks_ / _Brown Bag Sessions_):** Espacios periódicos de 30 minutos donde un integrante expone cómo resolvió un desafío complejo, qué tecnologías evaluó y qué aprendizajes obtuvo.
 3. **Retrospectivas de Sprint y Post-Mortems de Incidentes:** Al finalizar un hito o tras la ocurrencia de una falla grave en producción, el equipo realiza una sesión de _Post-Mortem_ sin buscar culpables (_blameless_), enfocándose en identificar las causas raíz y documentar la lección aprendida.
 4. **Protocolo Obligatorio de Traspaso (_Offboarding / Handover_):** Cuando un integrante desvincula su participación de un proyecto o de la empresa, se activa un plan de transferencia de 5 días hábiles que incluye:
-    - Mapeo de módulos bajo su responsabilidad exclusiva.
-    - Actualización y cierre de documentación pendiente en el repositorio.
-
----
+   - Mapeo de módulos bajo su responsabilidad exclusiva.
+   - Actualización y cierre de documentación pendiente en el repositorio.
 
 ## 4. Sistema de Lecciones Aprendidas y Registro de Errores (_Error Log_)
 
@@ -133,11 +127,11 @@ Uno de los mayores desperdicios de productividad en ingeniería de software es l
 La organización debe mantener un **Registro Centralizado de Errores** estructurado por categorías de fallas recurrentes:
 
 - **Categorías Principales:**
-    - `INFRA`: Fallas de contenedores, red, permisos o variables de entorno.
-    - `DB`: Excepciones de migraciones SQL, bloqueos de tablas o rendimiento de consultas.
-    - `API`: Errores de integración con servicios externos, autenticación o tokens expirados.
-    - `BUILD`: Errores de compilación, empaquetado o incompatibilidad de dependencias.
-    - `LOGIC`: Errores en algoritmos de negocio o manipulación de datos.
+  - `INFRA`: Fallas de contenedores, red, permisos o variables de entorno.
+  - `DB`: Excepciones de migraciones SQL, bloqueos de tablas o rendimiento de consultas.
+  - `API`: Errores de integración con servicios externos, autenticación o tokens expirados.
+  - `BUILD`: Errores de compilación, empaquetado o incompatibilidad de dependencias.
+  - `LOGIC`: Errores en algoritmos de negocio o manipulación de datos.
 
 ### 4.2. Plantilla Estándar para el Registro de un Error
 
@@ -145,20 +139,19 @@ Cada entrada en el catálogo de errores debe asentarse mediante el siguiente for
 
 ```markdown
 ### [ERR-042] Excepción de Caducidad de Token JWT en Peticiones Concurrenciales
-* **Fecha de Registro:** 22/10/2026
-* **Categoría:** API / Autenticación
-* **Entorno / Stack:** Node.js v20 / PostgreSQL / Middleware Auth
-* **Síntoma / Mensaje de Error:** 
+
+- **Fecha de Registro:** 22/10/2026
+- **Categoría:** API / Autenticación
+- **Entorno / Stack:** Node.js v20 / PostgreSQL / Middleware Auth
+- **Síntoma / Mensaje de Error:**
   `JsonWebTokenError: jwt expired` en peticiones paralelas tras 15 minutos de inactividad.
-* **Causa Raíz Identificada:** 
+- **Causa Raíz Identificada:**
   El middleware de autenticación no refrescaba el token antes de verificar peticiones asincrónicas simultáneas en el frontend.
-* **Solución Aplicada:** 
-  Implementación de un interceptor Axios en el cliente para manejar la cola de refresco (*Token Refresh Queue*) mediante promesas.
-* **Acción Preventiva / Lección Aprendida:** 
+- **Solución Aplicada:**
+  Implementación de un interceptor Axios en el cliente para manejar la cola de refresco (_Token Refresh Queue_) mediante promesas.
+- **Acción Preventiva / Lección Aprendida:**
   Se actualizó el archivo `AUTH_GUIDE.md` y se agregó una prueba unitaria que simula peticiones concurrentes con tokens a punto de expirar.
 ```
-
----
 
 ## 5. La Inteligencia Artificial como Nuevo Activo de Conocimiento
 
@@ -169,23 +162,23 @@ Las herramientas de asistencia basadas en Inteligencia Artificial Generativa y m
 Los componentes de IA deben administrarse con el mismo rigor metodológico que el código fuente tradicional:
 
 1. **Estructura Estándar de Archivos:** Cada activo de IA debe residir en el repositorio dentro de una estructura estandarizada:
-    
-    ```
-    /ai-assets/
-     ├── skills/
-     │    └── <nombre-skill>/
-     │         ├── SKILL.md            (Instrucciones de comportamiento del skill)
-     │         └── metadata.json       (Nombre, versión, descripción y parámetros)
-     ├── prompts/
-     │    └── <categoria>/
-     │         └── <nombre-prompt>.md  (Prompt depurado y probado)
-     └── validation-scripts/           (Scripts automáticos para validar la estructura)
-    ```
-    
+
+   ```
+   /ai-assets/
+    ├── skills/
+    │    └── <nombre-skill>/
+    │         ├── SKILL.md            (Instrucciones de comportamiento del skill)
+    │         └── metadata.json       (Nombre, versión, descripción y parámetros)
+    ├── prompts/
+    │    └── <categoria>/
+    │         └── <nombre-prompt>.md  (Prompt depurado y probado)
+    └── validation-scripts/           (Scripts automáticos para validar la estructura)
+   ```
+
 2. **Validación Automatizada por Scripts:** Se deben implementar scripts de validación que se ejecuten en el pipeline de integración continua para verificar que todo nuevo _skill_ o _prompt_ cumpla con:
-    - Convención de nombres (_kebab-case_).
-    - Presencia obligatoria de encabezados con descripción y ámbito de uso.
-    - Ausencia de credenciales, claves privadas o datos confidenciales harcodeados.
+   - Convención de nombres (_kebab-case_).
+   - Presencia obligatoria de encabezados con descripción y ámbito de uso.
+   - Ausencia de credenciales, claves privadas o datos confidenciales harcodeados.
 
 ### 5.2. Arquitecturas RAG (_Retrieval-Augmented Generation_) e Indización de Repositorios
 
@@ -193,8 +186,6 @@ Para explotar el historial de conocimiento de la empresa sin riesgo de alucinaci
 
 - **Bases de Datos Vectoriales con Contexto Local (RAG):** Implementar agentes de IA que consulten exclusivamente la base de conocimiento local estructurada (documentos `.md`, tickets de proyectos y código), respondiendo consultas precisas sobre decisiones técnicas pasadas.
 - **Escaneo de Repositorios Históricos (_Enterprise Code Search_):** Utilizar herramientas de indexación que permitan a los desarrolladores buscar cómo se resolvió un desafío técnico en cualquier proyecto previo de la empresa antes de iniciar el desarrollo desde cero.
-
----
 
 ## 6. Clasificación de Seguridad, Confidencialidad y Control de Acceso (RBAC)
 
@@ -213,8 +204,6 @@ Toda documentación o activo de conocimiento debe clasificarse bajo uno de los c
 
 - **Herramientas de IA y Permisos:** Los agentes de IA y sistemas RAG deben heredar los mismos permisos de acceso que el usuario que realiza la consulta. Bajo ninguna circunstancia un sistema de IA debe revelar información de Nivel 3 (Restringido) a un usuario que no posea las credenciales autorizadas.
 - **Auditoría de Consultas:** Se deben mantener registros auditables de los accesos a la base de conocimiento corporativa para prevenir filtraciones no autorizadas.
-
----
 
 ## 7. Hoja de Ruta Operativa: Matriz de Implementación para un Nuevo Proyecto
 

@@ -29,14 +29,14 @@ Lea cada afirmación y marque una única opción según su experiencia con el eq
 
 **Escala de valoración**
 
-| Puntaje | Significado |
-|---:|---|
-| 1 | Muy insatisfecho / Muy en desacuerdo |
-| 2 | Insatisfecho / En desacuerdo |
-| 3 | Ni satisfecho ni insatisfecho / Parcialmente de acuerdo |
-| 4 | Satisfecho / De acuerdo |
-| 5 | Muy satisfecho / Muy de acuerdo |
-| N/A | No aplica o no cuenta con información suficiente |
+| Puntaje | Significado                                             |
+| ------: | ------------------------------------------------------- |
+|       1 | Muy insatisfecho / Muy en desacuerdo                    |
+|       2 | Insatisfecho / En desacuerdo                            |
+|       3 | Ni satisfecho ni insatisfecho / Parcialmente de acuerdo |
+|       4 | Satisfecho / De acuerdo                                 |
+|       5 | Muy satisfecho / Muy de acuerdo                         |
+|     N/A | No aplica o no cuenta con información suficiente        |
 
 ## 4. Evaluación
 

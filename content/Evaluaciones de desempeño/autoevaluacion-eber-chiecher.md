@@ -19,18 +19,18 @@ date: 2026-10-23
 
 ## 2. Evaluación
 
-| Código | Criterio | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|---|:---:|---|
-| EA-01 | Roles y responsabilidades | Sé cuáles son las responsabilidades de mi rol en el proyecto. | 5 | Base de datos, migraciones y ambientes de servidor. |
-| EA-02 | Roles y responsabilidades | Sé quién es mi supervisor directo y cuáles son sus responsabilidades. | 4 | Reporto al PM y coordino con el líder de QA. |
-| EA-03 | Carga de trabajo | Considero que tengo una carga de trabajo adecuada y equilibrada. | 3 | La puesta en marcha del entorno de producción exigió horas extra. |
-| EA-04 | Herramientas | Conozco y aplico las herramientas de trabajo del proyecto (Git, Obsidian, tablero de tareas). | 4 | Git, migraciones versionadas y tablero al día. |
-| EA-05 | Trabajo en equipo | Considero que formo parte de un equipo de trabajo productivo. | 4 | Buena coordinación con backend y frontend. |
-| EA-06 | Planificación | Sé cuáles son mis metas semanales. | 4 | Definidas semanalmente. |
-| EA-07 | Planificación | Sé cuáles son las metas del proyecto a largo plazo. | 4 | Claras a partir de los hitos y el plan de despliegue. |
-| EA-08 | Comunicación | Conozco la estructura y los canales de comunicación del equipo. | 4 | Canales formales e informales definidos. |
-| EA-09 | Orientación | Considero que recibí la orientación y los recursos suficientes para realizar mi trabajo. | 4 | Conté con acceso a los servidores institucionales. |
-| EA-10 | Cumplimiento | Completé mis compromisos asignados dentro de los plazos pactados. | 3 | Una migración se reprogramó por dependencia con un cambio de esquema. |
+| Código | Criterio                  | Afirmación a evaluar                                                                          | Puntaje (1–5 o N/A) | Observaciones                                                         |
+| ------ | ------------------------- | --------------------------------------------------------------------------------------------- | :-----------------: | --------------------------------------------------------------------- |
+| EA-01  | Roles y responsabilidades | Sé cuáles son las responsabilidades de mi rol en el proyecto.                                 |          5          | Base de datos, migraciones y ambientes de servidor.                   |
+| EA-02  | Roles y responsabilidades | Sé quién es mi supervisor directo y cuáles son sus responsabilidades.                         |          4          | Reporto al PM y coordino con el líder de QA.                          |
+| EA-03  | Carga de trabajo          | Considero que tengo una carga de trabajo adecuada y equilibrada.                              |          3          | La puesta en marcha del entorno de producción exigió horas extra.     |
+| EA-04  | Herramientas              | Conozco y aplico las herramientas de trabajo del proyecto (Git, Obsidian, tablero de tareas). |          4          | Git, migraciones versionadas y tablero al día.                        |
+| EA-05  | Trabajo en equipo         | Considero que formo parte de un equipo de trabajo productivo.                                 |          4          | Buena coordinación con backend y frontend.                            |
+| EA-06  | Planificación             | Sé cuáles son mis metas semanales.                                                            |          4          | Definidas semanalmente.                                               |
+| EA-07  | Planificación             | Sé cuáles son las metas del proyecto a largo plazo.                                           |          4          | Claras a partir de los hitos y el plan de despliegue.                 |
+| EA-08  | Comunicación              | Conozco la estructura y los canales de comunicación del equipo.                               |          4          | Canales formales e informales definidos.                              |
+| EA-09  | Orientación               | Considero que recibí la orientación y los recursos suficientes para realizar mi trabajo.      |          4          | Conté con acceso a los servidores institucionales.                    |
+| EA-10  | Cumplimiento              | Completé mis compromisos asignados dentro de los plazos pactados.                             |          3          | Una migración se reprogramó por dependencia con un cambio de esquema. |
 
 ## 3. Cálculo del resultado
 

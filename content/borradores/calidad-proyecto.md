@@ -4,7 +4,7 @@ ISO 9.001 (es para cualquier proyecto) y 90.003 (es de software)
 
 Al basarse en la ISO 9001:2015, la ISO 90003 sigue la misma **Estructura de Alto Nivel (HLS)** y el ciclo Planificar-Hacer-Verificar-Actuar (PDCA), pero con interpretaciones específicas para el ciclo de vida del desarrollo de software (SDLC):
 
-### 1. Contexto de la Organización 
+### 1. Contexto de la Organización
 
 Exige comprender el entorno en el que se desarrolla el software. Esto incluye identificar las expectativas de todas las partes interesadas (clientes finales, usuarios, organismos reguladores, proveedores de servicios en la nube) y determinar cómo los factores externos (por ejemplo, nuevas leyes de privacidad de datos como el GDPR) afectan al Sistema de Gestión de Calidad (SGC).
 

@@ -1,6 +1,6 @@
 ---
-project: Banco de Señales Biomédicas ("BioSignalsBank")
-version: 1
+project: BioSignal
+version: 1.1
 title: Matriz de Riesgos
 aliases: Matriz de Riesgos
 ---
@@ -78,3 +78,11 @@ El nivel de riesgo se calcula como **Riesgo = Probabilidad × Impacto**:
 - **Medio (5 - 9)**: Tolerable; definir planes de mitigación estándar.
 - **Alto (10 - 14)**: Requiere atención prioritaria y respuesta activa.
 - **Crítico (15 - 25)**: Inaceptable; exige acción inmediata y escalamiento.
+
+### Apetito de Riesgo del Proyecto
+
+BioSignal tiene **apetito bajo** frente a riesgos de privacidad, seguridad y cumplimiento legal (Ley 25.326); **apetito medio** frente a riesgos técnicos y de cronograma; y **apetito alto** frente a oportunidades de innovación académica. Ningún riesgo con nivel **crítico (15–25)** puede quedar residual al cierre del proyecto; los riesgos altos (10–14) requieren respuesta activa con dueño y seguimiento quincenal.
+
+### Vínculo con el Registro de Riesgos
+
+Esta matriz es la herramienta de **evaluación** (probabilidad × impacto). Los riesgos concretos del proyecto (identificados con IDs **R-01…R-12**, con causa → evento → efecto, dueño, respuesta, disparador, riesgo residual y oportunidades **O-01…O-03**) se administran centralizadamente en el **registro de riesgos** del plan integrador, revisado semanalmente por el equipo, quincenalmente con el Sponsor y obligatoriamente en cada hito `H1–H7`. El informe de riesgos para el Sponsor se emite con la cadencia quincenal declarada en el Plan de Comunicaciones.

@@ -84,11 +84,11 @@ El proceso de adquisición en el proyecto **BioSignal** se rige por un procedimi
    - _Propuesta Económica / Precio:_ 30%
    - _Tiempo de Entrega / Despliegue:_ 20%
    - _Soporte Técnico y Garantía:_ 10%
-1. **Adjudicación, Firma de Contrato y Retroalimentación:**
+5. **Adjudicación, Firma de Contrato y Retroalimentación:**
    Se emite el Dictamen de Adjudicación al proveedor ganador. Como pilar de mejora continua remarcado en la materia, se envía una **notificación formal con feedback técnico a los proveedores no seleccionados**, indicando los motivos (ej. precio fuera de rango, tiempos extendidos) para impulsar la competitividad futura.
-2. **Emisión de Orden de Compra (OC) y Entrega:**
+6. **Emisión de Orden de Compra (OC) y Entrega:**
    Se formaliza la Orden de Compra de compromiso financiero y el proveedor adjudicado procede a la provisión o habilitación del servicio.
-3. **Inspección Técnica, Recepción Conformada y Cierre Operativo:**
+7. **Inspección Técnica, Recepción Conformada y Cierre Operativo:**
    El área técnica del proyecto (QA / Infraestructura) realiza las pruebas de homologación. Si el insumo satisface los criterios de aceptación, se firma la **Constancia de Recepción Conformada**, autorizando el pago y cerrando el circuito de compra.
 
 ### 2.3. Simulación Práctica de una Compra Real

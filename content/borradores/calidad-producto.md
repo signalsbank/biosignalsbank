@@ -5,15 +5,18 @@ ISO 25.010
 - **Completitud funcional.** MEDIA.
 - **Corrección funcional.** ALTA.
 - **Pertinencia funcional.** ALTA.
+
 ## Eficiencia de Desempeño
 
 - **Comportamiento temporal.** MEDIA/ALTA.
 - **Utilización de recursos.** MEDIA.
 - **Capacidad.** MEDIA.
+
 ## Compatibilidad
 
 - **Coexistencia.** ALTA.
 - **Interoperabilidad.** BAJA.
+
 ## Capacidad de Interacción CANDIDATA A CERTIFICACIÓN
 
 - **Reconocibilidad de la adecuación.** ALTA.
@@ -24,12 +27,14 @@ ISO 25.010
 - **Inclusividad.** MEDIA. (Debería ser alta, requiere modificar los requisitos)
 - **Asistencia al usuario.** MEDIA. (Debería ser alta, requiere modificar los requisitos)
 - **Auto-descriptividad.** ALTA.
+
 ## Fiabilidad
 
 - **Ausencia de fallos.** MEDIA.
 - **Disponibilidad.** ALTA.
 - **Tolerancia a fallos.** MEDIA.
 - **Capacidad de recuperación.** MEDIA.
+
 ## Seguridad
 
 - **Confidencialidad.** ALTA.
@@ -38,6 +43,7 @@ ISO 25.010
 - **Responsabilidad.** MEDIA.
 - **Autenticidad.** MEDIA.
 - **Resistencia.** BAJA.
+
 ## Mantenibilidad
 
 - **Modularidad.** ALTA.
@@ -45,12 +51,14 @@ ISO 25.010
 - **Analizabilidad.** MEDIA.
 - **Capacidad para ser modificado.** ALTA.
 - **Capacidad para ser probado.** ALTA.
+
 ## Flexibilidad
 
 - **Adaptabilidad.** BAJA.
 - **Escalabilidad.** BAJA. (Servidor con recursos fijos según lo especificado)
 - **Instalabilidad.** BAJA.
 - **Reemplazabilidad.** BAJA.
+
 ## Protección
 
 - **Restricción operativa.** BAJA.

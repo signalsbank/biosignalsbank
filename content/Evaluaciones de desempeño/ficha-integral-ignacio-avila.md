@@ -22,54 +22,54 @@ date: 2026-10-23
 
 ## 2. Conocimiento asociado al cargo
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-01 | Entiende las funciones y responsabilidades de su rol. | 5 | Cubre asistencia de dirección, custodia documental y RDS. |
-| EF-02 | Posee los conocimientos y habilidades necesarios para su rol. | 5 | Domina herramientas de documentación, versionado y seguimiento. |
+| Código | Afirmación a evaluar                                          | Puntaje (1–5 o N/A) | Observaciones                                                   |
+| ------ | ------------------------------------------------------------- | :-----------------: | --------------------------------------------------------------- |
+| EF-01  | Entiende las funciones y responsabilidades de su rol.         |          5          | Cubre asistencia de dirección, custodia documental y RDS.       |
+| EF-02  | Posee los conocimientos y habilidades necesarios para su rol. |          5          | Domina herramientas de documentación, versionado y seguimiento. |
 
 ## 3. Planificación y organización
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-03 | Requiere una supervisión mínima. | 4 | Trabaja con autonomía; consulta lo necesario en decisiones de alcance. |
-| EF-04 | Se desempeña de forma organizada. | 5 | Repositorio documental y tablero siempre actualizados. |
-| EF-05 | Es capaz de identificar y solucionar problemas. | 5 | Detectó inconsistencias de formato antes de la revisión del cliente. |
-| EF-06 | Reacciona rápidamente ante las dificultades. | 4 | Resolvió observaciones documentales en menos de 24 horas. |
+| Código | Afirmación a evaluar                            | Puntaje (1–5 o N/A) | Observaciones                                                          |
+| ------ | ----------------------------------------------- | :-----------------: | ---------------------------------------------------------------------- |
+| EF-03  | Requiere una supervisión mínima.                |          4          | Trabaja con autonomía; consulta lo necesario en decisiones de alcance. |
+| EF-04  | Se desempeña de forma organizada.               |          5          | Repositorio documental y tablero siempre actualizados.                 |
+| EF-05  | Es capaz de identificar y solucionar problemas. |          5          | Detectó inconsistencias de formato antes de la revisión del cliente.   |
+| EF-06  | Reacciona rápidamente ante las dificultades.    |          4          | Resolvió observaciones documentales en menos de 24 horas.              |
 
 ## 4. Productividad
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-07 | Consigue los objetivos asignados. | 5 | Todas las entregas documentales de la fase se completaron. |
-| EF-08 | Puede manejar varias actividades a la vez. | 5 | Sostuvo RDS, documentación y coordinación institucional en paralelo. |
-| EF-09 | Alcanza los estándares de productividad definidos por el equipo. | 3 | Los tiempos de revisión son buenos; en cierres de fase se ajustan justo. |
+| Código | Afirmación a evaluar                                             | Puntaje (1–5 o N/A) | Observaciones                                                            |
+| ------ | ---------------------------------------------------------------- | :-----------------: | ------------------------------------------------------------------------ |
+| EF-07  | Consigue los objetivos asignados.                                |          5          | Todas las entregas documentales de la fase se completaron.               |
+| EF-08  | Puede manejar varias actividades a la vez.                       |          5          | Sostuvo RDS, documentación y coordinación institucional en paralelo.     |
+| EF-09  | Alcanza los estándares de productividad definidos por el equipo. |          3          | Los tiempos de revisión son buenos; en cierres de fase se ajustan justo. |
 
 ## 5. Trabajo en equipo
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-10 | Sabe trabajar en equipo. | 5 | Articula eficazmente gestión y desarrollo. |
-| EF-11 | Ayuda a su equipo. | 5 | Apoya a los desarrolladores con plantillas y criterios de documentación. |
-| EF-12 | Se desempeña bien con diferentes tipos de personas. | 4 | Buen vínculo con autoridades, docentes y equipo técnico. |
-| EF-13 | Participa activamente en las reuniones de trabajo. | 4 | Registra acuerdos y hace seguimiento de compromisos. |
+| Código | Afirmación a evaluar                                | Puntaje (1–5 o N/A) | Observaciones                                                            |
+| ------ | --------------------------------------------------- | :-----------------: | ------------------------------------------------------------------------ |
+| EF-10  | Sabe trabajar en equipo.                            |          5          | Articula eficazmente gestión y desarrollo.                               |
+| EF-11  | Ayuda a su equipo.                                  |          5          | Apoya a los desarrolladores con plantillas y criterios de documentación. |
+| EF-12  | Se desempeña bien con diferentes tipos de personas. |          4          | Buen vínculo con autoridades, docentes y equipo técnico.                 |
+| EF-13  | Participa activamente en las reuniones de trabajo.  |          4          | Registra acuerdos y hace seguimiento de compromisos.                     |
 
 ## 6. Comunicación
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-14 | Participa en las reuniones. | 5 | Presencia constante y aportes concretos. |
-| EF-15 | Se explica de forma clara y fácil de entender. | 4 | Sus actas son claras y verificables. |
-| EF-16 | Sabe escuchar. | 5 | Recoge observaciones de todas las partes sin sesgos. |
-| EF-17 | Expone sus ideas de forma eficaz. | 5 | Propone mejoras de proceso con fundamento. |
+| Código | Afirmación a evaluar                           | Puntaje (1–5 o N/A) | Observaciones                                        |
+| ------ | ---------------------------------------------- | :-----------------: | ---------------------------------------------------- |
+| EF-14  | Participa en las reuniones.                    |          5          | Presencia constante y aportes concretos.             |
+| EF-15  | Se explica de forma clara y fácil de entender. |          4          | Sus actas son claras y verificables.                 |
+| EF-16  | Sabe escuchar.                                 |          5          | Recoge observaciones de todas las partes sin sesgos. |
+| EF-17  | Expone sus ideas de forma eficaz.              |          5          | Propone mejoras de proceso con fundamento.           |
 
 ## 7. Dirección de equipos de trabajo
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-18 | Transmite bien los objetivos a los integrantes del equipo. | 5 | Comunica los acuerdos y plazos con precisión. |
-| EF-19 | Comunica a todos en el proyecto el avance y éxito en el cumplimiento de objetivos. | 5 | Mantiene informado al equipo y al cliente. |
-| EF-20 | Demuestra dotes de liderazgo. | 4 | Lidera por proceso más que por conducción directa; es efectivo. |
-| EF-21 | Motiva al equipo para conseguir los objetivos. | 5 | Sostiene el compromiso con recordatorios útiles, no invasivos. |
+| Código | Afirmación a evaluar                                                               | Puntaje (1–5 o N/A) | Observaciones                                                   |
+| ------ | ---------------------------------------------------------------------------------- | :-----------------: | --------------------------------------------------------------- |
+| EF-18  | Transmite bien los objetivos a los integrantes del equipo.                         |          5          | Comunica los acuerdos y plazos con precisión.                   |
+| EF-19  | Comunica a todos en el proyecto el avance y éxito en el cumplimiento de objetivos. |          5          | Mantiene informado al equipo y al cliente.                      |
+| EF-20  | Demuestra dotes de liderazgo.                                                      |          4          | Lidera por proceso más que por conducción directa; es efectivo. |
+| EF-21  | Motiva al equipo para conseguir los objetivos.                                     |          5          | Sostiene el compromiso con recordatorios útiles, no invasivos.  |
 
 ## 8. Cálculo del resultado
 

@@ -1,6 +1,6 @@
 ---
-project: Banco de Señales Biomédicas ("BioSignalsBank")
-version: 1
+project: BioSignal
+version: 2
 title: 5. Estructura de Desglose de Trabajo
 aliases: Estructura de Desglose de Trabajo
 ---
@@ -16,13 +16,11 @@ aliases: Estructura de Desglose de Trabajo
     1.2 Infraestructura y Entorno
         1.2.1 Servidores y base de datos configurados
         1.2.2 Entornos de desarrollo y pruebas
-        1.2.3 Aprovisionamiento y carga de dataset
+        1.2.3 Aprovisionamiento y carga de dataset semilla
     1.3 Software: Banco de Señales
         1.3.1 Módulo de autenticación y seguridad
             1.3.1.1 Interfaz de inicio de sesión
-            1.3.1.2 Interfaz de registro de usuarios
-            1.3.1.3 Interfaz de recuperación de credenciales
-            1.3.1.4 Sistema de control de acceso por roles (RBAC)
+            1.3.1.2 Sistema de control de acceso por roles (RBAC)
         1.3.2 Módulo de gestión de señales
             1.3.2.1 Formulario y procesador de carga (alta)
             1.3.2.2 Interfaz de edición de metadatos (modificación)
@@ -34,7 +32,7 @@ aliases: Estructura de Desglose de Trabajo
     1.4 Aseguramiento de Calidad
         1.4.1 Reporte de pruebas unitarias
         1.4.2 Reporte de pruebas de integración y aceptación
-	1.5 Sistema desplegado en ambiente de producción
+    1.5 Sistema desplegado en ambiente de producción
 ```
 
 ```mermaid
@@ -58,6 +56,7 @@ flowchart LR
     %% Nivel 1.2.x
     N1_2 --> N1_2_1["1.2.1 Servidores y base de datos configurados"]
     N1_2 --> N1_2_2["1.2.2 Entornos de desarrollo y pruebas"]
+    N1_2 --> N1_2_3["1.2.3 Aprovisionamiento y carga de dataset semilla"]
 
     %% Nivel 1.3.x
     N1_3 --> N1_3_1["1.3.1 Módulo de autenticación y seguridad"]
@@ -66,9 +65,7 @@ flowchart LR
 
     %% Nivel 1.3.1.x
     N1_3_1 --> N1_3_1_1["1.3.1.1 Interfaz de inicio de sesión"]
-    N1_3_1 --> N1_3_1_2["1.3.1.2 Interfaz de registro de usuarios"]
-    N1_3_1 --> N1_3_1_3["1.3.1.3 Interfaz de recuperación de credenciales"]
-    N1_3_1 --> N1_3_1_4["1.3.1.4 Sistema de control de acceso por roles (RBAC)"]
+    N1_3_1 --> N1_3_1_2["1.3.1.2 Sistema de control de acceso por roles (RBAC)"]
 
     %% Nivel 1.3.2.x
     N1_3_2 --> N1_3_2_1["1.3.2.1 Formulario y procesador de carga (alta)"]

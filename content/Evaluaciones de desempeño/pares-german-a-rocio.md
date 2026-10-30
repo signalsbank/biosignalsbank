@@ -19,13 +19,13 @@ date: 2026-10-23
 
 ## 2. Evaluación
 
-| Código | Criterio | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|---|:---:|---|
-| EP-01 | Cumplimiento | Cumple con las tareas y compromisos asignados dentro del plazo. | 4 | Entregó las pantallas planificadas; un ajuste menor se movió a la fase siguiente. |
-| EP-02 | Calidad técnica | La calidad técnica de su trabajo es sólida y requiere pocas correcciones. | 5 | Componentes reutilizables y muy buen manejo de estados de carga y error. |
-| EP-03 | Comunicación | Comunica de forma clara y oportuna (canales del equipo, reuniones, PRs). | 4 | Comparte avances con capturas y describe bien los cambios de UI. |
-| EP-04 | Colaboración | Colabora con el equipo y ayuda a resolver bloqueos de los demás. | 5 | Se ofreció a maquetar pantallas de otro módulo para destrabar la demo. |
-| EP-05 | Revisión | Acepta las correcciones de los revisores y las aplica. | 4 | Aplica las observaciones de accesibilidad con buena predisposición. |
+| Código | Criterio        | Afirmación a evaluar                                                      | Puntaje (1–5 o N/A) | Observaciones                                                                     |
+| ------ | --------------- | ------------------------------------------------------------------------- | :-----------------: | --------------------------------------------------------------------------------- |
+| EP-01  | Cumplimiento    | Cumple con las tareas y compromisos asignados dentro del plazo.           |          4          | Entregó las pantallas planificadas; un ajuste menor se movió a la fase siguiente. |
+| EP-02  | Calidad técnica | La calidad técnica de su trabajo es sólida y requiere pocas correcciones. |          5          | Componentes reutilizables y muy buen manejo de estados de carga y error.          |
+| EP-03  | Comunicación    | Comunica de forma clara y oportuna (canales del equipo, reuniones, PRs).  |          4          | Comparte avances con capturas y describe bien los cambios de UI.                  |
+| EP-04  | Colaboración    | Colabora con el equipo y ayuda a resolver bloqueos de los demás.          |          5          | Se ofreció a maquetar pantallas de otro módulo para destrabar la demo.            |
+| EP-05  | Revisión        | Acepta las correcciones de los revisores y las aplica.                    |          4          | Aplica las observaciones de accesibilidad con buena predisposición.               |
 
 ## 3. Cálculo del resultado
 

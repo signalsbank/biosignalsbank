@@ -22,54 +22,54 @@ date: 2026-10-23
 
 ## 2. Conocimiento asociado al cargo
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-01 | Entiende las funciones y responsabilidades de su rol. | 5 | Asume la planificación, el seguimiento y el escalamiento con claridad. |
-| EF-02 | Posee los conocimientos y habilidades necesarios para su rol. | 5 | Aplica herramientas de gestión y metodologías acordes al proyecto. |
+| Código | Afirmación a evaluar                                          | Puntaje (1–5 o N/A) | Observaciones                                                          |
+| ------ | ------------------------------------------------------------- | :-----------------: | ---------------------------------------------------------------------- |
+| EF-01  | Entiende las funciones y responsabilidades de su rol.         |          5          | Asume la planificación, el seguimiento y el escalamiento con claridad. |
+| EF-02  | Posee los conocimientos y habilidades necesarios para su rol. |          5          | Aplica herramientas de gestión y metodologías acordes al proyecto.     |
 
 ## 3. Planificación y organización
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-03 | Requiere una supervisión mínima. | 5 | Reporta avances sin necesidad de recordatorios. |
-| EF-04 | Se desempeña de forma organizada. | 5 | Cronograma y tablero actualizados de forma consistente. |
-| EF-05 | Es capaz de identificar y solucionar problemas. | 5 | Resolvió el desvío del entorno institucional con un plan alternativo. |
-| EF-06 | Reacciona rápidamente ante las dificultades. | 5 | Reorganizó prioridades ante la demora de accesos a servidores. |
+| Código | Afirmación a evaluar                            | Puntaje (1–5 o N/A) | Observaciones                                                         |
+| ------ | ----------------------------------------------- | :-----------------: | --------------------------------------------------------------------- |
+| EF-03  | Requiere una supervisión mínima.                |          5          | Reporta avances sin necesidad de recordatorios.                       |
+| EF-04  | Se desempeña de forma organizada.               |          5          | Cronograma y tablero actualizados de forma consistente.               |
+| EF-05  | Es capaz de identificar y solucionar problemas. |          5          | Resolvió el desvío del entorno institucional con un plan alternativo. |
+| EF-06  | Reacciona rápidamente ante las dificultades.    |          5          | Reorganizó prioridades ante la demora de accesos a servidores.        |
 
 ## 4. Productividad
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-07 | Consigue los objetivos asignados. | 5 | Cumplió el hito del 23/10 con el visor operativo. |
-| EF-08 | Puede manejar varias actividades a la vez. | 4 | Sostuvo gestión, documentación y vínculo institucional simultáneamente. |
-| EF-09 | Alcanza los estándares de productividad definidos por el equipo. | 4 | Los entregables de gestión se produjeron en tiempo y forma. |
+| Código | Afirmación a evaluar                                             | Puntaje (1–5 o N/A) | Observaciones                                                           |
+| ------ | ---------------------------------------------------------------- | :-----------------: | ----------------------------------------------------------------------- |
+| EF-07  | Consigue los objetivos asignados.                                |          5          | Cumplió el hito del 23/10 con el visor operativo.                       |
+| EF-08  | Puede manejar varias actividades a la vez.                       |          4          | Sostuvo gestión, documentación y vínculo institucional simultáneamente. |
+| EF-09  | Alcanza los estándares de productividad definidos por el equipo. |          4          | Los entregables de gestión se produjeron en tiempo y forma.             |
 
 ## 5. Trabajo en equipo
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-10 | Sabe trabajar en equipo. | 5 | Integra las áreas técnica y académica sin fricciones. |
-| EF-11 | Ayuda a su equipo. | 5 | Se involucra en los bloqueos técnicos cuando es necesario. |
-| EF-12 | Se desempeña bien con diferentes tipos de personas. | 4 | Buen trato con autoridades, docentes y desarrolladores. |
-| EF-13 | Participa activamente en las reuniones de trabajo. | 5 | Conduce las reuniones con orden y foco en resultados. |
+| Código | Afirmación a evaluar                                | Puntaje (1–5 o N/A) | Observaciones                                              |
+| ------ | --------------------------------------------------- | :-----------------: | ---------------------------------------------------------- |
+| EF-10  | Sabe trabajar en equipo.                            |          5          | Integra las áreas técnica y académica sin fricciones.      |
+| EF-11  | Ayuda a su equipo.                                  |          5          | Se involucra en los bloqueos técnicos cuando es necesario. |
+| EF-12  | Se desempeña bien con diferentes tipos de personas. |          4          | Buen trato con autoridades, docentes y desarrolladores.    |
+| EF-13  | Participa activamente en las reuniones de trabajo.  |          5          | Conduce las reuniones con orden y foco en resultados.      |
 
 ## 6. Comunicación
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-14 | Participa en las reuniones. | 5 | Asistencia y participación constantes. |
-| EF-15 | Se explica de forma clara y fácil de entender. | 5 | Traduce conceptos técnicos para el patrocinador. |
-| EF-16 | Sabe escuchar. | 5 | Registra y responde las observaciones del cliente. |
-| EF-17 | Expone sus ideas de forma eficaz. | 5 | Sus informes son breves y accionables. |
+| Código | Afirmación a evaluar                           | Puntaje (1–5 o N/A) | Observaciones                                      |
+| ------ | ---------------------------------------------- | :-----------------: | -------------------------------------------------- |
+| EF-14  | Participa en las reuniones.                    |          5          | Asistencia y participación constantes.             |
+| EF-15  | Se explica de forma clara y fácil de entender. |          5          | Traduce conceptos técnicos para el patrocinador.   |
+| EF-16  | Sabe escuchar.                                 |          5          | Registra y responde las observaciones del cliente. |
+| EF-17  | Expone sus ideas de forma eficaz.              |          5          | Sus informes son breves y accionables.             |
 
 ## 7. Dirección de equipos de trabajo
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-18 | Transmite bien los objetivos a los integrantes del equipo. | 5 | El equipo conoce las metas semanales y de fase. |
-| EF-19 | Comunica a todos en el proyecto el avance y éxito en el cumplimiento de objetivos. | 4 | Los informes quincenales llegan, aunque a veces con poco detalle de riesgos. |
-| EF-20 | Demuestra dotes de liderazgo. | 5 | Sostuvo la cohesión del equipo en un período de alta carga. |
-| EF-21 | Motiva al equipo para conseguir los objetivos. | 5 | Reconoce los logros y acompaña los momentos difíciles. |
+| Código | Afirmación a evaluar                                                               | Puntaje (1–5 o N/A) | Observaciones                                                                |
+| ------ | ---------------------------------------------------------------------------------- | :-----------------: | ---------------------------------------------------------------------------- |
+| EF-18  | Transmite bien los objetivos a los integrantes del equipo.                         |          5          | El equipo conoce las metas semanales y de fase.                              |
+| EF-19  | Comunica a todos en el proyecto el avance y éxito en el cumplimiento de objetivos. |          4          | Los informes quincenales llegan, aunque a veces con poco detalle de riesgos. |
+| EF-20  | Demuestra dotes de liderazgo.                                                      |          5          | Sostuvo la cohesión del equipo en un período de alta carga.                  |
+| EF-21  | Motiva al equipo para conseguir los objetivos.                                     |          5          | Reconoce los logros y acompaña los momentos difíciles.                       |
 
 ## 8. Cálculo del resultado
 

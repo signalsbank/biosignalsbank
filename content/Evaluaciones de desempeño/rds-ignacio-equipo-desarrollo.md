@@ -21,22 +21,22 @@ date: 2026-10-23
 
 ## 2. Evaluación
 
-| Código | Criterio | Afirmación a evaluar | Martín | Germán | Rocío | Eber | Observaciones |
-|---|---|---|:---:|:---:|:---:|:---:|---|
-| ER-01 | Cumplimiento | Cumple con las tareas y compromisos asignados dentro del plazo. | 4 | 4 | 4 | 4 | Eber reprogramó una migración por dependencia técnica, con aviso previo. |
-| ER-02 | Calidad técnica | La calidad técnica de su trabajo es sólida y requiere pocas correcciones. | 4 | 4 | 5 | 5 | El código entregado pasó las revisiones con observaciones menores. |
-| ER-03 | Proceso | Respeta y sigue el proceso del proyecto (documentación, PRs, revisiones). | 4 | 4 | 4 | 3 | Eber debe reforzar la documentación previa de los cambios de esquema. |
-| ER-04 | Autonomía | Trabaja con autonomía y requiere supervisión mínima. | 4 | 3 | 3 | 4 | Rocío consulta con frecuencia antes de decidir; conviene darle más margen. |
-| ER-05 | Comunicación | Comunica de forma clara y oportuna el avance y los bloqueos. | 5 | 3 | 4 | 3 | Los bloqueos de infraestructura se comunicaron tarde en dos oportunidades. |
+| Código | Criterio        | Afirmación a evaluar                                                      | Martín | Germán | Rocío | Eber | Observaciones                                                              |
+| ------ | --------------- | ------------------------------------------------------------------------- | :----: | :----: | :---: | :--: | -------------------------------------------------------------------------- |
+| ER-01  | Cumplimiento    | Cumple con las tareas y compromisos asignados dentro del plazo.           |   4    |   4    |   4   |  4   | Eber reprogramó una migración por dependencia técnica, con aviso previo.   |
+| ER-02  | Calidad técnica | La calidad técnica de su trabajo es sólida y requiere pocas correcciones. |   4    |   4    |   5   |  5   | El código entregado pasó las revisiones con observaciones menores.         |
+| ER-03  | Proceso         | Respeta y sigue el proceso del proyecto (documentación, PRs, revisiones). |   4    |   4    |   4   |  3   | Eber debe reforzar la documentación previa de los cambios de esquema.      |
+| ER-04  | Autonomía       | Trabaja con autonomía y requiere supervisión mínima.                      |   4    |   3    |   3   |  4   | Rocío consulta con frecuencia antes de decidir; conviene darle más margen. |
+| ER-05  | Comunicación    | Comunica de forma clara y oportuna el avance y los bloqueos.              |   5    |   3    |   4   |  3   | Los bloqueos de infraestructura se comunicaron tarde en dos oportunidades. |
 
 ## 3. Cálculo del resultado (por integrante)
 
 | Integrante | Suma de puntajes válidos | Cantidad de respuestas válidas | Promedio | Puntaje final (%) |
-|---|:---:|:---:|:---:|:---:|
-| Martín | 21 | 5 | 4,20 | 84,0 % |
-| Germán | 18 | 5 | 3,60 | 72,0 % |
-| Rocío | 20 | 5 | 4,00 | 80,0 % |
-| Eber | 19 | 5 | 3,80 | 76,0 % |
+| ---------- | :----------------------: | :----------------------------: | :------: | :---------------: |
+| Martín     |            21            |               5                |   4,20   |      84,0 %       |
+| Germán     |            18            |               5                |   3,60   |      72,0 %       |
+| Rocío      |            20            |               5                |   4,00   |      80,0 %       |
+| Eber       |            19            |               5                |   3,80   |      76,0 %       |
 
 ## 4. Observaciones generales
 

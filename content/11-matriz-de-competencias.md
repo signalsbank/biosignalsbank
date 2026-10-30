@@ -1,9 +1,11 @@
 ---
-project: Banco de Señales Biomédicas ("BioSignalsBank")
-version: 1
+project: BioSignal
+version: 1.1
 title: 11. Matriz de Competencias
 aliases: Matriz de Competencias
 ---
+
+> **Nota de uso:** este documento es un **catálogo (anexo) de perfiles, funciones y competencias**; **no constituye una matriz RACI** y no puede sustituirla. La asignación de responsabilidad por entregable/paquete (quién ejecuta **R**, aprueba **A**, es consultado **C** e informado **I**) se gestiona en la matriz RACI del plan integrador, con los 8 roles mapeados a las 6 personas del equipo y QA independiente del autor del código.
 
 ## 1. Diseñador UX/UI
 

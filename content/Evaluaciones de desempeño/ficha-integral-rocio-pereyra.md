@@ -22,54 +22,54 @@ date: 2026-10-23
 
 ## 2. Conocimiento asociado al cargo
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-01 | Entiende las funciones y responsabilidades de su rol. | 4 | Clara sobre su alcance de maquetado y componentes. |
-| EF-02 | Posee los conocimientos y habilidades necesarios para su rol. | 4 | Buen dominio de React, TypeScript y Figma. |
+| Código | Afirmación a evaluar                                          | Puntaje (1–5 o N/A) | Observaciones                                      |
+| ------ | ------------------------------------------------------------- | :-----------------: | -------------------------------------------------- |
+| EF-01  | Entiende las funciones y responsabilidades de su rol.         |          4          | Clara sobre su alcance de maquetado y componentes. |
+| EF-02  | Posee los conocimientos y habilidades necesarios para su rol. |          4          | Buen dominio de React, TypeScript y Figma.         |
 
 ## 3. Planificación y organización
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-03 | Requiere una supervisión mínima. | 4 | Necesita validación en decisiones de alcance, no en lo técnico. |
-| EF-04 | Se desempeña de forma organizada. | 5 | Muy ordenada con componentes, ramas y entregables. |
-| EF-05 | Es capaz de identificar y solucionar problemas. | 4 | Detecta problemas de usabilidad y propone alternativas. |
-| EF-06 | Reacciona rápidamente ante las dificultades. | 4 | Ajusta la UI ante observaciones en plazos razonables. |
+| Código | Afirmación a evaluar                            | Puntaje (1–5 o N/A) | Observaciones                                                   |
+| ------ | ----------------------------------------------- | :-----------------: | --------------------------------------------------------------- |
+| EF-03  | Requiere una supervisión mínima.                |          4          | Necesita validación en decisiones de alcance, no en lo técnico. |
+| EF-04  | Se desempeña de forma organizada.               |          5          | Muy ordenada con componentes, ramas y entregables.              |
+| EF-05  | Es capaz de identificar y solucionar problemas. |          4          | Detecta problemas de usabilidad y propone alternativas.         |
+| EF-06  | Reacciona rápidamente ante las dificultades.    |          4          | Ajusta la UI ante observaciones en plazos razonables.           |
 
 ## 4. Productividad
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-07 | Consigue los objetivos asignados. | 4 | Cumplió las pantallas planificadas para la fase. |
-| EF-08 | Puede manejar varias actividades a la vez. | 5 | Sostuvo varios módulos de UI en paralelo sin perder calidad. |
-| EF-09 | Alcanza los estándares de productividad definidos por el equipo. | 4 | Cumple el estándar; los ajustes finales consumen más tiempo del estimado. |
+| Código | Afirmación a evaluar                                             | Puntaje (1–5 o N/A) | Observaciones                                                             |
+| ------ | ---------------------------------------------------------------- | :-----------------: | ------------------------------------------------------------------------- |
+| EF-07  | Consigue los objetivos asignados.                                |          4          | Cumplió las pantallas planificadas para la fase.                          |
+| EF-08  | Puede manejar varias actividades a la vez.                       |          5          | Sostuvo varios módulos de UI en paralelo sin perder calidad.              |
+| EF-09  | Alcanza los estándares de productividad definidos por el equipo. |          4          | Cumple el estándar; los ajustes finales consumen más tiempo del estimado. |
 
 ## 5. Trabajo en equipo
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-10 | Sabe trabajar en equipo. | 5 | Integración fluida con backend y con el cliente. |
-| EF-11 | Ayuda a su equipo. | 5 | Apoyó con maquetas adicionales para la demo. |
-| EF-12 | Se desempeña bien con diferentes tipos de personas. | 5 | Muy buen trato con docentes y usuarios finales. |
-| EF-13 | Participa activamente en las reuniones de trabajo. | 5 | Aporta desde la perspectiva de experiencia de usuario. |
+| Código | Afirmación a evaluar                                | Puntaje (1–5 o N/A) | Observaciones                                          |
+| ------ | --------------------------------------------------- | :-----------------: | ------------------------------------------------------ |
+| EF-10  | Sabe trabajar en equipo.                            |          5          | Integración fluida con backend y con el cliente.       |
+| EF-11  | Ayuda a su equipo.                                  |          5          | Apoyó con maquetas adicionales para la demo.           |
+| EF-12  | Se desempeña bien con diferentes tipos de personas. |          5          | Muy buen trato con docentes y usuarios finales.        |
+| EF-13  | Participa activamente en las reuniones de trabajo.  |          5          | Aporta desde la perspectiva de experiencia de usuario. |
 
 ## 6. Comunicación
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-14 | Participa en las reuniones. | 5 | Presencia constante. |
-| EF-15 | Se explica de forma clara y fácil de entender. | 5 | Explica decisiones de diseño con claridad. |
-| EF-16 | Sabe escuchar. | 4 | Escucha observaciones, aunque a veces defiende su criterio antes de probar alternativas. |
-| EF-17 | Expone sus ideas de forma eficaz. | 4 | Presenta propuestas visuales bien fundamentadas. |
+| Código | Afirmación a evaluar                           | Puntaje (1–5 o N/A) | Observaciones                                                                            |
+| ------ | ---------------------------------------------- | :-----------------: | ---------------------------------------------------------------------------------------- |
+| EF-14  | Participa en las reuniones.                    |          5          | Presencia constante.                                                                     |
+| EF-15  | Se explica de forma clara y fácil de entender. |          5          | Explica decisiones de diseño con claridad.                                               |
+| EF-16  | Sabe escuchar.                                 |          4          | Escucha observaciones, aunque a veces defiende su criterio antes de probar alternativas. |
+| EF-17  | Expone sus ideas de forma eficaz.              |          4          | Presenta propuestas visuales bien fundamentadas.                                         |
 
 ## 7. Dirección de equipos de trabajo (solo PM y Asistente PM)
 
-| Código | Afirmación a evaluar | Puntaje (1–5 o N/A) | Observaciones |
-|---|---|:---:|---|
-| EF-18 | Transmite bien los objetivos a los integrantes del equipo. | N/A | No ejerce dirección de equipo. |
-| EF-19 | Comunica a todos en el proyecto el avance y éxito en el cumplimiento de objetivos. | N/A | No ejerce dirección de equipo. |
-| EF-20 | Demuestra dotes de liderazgo. | N/A | No ejerce dirección de equipo. |
-| EF-21 | Motiva al equipo para conseguir los objetivos. | N/A | No ejerce dirección de equipo. |
+| Código | Afirmación a evaluar                                                               | Puntaje (1–5 o N/A) | Observaciones                  |
+| ------ | ---------------------------------------------------------------------------------- | :-----------------: | ------------------------------ |
+| EF-18  | Transmite bien los objetivos a los integrantes del equipo.                         |         N/A         | No ejerce dirección de equipo. |
+| EF-19  | Comunica a todos en el proyecto el avance y éxito en el cumplimiento de objetivos. |         N/A         | No ejerce dirección de equipo. |
+| EF-20  | Demuestra dotes de liderazgo.                                                      |         N/A         | No ejerce dirección de equipo. |
+| EF-21  | Motiva al equipo para conseguir los objetivos.                                     |         N/A         | No ejerce dirección de equipo. |
 
 ## 8. Cálculo del resultado
 

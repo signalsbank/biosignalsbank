@@ -4,3 +4,4 @@
 - Evaluar la eficacia (asegurar)
 - Métricas y monitoreo
 - Anticiparse a un plan de mediciones para evaluar desviaciones
+- Actividades del EDT (rama elegida) en JIRA, TRELLO o similar

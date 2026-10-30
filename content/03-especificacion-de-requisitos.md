@@ -1,11 +1,12 @@
 ---
-project: Banco de Señales Biomédicas ("BioSignalsBank")
-version: 1
+project: BioSignal
+version: 2
 title: 3. Especificación de Requisitos
 aliases:
   - Especificación de Requisitos
 authors: Mateo Astudillo, Ignacio Ávila
 ---
+
 ## 1. Requisitos de Negocio
 
 Definen los objetivos estratégicos, la justificación institucional y el valor verificable que la solución entrega a la organización.
@@ -23,7 +24,7 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 | -------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Universidad (UNViMe)**         | **RI-01** | Disponer de un desarrollo tecnológico propio con impacto en la comunidad académica que sirva como modelo de extensión y docencia.                                                                                                                                                                                                  |
 | **GAB (Grupo de Bioingeniería)** | **RI-02** | Poder persistir y organizar las bioseñales recolectadas en hospitales e instituciones sanitarias asociadas.                                                                                                                                                                                                                        |
-| **Estudiantes (ECS / EMA)**      | **RI-03** | Inspeccionar y ejercitar el análisis de señales clínicas sin depender de programas de escritorio con licencias comerciales o instalaciones complejas.                                                                                                                                                                              |
+| **Estudiantes (ECS / EM)**       | **RI-03** | Inspeccionar y ejercitar el análisis de señales clínicas sin depender de programas de escritorio con licencias comerciales o instalaciones complejas.                                                                                                                                                                              |
 | **Docentes de Cátedra**          | **RI-04** | Contar con un repositorio ordenado de casos biomédicos con patologías clasificadas para formular actividades prácticas de evaluación y análisis.                                                                                                                                                                                   |
 | **Equipo de Desarrollo**         | **RI-05** | • **Desarrollo de competencias profesionales:** Aplicar ingeniería de software, seguridad de datos médicos y procesamiento digital de señales en un caso real.<br>• **Precedente académico vinculante:** Consolidar el proyecto como antecedente formal curricular, proyecto de extensión o base para trabajo final de graduación. |
 
@@ -34,17 +35,18 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 - **RF-01 (Control de Acceso Basado en Roles - RBAC):** El sistema debe proveer autenticación segura diferenciando dos perfiles: ^rf-01
 - **Administrador (GAB / Docentes designados):** Carga masiva de señales, edición y curaduría de metadatos, eliminación de archivos, gestión de usuarios y trazabilidad de eventos.
 - **Consultor (Estudiantes / Usuarios autorizados):** Exploración del catálogo, visualización interactiva multicanal, ajuste de escalas y exportación de datos autorizados.
+- **Criterios de sesión y de roles (única):** El sistema tiene exactamente dos perfiles (Administrador y Consultor); roles adicionales (Investigador Clínico, Auditor, Usuario Estándar) quedan fuera de alcance. No existe registro público ni recuperación autónoma de credenciales: las cuentas las crea el Administrador. La sesión se revoca al cerrar el navegador y se bloquea la cuenta tras 5 intentos fallidos (ver RNF-15).
 
 - **RF-02 (Cierre de Sesión por Inactividad):** Toda sesión autenticada con rol Administrador debe expirar automáticamente tras 30 minutos sin interacción. ^rf-02
-- **RF-03 (Acceso Público Demostrativo):** El sistema debe ofrecer una sección pública (sin credenciales) que permita visualizar una señal de demostración e incluya la vinculación institucional a las carreras de la UNViMe (soporte de RN-04). ^rf-03
+- **RF-03 (Acceso Público Demostrativo):** El sistema debe ofrecer una sección pública (sin credenciales) que permita visualizar una señal de demostración (**sintética o anonimizada**) e incluya la vinculación institucional a las carreras de la UNViMe (soporte de RN-04). ^rf-03
 
 ### 3.2. Ingesta, Anonimización y Gestión de Registros
 
 - **RF-04 (Soporte Estándar EDF/EDF+):** El sistema debe procesar la ingesta exclusiva de archivos bajo especificación `.edf` y `.edf+` (European Data Format). ^rf-04
 - **RF-05 (Validación Estructural de Cabecera):** El sistema debe validar que el archivo posea una cabecera binaria válida, comprobando número de señales, duración del registro de datos y especificaciones de transductores antes de confirmar la carga. ^rf-05
-- **RF-06 (Sanitización y Anonimización Binaria Obligatoria):** En el proceso de ingesta, el servidor debe sobrescribir o eliminar de manera definitiva e irreversible los campos de cabecera que contengan datos de identificación personal del paciente (nombre, documento, identificación local, fecha exacta de nacimiento), garantizando el cumplimiento de la Ley 25.326. ^rf-06
+- **RF-06 (Sanitización y Anonimización Irreversible):** Durante la ingesta, el servidor debe sobrescribir o eliminar de forma definitiva e irreversible los datos de identificación personal del paciente en: (a) la cabecera EDF/EDF+, incluidos nombre, documento, identificación local, fecha de nacimiento y cualquier campo que permita identificar al paciente; (b) los canales de anotaciones TAL de EDF+; y (c) los metadatos libres cargados por el administrador. Se conservarán únicamente datos clínicos agregados (por ejemplo, grupo etario) cuando no permitan reidentificación por combinación con patología, institución, equipo o fecha. El proceso debe ser verificado sobre el 100 % de los archivos y garantizar el cumplimiento de la Ley 25.326. ^rf-06
 - **RF-07 (Gestión de Metadatos Académicos):** El Administrador debe poder indexar y modificar la ficha técnica de cada estudio: tipo de señal (ECG, EEG, EMG), patología de referencia, grupo etario del paciente, equipamiento empleado y notas clínicas de orientación académica. ^rf-07
-- **RF-08 (Baja Lógica y Confirmación):** La eliminación de señales debe quedar restringida al Administrador, requiriendo doble confirmación en pantalla y registrándose en el log de auditoría. ^rf-08
+- **RF-08 (Baja Lógica y Confirmación):** La eliminación de señales debe quedar restringida al Administrador, requiriendo doble confirmación en pantalla y registrándose en el log de auditoría. La **restauración** posterior de registros dados de baja queda reservada al Administrador y también se registra en la auditoría (baja lógica sin restauración visible para el Consultor). ^rf-08
 
 ### 3.3. Visualización Gráfica Interactiva
 
@@ -56,7 +58,7 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 
 ### 3.4. Exportación y Descarga
 
-- **RF-14 (Descarga):** El sistema debe permitir descargar el archivo `.edf`. ^rf-14
+- **RF-14 (Descarga):** El sistema debe permitir descargar el archivo `.edf` **sanitizado (anonimizado), íntegro y trazable** (con hash verificable y registro de descargas en auditoría). La exportación a otros formatos (CSV, JSON, MATLAB) queda fuera de alcance; extendirla requiere RFC y actualización del Enunciado del Alcance. ^rf-14
 
 ## 4. Requisitos No Funcionales y Atributos de Calidad
 
@@ -64,6 +66,7 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 
 - **RNF-01 (Capacidad Concurrente):** El sistema debe mantener su operatividad sin degradación ante un máximo de **100 usuarios concurrentes** visualizando señales simultáneamente. ^rnf-01
 - **RNF-02 (Tiempo de Respuesta en Visualización):** El tiempo transcurrido desde que un usuario solicita una señal hasta que el primer segmento interactivo se despliega en pantalla no debe exceder los **2,5 segundos** en redes con ancho de banda ≥ 10 Mbps. ^rnf-02
+- **Método de medición:** se define la métrica **TTIS** (_Time to Interactive Segment_), medida con `PerformanceObserver` sobre el primer frame interactivo del canvas. LCP se conserva como referencia de experiencia web, pero no reemplaza la medición del primer segmento interactivo de la señal. Criterio: **TTIS ≤ 2,5 s** en red ≥ 10 Mbps (validación con Lighthouse y DevTools por release).
 - **RNF-03 (Fluidez de Renderizado):** Las acciones interactivas de paneo y zoom deben sostener una tasa de refresco mínima de **30 cuadros por segundo (FPS)**. ^rnf-03
 - **RNF-04 (Tiempo de Procesamiento de Ingesta):** Para archivos EDF convencionales (menores a 50 MB), el tiempo de validación estructural, sanitización y persistencia no debe superar los **30 segundos**. ^rnf-04
 
@@ -76,19 +79,30 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 
 - **RNF-07 (Compatibilidad de Navegadores):** La plataforma debe funcionar sin fallas ni plugins adicionales en las dos versiones estables más recientes de los navegadores basados en Chromium (Google Chrome, Microsoft Edge, Brave), Gecko (Mozilla Firefox) y WebKit (Apple Safari). ^rnf-07
 - **RNF-08 (Adaptabilidad a Dispositivos):** ^rnf-08
-	- **Escritorio y Portátiles (ancho de pantalla ≥ 1024 px):** Modo completo multicanal con visualización simultánea de hasta 32 canales.
-	- **Dispositivos Móviles (smartphones y tablets con pantallas < 768 px):** Interfaz adaptativa que restrinja por defecto la vista a 1 o 2 canales seleccionados por el usuario, evitando sobrecarga de memoria gráfica y optimizando el espacio visual táctil.
+  - **Escritorio y Portátiles (ancho de pantalla ≥ 1024 px):** Modo completo multicanal con visualización simultánea de hasta 32 canales.
+  - **Dispositivos Móviles (smartphones y tablets con pantallas < 768 px):** Interfaz adaptativa que restrinja por defecto la vista a 1 o 2 canales seleccionados por el usuario, evitando sobrecarga de memoria gráfica y optimizando el espacio visual táctil.
 
 ### 4.4. Usabilidad
 
 - **RNF-09 (Facilidad de Aprendizaje):** Un estudiante sin formación previa en la plataforma debe ser capaz de buscar, abrir y configurar la visualización de una señal en un tiempo menor a 5 minutos. ^rnf-09
 
+### 4.5. Disponibilidad, Respaldo, Accesibilidad, Auditoría, Mantenibilidad y Seguridad (RNF adicionales)
+
+| ID         | Requisito                  | Métrica / Criterio                                                                      | Verificación                 |
+| :--------- | :------------------------- | :-------------------------------------------------------------------------------------- | :--------------------------- |
+| **RNF-10** | Disponibilidad             | ≥ 99,9 % mensual en producción                                                          | Monitoreo de uptime          |
+| **RNF-11** | Respaldo y recuperación    | Backup diario; RTO ≤ 4 h; RPO ≤ 24 h; restore probado                                   | Prueba de restore            |
+| **RNF-12** | Accesibilidad              | WCAG 2.1 AA; navegación por teclado; contraste; lector de pantalla                      | Auditoría + pruebas manuales |
+| **RNF-13** | Auditabilidad              | 100 % de altas, bajas, ediciones y descargas con usuario, fecha, acción y resultado     | Inspección de logs           |
+| **RNF-14** | Mantenibilidad             | Cobertura > 80 % en lógica crítica; complejidad ciclomática ≤ 10; lint/tipado limpio    | CI + reporte                 |
+| **RNF-15** | Seguridad de autenticación | Rate limiting; bloqueo tras 5 intentos; política de contraseñas; sesión Admin de 30 min | Pruebas de seguridad         |
+
 ## 5. Requisitos de Transición y Preparación Operativa
 
-| ID ^rt    | Requisito                                | Criterio de Aceptación                                                                                                   |
-| --------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **RT-01** | **Dataset Semilla**                      | Carga y verificación previa de al menos **30 registros EDF** (ej. 15 registros de ECG y 15 registros de EEG multicanal). |
-| **RT-02** | **Despliegue en Servidor de Producción** | Puesta en marcha en los servidores asignados por la UNViMe.                                                              |
+| ID ^rt    | Requisito                                | Criterio de Aceptación                                                                                                   | Dueño                 | Fecha Objetivo       |
+| --------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | :-------------------- | :------------------- |
+| **RT-01** | **Dataset Semilla**                      | Carga y verificación previa de al menos **30 registros EDF** (ej. 15 registros de ECG y 15 registros de EEG multicanal). | GAB (con QA)          | 15/01/2027 (Hito H4) |
+| **RT-02** | **Despliegue en Servidor de Producción** | Puesta en marcha en los servidores asignados por la UNViMe.                                                              | Infra / Dirección TIC | 12/02/2027 (Hito H7) |
 
 ## 6. Requisitos y Restricciones del Proyecto
 
@@ -109,3 +123,10 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 - Un archivo `.edf` completo puede pesar entre 10 MB y más de 100 MB. Descargar y parsear el archivo completo antes de graficar causaría bloqueos de red y memoria.
 - Técnicamente, la cabecera ocupa únicamente entre **2 KB y 4 KB**, y para la primera pantalla solo se requiere un bloque inicial de pocos segundos de señal (menos de 200 KB de datos numéricos).
 - Con una conexión estándar (10 Mbps), la transferencia del bloque inicial demora menos de 200 ms y el renderizado gráfico por hardware en el cliente insume menos de 400 ms. Por consiguiente, **2,5 segundos es un umbral técnicamente alcanzable, robusto y profesional**, que contempla incluso la latencia de red bajo carga de 100 usuarios simultáneos.
+
+## 8. Registro de Cambios
+
+| Versión | Fecha      | Cambio                                                                                                                                                                                                                                                                | Responsable | Estado    |
+| :------ | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :-------- |
+| v1      | —          | Versión inicial                                                                                                                                                                                                                                                       | PM          | Histórico |
+| v2.0    | 29/10/2026 | RF-06 ampliada a TALs y metadatos; criterios de sesión y 2 roles en RF-01; RF-08 con restauración por Administrador; RF-14 exige archivo sanitizado; señal demo sintética/anonimizada (RF-03); añadidos RNF-10 a RNF-15 y métrica TTIS; RT con dueño y fecha objetivo | QA + PM     | Aprobado  |

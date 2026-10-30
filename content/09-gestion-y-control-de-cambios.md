@@ -1,6 +1,6 @@
 ---
-project: Banco de Señales Biomédicas ("BioSignalsBank")
-version: 1
+project: BioSignal
+version: 1.1
 title: 9. Plan de Gestión de la Configuración y Control de Cambios
 aliases: Plan de Gestión de la Configuración y Control de Cambios
 ---
@@ -22,8 +22,8 @@ Los objetivos principales de este plan son:
 
 El Plan de Gestión de la Configuración abarca la totalidad del ciclo de vida del proyecto BioSignal e identifica cuatro grandes categorías de Elementos de Configuración (CIs):
 
-- **CI-DOC (Documentación Procesal y de Proyecto):** Actas, pliegos, especificaciones en formato `.md`, manuales, EDT y matriz de trazabilidad.
-- **CI-CODE (Código Fuente y Scripts):** Repositorios de Frontend (React/TypeScript), Backend (Node.js/Python), pipelines de CI/CD y scripts de despliegue.
+- **CI-DOC (Documentación Procesal y de Proyecto):** Actas, pliegos, especificaciones en formato `.md`, EDT y matriz de trazabilidad. (Los manuales de usuario están fuera de alcance del proyecto; si se los incorpora, se lo tramita por RFC.)
+- **CI-CODE (Código Fuente y Scripts):** Repositorios de Frontend (**Next.js / React + TypeScript** — stack canónico) y Backend (**FastAPI / Python** — stack canónico), pipelines de CI/CD y scripts de despliegue. La base de datos es PostgreSQL (ver CI-DATA).
 - **CI-DATA (Estructura de Base de Datos):** Modelo relacional PostgreSQL, archivos DDL, funciones almacenadas, vistas y scripts de migración/rollback.
 - **CI-UI (Interfaz de Usuario y UX):** Prototipos gráficos, maquetas en Figma, kits de componentes visuales y hojas de estilo.
 
@@ -40,7 +40,19 @@ El control de cambios se organiza mediante niveles de responsabilidad para evita
 | **Líder de Infraestructura y Base de Datos**       | Chiecher, Eber B.                                               | Aprobación y ejecución de migraciones DDL, scripts de rollback y gestión de ambientes de servidor.                               |
 | **Líder de Frontend y UI/UX**                      | Pereyra, Rocío / Mosainer, Martín D.                            | Versionado de prototipos Figma, revisión de maquetado adaptativo y cumplimiento de guías de estilo visual.                       |
 
-### 1.4. Flujo Operativo del Control Integrado de Cambios
+### 1.4. Gobernanza del Comité de Control de Cambios (CCB)
+
+| Elemento                    | Definición                                                                                                                             |
+| :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
+| **Miembros**                | PM (preside), Asistente del PM, QA, Infraestructura; **Sponsor participa cuando el cambio afecta alcance, plazo, costo o beneficios**. |
+| **Quórum**                  | 3 miembros, incluido el PM.                                                                                                            |
+| **Dictámenes posibles**     | Aprobado / Rechazado / Aplazado / Aprobado con condiciones.                                                                            |
+| **Plazo de decisión (SLA)** | 48 h hábiles para cambios normales; 24 h para cambios de emergencia.                                                                   |
+| **Ruta de emergencia**      | Pueden aprobar PM + QA + Infra; la decisión se **ratifica ante el CCB dentro de las 48 h** siguientes y se documenta en el Change Log. |
+| **Evaluación de impacto**   | Alcance, cronograma, costo, calidad, riesgo, beneficios, interesados y legal/privacidad.                                               |
+| **Registro**                | Toda decisión se asienta en el Change Log con RFC, versión resultante y estado.                                                        |
+
+### 1.5. Flujo Operativo del Control Integrado de Cambios
 
 Todo cambio en el proyecto debe seguir el siguiente circuito secuencial:
 
@@ -66,13 +78,12 @@ Todo cambio en el proyecto debe seguir el siguiente circuito secuencial:
 [7. Publicación en Producción y Actualización del Change Log]
 ```
 
----
-
 ## 2. Control de Cambios Documental y Procesal
 
 ### 2.1. Alcance de la Documentación
 
 Esto comprende todos los documentos vivos del proyecto y para los documentos estáticos (como el acta de constitución) se requiere una reunión directa con el patrocinador del proyecto y una aprobación con los integrantes del proyecto.
+
 ### 2.2. Roles y Flujo de Aprobación Documental
 
 1. **Elaboración:** El integrante responsable redacta la modificación propuesta sobre el archivo `.md`.
@@ -82,7 +93,7 @@ Esto comprende todos los documentos vivos del proyecto y para los documentos est
 
 ### 2.3. Criterio de Publicación y Vigencia
 
-- **Regla de Oro Documental:** La única versión válida y vigente de un documento o instructivo es aquella que se encuentra oficialmente publicada en el repositorio central del proyecto (`/workspace/knowledge/` o la rama `main` del repositorio de documentación).
+- **Regla de Oro Documental:** La única versión válida y vigente de un documento o instructivo es aquella que se encuentra oficialmente publicada en el repositorio central del proyecto (carpeta `content/` del repositorio, publicada mediante Quartz; o la rama `main` del repositorio de documentación).
 - Al publicarse una versión nueva (ej. `v2.0`), las versiones anteriores quedan automáticamente derogadas pero se conservan archivadas en el historial de Git a fines de auditoría.
 
 ### 2.4. Nomenclatura y Regla de Versionado Documental
@@ -92,8 +103,6 @@ Los documentos utilizan versionado numérico explícito en el encabezado y en el
 - **Versiones Borrador / En Revisión:** `v0.1`, `v0.2`, `v0.9` (cambios internos de redacción).
 - **Versiones Oficiales / Aprobadas:** `v1.0`, `v2.0` (versión formalmente aprobada por el PM).
 - **Versiones de Corrección Menor:** `v1.1`, `v1.2` (ajustes tipográficos, ortográficos o aclaraciones menores sin cambio de alcance).
-
----
 
 ## 3. Seguimiento, Control y Versionado de Código Fuente
 
@@ -124,7 +133,7 @@ Se adopta una adaptación de _GitFlow_ simplificado para garantizar la estabilid
 
 - **Prohibición de Merge Directo:** Queda estrictamente prohibido realizar _push_ o _merge_ directo sobre las ramas `main` y `develop`.
 - **Mecanismo de Pull Request (PR):** Todo desarrollador debe abrir una PR desde su rama `feature/*` hacia `develop`.
-- **Revisión por Tercero:** Ningún integrante puede aprobar su propio código. Toda PR requiere obligatoriamente la revisión y aprobación escrita de al menos un revisor asignado (**Germán Herrera** en Backend/QA o **Martín Mosainer** en Full-Stack).
+- **Revisión por Tercero:** Ningún integrante puede aprobar su propio código. Toda PR requiere obligatoriamente la revisión y aprobación escrita de al menos un integrante diferente al autor, tomado del **pool de revisores** de Backend/Full-stack/Infra (**Germán Herrera**, **Martín Mosainer** o **Eber Chiecher**). Si el autor es uno de ellos, la revisión la realiza otro distinto; **ninguna persona aprueba su propio trabajo**, y la aprobación final de QA la firma el PM.
 - **Criterios de Aceptación de la PR:** Cobertura de pruebas unitarias aprobadas, ausencia de secretos/claves hardcodeadas y paso limpio del pipeline de CI/CD.
 
 ### 3.4. Versionado Semántico y Promoción de Releases
@@ -135,8 +144,6 @@ El código fuente aplica **Semantic Versioning (SemVer - `MAJOR.MINOR.PATCH`)**:
 - **`MINOR` (Ej. 1.1.0):** Incorporación de nueva funcionalidad compatible hacia atrás (ej. nuevo módulo de catálogo).
 - **`PATCH` (Ej. 1.1.1):** Corrección de errores o parches de seguridad.
 
----
-
 ## 4. Control de Cambios en la Base de Datos
 
 ### 4.1. Alcance del Control en la Capa de Datos
@@ -145,7 +152,7 @@ Abarca el modelo relacional implementado en PostgreSQL (tablas, columnas, claves
 
 ### 4.2. Herramientas de Migración de Esquemas
 
-No se permiten modificaciones manuales ejecutas directamente por consola SQL en la base de datos de producción o pruebas. Todo cambio debe gestionarse mediante **Scripts de Migración Versionados** integrados con el ORM/herramienta de persistencia.
+No se permiten modificaciones manuales ejecutadas directamente por consola SQL en la base de datos de producción o pruebas. Todo cambio debe gestionarse mediante **Scripts de Migración Versionados** integrados con el ORM/herramienta de persistencia.
 
 ### 4.3. Regla Obligatoria de Pares: Migración + Rollback
 
@@ -160,8 +167,6 @@ Todo archivo de cambio de estructura DDL debe ir acompañado de manera indivisib
 2. **Verificación de Impacto:** Se evalúa si el cambio destruye datos existentes o requiere un script intermedio de transformación/migración de datos.
 3. **Ejecución en Staging:** Se aplica la migración en el entorno de pruebas antes de autorizar el pase a producción.
 4. **Respaldo Pre-Despliegue:** Antes de ejecutar una migración en producción, la Dirección de TIC o el líder de infraestructura ejecuta un _dump/backup_ preventivo de la base de datos.
-
----
 
 ## 5. Control de Cambios en la Interfaz de Usuario (UI/UX)
 
@@ -187,21 +192,26 @@ Antes de que una modificación de diseño sea enviada a desarrollo frontend (**R
 
 ### 5.4. Trazabilidad con el Backlog (ver herramienta)
 
-Todo cambio visual en la interfaz debe estar vinculado al ID de la historia de usuario correspondiente en (alguna herramienta) (ej. `BIOSIG-45: Ajuste de escala de amplitud en Canvas`), impidiendo rediseños estéticos que no estén presupuestados en el Sprint.
-
----
+Todo cambio visual en la interfaz debe estar vinculado al ID de la historia de usuario correspondiente en **GitHub Projects** (issues `BIOSIG-xx`; ej. `BIOSIG-45: Ajuste de escala de amplitud en Canvas`), impidiendo rediseños estéticos que no estén presupuestados en la iteración.
 
 ## 6. Registro de Cambios (_Change Log_) y Auditoría
 
 ### 6.1. Plantilla del Registro de Cambios del Proyecto (_Change Log_)
 
-Toda solicitud de cambio aprobada o rechazada se asienta en la **Matriz Consolidada de Control de Cambios**:
+Toda solicitud de cambio aprobada o rechazada se asienta en la **Matriz Consolidada de Control de Cambios** (plantilla de RFC: solicita, elemento de configuración, descripción, impacto en alcance/cronograma/costo/calidad/riesgo/beneficios/interesados/legal, dictamen CCB, versión resultante y evidencia de verificación):
 
-|  ID Cambio  | Fecha Solicitud | Elemento Afectado (CI)                  | Descripción del Cambio Solicitado                        | Solicitante   | Revisor Técnico / Legal    |           Dictamen CCB           | Versión Resultante |    Estado    |
-| :---------: | :-------------: | :-------------------------------------- | :------------------------------------------------------- | :------------ | :------------------------- | :------------------------------: | :----------------: | :----------: |
-| **RFC-001** |   05/10/2026    | `CI-DOC-02` (Especificación Requisitos) | Ajuste en RNF-02 de latencia LCP de 10s a ≤ 2,5s.        | Astudillo, M. | Ávila Gelbes, I.           |           **Aprobado**           |       `v2.0`       | Implementado |
-| **RFC-002** |   12/10/2026    | `CI-CODE` (Backend Ingesta)             | Incorporación de parser secundario para formato .MAT.    | Colaborador   | Herrera, G. / Chiecher, E. | **Rechazado** (Fuera de alcance) |        N/A         |   Cerrado    |
-| **RFC-003** |   18/10/2026    | `CI-DATA` (PostgreSQL)                  | Agregado de tabla `auditoria_descargas` para Ley 25.326. | Chiecher, E.  | Equipo PM / Legal          |           **Aprobado**           |      `v1.2.0`      |    En QA     |
+|  ID Cambio  | Fecha Solicitud | Elemento Afectado (CI)                                | Descripción del Cambio Solicitado                                                                                                                                                                                                         | Solicitante      | Revisor Técnico / Legal    |           Dictamen CCB           | Versión Resultante |      Estado       |
+| :---------: | :-------------: | :---------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------- | :------------------------- | :------------------------------: | :----------------: | :---------------: |
+| **RFC-001** |   05/10/2026    | `CI-DOC-02` (Especificación Requisitos)               | Ajuste en RNF-02 de latencia LCP de 10s a ≤ 2,5s.                                                                                                                                                                                         | Astudillo, M.    | Ávila Gelbes, I.           |           **Aprobado**           |       `v2.0`       |   Implementado    |
+| **RFC-002** |   12/10/2026    | `CI-CODE` (Backend Ingesta)                           | Incorporación de parser secundario para formato .MAT.                                                                                                                                                                                     | Colaborador      | Herrera, G. / Chiecher, E. | **Rechazado** (Fuera de alcance) |        N/A         |      Cerrado      |
+| **RFC-003** |   18/10/2026    | `CI-DATA` (PostgreSQL)                                | Agregado de tabla `auditoria_descargas` para Ley 25.326.                                                                                                                                                                                  | Chiecher, E.     | Equipo PM / Legal          |           **Aprobado**           |      `v1.2.0`      |       En QA       |
+| **RFC-004** |   29/10/2026    | `CI-DOC-02` (Acta)                                    | Rebaselineo del Acta: nombre canónico BioSignal, objetivos O-01…O-07, entregables EP/EJ, hitos H1–H7 (Opción A), presupuesto caja/esfuerzo                                                                                                | Astudillo, M.    | Ávila Gelbes, I.           |          **Propuesto**           |       `v2.0`       | Pendiente Sponsor |
+| **RFC-005** |   29/10/2026    | `CI-DOC` (Alcance, ERS, EDT, Diccionario, RTM)        | Alineación de alcance: fuera del MVP registro/recuperación de credenciales, roles extra, calibradores y export CSV/JSON/MAT; métricas 30 FPS y < 50 MB/≤ 30 s; solo EDF/EDF+; RBAC → 1.3.1.2; 1.2.3 completado; PERT corregido; RNF-10…15 | Astudillo, M.    | Herrera, G.                |          **Propuesto**           |       `v2.0`       |   Pendiente CCB   |
+| **RFC-006** |   29/10/2026    | `CI-DOC` (nuevos)                                     | Plan integrador, registro de tailoring, caso de negocio y registro de beneficios (nuevos artefactos)                                                                                                                                      | Astudillo, M.    | Equipo PM                  |          **Propuesto**           |       `v1.0`       |   Pendiente CCB   |
+| **RFC-007** |   29/10/2026    | `CI-DOC` (Interesados, Comunicaciones)                | Registro de interesados con niveles PMBOK 7 (actual/deseado) y plan de comunicaciones ampliado                                                                                                                                            | Ávila Gelbes, I. | Equipo PM                  |          **Propuesto**           |       `v1.1`       |   Pendiente CCB   |
+| **RFC-008** |   29/10/2026    | `CI-DOC` (Calidad, Riesgos, ERS)                      | Integrar plan/métricas de calidad a PMBOK 7; apetito y registro de riesgos; RNF-10…15                                                                                                                                                     | Herrera, G.      | Equipo PM                  |          **Propuesto**           |       `v1.1`       |   Pendiente CCB   |
+| **RFC-009** |   29/10/2026    | `CI-DOC` (Competencias)                               | Separar catálogo de competencias del RACI; clarificar uso como anexo                                                                                                                                                                      | Ávila Gelbes, I. | Equipo PM                  |          **Propuesto**           |       `v1.1`       |   Pendiente CCB   |
+| **RFC-010** |   29/10/2026    | `CI-DOC` / `CI-CODE` (SCM, Índice, borrador de ramas) | SCM consolidado: stack canónico, ruta `content/`, pool de revisores, gobernanza CCB, RFC-004…010, modelo de ramas unificado e índice sin borradores                                                                                       | Astudillo, M.    | Chiecher, E.               |          **Propuesto**           |       `v1.1`       |   Pendiente CCB   |
 
 ### 6.2. Auditorías de Configuración
 
@@ -210,4 +220,9 @@ Al finalizar cada hito del proyecto, el Asistente del PM y el equipo de QA reali
 - Todos los entregables desplegados coinciden exactamente con la versión aprobada en el Change Log.
 - Ningún componente de software o tabla de base de datos fue modificado al margen del proceso formal.
 
----
+## 7. Registro de Cambios de este Documento
+
+| Versión | Fecha      | Cambio                                                                                                                                                                                 | Responsable | Estado                    |
+| :------ | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :------------------------ |
+| v1      | —          | Versión inicial                                                                                                                                                                        | PM          | Histórico                 |
+| v1.1    | 29/10/2026 | Stack canónico fijado (Next.js/FastAPI/PostgreSQL); ruta documental `content/`; pool de revisores con independencia; gobernanza del CCB; nota de rebaselineo y RFC-004…010 registradas | PM          | Propuesto (pendiente CCB) |
