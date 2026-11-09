@@ -12,6 +12,9 @@ configuration:
     - .obsidian
     - "borradores"
     - "borradores/**"
+    - "consignas"
+    - "consignas/**"
+    - "00-contexto-del-proyecto.md"
   theme:
     fontOrigin: googleFonts
     cdnCaching: true

@@ -7,6 +7,21 @@ aliases: Matriz de Competencias
 
 > **Nota de uso:** este documento es un **catálogo (anexo) de perfiles, funciones y competencias**; **no constituye una matriz RACI** y no puede sustituirla. La asignación de responsabilidad por entregable/paquete (quién ejecuta **R**, aprueba **A**, es consultado **C** e informado **I**) se gestiona en la matriz RACI del plan integrador, con los 8 roles mapeados a las 6 personas del equipo y QA independiente del autor del código.
 
+## Matriz resumen de competencias
+
+| Rol                 | Persona asignada                | Educación                                                                      | Formación                                    | Habilidades                                                 | Experiencia                                                       |
+| :------------------ | :------------------------------ | :----------------------------------------------------------------------------- | :------------------------------------------- | :---------------------------------------------------------- | :---------------------------------------------------------------- |
+| **Diseñador UX/UI** | Rocío Pereyra                   | Formación terciaria/universitaria en diseño, comunicación visual o equivalente | Curso de UX/UI, Figma y accesibilidad WCAG   | Pensamiento visual, empatía, comunicación                   | +1 año en proyectos web; deseable visualización de datos          |
+| **Frontend**        | Rocío Pereyra / Martín Mosainer | Estudiante avanzado o graduado en sistemas, computación o equivalente          | Next.js/React, TypeScript, Canvas/WebGL      | Optimización, resolución de problemas, trabajo colaborativo | +2 años en frontend; deseable gráficos o datos en tiempo real     |
+| **Backend**         | Germán Herrera / Eber Chiecher  | Estudiante avanzado o graduado en sistemas, computación o equivalente          | FastAPI/Python, PostgreSQL y seguridad web   | Lógica, diseño de API, trabajo colaborativo                 | +2 años en backend; deseable datos biomédicos o archivos binarios |
+| **DBA**             | Eber Chiecher                   | Formación afín + base de datos                                                 | PostgreSQL, modelado, backup/restore         | Análisis, rigurosidad, comunicación                         | +3 años en administración o diseño de bases de datos              |
+| **DevOps**          | Eber Chiecher                   | Formación afín + infraestructura                                               | Docker, CI/CD, Linux, TLS                    | Resolución de problemas, proactividad                       | +1 año en despliegue y administración de servidores               |
+| **PM**              | Mateo Astudillo                 | Estudiante avanzado o graduado en ingeniería/sistemas                          | PMBOK 7, riesgos y EVM                       | Liderazgo, negociación, comunicación                        | +3 años en gestión de proyectos de software                       |
+| **APM**             | Ignacio Ávila                   | Estudiante avanzado o graduado en ingeniería/sistemas                          | Gestión documental, Scrum y seguimiento      | Organización, comunicación escrita                          | No excluyente; proyectos académicos o de software                 |
+| **QA**              | Germán Herrera                  | Estudiante avanzado o graduado en sistemas, computación o equivalente          | Testing automatizado, Playwright, k6 y OWASP | Atención al detalle, pensamiento analítico                  | +1 año en testing de aplicaciones web                             |
+
+> Los roles se comparten por tratarse de un equipo de 6 personas: una misma persona puede cubrir más de un rol. La asignación es la utilizada en este proyecto y debe validarse con el equipo al inicio de cada fase.
+
 ## 1. Diseñador UX/UI
 
 - **Objetivo:** Diseñar una interfaz clara y autoexplicativa que permita a un usuario sin formación previa buscar, abrir y configurar una señal en menos de 5 minutos.
@@ -39,7 +54,7 @@ aliases: Matriz de Competencias
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - _Conocimientos:_ HTML5, CSS, JavaScript/TypeScript, framework: nextjs, Canvas/WebGL, Git.
+  - _Conocimientos:_ HTML5, CSS, JavaScript/TypeScript, framework: Next.js, Canvas/WebGL, Git.
   - _Habilidades:_ Optimización de rendimiento, resolución de problemas, trabajo colaborativo.
   - _Experiencia:_ +2 años en desarrollo frontend, no excluyente: con gráficos o datos en tiempo real.
 
@@ -59,7 +74,7 @@ aliases: Matriz de Competencias
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - _Conocimientos:_ Lenguaje y framework: FastApi con python, APIs REST, autenticación/sesiones, seguridad web, formato EDF, Git.
+  - _Conocimientos:_ Lenguaje y framework: FastAPI con Python, APIs REST, autenticación/sesiones, seguridad web, formato EDF, Git.
   - _Habilidades:_ Lógica, trabajo colaborativo.
   - _Experiencia:_ +2 años en backend; no excluyente: datos biomédicos o archivos binarios.
 
@@ -97,7 +112,7 @@ aliases: Matriz de Competencias
 - **Requisitos:**
   - _Conocimientos:_ Linux, Docker, CI/CD, Git, redes, HTTPS/TLS, herramientas open source de monitoreo.
   - _Habilidades:_ Resolución de problemas, proactividad, comunicación interinstitucional.
-  - _Experiencia:_ +1 años en despliegue y administración de servidores.
+  - _Experiencia:_ +1 año en despliegue y administración de servidores.
 
 ## 6. PM (Project Manager)
 
@@ -154,4 +169,19 @@ aliases: Matriz de Competencias
 - **Requisitos:**
   - _Conocimientos:_ Técnicas de testing, pruebas de carga, DevTools, automatización de pruebas.
   - _Habilidades:_ Atención al detalle, pensamiento analítico, comunicación clara de defectos.
-  - _Experiencia:_ +1 años en testing de aplicaciones web.
+  - _Experiencia:_ +1 año en testing de aplicaciones web.
+
+## Plan de Mejora de Competencias
+
+Las brechas se detectan con la matriz anterior y con las evaluaciones de desempeño (documento 13). Cada acción tiene un indicador verificable y se revisa en el siguiente hito o en la próxima evaluación 360°.
+
+| Brecha detectada                                                                       | Acción de mejora                                                                | Tipo                   | Responsable   | Plazo      | Indicador de eficacia                                      |
+| :------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------ | :--------------------- | :------------ | :--------- | :--------------------------------------------------------- |
+| Germán: demoras en respuestas y revisiones; dificultad para equilibrar desarrollo y QA | Tutoría de priorización y acuerdo interno de revisión en ≤ 48 h                 | Tutoría                | PM + Germán   | 31/12/2026 | 100 % de PR revisadas en ≤ 48 h; próximo RDS ≥ 4,0         |
+| Rocío: autonomía limitada en decisiones de UI                                          | Asignarle un módulo completo con mentoría de UX y revisión semanal              | Tutoría / reasignación | PM + Rocío    | 31/01/2027 | 0 bloqueos por consultas evitables; RDS de autonomía ≥ 4,0 |
+| Eber: documentación previa insuficiente en cambios de esquema                          | Usar plantilla de migración y avisar cambios con 48 h de anticipación           | Capacitación           | Eber + PM     | 31/12/2026 | 100 % de migraciones con up/down y aviso previo registrado |
+| PM: informes de riesgos con poco detalle                                               | Incorporar plantilla mensual de riesgos y dependencias con estado y responsable | Tutoría                | PM + APM      | 30/11/2026 | 100 % de informes con riesgos, dependencias y dueño        |
+| Equipo: cobertura irregular de pruebas de integración                                  | Taller corto de pytest/Testcontainers y revisión en PR                          | Capacitación           | Germán + Eber | 31/01/2027 | Cobertura > 80 % en lógica crítica y 0 fallas en CI        |
+| Equipo: documentación desigual entre áreas                                             | Guía única de documentación y chequeo en la Definition of Done                  | Formación interna      | APM           | 31/12/2026 | 100 % de PR con documentación actualizada                  |
+
+**Evaluación de eficacia:** al cierre de cada fase, el PM y el APM comparan el indicador con la línea base. Si la acción no alcanza el umbral, se ajusta (otra tutoría, reasignación o capacitación adicional). Si lo alcanza, la brecha se cierra y se deja registro en la ficha del integrante.

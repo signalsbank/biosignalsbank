@@ -27,6 +27,20 @@ El Plan de Gestión de la Configuración abarca la totalidad del ciclo de vida d
 - **CI-DATA (Estructura de Base de Datos):** Modelo relacional PostgreSQL, archivos DDL, funciones almacenadas, vistas y scripts de migración/rollback.
 - **CI-UI (Interfaz de Usuario y UX):** Prototipos gráficos, maquetas en Figma, kits de componentes visuales y hojas de estilo.
 
+#### 1.2.1. Identificación de los Elementos de Configuración
+
+| ID             | Elemento                             |
+| :------------- | :----------------------------------- |
+| **CI-DOC-01**  | Acta de Constitución                 |
+| **CI-DOC-02**  | Especificación de Requisitos (ERS)   |
+| **CI-DOC-03**  | Enunciado del Alcance                |
+| **CI-DOC-04**  | EDT y Diccionario                    |
+| **CI-DOC-05**  | Matriz de Trazabilidad               |
+| **CI-CODE-01** | Repositorio backend                  |
+| **CI-CODE-02** | Repositorio frontend                 |
+| **CI-DATA-01** | Esquema y migraciones PostgreSQL     |
+| **CI-UI-01**   | Archivo Figma y componentes visuales |
+
 ### 1.3. Matriz de Roles y Niveles de Autorización
 
 El control de cambios se organiza mediante niveles de responsabilidad para evitar decisiones unilaterales:
@@ -56,27 +70,32 @@ El control de cambios se organiza mediante niveles de responsabilidad para evita
 
 Todo cambio en el proyecto debe seguir el siguiente circuito secuencial:
 
+```mermaid
+flowchart TD
+    A[Solicitante registra RFC<br/>GitHub Issue o correo al APM] --> B[APM valida datos y asigna el CI]
+    B --> C[PM / dueño del proceso / experto evalúa impacto]
+    C --> D{Decisión del CCB}
+    D -->|Aprueba| E[Implementación en rama o migración]
+    D -->|Aprueba con condiciones| E
+    D -->|Rechaza| F[Notifica el motivo y cierra como rechazado]
+    D -->|Aplaza| G[Reprograma, notifica y mantiene abierto]
+    E --> H[QA / revisión cruzada verifica]
+    H -->|No cumple| E
+    H -->|Cumple| I[Publica la versión, actualiza el Change Log y cierra]
+    D -.->|Emergencia: PM + QA + Infra| E
 ```
-[1. Identificación y Solicitud de Cambio]
-       │
-       ▼
-[2. Evaluación de Impacto Técnico, Costo y Tiempo]
-       │
-       ▼
-[3. Revisión por el Dueño del Proceso / Experto Técnico]
-       │
-       ▼
-[4. Dictamen del Comité (Aprobado / Rechazado / Aplazado)]
-       │
-       ▼
-[5. Implementación en Entorno de Pruebas]
-       │
-       ▼
-[6. Verificación de QA / Inspección Cruzada]
-       │
-       ▼
-[7. Publicación en Producción y Actualización del Change Log]
-```
+
+### 1.6. Reglas del RFC
+
+| Regla                       | Definición                                                                                                                                                                                    |
+| :-------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Quién solicita**          | Cualquier integrante del equipo, el sponsor o un interesado. Los externos lo envían al APM, que lo registra.                                                                                  |
+| **Cómo se registra**        | GitHub Issue con prefijo `RFC-xxx` o, si no hay acceso, correo al APM con los datos mínimos.                                                                                                  |
+| **Contenido mínimo**        | ID, fecha, solicitante, elemento de configuración (CI), descripción, motivo, impacto esperado, urgencia y adjuntos.                                                                           |
+| **Quién analiza**           | PM/APM, dueño del proceso y revisor técnico o legal según el CI afectado. Evalúan alcance, tiempo, costo, calidad, riesgo y legalidad.                                                        |
+| **Quién decide**            | El CCB. Dictámenes: aprobado, rechazado, aplazado o aprobado con condiciones. La emergencia se ratifica en 48 h.                                                                              |
+| **Cómo se comunica**        | Respuesta en el Issue, comunicación en la reunión semanal y registro en el Change Log. Si afecta la línea base, se informa al sponsor.                                                        |
+| **Implementación y cierre** | Se implementa en rama o migración, se verifica con QA y revisión cruzada, se publica la versión y se actualiza el Change Log. El cambio queda **Cerrado** solo con evidencia de verificación. |
 
 ## 2. Control de Cambios Documental y Procesal
 
@@ -115,26 +134,30 @@ El código fuente de BioSignal se gestiona en repositorios Git centralizados baj
 Se adopta una adaptación de _GitFlow_ simplificado para garantizar la estabilidad de los entornos:
 
 ```
-[main]      ───●─────────────────────────●───────────── (Producción estable)
-               │                         ▲
-[develop]   ───┼───────●─────────●───────┤             (Integración / Staging)
-               │       ▲         ▲       │
-[feature/*] ───┴───●───┘         │       │             (Desarrollo funcional)
-                                 │       │
-[bugfix/*]  ─────────────────────┴───●───┘             (Corrección de errores)
+[main]      ───●──────────────────────────────●──────────►  (Producción estable)
+               │                              ▲
+[test]      ───┼──────────────●───────────────┘            (QA / Staging)
+               │              ▲
+[develop]   ───┼──────●───────┴───────●                    (Integración continua)
+               │      ▲               ▲
+[feature/*] ───┴──●───┘               │                    (Desarrollo funcional)
+                                      │
+[bugfix/*]  ──────────────────────────●                    (Corrección de errores)
 ```
 
 - **`main`:** Rama protegida de código productivo. Refleja exclusivamente versiones probadas y desplegadas en el servidor institucional.
+- **`test`:** Rama protegida de **QA / staging**. Recibe los _merge_ de `develop` cuando se arma un _release candidate_; se despliega en el entorno de pruebas para ejecutar la regresión, la UAT y las pruebas de carga. Solo pasa a `main` con la aprobación escrita de QA y del PM.
 - **`develop`:** Rama de integración continua donde se consolidan las funcionalidades probadas.
 - **`feature/<nombre-tarea>`:** Ramas temporales creadas para desarrollar una historia de usuario o paquete de trabajo de la EDT (ej. `feature/parser-edf-header`).
 - **`bugfix/<nombre-error>`:** Ramas temporales para resolver incidencias de QA (ej. `bugfix/fix-jwt-expiration`).
 
 ### 3.3. Regla del Control Cruzado Obligatorio (_Code Review_ / PRs)
 
-- **Prohibición de Merge Directo:** Queda estrictamente prohibido realizar _push_ o _merge_ directo sobre las ramas `main` y `develop`.
-- **Mecanismo de Pull Request (PR):** Todo desarrollador debe abrir una PR desde su rama `feature/*` hacia `develop`.
+- **Prohibición de Merge Directo:** Queda estrictamente prohibido realizar _push_ o _merge_ directo sobre las ramas `main`, `test` y `develop`.
+- **Mecanismo de Pull Request (PR):** Todo desarrollador debe abrir una PR desde su rama `feature/*` hacia `develop`. El pasaje entre entornos se hace siempre por PR: `develop` → `test` para armar el _release candidate_, y `test` → `main` solo tras la aceptación de QA y UAT.
 - **Revisión por Tercero:** Ningún integrante puede aprobar su propio código. Toda PR requiere obligatoriamente la revisión y aprobación escrita de al menos un integrante diferente al autor, tomado del **pool de revisores** de Backend/Full-stack/Infra (**Germán Herrera**, **Martín Mosainer** o **Eber Chiecher**). Si el autor es uno de ellos, la revisión la realiza otro distinto; **ninguna persona aprueba su propio trabajo**, y la aprobación final de QA la firma el PM.
 - **Criterios de Aceptación de la PR:** Cobertura de pruebas unitarias aprobadas, ausencia de secretos/claves hardcodeadas y paso limpio del pipeline de CI/CD.
+- **Promoción a `test`:** la PR `develop` → `test` exige que el pipeline esté en verde y que el APM registre la versión candidata. Una vez desplegada en staging, QA ejecuta la regresión, la UAT y las pruebas de carga; cualquier defecto vuelve a `develop` por `bugfix/*`. La PR `test` → `main` requiere el informe de QA aprobado y la autorización del PM.
 
 ### 3.4. Versionado Semántico y Promoción de Releases
 
@@ -143,6 +166,8 @@ El código fuente aplica **Semantic Versioning (SemVer - `MAJOR.MINOR.PATCH`)**:
 - **`MAJOR` (Ej. 1.0.0):** Cambios estructurales incompatibles con la API anterior.
 - **`MINOR` (Ej. 1.1.0):** Incorporación de nueva funcionalidad compatible hacia atrás (ej. nuevo módulo de catálogo).
 - **`PATCH` (Ej. 1.1.1):** Corrección de errores o parches de seguridad.
+
+**Promoción de releases:** `develop` → `test` genera el _release candidate_ (`vX.Y.Z-rc.N`), que se valida en staging; `test` → `main` promueve la versión estable (`vX.Y.Z`) y dispara el tag y el despliegue a producción. El Change Log registra la versión, la rama de origen y la evidencia de QA.
 
 ## 4. Control de Cambios en la Base de Datos
 
@@ -165,7 +190,7 @@ Todo archivo de cambio de estructura DDL debe ir acompañado de manera indivisib
 
 1. **Generación Local:** El desarrollador de backend (**Eber Chiecher**) crea el script de migración y ejecuta localmente la prueba de _Up_ y _Down_.
 2. **Verificación de Impacto:** Se evalúa si el cambio destruye datos existentes o requiere un script intermedio de transformación/migración de datos.
-3. **Ejecución en Staging:** Se aplica la migración en el entorno de pruebas antes de autorizar el pase a producción.
+3. **Ejecución en Staging:** Se aplica la migración en el entorno de pruebas desplegado desde la rama `test` antes de autorizar el pase a producción.
 4. **Respaldo Pre-Despliegue:** Antes de ejecutar una migración en producción, la Dirección de TIC o el líder de infraestructura ejecuta un _dump/backup_ preventivo de la base de datos.
 
 ## 5. Control de Cambios en la Interfaz de Usuario (UI/UX)
@@ -194,6 +219,17 @@ Antes de que una modificación de diseño sea enviada a desarrollo frontend (**R
 
 Todo cambio visual en la interfaz debe estar vinculado al ID de la historia de usuario correspondiente en **GitHub Projects** (issues `BIOSIG-xx`; ej. `BIOSIG-45: Ajuste de escala de amplitud en Canvas`), impidiendo rediseños estéticos que no estén presupuestados en la iteración.
 
+### 5.5. Vinculación de Versiones con el RFC o Ticket
+
+| Elemento           | Herramienta              | Identificador de versión                          | Vínculo con el cambio                                                                            |
+| :----------------- | :----------------------- | :------------------------------------------------ | :----------------------------------------------------------------------------------------------- |
+| **Documentación**  | Markdown + Git           | `version` del frontmatter y fila en el Change Log | `RFC-xxx` en el historial del documento                                                          |
+| **Código fuente**  | Git / GitHub             | SemVer y tag de release                           | Rama `feature/BIOSIG-xx`, commit `BIOSIG-xx: ...` y PR `develop` → `test` → `main` con `RFC-xxx` |
+| **Base de datos**  | PostgreSQL + migraciones | `YYYYMMDDHHMMSS_descripcion`                      | Nombre de migración y PR con `RFC-xxx`                                                           |
+| **Interfaz UI/UX** | Figma                    | `vX.Y` de la página o componente                  | Comentario en Figma y issue `BIOSIG-xx`                                                          |
+
+**Convención mínima:** todo commit o PR debe empezar con el ID del ticket (`BIOSIG-xx`) y, si aplica, indicar el RFC (`RFC-xxx`). Así se puede reconstruir por qué se cambió un artefacto y qué solicitud lo autorizó.
+
 ## 6. Registro de Cambios (_Change Log_) y Auditoría
 
 ### 6.1. Plantilla del Registro de Cambios del Proyecto (_Change Log_)
@@ -205,7 +241,7 @@ Toda solicitud de cambio aprobada o rechazada se asienta en la **Matriz Consolid
 | **RFC-001** |   05/10/2026    | `CI-DOC-02` (Especificación Requisitos)               | Ajuste en RNF-02 de latencia LCP de 10s a ≤ 2,5s.                                                                                                                                                                                         | Astudillo, M.    | Ávila Gelbes, I.           |           **Aprobado**           |       `v2.0`       |   Implementado    |
 | **RFC-002** |   12/10/2026    | `CI-CODE` (Backend Ingesta)                           | Incorporación de parser secundario para formato .MAT.                                                                                                                                                                                     | Colaborador      | Herrera, G. / Chiecher, E. | **Rechazado** (Fuera de alcance) |        N/A         |      Cerrado      |
 | **RFC-003** |   18/10/2026    | `CI-DATA` (PostgreSQL)                                | Agregado de tabla `auditoria_descargas` para Ley 25.326.                                                                                                                                                                                  | Chiecher, E.     | Equipo PM / Legal          |           **Aprobado**           |      `v1.2.0`      |       En QA       |
-| **RFC-004** |   29/10/2026    | `CI-DOC-02` (Acta)                                    | Rebaselineo del Acta: nombre canónico BioSignal, objetivos O-01…O-07, entregables EP/EJ, hitos H1–H7 (Opción A), presupuesto caja/esfuerzo                                                                                                | Astudillo, M.    | Ávila Gelbes, I.           |          **Propuesto**           |       `v2.0`       | Pendiente Sponsor |
+| **RFC-004** |   29/10/2026    | `CI-DOC-01` (Acta)                                    | Rebaselineo del Acta: nombre canónico BioSignal, objetivos O-01…O-07, entregables EP/EJ, hitos H1–H7 (Opción A), presupuesto caja/esfuerzo                                                                                                | Astudillo, M.    | Ávila Gelbes, I.           |          **Propuesto**           |       `v2.0`       | Pendiente Sponsor |
 | **RFC-005** |   29/10/2026    | `CI-DOC` (Alcance, ERS, EDT, Diccionario, RTM)        | Alineación de alcance: fuera del MVP registro/recuperación de credenciales, roles extra, calibradores y export CSV/JSON/MAT; métricas 30 FPS y < 50 MB/≤ 30 s; solo EDF/EDF+; RBAC → 1.3.1.2; 1.2.3 completado; PERT corregido; RNF-10…15 | Astudillo, M.    | Herrera, G.                |          **Propuesto**           |       `v2.0`       |   Pendiente CCB   |
 | **RFC-006** |   29/10/2026    | `CI-DOC` (nuevos)                                     | Plan integrador, registro de tailoring, caso de negocio y registro de beneficios (nuevos artefactos)                                                                                                                                      | Astudillo, M.    | Equipo PM                  |          **Propuesto**           |       `v1.0`       |   Pendiente CCB   |
 | **RFC-007** |   29/10/2026    | `CI-DOC` (Interesados, Comunicaciones)                | Registro de interesados con niveles PMBOK 7 (actual/deseado) y plan de comunicaciones ampliado                                                                                                                                            | Ávila Gelbes, I. | Equipo PM                  |          **Propuesto**           |       `v1.1`       |   Pendiente CCB   |
@@ -213,7 +249,25 @@ Toda solicitud de cambio aprobada o rechazada se asienta en la **Matriz Consolid
 | **RFC-009** |   29/10/2026    | `CI-DOC` (Competencias)                               | Separar catálogo de competencias del RACI; clarificar uso como anexo                                                                                                                                                                      | Ávila Gelbes, I. | Equipo PM                  |          **Propuesto**           |       `v1.1`       |   Pendiente CCB   |
 | **RFC-010** |   29/10/2026    | `CI-DOC` / `CI-CODE` (SCM, Índice, borrador de ramas) | SCM consolidado: stack canónico, ruta `content/`, pool de revisores, gobernanza CCB, RFC-004…010, modelo de ramas unificado e índice sin borradores                                                                                       | Astudillo, M.    | Chiecher, E.               |          **Propuesto**           |       `v1.1`       |   Pendiente CCB   |
 
-### 6.2. Auditorías de Configuración
+### 6.2. Simulación del Recorrido de un Cambio (RFC-001)
+
+Se toma el **RFC-001** ya registrado para mostrar el recorrido completo que la tabla resumen no desarrolla.
+
+| Campo                           | Contenido                                                                                                                                          |
+| :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Descripción y motivo**        | Ajustar el RNF-02 de latencia LCP de 10 s a ≤ 2,5 s. El benchmark inicial mostró que 10 s hacía inviable la experiencia de uso en el visualizador. |
+| **Solicitante**                 | Astudillo, M. (PM), a partir del resultado de la prueba de rendimiento.                                                                            |
+| **Impacto en alcance**          | No agrega funcionalidad; endurece un criterio de aceptación existente.                                                                             |
+| **Impacto en tiempo**           | 1 día de análisis y ajuste; no mueve hitos.                                                                                                        |
+| **Impacto en costo**            | 8 h de esfuerzo interno; sin erogación de caja.                                                                                                    |
+| **Impacto en calidad y riesgo** | Mejora la usabilidad y reduce el riesgo de rechazo en UAT; riesgo técnico bajo.                                                                    |
+| **Impacto legal**               | Ninguno.                                                                                                                                           |
+| **Decisión y responsable**      | **Aprobado** por el CCB; responsable de implementación: PM con apoyo de Frontend y QA.                                                             |
+| **Implementación**              | Actualizar ERS y RTM, ajustar la métrica en el plan de calidad, implementar la optimización y abrir PR.                                            |
+| **Verificación**                | QA mide LCP con Lighthouse/PerformanceObserver y confirma ≤ 2,5 s; revisión cruzada del PR.                                                        |
+| **Estado final**                | **Implementado y cerrado**; versión `v2.0` publicada y registrada en el Change Log.                                                                |
+
+### 6.3. Auditorías de Configuración
 
 Al finalizar cada hito del proyecto, el Asistente del PM y el equipo de QA realizarán una **Auditoría de Configuración** para verificar que:
 

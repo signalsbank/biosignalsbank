@@ -14,24 +14,24 @@ date: 2026-10-29
 
 ## 1. Enfoque y marco normativo
 
-| Norma                            | Rol en BioSignal                                                   | Dónde se aplica                                   |
-| -------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------- |
-| **ISO 9001 / ISO 90003**         | Sistema de gestión de la calidad y su interpretación para software | Política, procesos, auditorías, mejora (sección 2)       |
-| **ISO/IEC/IEEE 12207 (nivel 1)** | Procesos del ciclo de vida y madurez del proceso                   | Entornos, SCM, CI/CD, verificación (sección 2)           |
-| **ISO/IEC 25010**                | Modelo de calidad del producto                                     | Características y métricas del software (sección 3)      |
-| **ISO/IEC 20000**                | Gestión del servicio                                               | Puesta en servicio y transferencia operativa (sección 4) |
-| **ISO/IEC/IEEE 29148**           | Calidad de requisitos                                              | ERS y revisión documental (sección 2.7)                  |
-| **EDF / EDF+**                   | Formato de entrada/salida de señales                               | RF-04 a RF-06, RF-14                              |
-| **Ley 25.326**                   | Protección de datos personales                                     | RF-06, RNF-05, RP-03                              |
-| **OWASP Top 10 / ASVS**          | Verificación de seguridad web                                      | Pruebas de seguridad                              |
-| **WCAG 2.1 AA**                  | Accesibilidad                                                      | RNF-12, interfaz y gráficos                       |
-| **Core Web Vitals**              | Referencia de experiencia web                                      | RNF-02 (TTIS como métrica principal)              |
+| Norma                    | Rol en BioSignal                                                   | Dónde se aplica                                          |
+| ------------------------ | ------------------------------------------------------------------ | -------------------------------------------------------- |
+| **ISO 9001 / ISO 90003** | Sistema de gestión de la calidad y su interpretación para software | Política, procesos, auditorías, mejora (sección 2)       |
+| **ISO/IEC/IEEE 12207**   | Procesos del ciclo de vida y madurez del proceso                   | Entornos, SCM, CI/CD, verificación (sección 2)           |
+| **ISO/IEC 25010:2023**   | Modelo de calidad del producto                                     | Características y métricas del software (sección 3)      |
+| **ISO/IEC 20000-1**      | Gestión del servicio                                               | Puesta en servicio y transferencia operativa (sección 4) |
+| **ISO/IEC/IEEE 29148**   | Calidad de requisitos                                              | ERS y revisión documental (sección 2.7)                  |
+| **EDF / EDF+**           | Formato de entrada/salida de señales                               | RF-04 a RF-06, RF-14                                     |
+| **Ley 25.326**           | Protección de datos personales                                     | RF-06, RNF-05, RP-03                                     |
+| **OWASP Top 10 / ASVS**  | Verificación de seguridad web                                      | Pruebas de seguridad                                     |
+| **WCAG 2.1 AA**          | Accesibilidad                                                      | RNF-12, interfaz y gráficos                              |
+| **Core Web Vitals**      | Referencia de experiencia web                                      | RNF-02 (TTIS como métrica principal)                     |
 
 | Dimensión | Norma principal          | Pregunta que responde                                   | Sección |
 | --------- | ------------------------ | ------------------------------------------------------- | ------- |
 | Proyecto  | ISO 9001 / 90003 / 12207 | ¿El proceso es repetible, trazable y auditable?         | 2       |
-| Producto  | ISO/IEC 25010            | ¿El software cumple los atributos de calidad acordados? | 3       |
-| Servicio  | ISO/IEC 20000            | ¿Puede operarse, monitorearse y transferirse?           | 4       |
+| Producto  | ISO/IEC 25010:2023       | ¿El software cumple los atributos de calidad acordados? | 3       |
+| Servicio  | ISO/IEC 20000-1          | ¿Puede operarse, monitorearse y transferirse?           | 4       |
 
 ## 2. Calidad del proyecto (ISO 9001 / 90003 / 12207)
 
@@ -41,18 +41,18 @@ El equipo de BioSignal se compromete a entregar a la UNViMe una plataforma **seg
 
 ### 2.2 Objetivos medibles
 
-| ID    | Objetivo                      | Meta                                                                        | Origen                     |
-| ----- | ----------------------------- | --------------------------------------------------------------------------- | -------------------------- |
-| OC-01 | Privacidad                    | 0 % de datos identificatorios residuales en el 100 % de los EDF persistidos | RF-06, RNF-05              |
+| ID    | Objetivo                      | Meta                                                                        | Origen                              |
+| ----- | ----------------------------- | --------------------------------------------------------------------------- | ----------------------------------- |
+| OC-01 | Privacidad                    | 0 % de datos identificatorios residuales en el 100 % de los EDF persistidos | RF-06, RNF-05                       |
 | OC-02 | Defectos críticos/bloqueantes | 0 abiertos al cierre de la fase de QA                                       | Criterios de aceptación del alcance |
-| OC-03 | Desempeño del visualizador    | TTIS ≤ 2,5 s (≥ 10 Mbps) y ≥ 30 FPS                                         | RNF-02, RNF-03             |
-| OC-04 | Concurrencia                  | 100 usuarios simultáneos sin errores 5xx                                    | RNF-01                     |
-| OC-05 | Ingesta                       | ≤ 30 s para EDF < 50 MB                                                     | RNF-04                     |
-| OC-06 | Seguridad en tránsito         | TLS 1.3 y calificación A (SSL Labs / testssl)                               | RNF-06                     |
-| OC-07 | Mantenibilidad                | Cobertura > 80 % en lógica crítica; 0 fallas                                | RNF-14                     |
-| OC-08 | Compatibilidad                | 100 % de la matriz cross-browser                                            | RNF-07                     |
-| OC-09 | Usabilidad                    | Tarea "buscar–abrir–configurar" < 5 min                                     | RNF-09                     |
-| OC-10 | Cumplimiento de proceso       | 100 % de PR con revisión cruzada y 100 % de cambios en el Change Log        | Plan SCM                   |
+| OC-03 | Desempeño del visualizador    | TTIS ≤ 2,5 s (≥ 10 Mbps) y ≥ 30 FPS                                         | RNF-02, RNF-03                      |
+| OC-04 | Concurrencia                  | 100 usuarios simultáneos sin errores 5xx                                    | RNF-01                              |
+| OC-05 | Ingesta                       | ≤ 30 s para EDF < 50 MB                                                     | RNF-04                              |
+| OC-06 | Seguridad en tránsito         | TLS 1.3 y calificación A (SSL Labs / testssl)                               | RNF-06                              |
+| OC-07 | Mantenibilidad                | Cobertura > 80 % de líneas y ≥ 70 % de ramas; 0 fallas                      | RNF-14                              |
+| OC-08 | Compatibilidad                | 100 % de la matriz cross-browser                                            | RNF-07                              |
+| OC-09 | Usabilidad                    | Tarea "buscar–abrir–configurar" < 5 min                                     | RNF-09                              |
+| OC-10 | Cumplimiento de proceso       | 100 % de PR con revisión cruzada y 100 % de cambios en el Change Log        | Plan SCM                            |
 
 ### 2.3 Procesos del SGC (adaptación de ISO 90003)
 
@@ -62,9 +62,9 @@ El equipo de BioSignal se compromete a entregar a la UNViMe una plataforma **seg
 | **5. Liderazgo**     | El PM y los líderes técnicos asumen la calidad; QA tiene autoridad de veto técnico             | Este plan, RACI, actas                           | Formalizar la política de seguridad y codificación en una guía única    |
 | **6. Planificación** | Enfoque basado en riesgos: deuda técnica, seguridad, integración, plazos y rotación            | Matriz de riesgos, RQ-01 a RQ-07                 | Mantener revisión de riesgos por hito                                   |
 | **7. Soporte**       | Entornos dev/staging/prod, CI/CD, repositorios, competencias y documentación controlada        | Plan SCM, matriz de competencias, CI             | Sin manuales de usuario (excluido del alcance)                          |
-| **8. Operación**     | ERS, diseño, desarrollo, control de releases y salidas no conformes                            | ERS, EDT, Change Log, sección 3.5                       | Documentar el diseño de arquitectura y el flujo de salidas no conformes |
+| **8. Operación**     | ERS, diseño, desarrollo, control de releases y salidas no conformes                            | ERS, EDT, Change Log, sección 3.5                | Documentar el diseño de arquitectura y el flujo de salidas no conformes |
 | **9. Evaluación**    | Pruebas, revisión de código, métricas, UAT y auditorías internas                               | Informes IC-01 a IC-07                           | Incorporar encuesta de satisfacción (SUS) y auditoría interna por hito  |
-| **10. Mejora**       | No conformidades, causa raíz y actualización del plan                                          | Registro IC-06, lecciones aprendidas             | Aprobar el plan de mejora continua de la sección 6                                |
+| **10. Mejora**       | No conformidades, causa raíz y actualización del plan                                          | Registro IC-06, lecciones aprendidas             | Aprobar el plan de mejora continua de la sección 6                      |
 
 ### 2.4 Roles y responsabilidades
 
@@ -95,9 +95,9 @@ El equipo de BioSignal se compromete a entregar a la UNViMe una plataforma **seg
 | ID     | Proceso                    | Métrica                                         | Umbral                |
 | ------ | -------------------------- | ----------------------------------------------- | --------------------- |
 | MPR-01 | Control de versiones       | PR aprobadas por revisor distinto del autor     | 100 %                 |
-| MPR-02 | Control de versiones       | Commits directos a `main`/`develop`             | 0                     |
+| MPR-02 | Control de versiones       | Commits directos a `main`/`test`/`develop`      | 0                     |
 | MPR-03 | Gestión de cambios         | Cambios con RFC en el Change Log                | 100 %                 |
-| MPR-04 | Integración continua       | Builds de `develop` en verde                    | ≥ 90 %                |
+| MPR-04 | Integración continua       | Builds de `develop` y `test` en verde           | ≥ 90 %                |
 | MPR-05 | Verificación               | Eficacia de remoción de defectos (DRE)          | ≥ 95 %                |
 | MPR-06 | Verificación               | Defectos escapados a UAT/producción             | 0 críticos            |
 | MPR-07 | Verificación               | Reapertura de defectos                          | ≤ 10 %                |
@@ -129,69 +129,85 @@ Todo requisito debe ser **único, atómico, no ambiguo, verificable y con criter
 
 Se prioriza la inversión en **prevención y evaluación del flujo de ingesta/anonimización** (impacto legal y reputacional) y del **visualizador** (impacto en la adopción curricular).
 
-## 3. Calidad del producto (ISO/IEC 25010)
+## 3. Calidad del producto (ISO/IEC 25010:2023)
 
 ### 3.1 Modelo y prioridad
 
-Niveles objetivo acordados (ALTA / MEDIA / BAJA). Las características marcadas como **candidatas a certificación** son las que sostienen la propuesta de valor.
+Niveles objetivo acordados (ALTA / MEDIA / BAJA). Las características marcadas como **prioritarias para verificación** son las que sostienen la propuesta de valor.
 
 | Característica (ISO 25010) | Nivel objetivo                                 | Foco en BioSignal                                      |
 | -------------------------- | ---------------------------------------------- | ------------------------------------------------------ |
 | Adecuación funcional       | ALTA                                           | Cobertura de RF-01 a RF-14, validación EDF             |
 | Eficiencia de desempeño    | MEDIA/ALTA                                     | TTIS, FPS, concurrencia, ingesta                       |
 | Compatibilidad             | ALTA (coexistencia) / BAJA (interoperabilidad) | Cross-browser; interoperabilidad acotada a EDF/EDF+    |
-| Capacidad de interacción   | **Candidata a certificación**                  | Aprendizaje, operabilidad, accesibilidad               |
+| Capacidad de interacción   | **Foco prioritario de verificación**           | Aprendizaje, operabilidad, accesibilidad               |
 | Fiabilidad                 | MEDIA/ALTA                                     | Disponibilidad, tolerancia a fallos, recuperación      |
 | Seguridad                  | ALTA                                           | Confidencialidad, integridad, auditoría, autenticidad  |
 | Mantenibilidad             | ALTA                                           | Cobertura, modularidad, análisis estático              |
 | Flexibilidad               | BAJA                                           | Infraestructura fija; adaptabilidad móvil acotada      |
 | Protección (safety)        | MEDIA/BAJA                                     | Uso académico, no diagnóstico; advertencias de alcance |
 
+### 3.1.1 Subcaracterísticas aplicables (ISO/IEC 25010:2023)
+
+| Característica               | Subcaracterísticas aplicables                                                                      | Evidencia en BioSignal                                                            |
+| :--------------------------- | :------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| **Adecuación funcional**     | Completitud, corrección y pertinencia funcional                                                    | RF-01 a RF-14 cubiertos y trazados en la RTM; pruebas de aceptación.              |
+| **Eficiencia de desempeño**  | Comportamiento temporal, utilización de recursos y capacidad                                       | TTIS ≤ 2,5 s, ≥ 30 FPS, 100 usuarios concurrentes e ingesta ≤ 30 s.               |
+| **Compatibilidad**           | Coexistencia e interoperabilidad                                                                   | Matriz cross-browser; importación/exportación EDF/EDF+.                           |
+| **Capacidad de interacción** | Reconocibilidad, aprendibilidad, operabilidad, protección contra errores, estética y accesibilidad | Tarea “buscar–abrir–configurar” < 5 min; WCAG 2.1 AA; controles claros.           |
+| **Fiabilidad**               | Madurez, disponibilidad, tolerancia a fallos y recuperabilidad                                     | Uptime ≥ 99,9 %; backups diarios; RTO ≤ 4 h y RPO ≤ 24 h.                         |
+| **Seguridad**                | Confidencialidad, integridad, no repudio, responsabilidad y autenticidad                           | Anonimización irreversible, TLS 1.3, RBAC, auditoría y sesión de 30 min.          |
+| **Mantenibilidad**           | Modularidad, reutilizabilidad, analizabilidad, modificabilidad y testabilidad                      | Cobertura > 80 % de líneas, linters, revisión de PR y tests automatizados.        |
+| **Flexibilidad**             | Adaptabilidad, escalabilidad, instalabilidad y reemplazabilidad                                    | Docker Compose, despliegue reproducible y diseño responsive.                      |
+| **Protección (safety)**      | Restricción operacional, identificación de riesgos, falla segura y advertencia de peligro          | Uso académico, no diagnóstico; advertencias de alcance y validación de cabeceras. |
+
+**Niveles objetivo:** **ALTA** exige verificar todas las subcaracterísticas aplicables; **MEDIA** exige las críticas para el alcance; **BAJA** solo requiere el comportamiento básico. La prioridad se justifica en la tabla 3.1.
+
 ### 3.2 Métricas clave y umbrales
 
-| ID       | Característica / métrica                        | Umbral                                       | Verificación                     | Req.          |
-| -------- | ----------------------------------------------- | -------------------------------------------- | -------------------------------- | ------------- |
-| MP-FS-01 | RF implementados y verificados                  | 100 %                                        | Trazabilidad + pruebas           | RF-01…RF-14   |
+| ID       | Característica / métrica                        | Umbral                                       | Verificación                     | Req.                                |
+| -------- | ----------------------------------------------- | -------------------------------------------- | -------------------------------- | ----------------------------------- |
+| MP-FS-01 | RF implementados y verificados                  | 100 %                                        | Trazabilidad + pruebas           | RF-01…RF-14                         |
 | MP-FS-02 | Casos de aceptación aprobados                   | 100 % críticos; ≥ 95 % total                 | Playwright / UAT                 | Criterios de aceptación del alcance |
-| MP-FS-03 | Aceptación de EDF válidos y rechazo de espurios | 100 %                                        | pytest                           | RF-04         |
-| MP-FS-04 | Detección de cabeceras corruptas                | 100 %                                        | pytest con fuzzing               | RF-05         |
-| MP-PE-01 | TTIS del primer segmento interactivo            | ≤ 2,5 s (p75)                                | PerformanceObserver / Lighthouse | RNF-02        |
-| MP-PE-02 | FPS en paneo/zoom con 32 canales                | ≥ 30 FPS sostenidos                          | DevTools Performance             | RNF-03        |
-| MP-PE-03 | Tiempo de ingesta                               | ≤ 30 s para EDF < 50 MB                      | Benchmark (n ≥ 10)               | RNF-04        |
-| MP-PE-04 | Usuarios concurrentes                           | 100 sin errores 5xx                          | k6 / JMeter                      | RNF-01        |
-| MP-PE-05 | Latencia de API bajo carga                      | media < 3 s; p95 ≤ 5 s                       | k6                               | RNF-01        |
-| MP-PE-06 | CPU / RAM del servidor                          | < 80 %                                       | Monitoreo                        | RNF-01        |
-| MP-PE-07 | Memoria del navegador (32 canales)              | Sin fuga tras 5 min                          | DevTools Memory                  | RNF-08        |
-| MP-CO-01 | Matriz cross-browser                            | 100 %                                        | Playwright + Safari real         | RNF-07        |
-| MP-CO-02 | EDF exportado legible por librerías estándar    | 100 %                                        | MNE-Python / pyedflib            | RF-14         |
-| MP-US-01 | Time-on-Task "buscar–abrir–configurar"          | < 5 min (media)                              | Prueba con ≥ 5 estudiantes       | RNF-09        |
-| MP-US-02 | Tasa de éxito de tarea                          | ≥ 90 %                                       | Prueba de usuario                | RNF-09        |
-| MP-US-03 | Contraste y accesibilidad                       | ≥ 4,5:1 texto; ≥ 3:1 gráficos; teclado       | Lighthouse / axe                 | RNF-12        |
-| MP-US-04 | Canales por dispositivo                         | ≥ 1024 px: 32; < 768 px: 1–2                 | Demostración responsive          | RNF-08        |
-| MP-US-05 | Satisfacción (SUS)                              | ≥ 68                                         | Cuestionario post-UAT            | RI-03, RI-04  |
-| MP-RE-01 | Errores críticos bajo estrés                    | < 1 %; 0 % de 5xx con 100 usuarios           | k6                               | RNF-01        |
-| MP-RE-02 | Disponibilidad en producción                    | ≥ 99,9 % mensual                             | Uptime monitor                   | RNF-10        |
-| MP-RE-03 | Integridad ante fallo de ingesta                | 0 registros inconsistentes                   | pytest de integración            | Pkg 1.3.2.1   |
-| MP-RE-04 | Restauración desde backup                       | Éxito 100 %; RTO ≤ 4 h; RPO ≤ 24 h           | Prueba de restore                | RNF-11        |
-| MP-RE-05 | Densidad de defectos                            | Tendencia decreciente; 0 críticos al cierre  | Gestor de tareas                 | OC-02         |
-| MP-SE-01 | PII residual en EDF persistidos                 | 0 % sobre el 100 % de archivos               | Auditoría binaria                | RF-06, RNF-05 |
-| MP-SE-02 | PII en anotaciones EDF+, nombres y logs         | 0 hallazgos                                  | Auditoría + revisión de logs     | RF-06         |
-| MP-SE-03 | Cifrado en tránsito                             | TLS 1.3; calificación A                      | testssl.sh / SSL Labs            | RNF-06        |
-| MP-SE-04 | Vulnerabilidades OWASP críticas/altas           | 0 abiertas                                   | ZAP + revisión manual            | OC-02         |
-| MP-SE-05 | Vulnerabilidades en dependencias                | 0 críticas/altas                             | pip-audit / npm audit            | Pkg 1.3       |
-| MP-SE-06 | Elevación de privilegios                        | 100 % bloqueada con HTTP 403                 | pytest / ZAP                     | RF-01         |
-| MP-SE-07 | Eventos auditables registrados                  | 100 % (alta, edición, baja, descarga, login) | Inspección de logs               | RNF-13        |
-| MP-SE-08 | Expiración de sesión Admin                      | 30 min (± 5 s)                               | pytest / E2E                     | RF-02         |
-| MP-SE-09 | Fuerza bruta                                    | Bloqueo al 5.º intento                       | E2E                              | RNF-15        |
-| MP-SE-10 | Secretos hardcodeados                           | 0                                            | gitleaks / trufflehog            | Plan SCM, sección 3.3      |
-| MP-SE-11 | Integridad de la señal tras editar metadatos    | Hash antes = después                         | Test de hash                     | Pkg 1.3.2.2   |
-| MP-MA-01 | Cobertura de pruebas unitarias                  | > 80 % líneas; ≥ 70 % ramas                  | pytest-cov / Jest                | RNF-14        |
-| MP-MA-02 | Pruebas unitarias exitosas                      | 100 % (0 fallas)                             | CI                               | RNF-14        |
-| MP-MA-03 | Linter y tipado                                 | 0 errores                                    | ruff, ESLint, mypy, tsc          | RNF-14        |
-| MP-MA-04 | Complejidad ciclomática                         | ≤ 10 por función                             | radon / ESLint                   | RNF-14        |
-| MP-MA-05 | Duplicación de código                           | ≤ 5 %                                        | jscpd                            | —             |
-| MP-MA-06 | Migraciones con up/down probado                 | 100 %                                        | Revisión + CI                    | Plan SCM, sección 4.3      |
-| MP-PO-01 | Despliegue reproducible                         | Éxito desde cero con un comando              | Docker Compose / CI              | Pkg 1.2.2     |
+| MP-FS-03 | Aceptación de EDF válidos y rechazo de espurios | 100 %                                        | pytest                           | RF-04                               |
+| MP-FS-04 | Detección de cabeceras corruptas                | 100 %                                        | pytest con fuzzing               | RF-05                               |
+| MP-PE-01 | TTIS del primer segmento interactivo            | ≤ 2,5 s (p75)                                | PerformanceObserver / Lighthouse | RNF-02                              |
+| MP-PE-02 | FPS en paneo/zoom con 32 canales                | ≥ 30 FPS sostenidos                          | DevTools Performance             | RNF-03                              |
+| MP-PE-03 | Tiempo de ingesta                               | ≤ 30 s para EDF < 50 MB                      | Benchmark (n ≥ 10)               | RNF-04                              |
+| MP-PE-04 | Usuarios concurrentes                           | 100 sin errores 5xx                          | k6 / JMeter                      | RNF-01                              |
+| MP-PE-05 | Latencia de API bajo carga                      | media < 3 s; p95 ≤ 5 s                       | k6                               | RNF-01                              |
+| MP-PE-06 | CPU / RAM del servidor                          | < 80 %                                       | Monitoreo                        | RNF-01                              |
+| MP-PE-07 | Memoria del navegador (32 canales)              | Sin fuga tras 5 min                          | DevTools Memory                  | RNF-08                              |
+| MP-CO-01 | Matriz cross-browser                            | 100 %                                        | Playwright + Safari real         | RNF-07                              |
+| MP-CO-02 | EDF exportado legible por librerías estándar    | 100 %                                        | MNE-Python / pyedflib            | RF-14                               |
+| MP-US-01 | Time-on-Task "buscar–abrir–configurar"          | < 5 min (media)                              | Prueba con ≥ 5 estudiantes       | RNF-09                              |
+| MP-US-02 | Tasa de éxito de tarea                          | ≥ 90 %                                       | Prueba de usuario                | RNF-09                              |
+| MP-US-03 | Contraste y accesibilidad                       | ≥ 4,5:1 texto; ≥ 3:1 gráficos; teclado       | Lighthouse / axe                 | RNF-12                              |
+| MP-US-04 | Canales por dispositivo                         | ≥ 1024 px: 32; < 768 px: 1–2                 | Demostración responsive          | RNF-08                              |
+| MP-US-05 | Satisfacción (SUS)                              | ≥ 68                                         | Cuestionario post-UAT            | RI-03, RI-04                        |
+| MP-RE-01 | Errores críticos bajo estrés                    | < 1 %; 0 % de 5xx con 100 usuarios           | k6                               | RNF-01                              |
+| MP-RE-02 | Disponibilidad en producción                    | ≥ 99,9 % mensual                             | Uptime monitor                   | RNF-10                              |
+| MP-RE-03 | Integridad ante fallo de ingesta                | 0 registros inconsistentes                   | pytest de integración            | Pkg 1.3.2.1                         |
+| MP-RE-04 | Restauración desde backup                       | Éxito 100 %; RTO ≤ 4 h; RPO ≤ 24 h           | Prueba de restore                | RNF-11                              |
+| MP-RE-05 | Densidad de defectos                            | Tendencia decreciente; 0 críticos al cierre  | Gestor de tareas                 | OC-02                               |
+| MP-SE-01 | PII residual en EDF persistidos                 | 0 % sobre el 100 % de archivos               | Auditoría binaria                | RF-06, RNF-05                       |
+| MP-SE-02 | PII en anotaciones EDF+, nombres y logs         | 0 hallazgos                                  | Auditoría + revisión de logs     | RF-06                               |
+| MP-SE-03 | Cifrado en tránsito                             | TLS 1.3; calificación A                      | testssl.sh / SSL Labs            | RNF-06                              |
+| MP-SE-04 | Vulnerabilidades OWASP críticas/altas           | 0 abiertas                                   | ZAP + revisión manual            | OC-02                               |
+| MP-SE-05 | Vulnerabilidades en dependencias                | 0 críticas/altas                             | pip-audit / npm audit            | Pkg 1.3                             |
+| MP-SE-06 | Elevación de privilegios                        | 100 % bloqueada con HTTP 403                 | pytest / ZAP                     | RF-01                               |
+| MP-SE-07 | Eventos auditables registrados                  | 100 % (alta, edición, baja, descarga, login) | Inspección de logs               | RNF-13                              |
+| MP-SE-08 | Expiración de sesión Admin                      | 30 min (± 5 s)                               | pytest / E2E                     | RF-02                               |
+| MP-SE-09 | Fuerza bruta                                    | Bloqueo al 5.º intento                       | E2E                              | RNF-15                              |
+| MP-SE-10 | Secretos hardcodeados                           | 0                                            | gitleaks / trufflehog            | Plan SCM, sección 3.3               |
+| MP-SE-11 | Integridad de la señal tras editar metadatos    | Hash antes = después                         | Test de hash                     | Pkg 1.3.2.2                         |
+| MP-MA-01 | Cobertura de pruebas unitarias                  | > 80 % líneas; ≥ 70 % ramas                  | pytest-cov / Jest                | RNF-14                              |
+| MP-MA-02 | Pruebas unitarias exitosas                      | 100 % (0 fallas)                             | CI                               | RNF-14                              |
+| MP-MA-03 | Linter y tipado                                 | 0 errores                                    | ruff, ESLint, mypy, tsc          | RNF-14                              |
+| MP-MA-04 | Complejidad ciclomática                         | ≤ 10 por función                             | radon / ESLint                   | RNF-14                              |
+| MP-MA-05 | Duplicación de código                           | ≤ 5 %                                        | jscpd                            | —                                   |
+| MP-MA-06 | Migraciones con up/down probado                 | 100 %                                        | Revisión + CI                    | Plan SCM, sección 4.3               |
+| MP-PO-01 | Despliegue reproducible                         | Éxito desde cero con un comando              | Docker Compose / CI              | Pkg 1.2.2                           |
 
 ### 3.3 Verificación por entregable
 
@@ -240,18 +256,22 @@ Ciclo de vida: `Nuevo → Triage (QA) → Asignado → En corrección (bugfix/*)
 
 **Go / No-Go de la fase de QA:** 0 críticos/bloqueantes abiertos; 100 % de unitarias en verde; cobertura > 80 % en lógica crítica; RNF-01 a RNF-15 en umbral; auditoría binaria 100 % limpia; UAT aprobado; recomendación escrita de QA al PM.
 
-## 4. Calidad del servicio (ISO/IEC 20000)
+## 4. Calidad del servicio (ISO/IEC 20000-1)
 
-### 4.1 Prácticas y estado
+### 4.1 Prácticas, estado y evidencias
 
-| Práctica                        | Situación actual                                                           | Decisión / acción                                                                                                 |
-| ------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| **Relaciones y acuerdos (SLA)** | Se definen entregables y criterios de aceptación, pero no un SLA formal    | Fijar objetivos operativos (disponibilidad 99,9 %, RTO ≤ 4 h, RPO ≤ 24 h) en el Acta de Despliegue                |
-| **Incidencias y problemas**     | No hay proceso formalizado                                                 | Documentar canal de reporte, categorías, prioridades y responsable de recepción antes de la transferencia (LV-11) |
-| **Cambios y releases**          | Cubierto por el Plan SCM para software propio; no hay software de terceros | Mantener RFC, staging y rollback; registrar la versión desplegada                                                 |
-| **Capacidad y disponibilidad**  | No garantizadas por el equipo; dependen de RP-01                           | Monitoreo de uptime y recursos, alertas y escalamiento al patrocinador                                            |
-| **Continuidad y respaldo**      | Backup diario y restore definidos en RNF-11                                | Entregar política de respaldo y procedimiento de restauración probado                                             |
-| **Gestión de la configuración** | Versión desplegada = versión aprobada en Change Log                        | Verificación en cada release (MS-05)                                                                              |
+**Escala:** `C` = cumple, `P` = parcial, `NC` = no cumple.
+
+| Práctica                        | Estado | Evidencia / situación actual                                                                                | Acción                                                                                     |
+| :------------------------------ | :----: | :---------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
+| **Gobierno del servicio**       |   P    | Roles de PM, RDS y Dirección TIC definidos; falta formalizar el dueño del servicio transferido.             | Designar responsable del servicio en el Acta de Despliegue.                                |
+| **Relaciones y acuerdos (SLA)** |   P    | SLA con UNViMe definido en el documento 08 (disponibilidad 99,9 %, RTO ≤ 4 h, RPO ≤ 24 h); pendiente firma. | Formalizarlo en el Acta de Despliegue.                                                     |
+| **Incidencias y problemas**     |   NC   | No hay proceso formalizado.                                                                                 | Documentar canal, categorías, prioridades y responsable antes de la transferencia (LV-11). |
+| **Cambios y releases**          |   C    | Cubierto por el Plan SCM para software propio; no hay software de terceros.                                 | Mantener RFC, staging y rollback; registrar la versión desplegada.                         |
+| **Capacidad y disponibilidad**  |   P    | Dependen de RP-01 y del monitoreo de uptime.                                                                | Monitorear recursos, alertas y escalamiento al patrocinador.                               |
+| **Continuidad y respaldo**      |   P    | Backup diario y restore definidos en RNF-11; falta probar la restauración.                                  | Entregar política de respaldo y evidencia de restore probado.                              |
+| **Gestión de la configuración** |   C    | Versión desplegada = versión aprobada en Change Log.                                                        | Verificación en cada release (MS-05).                                                      |
+| **Mejora continua**             |   P    | Ciclo PDCA definido; sin serie histórica de métricas.                                                       | Revisar indicadores al cierre de cada hito y registrar acciones.                           |
 
 ### 4.2 Métricas del servicio
 
@@ -275,6 +295,19 @@ Antes de declarar el servicio operativo se verifica:
 - Prueba de humo completa: login, carga, búsqueda, visualización y descarga.
 - Dataset semilla ≥ 30 EDF catalogados y auditoría binaria con 0 PII.
 - Canal de incidencias, monitoreo y procedimiento de cambio entregados a la Dirección TIC.
+
+### 4.4 Procesos de transición, operación y mantenimiento (ISO/IEC/IEEE 12207)
+
+| Grupo de procesos | Proceso               | Cómo se aplica en BioSignal                                                         | Evidencia                                          |
+| :---------------- | :-------------------- | :---------------------------------------------------------------------------------- | :------------------------------------------------- |
+| **Transición**    | Instalación           | Despliegue del release candidate en el servidor UNViMe con Docker Compose.          | Acta de despliegue y LV-10.                        |
+| **Transición**    | Apoyo a la aceptación | UAT con docentes y GAB; aceptación formal del sponsor.                              | IC-07 y acta de aceptación.                        |
+| **Transición**    | Transición            | Transferencia de credenciales, monitoreo y canal de incidencias a la Dirección TIC. | LV-11 y checklist de transferencia.                |
+| **Operación**     | Operación             | Servicio en producción con monitoreo de uptime, recursos y backups.                 | Panel de monitoreo y MS-02.                        |
+| **Operación**     | Soporte operativo     | Atención de incidencias y consultas del servicio transferido.                       | Canal de incidencias y MS-01.                      |
+| **Operación**     | Servicio al usuario   | Comunicación de disponibilidad, alcance y limitaciones a los usuarios.              | Avisos institucionales y documentación publicada.  |
+| **Mantenimiento** | Mantenimiento         | Correcciones, parches de seguridad y mejoras posteriores al cierre.                 | RFC, ramas `bugfix/*` y releases SemVer.           |
+| **Mantenimiento** | Logística             | Gestión de dependencias, backups y renovación de servicios.                         | Inventario de dependencias y política de respaldo. |
 
 ## 5. Verificación: listas de verificación e informes
 
@@ -336,12 +369,31 @@ Cada lista se completa por el responsable indicado y se adjunta al Informe de Ca
 
 ## 6. Mejora continua
 
+### 6.1 Evaluación del proceso de Verificación (ISO/IEC 33000)
+
+Se selecciona el proceso de **Verificación y QA** porque concentra la evidencia del proyecto: plan de pruebas, revisión de PR, CI, auditorías y reportes de calidad.
+
+| Nivel | Descripción                                                   |    Estado     | Evidencia / justificación                                                      |
+| :---: | :------------------------------------------------------------ | :-----------: | :----------------------------------------------------------------------------- |
+| **0** | Incompleto: no se ejecuta o no logra sus salidas              |      No       | El proceso existe y produce resultados.                                        |
+| **1** | Ejecutado: resultados reactivos/artesanales                   |   Superado    | Hay pruebas unitarias, integración, E2E y revisión de PR.                      |
+| **2** | Gestionado: se planifica, monitorea y ajusta                  | **Alcanzado** | Plan de pruebas, CI, umbrales, IC-05, registro de defectos y revisión cruzada. |
+| **3** | Establecido: proceso estándar definido a nivel organizacional |    Parcial    | La guía es del proyecto; aún no está institucionalizada para otros proyectos.  |
+| **4** | Predecible: límites de control cuantitativos y estadísticos   |      No       | No hay series históricas ni control estadístico del proceso.                   |
+| **5** | En optimización: mejora continua basada en causas comunes     |      No       | Se aplica PDCA, pero sin análisis cuantitativo de variación.                   |
+
+**Brecha principal:** el proceso está gestionado a nivel de proyecto, pero falta convertirlo en estándar organizacional y medirlo con series históricas. **Acción:** documentar el proceso de verificación como plantilla reutilizable, definir una línea base de defectos y revisar los indicadores al cierre de cada hito. **Meta:** Nivel 3 al cierre del proyecto.
+
+### 6.2 Ciclo PDCA
+
 Se adopta un ciclo **PDCA** con revisión al cierre de cada hito:
 
 1. **Planificar:** objetivos, métricas y acciones preventivas (secciones 2.2 y 3.2).
 2. **Hacer:** ejecución del plan, PR, CI y pruebas.
 3. **Verificar:** informes IC, auditorías, UAT y tablero de calidad.
 4. **Actuar:** no conformidades (IC-06), análisis de causa raíz (5 Porqués / Ishikawa) y actualización del plan.
+
+### 6.3 Plan de mejora inicial
 
 **Plan de mejora inicial:**
 
@@ -350,7 +402,7 @@ Se adopta un ciclo **PDCA** con revisión al cierre de cada hito:
 | Cultura de calidad delegada solo a QA                | Incluir la calidad como criterio en la revisión de desempeño y en cada hito | PM                 | Acta de retrospectiva        |
 | Falta de política de seguridad y codificación        | Publicar guía única de estilo y seguridad                                   | Herrera + Chiecher | Revisión en LV-01            |
 | Diseño y arquitectura poco documentados              | Documento de arquitectura base                                              | Chiecher           | Revisión por pares           |
-| Salidas no conformes sin procedimiento               | Formalizar el flujo de defectos de la sección 3.5                                     | QA                 | IC-06                        |
+| Salidas no conformes sin procedimiento               | Formalizar el flujo de defectos de la sección 3.5                           | QA                 | IC-06                        |
 | Sin encuestas de satisfacción ni auditorías internas | Aplicar SUS en UAT y auditoría de proceso por hito                          | QA + APM           | IC-05 / IC-01                |
 | Sin plan de mejora continua                          | Este apartado y revisión por hito                                           | PM                 | Versión actualizada del plan |
 | Proceso de incidencias del servicio no formalizado   | Canal, categorías y prioridades antes de la transferencia                   | PM + DevOps        | LV-11                        |
@@ -359,20 +411,20 @@ Las mejoras aprobadas se incorporan como nueva versión de este plan (v1.1, v2.0
 
 ## 7. Riesgos de calidad
 
-| ID    | Riesgo                                                         | P   | I   | Mitigación                                                            | Alerta                                |
-| ----- | -------------------------------------------------------------- | --- | --- | --------------------------------------------------------------------- | ------------------------------------- |
-| RQ-01 | PII residual en cabecera, anotaciones EDF+ o nombre de archivo | 2   | 5   | Lista blanca de campos, auditoría binaria al 100 %, archivo sentinela | Cualquier hallazgo > 0                |
-| RQ-02 | Visualizador < 30 FPS con 32 canales                           | 3   | 4   | Submuestreo LTTB, WebGL/Canvas, chunking, perfilado temprano          | FPS medio < 35 en pruebas intermedias |
-| RQ-03 | Degradación con 100 usuarios concurrentes                      | 3   | 4   | Caché, paginado por fragmentos, carga progresiva (25/50/100)          | p95 > 3 s                             |
-| RQ-04 | Safari/WebKit incompatible                                     | 3   | 3   | Playwright WebKit en CI y prueba manual en Safari                     | Falla en la matriz                    |
-| RQ-05 | Infraestructura UNViMe tardía (RP-01)                          | 3   | 5   | Staging propio equivalente y escalamiento al patrocinador             | Sin credenciales al inicio de Fase 5  |
-| RQ-06 | Cambios no controlados que rompen la línea base                | 2   | 4   | Ramas protegidas, RFC y auditoría por hito                            | Commit directo en `main`/`develop`    |
-| RQ-07 | Falta de EDF válidos con aval ético (RP-03)                    | 3   | 4   | Dataset público de respaldo y convenios tempranos                     | < 30 registros al inicio de Fase 5    |
+| ID    | Riesgo                                                         | P   | I   | Mitigación                                                            | Alerta                                    |
+| ----- | -------------------------------------------------------------- | --- | --- | --------------------------------------------------------------------- | ----------------------------------------- |
+| RQ-01 | PII residual en cabecera, anotaciones EDF+ o nombre de archivo | 2   | 5   | Lista blanca de campos, auditoría binaria al 100 %, archivo sentinela | Cualquier hallazgo > 0                    |
+| RQ-02 | Visualizador < 30 FPS con 32 canales                           | 3   | 4   | Submuestreo LTTB, WebGL/Canvas, chunking, perfilado temprano          | FPS medio < 35 en pruebas intermedias     |
+| RQ-03 | Degradación con 100 usuarios concurrentes                      | 3   | 4   | Caché, paginado por fragmentos, carga progresiva (25/50/100)          | p95 > 3 s                                 |
+| RQ-04 | Safari/WebKit incompatible                                     | 3   | 3   | Playwright WebKit en CI y prueba manual en Safari                     | Falla en la matriz                        |
+| RQ-05 | Infraestructura UNViMe tardía (RP-01)                          | 3   | 5   | Staging propio equivalente y escalamiento al patrocinador             | Sin credenciales al inicio de Fase 5      |
+| RQ-06 | Cambios no controlados que rompen la línea base                | 2   | 4   | Ramas protegidas, RFC y auditoría por hito                            | Commit directo en `main`/`test`/`develop` |
+| RQ-07 | Falta de EDF válidos con aval ético (RP-03)                    | 3   | 4   | Dataset público de respaldo y convenios tempranos                     | < 30 registros al inicio de Fase 5        |
 
 ## 8. Integración con otros planes
 
 - **Plan SCM:** ramas protegidas, PR con revisión cruzada, migraciones up/down, Change Log y auditoría de configuración.
 - **Plan de Comunicaciones:** resultados de pruebas en la reunión semanal de QA y en el Informe de Hito.
-- **Plan de Riesgos y Adquisiciones:** presupuesto de licencias $0; solo herramientas open source.
+- **Plan de Riesgos y Adquisiciones:** presupuesto de licencias $0; herramientas open source y aportes en especie o compras simuladas según el documento 08.
 - **Gestión del Conocimiento:** lecciones aprendidas y Error Logs del proyecto.
 - **Matriz de Competencias:** formación y evaluación de las habilidades requeridas por cada rol.

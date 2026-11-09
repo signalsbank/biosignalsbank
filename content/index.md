@@ -2,6 +2,12 @@
 title: Índice
 ---
 
+## Contexto
+
+- [[00-contexto-del-proyecto]]
+
+## Documentos del trabajo práctico
+
 - [[02-acta-de-constitucion]]
 - [[02b-gestion-de-las-comunicaciones]]
 - [[02b-gestion-de-las-partes-interesadas]]
@@ -17,3 +23,4 @@ title: Índice
 - [[11-matriz-de-competencias]]
 - [[12-gestion-de-calidad]]
 - [[13-evaluaciones-de-desempeño]]
+- [[13b-formato-evaluaciones-de-desempeño]]

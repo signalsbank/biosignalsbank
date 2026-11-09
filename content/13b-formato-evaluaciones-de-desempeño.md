@@ -1,3 +1,9 @@
+---
+title: 13b. Formato de Evaluaciones de Desempeño
+aliases:
+  - Formato de evaluaciones de desempeño
+---
+
 # Evaluación de Desempeño
 
 ## 1. Instrumentos y responsables de la evaluación
@@ -7,6 +13,7 @@
 | Autoevaluación                                | Cada integrante → sí mismo                     | Los 6 integrantes del proyecto             |
 | Evaluación de pares                           | Ciclo: Martín → Germán → Rocío → Eber → Martín | Desarrolladores                            |
 | Evaluación del cliente                        | Cliente → Mateo e Ignacio                      | Dirección del proyecto (PM y Asistente PM) |
+| Evaluación ascendente                         | Equipo de desarrollo → Mateo e Ignacio         | Dirección del proyecto (PM y APM)          |
 | Evaluación del responsable del servicio (RDS) | Ignacio → Martín, Germán, Rocío y Eber         | Equipo de desarrollo                       |
 
 ## 2. Escala única de calificación
@@ -184,17 +191,54 @@ El promedio es un indicador orientativo y debe interpretarse junto con las obser
 
 ---
 
-## 6. Evaluación del responsable del servicio (RDS)
+## 6. Evaluación ascendente (equipo a la dirección)
+
+**La completa el equipo de desarrollo en consenso; evalúa a PM y APM.**
+
+### 6.1. Datos generales
+
+- **Evaluador:** ____________________________________
+- **Evaluados:** ____________________________________
+- **Fecha de evaluación:** ____ / ____ / ______
+- **Período evaluado:** ____ / ____ / ______ al ____ / ____ / ______
+
+### 6.2. Evaluación
+
+| Código | Criterio     | Afirmación a evaluar                                       | PM  | APM | Observaciones |
+| :----- | :----------- | :--------------------------------------------------------- | :-: | :-: | :------------ |
+| EA-01  | Claridad     | Comunica objetivos y prioridades de forma clara.           |     |     |               |
+| EA-02  | Comunicación | Informa avances, riesgos y decisiones de manera oportuna.  |     |     |               |
+| EA-03  | Apoyo        | Ayuda a destrabar bloqueos técnicos y de gestión.          |     |     |               |
+| EA-04  | Clima        | Reconoce logros y sostiene un clima de trabajo respetuoso. |     |     |               |
+| EA-05  | Organización | Planifica y da previsibilidad al trabajo del equipo.       |     |     |               |
+
+### 6.3. Cálculo del resultado
+
+- **PM — Suma de puntajes válidos:** ____
+- **PM — Cantidad de respuestas válidas:** ____
+- **PM — Promedio obtenido:** ____
+- **PM — Puntaje final (%):** ____
+- **APM — Suma de puntajes válidos:** ____
+- **APM — Cantidad de respuestas válidas:** ____
+- **APM — Promedio obtenido:** ____
+- **APM — Puntaje final (%):** ____
+
+### 6.4. Comentarios
+
+1. **¿Qué aspectos de la dirección considera positivos?**
+2. **¿Qué recomendación concreta le haría a la dirección?**
+
+## 7. Evaluación del responsable del servicio (RDS)
 
 **El RDS (Ignacio) completa la tabla una única vez; cada columna corresponde a un integrante del equipo de desarrollo.**
 
-### 6.1. Datos generales
+### 7.1. Datos generales
 
 - **Evaluador (RDS):** ____________________________________
 - **Fecha de evaluación:** ____ / ____ / ______
 - **Período evaluado:** ____ / ____ / ______ al ____ / ____ / ______
 
-### 6.2. Evaluación
+### 7.2. Evaluación
 
 _Validez de celdas: puntaje de 1 a 5, o `N/A` (excluido del cálculo)._
 
@@ -206,7 +250,7 @@ _Validez de celdas: puntaje de 1 a 5, o `N/A` (excluido del cálculo)._
 | ER-04  | Autonomía       | Trabaja con autonomía y requiere supervisión mínima.                      |        |        |       |      |               |
 | ER-05  | Comunicación    | Comunica de forma clara y oportuna el avance y los bloqueos.              |        |        |       |      |               |
 
-### 6.3. Cálculo del resultado (por integrante)
+### 7.3. Cálculo del resultado (por integrante)
 
 Calcular por columna, excluyendo las respuestas `N/A`:
 
@@ -217,17 +261,15 @@ Calcular por columna, excluyendo las respuestas `N/A`:
 | Rocío      |                          |                                |          |                   |
 | Eber       |                          |                                |          |                   |
 
-### 6.4. Observaciones generales
+### 7.4. Observaciones generales
 
 ---
 
----
-
-## 7. Ficha integral de evaluación individual (opcional, por integrante)
+## 8. Ficha integral de evaluación individual (opcional, por integrante)
 
 Ficha detallada para profundizar el desempeño de un integrante al cierre de una fase o del proyecto.
 
-### 7.1. Datos de la evaluación
+### 8.1. Datos de la evaluación
 
 - **Nombre completo:** ______________________________________
 - **Rol en el proyecto:** ___________________________________
@@ -239,7 +281,7 @@ Ficha detallada para profundizar el desempeño de un integrante al cierre de una
 
 _Las siguientes secciones siguen el formato estándar del documento: escala 1–5 + N/A (sección 2), con observaciones por criterio. Las respuestas `N/A` se excluyen del cálculo._
 
-### 7.2. Conocimiento asociado al cargo
+### 8.2. Conocimiento asociado al cargo
 
 _Conjunto de habilidades y destrezas técnicas que debe poseer el integrante para desempeñar su rol._
 
@@ -248,7 +290,7 @@ _Conjunto de habilidades y destrezas técnicas que debe poseer el integrante par
 | EF-01  | Entiende las funciones y responsabilidades de su rol.         |                     |               |
 | EF-02  | Posee los conocimientos y habilidades necesarios para su rol. |                     |               |
 
-### 7.3. Planificación y organización
+### 8.3. Planificación y organización
 
 _Capacidad de determinar eficazmente las metas y prioridades de su tarea, estipulando la acción, los plazos y los recursos requeridos._
 
@@ -259,7 +301,7 @@ _Capacidad de determinar eficazmente las metas y prioridades de su tarea, estipu
 | EF-05  | Es capaz de identificar y solucionar problemas. |                     |               |
 | EF-06  | Reacciona rápidamente ante las dificultades.    |                     |               |
 
-### 7.4. Productividad
+### 8.4. Productividad
 
 _Habilidad de fijar para sí mismo objetivos de desempeño por encima del promedio, alcanzándolos exitosamente._
 
@@ -269,7 +311,7 @@ _Habilidad de fijar para sí mismo objetivos de desempeño por encima del promed
 | EF-08  | Puede manejar varias actividades a la vez.                       |                     |               |
 | EF-09  | Alcanza los estándares de productividad definidos por el equipo. |                     |               |
 
-### 7.5. Trabajo en equipo
+### 8.5. Trabajo en equipo
 
 _Habilidad para participar activamente de una meta común, incluso cuando la colaboración conduce a una meta que no está directamente relacionada con el interés personal._
 
@@ -280,7 +322,7 @@ _Habilidad para participar activamente de una meta común, incluso cuando la col
 | EF-12  | Se desempeña bien con diferentes tipos de personas. |                     |               |
 | EF-13  | Participa activamente en las reuniones de trabajo.  |                     |               |
 
-### 7.6. Comunicación
+### 8.6. Comunicación
 
 _Capacidad de escuchar, hacer preguntas y expresar conceptos e ideas en forma efectiva, en el momento correcto, a la persona correcta y de manera adecuada._
 
@@ -291,7 +333,7 @@ _Capacidad de escuchar, hacer preguntas y expresar conceptos e ideas en forma ef
 | EF-16  | Sabe escuchar.                                 |                     |               |
 | EF-17  | Expone sus ideas de forma eficaz.              |                     |               |
 
-### 7.7. Dirección de equipos de trabajo (solo PM y Asistente PM)
+### 8.7. Dirección de equipos de trabajo (solo PM y Asistente PM)
 
 _Capacidad de desarrollar, consolidar y conducir un equipo de trabajo, alentando a sus miembros a desempeñarse con autonomía y responsabilidad._
 
@@ -304,14 +346,14 @@ _Capacidad de desarrollar, consolidar y conducir un equipo de trabajo, alentando
 
 > **Excluir esta sección del cálculo** cuando el integrante evaluado no ejerza dirección (desarrolladores). Marcar `N/A` en cada criterio de esta sección.
 
-### 7.8. Cálculo del resultado
+### 8.8. Cálculo del resultado
 
 - **Suma de puntajes válidos:** ____
 - **Cantidad de respuestas válidas:** ____
 - **Promedio obtenido:** ____
 - **Puntaje final (%):** ____
 
-### 7.9. Preguntas abiertas
+### 8.9. Preguntas abiertas
 
 1. **¿Qué aspectos del desempeño del integrante considera positivos?**
 
@@ -320,7 +362,7 @@ _Capacidad de desarrollar, consolidar y conducir un equipo de trabajo, alentando
 2. **¿Qué recomendación concreta le haría para mejorar su desempeño?**
    ***
 
-### 7.10. Áreas de mejora
+### 8.10. Áreas de mejora
 
 ¿En qué áreas debe concentrar el integrante sus esfuerzos de mejora?
 
@@ -328,7 +370,7 @@ _Capacidad de desarrollar, consolidar y conducir un equipo de trabajo, alentando
 2. ***
 3. ***
 
-### 7.11. Comentarios adicionales
+### 8.11. Comentarios adicionales
 
 ---
 
@@ -336,7 +378,7 @@ _Capacidad de desarrollar, consolidar y conducir un equipo de trabajo, alentando
 
 ---
 
-## 8. Firmas
+## 9. Firmas
 
 **Firma del evaluador:**
 

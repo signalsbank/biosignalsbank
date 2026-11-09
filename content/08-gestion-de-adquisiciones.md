@@ -1,7 +1,7 @@
 ---
 aliases:
   - Gestión de Adquisiciones
-title: 8. Gestión de Asquisiciones
+title: 8. Gestión de Adquisiciones
 project: Banco de Señales Biomédicas ("BioSignalsBank")
 version: 1
 ---
@@ -12,7 +12,22 @@ version: 1
 
 Aunque el proyecto **BioSignal** opera bajo una restricción formal de **$0 USD de costo directo recurrente** en infraestructura comercial por sustentarse en los servidores institucionales de la **Universidad Nacional de Villa Mercedes (UNViMe)**, se detallan los insumos, licencias, servicios profesionales, equipamiento y conjuntos de datos requeridos para la ejecución, aseguramiento de la calidad y contingencia del sistema.
 
-### 1.2. Matriz Consolidada de Insumos y Productos
+### 1.2. Análisis Hacer, Comprar o Recibir como Aporte
+
+| Componente                                                         | Decisión                                                     | Justificación                                                                                                      |
+| :----------------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| Plataforma BioSignal (frontend, backend, parser EDF, visualizador) | **Hacer**                                                    | Es el núcleo del alcance y no existe una solución lista que cumpla RBAC, anonimización y visualización requeridas. |
+| Servidor, subdominio y almacenamiento                              | **Recibir aporte de UNViMe**                                 | RP-01; no hay erogación de caja.                                                                                   |
+| Dominio web de respaldo                                            | **Comprar / aporte en especie**                              | Contingencia si se demora la delegación del subdominio; costo referencial.                                         |
+| Pruebas de carga                                                   | **Hacer con k6/JMeter**; comprar SaaS solo como contingencia | La prueba es estándar y no justifica una licencia recurrente; el SaaS se simula para comparar alternativas.        |
+| Auditoría de seguridad y anonimización                             | **Contratar / aporte en especie**                            | Requiere dictamen independiente y experiencia forense que el equipo no tiene.                                      |
+| Servicio de IA para metadatos                                      | **Comprar por consumo** (créditos, simulado)                 | Acelera el etiquetado; es opcional y con costo referencial.                                                        |
+| Dataset semilla                                                    | **Recibir de GAB / PhysioNet / sintéticos**                  | RP-03; no se compra.                                                                                               |
+| Diseño UI/UX                                                       | **Hacer**                                                    | Está dentro de las competencias del equipo.                                                                        |
+
+> Los insumos **INS-04, INS-06 e INS-07** se evaluaron y no se adquieren: se cubren con herramientas open source o aportes en especie. Por eso se conservan los identificadores originales de los insumos que sí requieren análisis de compra.
+
+### 1.3. Matriz Consolidada de Insumos y Productos
 
 |    Ítem    | Nombre del Insumo / Producto                                   | Categoría               | Especificaciones Técnicas y Criterios de Calidad Requeridos                                                                       |                     Paquete de Trabajo EDT / Req. Asociado                     | Justificación Técnica en BioSignal                                                                                      |
 | :--------: | :------------------------------------------------------------- | :---------------------- | :-------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +37,19 @@ Aunque el proyecto **BioSignal** opera bajo una restricción formal de **$0 USD 
 | **INS-05** | **Servicio de Auditoría de Seguridad y Anonimización**         | Servicios Profesionales | Servicio de auditoría forense binaria sobre cabeceras .edf/.edf+ con dictamen normativo Ley 25.326.                               |       `1.3.2.1 Formulario y procesador de carga`<br>([RF-06], [RNF-05])        | Auditar la eliminación 100% irreversible de datos personales de pacientes en cumplimiento legal estricto.               |
 | **INS-08** | **Bolsa de Créditos/Tokens de API de Procesamiento e IA**      | Software / AI           | Créditos/tokens para servicio de IA/LLM enfocado en extracción automática de metadatos clínicos e indexación de patologías.       |            `1.3.2.2 Interfaz de edición de metadatos`<br>([RF-07])             | Asistir al administrador en la sugerencia y etiquetado automático de patologías durante la ingesta.                     |
 
-### 1.3. Fichas de Solicitud de Compra para Insumos Clave
+### 1.4. Matriz de Adquisiciones
+
+Los importes son **referencias de mercado para el ejercicio**: no representan erogación de caja. La compra real solo se activa si la UNViMe o un aporte en especie no cubre la necesidad.
+
+| Ítem       | EDT / requisito           | Tipo de contrato / modalidad                  | Proveedores candidatos                        | Responsable          | Costo estimado                       | Fecha requerida | Planificación                                                            | Cierre                                    |
+| :--------- | :------------------------ | :-------------------------------------------- | :-------------------------------------------- | :------------------- | :----------------------------------- | :-------------- | :----------------------------------------------------------------------- | :---------------------------------------- |
+| **INS-01** | `1.2.1` / RNF-01, RNF-10  | Servicio cloud (simulado) o aporte en especie | UNViMe/TIC; proveedor cloud A/B               | Chiecher             | USD 0 (referencia USD 60/mes)        | 05/02/2027 (H6) | Solicitud al confirmar H5; cotización 3–5 días; adjudicación antes de H6 | Recepción conforme y prueba de _failover_ |
+| **INS-02** | `1.5` / RT-02, RNF-06     | Registro de dominio (compra simulada)         | NIC.ar; registrador .org A/B                  | Astudillo / APM      | USD 0 (referencia USD 15/año)        | 12/02/2027 (H7) | Solicitar en H5; verificar DNS y TLS                                     | DNS resuelve y certificado válido         |
+| **INS-03** | `1.4.2` / RNF-01, RNF-02  | SaaS (simulado) o herramienta open source     | LoadMaster Cloud; StressTester Pro; k6/JMeter | Herrera              | USD 0 (referencia USD 120/trimestre) | 05/02/2027 (H6) | Evaluar en H5; usar k6 si cubre; si no, contratar SaaS                   | Informe de carga aceptado                 |
+| **INS-05** | `1.3.2.1` / RF-06, RNF-05 | Servicios profesionales (simulado / aporte)   | Consultora A/B; asesoría UNViMe               | Astudillo / Chiecher | USD 0 (referencia USD 800)           | 15/01/2027 (H4) | Solicitud en H3; dictamen antes de H4                                    | Dictamen legal y 0 PII                    |
+| **INS-08** | `1.3.2.2` / RF-07         | Consumo de API (simulado)                     | LLM API A/B                                   | Herrera              | USD 0 (referencia USD 50)            | 15/01/2027 (H4) | Prueba en H3; límite de consumo                                          | Integración aprobada                      |
+
+### 1.5. Fichas de Solicitud de Compra para Insumos Clave
 
 #### Ficha de Solicitud INS-01: Servidor VPS de Contingencia (Failover)
 
@@ -42,7 +69,7 @@ Aunque el proyecto **BioSignal** opera bajo una restricción formal de **$0 USD 
 
 ## 2. Procedimiento y Circuito Operativo del Proceso de Compras (Efectuar las Adquisiciones)
 
-### 2.1. Circuito Flujo de Compras Paso a Paso
+### 2.1. Circuito del Flujo de Compras Paso a Paso
 
 El proceso de adquisición en el proyecto **BioSignal** se rige por un procedimiento administrativo y técnico estructurado en 7 etapas secuenciales, garantizando transparencia, trazabilidad y libre concurrencia de proveedores:
 
@@ -87,15 +114,29 @@ El proceso de adquisición en el proyecto **BioSignal** se rige por un procedimi
 5. **Adjudicación, Firma de Contrato y Retroalimentación:**
    Se emite el Dictamen de Adjudicación al proveedor ganador. Como pilar de mejora continua remarcado en la materia, se envía una **notificación formal con feedback técnico a los proveedores no seleccionados**, indicando los motivos (ej. precio fuera de rango, tiempos extendidos) para impulsar la competitividad futura.
 6. **Emisión de Orden de Compra (OC) y Entrega:**
-   Se formaliza la Orden de Compra de compromiso financiero y el proveedor adjudicado procede a la provisión o habilitación del servicio.
+   Se formaliza la Orden de Compra (simulada en este ejercicio) y el proveedor adjudicado procede a la provisión o habilitación del servicio.
 7. **Inspección Técnica, Recepción Conformada y Cierre Operativo:**
    El área técnica del proyecto (QA / Infraestructura) realiza las pruebas de homologación. Si el insumo satisface los criterios de aceptación, se firma la **Constancia de Recepción Conformada**, autorizando el pago y cerrando el circuito de compra.
 
-### 2.3. Simulación Práctica de una Compra Real
+### 2.3. Tabla de Etapas, Responsables y Registros
 
-Se simula el proceso de selección competitiva para el insumo **INS-03 (Licencia de Plataforma de Pruebas de Carga y Estrés SaaS)**:
+El proceso se inicia cuando el paquete de la EDT está aprobado y existe una necesidad con fecha objetivo. Depende de la decisión de alcance y del hito al que pertenece el insumo; no puede cerrarse sin la aceptación técnica de QA.
 
-#### Datos de la Compra Simula
+| Etapa                             | ¿Qué se hace?                                                                 | Responsable           | Documento o registro resultante        |
+| :-------------------------------- | :---------------------------------------------------------------------------- | :-------------------- | :------------------------------------- |
+| 1. Identificación de la necesidad | Se completa la requisitoria interna con especificaciones y justificación EDT. | Dueño del paquete EDT | Solicitud de compra                    |
+| 2. Elaboración del pliego         | Se redactan bases, condiciones y criterios de evaluación.                     | PM / APM              | Pliego o solicitud de cotización (RFQ) |
+| 3. Convocatoria                   | Se notifica a los proveedores del rubro y se fija plazo de oferta.            | APM                   | Registro de invitaciones               |
+| 4. Evaluación de ofertas          | Se abre la propuesta y se aplica la matriz de selección.                      | PM + revisor técnico  | Acta de evaluación                     |
+| 5. Adjudicación                   | Se emite el dictamen y se formaliza la orden de compra o contrato.            | PM                    | Dictamen de adjudicación y OC          |
+| 6. Entrega                        | El proveedor entrega o habilita el producto o servicio.                       | Proveedor             | Remito o acta de entrega               |
+| 7. Recepción y cierre             | Se prueba el insumo y se firma la conformidad.                                | QA / Infraestructura  | Constancia de recepción conformada     |
+
+### 2.4. Simulación Práctica de una Compra
+
+Se simula el proceso de selección competitiva para el insumo **INS-03 (Licencia de Plataforma de Pruebas de Carga y Estrés SaaS)**. La compra es **simulada**: el costo se usa para comparar alternativas, no para ejecutar un pago.
+
+#### Datos de la Compra Simulada
 
 - **Objeto:** Licencia SaaS para simulación de 100 usuarios concurrentes en visualizador WebGL.
 - **Presupuesto Máximo de Referencia:** $150 USD / trimestre.
@@ -112,6 +153,20 @@ Se simula el proceso de selección competitiva para el insumo **INS-03 (Licencia
 | **PUNTAJE PONDERADO TOTAL**             | **100%** |       **4.85 (GANADOR)**       |               **4.20**               |           **2.30**            |
 
 **Dictamen de Adjudicación:** Se selecciona al **Proveedor A (LoadMaster Cloud)** con una puntuación de **4.85/5.00** por ofrecer la mejor relación calidad-precio y soporte integral para gráficos WebGL/Canvas.
+
+#### Condiciones, Riesgo y Seguimiento del Proveedor Seleccionado
+
+| Aspecto        | Condición acordada                                                        |
+| :------------- | :------------------------------------------------------------------------ |
+| **Precio**     | USD 120 por trimestre, **referencial y simulado**; sin erogación de caja. |
+| **Plazo**      | Activación dentro de 5 días hábiles desde la orden de compra.             |
+| **Pago**       | Contra aceptación del informe de pruebas; en el ejercicio, pago simulado. |
+| **Soporte**    | Canal 24/7 en español y SLA de respuesta < 4 h.                           |
+| **Aceptación** | Informe PDF con 100 VUs, métricas de LCP/TTFB/FPS y cero errores 5xx.     |
+
+**Riesgo asociado:** el proveedor no soporta correctamente WebGL o demora la activación. **Prevención:** exigir una demo técnica antes de adjudicar y dejar la cláusula de aceptación por escrito. **Respuesta:** ejecutar las pruebas con k6/JMeter y activar al Proveedor B.
+
+**Seguimiento:** reunión semanal durante la ventana de pruebas, verificación del informe de aceptación, registro del resultado en la ficha post-compra y actualización del historial de proveedores.
 
 ## 3. Sistema de Evaluación de Desempeño de Proveedores
 

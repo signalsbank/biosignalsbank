@@ -16,7 +16,7 @@ date: 2026-10-23
 - **Cliente / representante:** Ing. Alejandro Rosas
 - **Organización:** Universidad Nacional de Villa Mercedes (UNViMe) — Escuela de Ingeniería y Ciencias Ambientales (EICA)
 - **Fecha de evaluación:** 23/10/2026
-- **Período o entregable evaluado:** 01/08/2026 al 23/10/2026 — Fase 1: visualizador web de señales EDF y gestión inicial de carga
+- **Período o entregable evaluado:** 01/08/2026 al 23/10/2026 — Etapa preliminar: visualizador web de señales EDF y gestión inicial de carga
 - **Persona que completa la evaluación:** Ing. Alejandro Rosas, Director de la EICA (representante del cliente)
 
 ## 2. Objetivo
