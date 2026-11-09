@@ -16,7 +16,7 @@ date: 2026-11-09
 
 > **Alcance temporal:** esta evaluación corresponde a la **etapa preliminar de conformación y piloto**, previa a la línea base formal del proyecto (02/11/2026). No reemplaza la evaluación de cierre de fase; sirve como línea base de desempeño del equipo.
 
-El formato de cada instrumento sigue el documento [[13b-formato-evaluaciones-de-desempeño]].
+El formato de cada instrumento sigue el documento [[formato-evaluaciones-de-desempeño]].
 
 ## 1. Cobertura 360°
 
