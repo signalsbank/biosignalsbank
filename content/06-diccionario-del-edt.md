@@ -1,7 +1,7 @@
 ---
 project: BioSignal
 version: 2.1
-title: "06. Diccionario del EDT"
+title: "6. Diccionario del EDT"
 aliases:
   - "Diccionario del EDT"
   - "6. Diccionario del EDT"
