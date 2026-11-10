@@ -2,7 +2,9 @@
 project: BioSignal
 version: 1.1
 title: Matriz de Riesgos
-aliases: Matriz de Riesgos
+aliases:
+  - "Matriz de Riesgos"
+  - "Riesgos"
 ---
 
 <table style="width: 100%; border-collapse: collapse; font-family: inherit;">
@@ -85,4 +87,4 @@ BioSignal tiene **apetito bajo** frente a riesgos de privacidad, seguridad y cum
 
 ### Vínculo con el Registro de Riesgos
 
-Esta matriz es la herramienta de **evaluación** (probabilidad × impacto). Los riesgos concretos del proyecto (identificados con IDs **R-01…R-12**, con causa → evento → efecto, dueño, respuesta, disparador, riesgo residual y oportunidades **O-01…O-03**) se administran centralizadamente en el **registro de riesgos** del plan integrador, revisado semanalmente por el equipo, quincenalmente con el Sponsor y obligatoriamente en cada hito `H1–H7`. El informe de riesgos para el Sponsor se emite con la cadencia quincenal declarada en el Plan de Comunicaciones.
+Esta matriz es la herramienta de **evaluación** (probabilidad × impacto). Los riesgos concretos del proyecto (identificados con IDs **R-01…R-12**, con causa → evento → efecto, dueño, respuesta, disparador, riesgo residual y oportunidades **O-01…O-03**) se administran centralizadamente en el **registro de riesgos** del plan integrador, revisado semanalmente por el equipo, quincenalmente con el Sponsor y obligatoriamente en cada hito [[02-acta-de-constitucion#10. Cronograma de Hitos de Aceptación|H1–H7]]. El informe de riesgos para el Sponsor se emite con la cadencia quincenal declarada en el Plan de Comunicaciones.

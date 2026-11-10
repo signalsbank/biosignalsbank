@@ -3,7 +3,9 @@ project: BioSignal
 version: 2
 title: 2. Acta de Constitución
 aliases:
-  - Acta de Constitución
+  - "Acta de Constitución"
+  - "Acta de Constitución del Proyecto"
+  - "Acta"
 authors: Mateo Astudillo, Ignacio Ávila
 ---
 
@@ -81,13 +83,13 @@ Mejorar la experiencia de los estudiantes y docentes de carreras a la salud a la
 
 ### Criterios de Éxito por Parte Interesada
 
-| Parte Interesada                                  | Criterio de Éxito Específico                                                            | Tipo                            | Evidencia                |
-| :------------------------------------------------ | :-------------------------------------------------------------------------------------- | :------------------------------ | :----------------------- |
-| **Patrocinador (EICA / Autoridades)**             | Sistema en producción con desembolso directo de **$0 USD** y acta de aceptación firmada | Proyecto                        | Actas + registro de caja |
-| **GAB (Grupo de Bioingeniería)**                  | 30 EDF catalogados, 0 % de PII residual, metadatos completos                            | Producto                        | Inventario + auditoría   |
-| **Estudiantes y docentes (ECS / EM)**             | 50 usuarios completan "buscar–abrir–configurar" en **< 5 minutos** (RNF-09)             | Beneficio (se mide post-cierre) | UAT + guías de cátedra   |
-| **Dirección TIC (UNViMe)**                        | Despliegue, monitoreo, backup y restore verificados                                     | Producto                        | Checklist de transición  |
-| **Equipo de Desarrollo del Proyecto (PM y Devs)** | Concluir el alcance planificado dentro del rango de 260 a 360 horas de trabajo          | Proyecto                        | EVM + retrospectivas     |
+| Parte Interesada                                  | Criterio de Éxito Específico                                                                                                     | Tipo                            | Evidencia                |
+| :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------- | :------------------------------ | :----------------------- |
+| **Patrocinador (EICA / Autoridades)**             | Sistema en producción con desembolso directo de **$0 USD** y acta de aceptación firmada                                          | Proyecto                        | Actas + registro de caja |
+| **GAB (Grupo de Bioingeniería)**                  | 30 EDF catalogados, 0 % de PII residual, metadatos completos                                                                     | Producto                        | Inventario + auditoría   |
+| **Estudiantes y docentes (ECS / EM)**             | 50 usuarios completan "buscar–abrir–configurar" en **< 5 minutos** ([[03-especificacion-de-requisitos#4.4. Usabilidad\|RNF-09]]) | Beneficio (se mide post-cierre) | UAT + guías de cátedra   |
+| **Dirección TIC (UNViMe)**                        | Despliegue, monitoreo, backup y restore verificados                                                                              | Producto                        | Checklist de transición  |
+| **Equipo de Desarrollo del Proyecto (PM y Devs)** | Concluir el alcance planificado dentro del rango de 260 a 360 horas de trabajo                                                   | Proyecto                        | EVM + retrospectivas     |
 
 ## 7. Requisitos de Alto Nivel
 

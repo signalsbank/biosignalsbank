@@ -1,0 +1,35 @@
+---
+project: BioSignal
+version: 2
+title: "1.1.1.C Negociación y aprobación"
+aliases:
+  - "1.1.1.C"
+---
+
+> Paquete: [[diccionario-del-edt/1-1-gestion-del-proyecto/1-1-1-acta-de-constitucion-del-proyecto/index|1.1.1 Acta de constitución del proyecto]]
+
+- **Código:** 1.1.1.C
+- **Actividad:** Negociación y aprobación
+
+## Alcance
+
+Revisar observaciones con las partes interesadas, ajustar términos y formalizar la firma del sponsor
+
+## Estimación y costos
+
+- **Cálculo de tiempo estimado:** Estimación tres valores: (TO: 1h + TM: 2h + TP: 3h) / 6 (PERT β)
+- **Tiempo estimado:** 2h
+- **Costo estimado:** 2h x $10.000/h = **$20.000**
+- **Costo de gestión del riesgo:** 0.5h x $10.000/h = **$5.000**
+- **Tiempo adicional si ocurre:** 2h
+- **Costo de contingencia si ocurre:** 2h x $10.000/h = **$20.000**
+- **Costo total:** **$45.000**
+
+## Gestión del riesgo
+
+- **Riesgo:** Que no se apruebe por discrepancias en las restricciones o presupuesto
+- **Probabilidad (1-5):** 2
+- **Impacto (1-5):** 4
+- **P × I:** 8
+- **Mitigación (preventiva):** Enviar borrador 72h antes para resolver observaciones de forma asincrónica (dedicación: 0.5h)
+- **Respuesta al riesgo:** **Negociar / Contingencia:** Conducir mesa de negociación técnica para ajustar supuestos críticos, posponer entregables no esenciales o recalibrar plazos

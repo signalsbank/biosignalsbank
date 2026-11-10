@@ -2,7 +2,9 @@
 project: BioSignal
 version: 1.1
 title: 11. Matriz de Competencias
-aliases: Matriz de Competencias
+aliases:
+  - "Matriz de Competencias"
+  - "Competencias"
 ---
 
 > **Nota de uso:** este documento es un **catálogo (anexo) de perfiles, funciones y competencias**; **no constituye una matriz RACI** y no puede sustituirla. La asignación de responsabilidad por entregable/paquete (quién ejecuta **R**, aprueba **A**, es consultado **C** e informado **I**) se gestiona en la matriz RACI del plan integrador, con los 8 roles mapeados a las 6 personas del equipo y QA independiente del autor del código.
@@ -121,7 +123,7 @@ aliases: Matriz de Competencias
   - Planificar, ejecutar, monitorear y cerrar el proyecto
   - Gestionar el alcance, los riesgos, las comunicaciones y los interesados.
 - **Funciones:**
-  - Elaborar el Acta de Constitución, el cronograma y la gestión de riesgos.
+  - Elaborar el [[02-acta-de-constitucion|Acta de Constitución]], el cronograma y la gestión de riesgos.
   - Coordinar al equipo y remover impedimentos.
   - Gestionar los cambios y reportar el avance a los interesados.
   - Gestionar las actas de despliegue y cierre.
@@ -173,7 +175,7 @@ aliases: Matriz de Competencias
 
 ## Plan de Mejora de Competencias
 
-Las brechas se detectan con la matriz anterior y con las evaluaciones de desempeño (documento 13). Cada acción tiene un indicador verificable y se revisa en el siguiente hito o en la próxima evaluación 360°.
+Las brechas se detectan con la matriz anterior y con las evaluaciones de desempeño ([[13-evaluaciones-de-desempeño|documento 13]]). Cada acción tiene un indicador verificable y se revisa en el siguiente hito o en la próxima evaluación 360°.
 
 | Brecha detectada                                                                       | Acción de mejora                                                                | Tipo                   | Responsable   | Plazo      | Indicador de eficacia                                      |
 | :------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------ | :--------------------- | :------------ | :--------- | :--------------------------------------------------------- |

@@ -2,20 +2,23 @@
 project: BioSignal
 version: 1.1
 title: 2b. Gestión de las comunicaciones
-aliases: Gestión de las comunicaciones
+aliases:
+  - "Gestión de las comunicaciones"
+  - "Plan de Comunicaciones"
+  - "Comunicaciones"
 ---
 
 ## Comunicaciones externas
 
-| Información             | Formato                 | Emisor                          | Grupo Receptor                                           | Tecnología                                 | Frecuencia                               | Feedback / Cierre     |
-| :---------------------- | :---------------------- | :------------------------------ | :------------------------------------------------------- | :----------------------------------------- | :--------------------------------------- | :-------------------- |
-| Iniciación del Proyecto | Acta de Constitución    | Director del Proyecto           | Patrocinador (EICA), Bioingeniería, cátedras evaluadoras | Documento digital vía correo institucional | Una sola vez                             | Firma del Acta        |
-| Estado del Proyecto     | Informe ejecutivo       | Director del Proyecto           | Patrocinador (Alejandro Rosas)                           | Documento digital + reunión formal         | Mensual + por hito (7 instancias: H1–H7) | Minuta con decisiones |
-| Requisitos y alcance    | ERS + RTM + revisión    | Asistente del PM (APM)          | GAB, Dirección TIC, docentes                             | Repositorio + reunión                      | Por hito                                 | Acta de revisión      |
-| Infraestructura         | Ticket + checklist      | Infraestructura (Eber Chiecher) | Dirección TIC                                            | Mesa de ayuda + reunión                    | Semanal durante infraestructura          | Confirmación TIC      |
-| Legal y ética           | Dictamen                | Director del Proyecto           | Asesoría legal / comité de ética                         | Correo formal                              | En requisitos y auditoría (RP-03)        | Dictamen firmado      |
-| Dataset semilla         | Inventario + validación | GAB                             | PM y QA                                                  | Repositorio + reunión                      | Quincenal hasta Hito H4                  | Inventario verificado |
-| Cierre del Proyecto     | Acta de Cierre          | Director del Proyecto           | Patrocinador, cátedras evaluadoras, usuarios finales     | Documento digital + reunión formal         | Una sola vez, antes del 15/Feb/2027      | Firma del Acta        |
+| Información             | Formato                                           | Emisor                          | Grupo Receptor                                           | Tecnología                                 | Frecuencia                                                                                                                                                                     | Feedback / Cierre     |
+| :---------------------- | :------------------------------------------------ | :------------------------------ | :------------------------------------------------------- | :----------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------- |
+| Iniciación del Proyecto | [[02-acta-de-constitucion\|Acta de Constitución]] | Director del Proyecto           | Patrocinador (EICA), Bioingeniería, cátedras evaluadoras | Documento digital vía correo institucional | Una sola vez                                                                                                                                                                   | Firma del Acta        |
+| Estado del Proyecto     | Informe ejecutivo                                 | Director del Proyecto           | Patrocinador (Alejandro Rosas)                           | Documento digital + reunión formal         | Mensual + por hito (7 instancias: [[02-acta-de-constitucion#10. Cronograma de Hitos de Aceptación\|H1]]–[[02-acta-de-constitucion#10. Cronograma de Hitos de Aceptación\|H7]]) | Minuta con decisiones |
+| Requisitos y alcance    | ERS + RTM + revisión                              | Asistente del PM (APM)          | GAB, Dirección TIC, docentes                             | Repositorio + reunión                      | Por hito                                                                                                                                                                       | Acta de revisión      |
+| Infraestructura         | Ticket + checklist                                | Infraestructura (Eber Chiecher) | Dirección TIC                                            | Mesa de ayuda + reunión                    | Semanal durante infraestructura                                                                                                                                                | Confirmación TIC      |
+| Legal y ética           | Dictamen                                          | Director del Proyecto           | Asesoría legal / comité de ética                         | Correo formal                              | En requisitos y auditoría ([[03-especificacion-de-requisitos#6. Requisitos y Restricciones del Proyecto\|RP-03]])                                                              | Dictamen firmado      |
+| Dataset semilla         | Inventario + validación                           | GAB                             | PM y QA                                                  | Repositorio + reunión                      | Quincenal hasta Hito [[02-acta-de-constitucion#10. Cronograma de Hitos de Aceptación\|H4]]                                                                                     | Inventario verificado |
+| Cierre del Proyecto     | Acta de Cierre                                    | Director del Proyecto           | Patrocinador, cátedras evaluadoras, usuarios finales     | Documento digital + reunión formal         | Una sola vez, antes del 15/Feb/2027                                                                                                                                            | Firma del Acta        |
 
 ## Comunicaciones internas
 

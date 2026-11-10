@@ -1,0 +1,35 @@
+---
+project: BioSignal
+version: 2
+title: "1.3.2.1.C Funcionalidad de subida"
+aliases:
+  - "1.3.2.1.C"
+---
+
+> Paquete: [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-2-modulo-de-gestion-de-senales/1-3-2-1-formulario-y-procesador-de-carga-alta/index|1.3.2.1 Formulario y procesador de carga (alta)]]
+
+- **Código:** 1.3.2.1.C
+- **Actividad:** Funcionalidad de subida
+
+## Alcance
+
+Procesador backend que valida integridad, detecta el formato (EDF), extrae canales, frecuencia de muestreo y duración, y guarda el binario
+
+## Estimación y costos
+
+- **Cálculo de tiempo estimado:** Descomposición: validación de integridad 10 h + detección de formato 8 h + extracción de características 12 h + almacenamiento del binario 10 h = 40 h
+- **Tiempo estimado:** 40 h
+- **Costo estimado:** $400.000
+- **Tiempo de prevención:** 4 h
+- **Costo de gestión del riesgo:** $40.000
+- **Tiempo adicional si ocurre:** 14 h
+- **Costo de contingencia si ocurre:** $140.000
+- **Duración total:** 58 h
+- **Costo total:** $580.000
+
+## Gestión del riesgo
+
+- **Riesgo:** Archivos de hasta 50 MB que saturan la memoria o superan el tiempo máximo de 30 s
+- **Probabilidad (1-5):** 3
+- **Impacto (1-5):** 5
+- **Mitigación (preventiva):** Lectura por streaming/bloques y prueba de carga con un archivo de 50 MB

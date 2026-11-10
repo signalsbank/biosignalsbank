@@ -1,7 +1,9 @@
 ---
 title: 10. Gestión del Conocimiento
 aliases:
-  - Gestión del Conocimiento
+  - "Gestión del Conocimiento"
+  - "Gestión de Conocimiento"
+  - "Conocimiento"
 project: BioSignal
 version: 2.0
 authors: Mateo Astudillo, Ignacio Ávila
@@ -48,12 +50,12 @@ Resolver cuatro necesidades concretas:
 
 ## 3. Información a gestionar
 
-| Nivel              | Contenido                                                                                        | Ejemplo                                           |
-| :----------------- | :----------------------------------------------------------------------------------------------- | :------------------------------------------------ |
-| **Organizacional** | Políticas, estándares, procesos, plantillas, glosario, componentes reutilizables y activos de IA | Guía de estilo, plantilla de ADR, checklist de PR |
-| **Proyecto**       | Requisitos, alcance, arquitectura, decisiones, pruebas, operación, riesgos y estado              | ERS de BioSignal, diagrama C4, plan de pruebas    |
-| **Operación**      | Runbooks, incidencias, errores conocidos, backups y monitoreo                                    | Procedimiento de restore, error JWT               |
-| **Aprendizaje**    | Lecciones aprendidas, post-mortems y recomendaciones                                             | Qué falló en una migración y cómo evitarlo        |
+| Nivel              | Contenido                                                                                        | Ejemplo                                                                             |
+| :----------------- | :----------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| **Organizacional** | Políticas, estándares, procesos, plantillas, glosario, componentes reutilizables y activos de IA | Guía de estilo, plantilla de ADR, checklist de PR                                   |
+| **Proyecto**       | Requisitos, alcance, arquitectura, decisiones, pruebas, operación, riesgos y estado              | [[03-especificacion-de-requisitos\|ERS]] de BioSignal, diagrama C4, plan de pruebas |
+| **Operación**      | Runbooks, incidencias, errores conocidos, backups y monitoreo                                    | Procedimiento de restore, error JWT                                                 |
+| **Aprendizaje**    | Lecciones aprendidas, post-mortems y recomendaciones                                             | Qué falló en una migración y cómo evitarlo                                          |
 
 **Regla de clasificación:** si sirve para más de un proyecto, va a la wiki central; si es específico, va al repositorio del proyecto. Si es reusable, se enlaza desde la wiki.
 

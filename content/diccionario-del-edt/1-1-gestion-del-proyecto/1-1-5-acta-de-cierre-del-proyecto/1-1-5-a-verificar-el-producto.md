@@ -1,0 +1,35 @@
+---
+project: BioSignal
+version: 2
+title: "1.1.5.A Verificar el producto"
+aliases:
+  - "1.1.5.A"
+---
+
+> Paquete: [[diccionario-del-edt/1-1-gestion-del-proyecto/1-1-5-acta-de-cierre-del-proyecto/index|1.1.5 Acta de cierre del proyecto]]
+
+- **Código:** 1.1.5.A
+- **Actividad:** Verificar el producto
+
+## Alcance
+
+Comprobar el cumplimiento de criterios de aceptación de entregables, verificar objetivos y auditar compromisos
+
+## Estimación y costos
+
+- **Cálculo de tiempo estimado:** Estimación tres valores: (TO: 3h + TM: 4h + TP: 5h) / 6 (PERT β)
+- **Tiempo estimado:** 4h
+- **Costo estimado:** 4h x $10.000/h = **$40.000**
+- **Costo de gestión del riesgo:** 1h x $10.000/h = **$10.000**
+- **Tiempo adicional si ocurre:** 3h
+- **Costo de contingencia si ocurre:** 3h x $10.000/h = **$30.000**
+- **Costo total:** **$80.000**
+
+## Gestión del riesgo
+
+- **Riesgo:** Identificar actividades pendientes o entregables no conformes
+- **Probabilidad (1-5):** 3
+- **Impacto (1-5):** 4
+- **P × I:** 12
+- **Mitigación (preventiva):** Aplicar checklist de validación previa junto con actas de aceptación parciales (dedicación: 1h)
+- **Respuesta al riesgo:** **Resolver / Contingencia:** Elaborar lista de observaciones pendientes (_punch list_), acordar tolerancias y ejecutar plan express de subsanación técnica

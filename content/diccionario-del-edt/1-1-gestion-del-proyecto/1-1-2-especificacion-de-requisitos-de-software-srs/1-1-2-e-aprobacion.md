@@ -1,0 +1,35 @@
+---
+project: BioSignal
+version: 2
+title: "1.1.2.E Aprobación"
+aliases:
+  - "1.1.2.E"
+---
+
+> Paquete: [[diccionario-del-edt/1-1-gestion-del-proyecto/1-1-2-especificacion-de-requisitos-de-software-srs/index|1.1.2 Especificación de requisitos de software (SRS)]]
+
+- **Código:** 1.1.2.E
+- **Actividad:** Aprobación
+
+## Alcance
+
+Presentar el documento ante referentes de UNViMe y GAB para firma y congelamiento de línea base
+
+## Estimación y costos
+
+- **Cálculo de tiempo estimado:** Estimación tres valores: (TO: 0.5h + TM: 1h + TP: 1.5h) / 6 (PERT β)
+- **Tiempo estimado:** 1h
+- **Costo estimado:** 1h x $10.000/h = **$10.000**
+- **Costo de gestión del riesgo:** 0.5h x $10.000/h = **$5.000**
+- **Tiempo adicional si ocurre:** 2h
+- **Costo de contingencia si ocurre:** 2h x $10.000/h = **$20.000**
+- **Costo total:** **$35.000**
+
+## Gestión del riesgo
+
+- **Riesgo:** Que no se apruebe por disconformidad en el alcance acordado
+- **Probabilidad (1-5):** 2
+- **Impacto (1-5):** 4
+- **P × I:** 8
+- **Mitigación (preventiva):** Validar actas parciales de requerimientos durante el proceso de redacción (dedicación: 0.5h)
+- **Respuesta al riesgo:** **Negociar / Contingencia:** Revisar observaciones puntuales, transferir requerimientos en disputa a un backlog de fases futuras y proceder a la firma

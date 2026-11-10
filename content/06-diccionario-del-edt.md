@@ -1,9 +1,11 @@
 ---
 project: BioSignal
 version: 2.1
-title: "6. Diccionario del EDT"
+title: "06. Diccionario del EDT"
 aliases:
   - "Diccionario del EDT"
+  - "6. Diccionario del EDT"
+  - "Diccionario EDT"
 ---
 
 > **Método de estimación:** distribución beta (_PERT_): **E = (TO + 4·TM + TP) / 6**, con desvío estándar σ = (TP – TO) / 6. Los valores publicados son la esperanza de cada actividad (nivel de confianza ≈ 50 % por actividad). Cuando el valor es simétrico, coincide con la media simple; se usa la fórmula PERT como método único.
@@ -12,59 +14,59 @@ aliases:
 
 ## 1.1 Gestión del Proyecto
 
-| Código | Paquete                                                                                                | Actividades |
-| :----- | :----------------------------------------------------------------------------------------------------- | :---------- |
-| 1.1.1  | [[1.1.1-acta-de-constitucion-del-proyecto\|Acta de constitución del proyecto]]                         | 3           |
-| 1.1.2  | [[1.1.2-especificacion-de-requisitos-de-software-srs\|Especificación de requisitos de software (SRS)]] | 5           |
-| 1.1.3  | [[1.1.3-plan-para-la-direccion-del-proyecto\|Plan para la dirección del proyecto]]                     | 3           |
-| 1.1.4  | [[1.1.4-reportes-de-avance-y-seguimiento\|Reportes de avance y seguimiento]]                           | 3           |
-| 1.1.5  | [[1.1.5-acta-de-cierre-del-proyecto\|Acta de cierre del proyecto]]                                     | 3           |
+| Código | Paquete                                                                                                                                                   | Actividades |
+| :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
+| 1.1.1  | [[diccionario-del-edt/1-1-gestion-del-proyecto/1-1-1-acta-de-constitucion-del-proyecto/index\|Acta de constitución del proyecto]]                         | 3           |
+| 1.1.2  | [[diccionario-del-edt/1-1-gestion-del-proyecto/1-1-2-especificacion-de-requisitos-de-software-srs/index\|Especificación de requisitos de software (SRS)]] | 5           |
+| 1.1.3  | [[diccionario-del-edt/1-1-gestion-del-proyecto/1-1-3-plan-para-la-direccion-del-proyecto/index\|Plan para la dirección del proyecto]]                     | 3           |
+| 1.1.4  | [[diccionario-del-edt/1-1-gestion-del-proyecto/1-1-4-reportes-de-avance-y-seguimiento/index\|Reportes de avance y seguimiento]]                           | 3           |
+| 1.1.5  | [[diccionario-del-edt/1-1-gestion-del-proyecto/1-1-5-acta-de-cierre-del-proyecto/index\|Acta de cierre del proyecto]]                                     | 3           |
 
 ## 1.2 Infraestructura y Entorno
 
-| Código | Paquete                                                                                              | Actividades |
-| :----- | :--------------------------------------------------------------------------------------------------- | :---------- |
-| 1.2.1  | [[1.2.1-servidores-y-base-de-datos-configurados\|Servidores y base de datos configurados]]           | —           |
-| 1.2.2  | [[1.2.2-entornos-de-desarrollo-y-pruebas\|Entornos de desarrollo y pruebas]]                         | —           |
-| 1.2.3  | [[1.2.3-aprovisionamiento-y-carga-de-dataset-semilla\|Aprovisionamiento y carga de dataset semilla]] | —           |
+| Código | Paquete                                                                                                                                                      | Actividades |
+| :----- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
+| 1.2.1  | [[diccionario-del-edt/1-2-infraestructura-y-entorno/1-2-1-servidores-y-base-de-datos-configurados/index\|Servidores y base de datos configurados]]           | —           |
+| 1.2.2  | [[diccionario-del-edt/1-2-infraestructura-y-entorno/1-2-2-entornos-de-desarrollo-y-pruebas/index\|Entornos de desarrollo y pruebas]]                         | —           |
+| 1.2.3  | [[diccionario-del-edt/1-2-infraestructura-y-entorno/1-2-3-aprovisionamiento-y-carga-de-dataset-semilla/index\|Aprovisionamiento y carga de dataset semilla]] | —           |
 
 ## 1.3 Software: Banco de Señales
 
 ### 1.3.1 Módulo de autenticación y seguridad
 
-| Código  | Paquete                                                                                                | Actividades |
-| :------ | :----------------------------------------------------------------------------------------------------- | :---------- |
-| 1.3.1.1 | [[1.3.1.1-interfaz-de-inicio-de-sesion\|Interfaz de inicio de sesión]]                                 | —           |
-| 1.3.1.2 | [[1.3.1.2-sistema-de-control-de-acceso-por-roles-rbac\|Sistema de control de acceso por roles (RBAC)]] | —           |
+| Código  | Paquete                                                                                                                                                                                                  | Actividades |
+| :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
+| 1.3.1.1 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-1-modulo-de-autenticacion-y-seguridad/1-3-1-1-interfaz-de-inicio-de-sesion/index\|Interfaz de inicio de sesión]]                                 | —           |
+| 1.3.1.2 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-1-modulo-de-autenticacion-y-seguridad/1-3-1-2-sistema-de-control-de-acceso-por-roles-rbac/index\|Sistema de control de acceso por roles (RBAC)]] | —           |
 
 ### 1.3.2 Módulo de gestión de señales
 
-| Código  | Paquete                                                                                                    | Actividades |
-| :------ | :--------------------------------------------------------------------------------------------------------- | :---------- |
-| 1.3.2.1 | [[1.3.2.1-formulario-y-procesador-de-carga-alta\|Formulario y procesador de carga (alta)]]                 | 4           |
-| 1.3.2.2 | [[1.3.2.2-interfaz-de-edicion-de-metadatos-modificacion\|Interfaz de edición de metadatos (modificación)]] | 3           |
-| 1.3.2.3 | [[1.3.2.3-mecanismo-de-baja-logica-baja\|Mecanismo de baja lógica (baja)]]                                 | 3           |
+| Código  | Paquete                                                                                                                                                                                               | Actividades |
+| :------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
+| 1.3.2.1 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-2-modulo-de-gestion-de-senales/1-3-2-1-formulario-y-procesador-de-carga-alta/index\|Formulario y procesador de carga (alta)]]                 | 4           |
+| 1.3.2.2 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-2-modulo-de-gestion-de-senales/1-3-2-2-interfaz-de-edicion-de-metadatos-modificacion/index\|Interfaz de edición de metadatos (modificación)]] | 3           |
+| 1.3.2.3 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-2-modulo-de-gestion-de-senales/1-3-2-3-mecanismo-de-baja-logica-baja/index\|Mecanismo de baja lógica (baja)]]                                 | 3           |
 
 ### 1.3.3 Módulo de consulta y visualización
 
-| Código  | Paquete                                                                                            | Actividades |
-| :------ | :------------------------------------------------------------------------------------------------- | :---------- |
-| 1.3.3.1 | [[1.3.3.1-motor-de-busqueda-y-filtrado-por-metadatos\|Motor de búsqueda y filtrado por metadatos]] | —           |
-| 1.3.3.2 | [[1.3.3.2-renderizador-interactivo-de-senales\|Renderizador interactivo de señales]]               | —           |
-| 1.3.3.3 | [[1.3.3.3-herramienta-de-exportacion-de-registros\|Herramienta de exportación de registros]]       | —           |
+| Código  | Paquete                                                                                                                                                                                             | Actividades |
+| :------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
+| 1.3.3.1 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-3-modulo-de-consulta-y-visualizacion/1-3-3-1-motor-de-busqueda-y-filtrado-por-metadatos/index\|Motor de búsqueda y filtrado por metadatos]] | —           |
+| 1.3.3.2 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-3-modulo-de-consulta-y-visualizacion/1-3-3-2-renderizador-interactivo-de-senales/index\|Renderizador interactivo de señales]]               | —           |
+| 1.3.3.3 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-3-modulo-de-consulta-y-visualizacion/1-3-3-3-herramienta-de-exportacion-de-registros/index\|Herramienta de exportación de registros]]       | —           |
 
 ## 1.4 Aseguramiento de Calidad
 
-| Código | Paquete                                                                                                  | Actividades |
-| :----- | :------------------------------------------------------------------------------------------------------- | :---------- |
-| 1.4.1  | [[1.4.1-reporte-de-pruebas-unitarias\|Reporte de pruebas unitarias]]                                     | —           |
-| 1.4.2  | [[1.4.2-reporte-de-pruebas-de-integracion-y-aceptacion\|Reporte de pruebas de integración y aceptación]] | —           |
+| Código | Paquete                                                                                                                                                         | Actividades |
+| :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
+| 1.4.1  | [[diccionario-del-edt/1-4-aseguramiento-de-calidad/1-4-1-reporte-de-pruebas-unitarias/index\|Reporte de pruebas unitarias]]                                     | —           |
+| 1.4.2  | [[diccionario-del-edt/1-4-aseguramiento-de-calidad/1-4-2-reporte-de-pruebas-de-integracion-y-aceptacion/index\|Reporte de pruebas de integración y aceptación]] | —           |
 
 ## 1.5 Despliegue Final
 
-| Código | Paquete                                                                                            | Actividades |
-| :----- | :------------------------------------------------------------------------------------------------- | :---------- |
-| 1.5    | [[1.5-sistema-desplegado-en-ambiente-de-produccion\|Sistema desplegado en ambiente de producción]] | —           |
+| Código | Paquete                                                                                                                                           | Actividades |
+| :----- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :---------- |
+| 1.5    | [[diccionario-del-edt/1-5-despliegue-final/1-5-sistema-desplegado-en-ambiente-de-produccion/index\|Sistema desplegado en ambiente de producción]] | —           |
 
 ## Registro de Cambios
 

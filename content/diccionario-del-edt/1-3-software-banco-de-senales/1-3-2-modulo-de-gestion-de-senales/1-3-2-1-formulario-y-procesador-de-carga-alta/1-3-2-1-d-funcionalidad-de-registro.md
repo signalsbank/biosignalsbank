@@ -1,0 +1,35 @@
+---
+project: BioSignal
+version: 2
+title: "1.3.2.1.D Funcionalidad de registro"
+aliases:
+  - "1.3.2.1.D"
+---
+
+> Paquete: [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-2-modulo-de-gestion-de-senales/1-3-2-1-formulario-y-procesador-de-carga-alta/index|1.3.2.1 Formulario y procesador de carga (alta)]]
+
+- **Código:** 1.3.2.1.D
+- **Actividad:** Funcionalidad de registro
+
+## Alcance
+
+Alta del registro en la base de datos: guarda los metadatos extraídos, los vincula al binario y registra usuario y fecha
+
+## Estimación y costos
+
+- **Cálculo de tiempo estimado:** Tres valores: (24 + 4·30 + 36) / 6 = 30 h
+- **Tiempo estimado:** 30 h
+- **Costo estimado:** $300.000
+- **Tiempo de prevención:** 2 h
+- **Costo de gestión del riesgo:** $20.000
+- **Tiempo adicional si ocurre:** 8 h
+- **Costo de contingencia si ocurre:** $80.000
+- **Duración total:** 40 h
+- **Costo total:** $400.000
+
+## Gestión del riesgo
+
+- **Riesgo:** Inconsistencia entre metadatos y archivo si falla la operación a mitad de camino
+- **Probabilidad (1-5):** 2
+- **Impacto (1-5):** 4
+- **Mitigación (preventiva):** Guardar en una transacción atómica con rollback

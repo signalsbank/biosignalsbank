@@ -532,7 +532,7 @@ Si BioSignal fuera un proyecto real, habría que:
 
 - Formato Markdown con frontmatter YAML: `project`, `version`, `title`, `aliases`, `authors`, `date`.
 - Nombres de archivo con prefijo numérico (`02-`, `03-`, …) y guiones.
-- Enlaces internos estilo Obsidian (`[[...]]`) o relativos a `.md` con anclas (`#^rf-01`).
+- Enlaces internos estilo Obsidian (`[[...]]`) o relativos a `.md` con anclas de sección.
 - Fechas en formato `dd/mm/aaaa`.
 - Moneda: `USD` para caja y `ARS` para esfuerzo interno; no mezclar.
 - Versionado: `v0.x` en revisión, `v1.0` aprobado, `v1.x` corrección menor.

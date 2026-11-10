@@ -3,7 +3,9 @@ project: BioSignal
 version: 2
 title: 4. Enunciado del Alcance del Proyecto
 aliases:
-  - Enunciado del Alcance del Proyecto
+  - "Enunciado del Alcance del Proyecto"
+  - "Enunciado del Alcance"
+  - "Alcance"
 ---
 
 # Enunciado del Alcance del Proyecto
@@ -137,12 +139,12 @@ Abarca todo el trabajo técnico, de integración y de calidad necesario para con
 
 ## 5. Supuestos del Proyecto
 
-| #   | Supuesto                                                                                                                                                                                                                        | Dueño                       | Válido hasta / Condición de validación        | Riesgo vinculado                              |
-| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------- | :-------------------------------------------- | :-------------------------------------------- |
-| 1   | La Dirección de Informática/TIC de la UNViMe garantizará a tiempo el aprovisionamiento del servidor, las credenciales de administración, el subdominio (`*.unvime.edu.ar`) y un mínimo de 100 GB de almacenamiento persistente. | Infra (Eber Chiecher)       | Credenciales disponibles al 30/11/2026        | Sin credenciales al 30/11 → escalar a Sponsor |
-| 2   | El Grupo de Bioingeniería (GAB) facilitará oportunamente los registros EDF necesarios para conformar el Dataset Semilla con el respaldo ético correspondiente.                                                                  | PM                          | ≥ 10 EDF al 15/12/2026                        | R1: si no, usar PhysioNet/sintéticos          |
-| 3   | El diseño de la interfaz gráfica resultará suficientemente intuitivo y autoexplicativo, permitiendo la operación directa de los usuarios sin necesidad de soporte documental o entrenamiento presencial.                        | Frontend/UX (Rocío Pereyra) | Prueba de piloto en UAT (Hito H6)             | Retraba Usabilidad si falla                   |
-| 4   | Los usuarios finales contarán con conexión a Internet y navegadores actualizados compatibles con HTML5 Canvas / WebGL.                                                                                                          | QA                          | Verificación en matriz cross-browser (RNF-07) | RNF-07 test cubre                             |
+| #   | Supuesto                                                                                                                                                                                                                        | Dueño                       | Válido hasta / Condición de validación                                                                                | Riesgo vinculado                                                                          |
+| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
+| 1   | La Dirección de Informática/TIC de la UNViMe garantizará a tiempo el aprovisionamiento del servidor, las credenciales de administración, el subdominio (`*.unvime.edu.ar`) y un mínimo de 100 GB de almacenamiento persistente. | Infra (Eber Chiecher)       | Credenciales disponibles al 30/11/2026                                                                                | Sin credenciales al 30/11 → escalar a Sponsor                                             |
+| 2   | El Grupo de Bioingeniería (GAB) facilitará oportunamente los registros EDF necesarios para conformar el Dataset Semilla con el respaldo ético correspondiente.                                                                  | PM                          | ≥ 10 EDF al 15/12/2026                                                                                                | R1: si no, usar PhysioNet/sintéticos                                                      |
+| 3   | El diseño de la interfaz gráfica resultará suficientemente intuitivo y autoexplicativo, permitiendo la operación directa de los usuarios sin necesidad de soporte documental o entrenamiento presencial.                        | Frontend/UX (Rocío Pereyra) | Prueba de piloto en UAT (Hito [[02-acta-de-constitucion#10. Cronograma de Hitos de Aceptación\|H6]])                  | Retraba Usabilidad si falla                                                               |
+| 4   | Los usuarios finales contarán con conexión a Internet y navegadores actualizados compatibles con HTML5 Canvas / WebGL.                                                                                                          | QA                          | Verificación en matriz cross-browser ([[03-especificacion-de-requisitos#4.3. Compatibilidad y Portabilidad\|RNF-07]]) | [[03-especificacion-de-requisitos#4.3. Compatibilidad y Portabilidad\|RNF-07]] test cubre |
 
 ## 6. Exclusiones del Proyecto (_Out of Scope_)
 
@@ -161,7 +163,7 @@ Abarca todo el trabajo técnico, de integración y de calidad necesario para con
 ## 7. Restricciones del Proyecto
 
 - **Cronograma Comprometido (Fecha Límite):** La fecha límite inamovible de homologación, despliegue productivo y firma del Acta de Cierre es el **15 de febrero de 2027**, permitiendo la disponibilidad operativa para el ciclo lectivo 2027. **Línea base aprobada (Opción A):** inicio 02/11/2026, 15 semanas, alcance MVP (ver Acta, Sección 10).
-- **Costo de Licenciamiento e Infraestructura:** El despliegue se efectuará exclusivamente sobre la infraestructura provista por la UNViMe (garantizando soberanía total sobre los datos), con un presupuesto asignado para licencias de terceros o software comercial estrictamente de **$0 USD** de desembolso de caja (moneda declarada); el costo interno de esfuerzo del equipo se controla en ARS según el Diccionario del EDT (260–360 h).
+- **Costo de Licenciamiento e Infraestructura:** El despliegue se efectuará exclusivamente sobre la infraestructura provista por la UNViMe (garantizando soberanía total sobre los datos), con un presupuesto asignado para licencias de terceros o software comercial estrictamente de **$0 USD** de desembolso de caja (moneda declarada); el costo interno de esfuerzo del equipo se controla en ARS según el [[06-diccionario-del-edt|Diccionario del EDT]] (260–360 h).
 - **Marco Legal y Ético:** Cumplimiento imperativo de la **Ley Nacional N° 25.326** (Protección de los Datos Personales) para garantizar la imposibilidad de reidentificación de pacientes, y exigencia de convenios y avales bioéticos para las señales provenientes de centros hospitalarios.
 - **Restricción de Cliente:** El acceso a la plataforma debe operar íntegramente a través de estándares web nativos, sin requerir descargas adicionales, plugins ni extensiones locales por parte de los usuarios finales.
 

@@ -1,0 +1,35 @@
+---
+project: BioSignal
+version: 2
+title: "1.1.5.B Redacción del documento"
+aliases:
+  - "1.1.5.B"
+---
+
+> Paquete: [[diccionario-del-edt/1-1-gestion-del-proyecto/1-1-5-acta-de-cierre-del-proyecto/index|1.1.5 Acta de cierre del proyecto]]
+
+- **Código:** 1.1.5.B
+- **Actividad:** Redacción del documento
+
+## Alcance
+
+Elaborar el documento final de cierre con balance de alcance, costo, tiempo, lecciones aprendidas y archivo
+
+## Estimación y costos
+
+- **Cálculo de tiempo estimado:** Estimación tres valores: (TO: 1h + TM: 2h + TP: 3h) / 6 (PERT β)
+- **Tiempo estimado:** 2h
+- **Costo estimado:** 2h x $10.000/h = **$20.000**
+- **Costo de gestión del riesgo:** 0.5h x $10.000/h = **$5.000**
+- **Tiempo adicional si ocurre:** 1h
+- **Costo de contingencia si ocurre:** 1h x $10.000/h = **$10.000**
+- **Costo total:** **$35.000**
+
+## Gestión del riesgo
+
+- **Riesgo:** Omisión de lecciones aprendidas críticas o falta de documentación de soporte
+- **Probabilidad (1-5):** 2
+- **Impacto (1-5):** 2
+- **P × I:** 4
+- **Mitigación (preventiva):** Utilizar plantilla normalizada de cierre con sesión previa de retrospectiva (dedicación: 0.5h)
+- **Respuesta al riesgo:** **Completar / Contingencia:** Conducir sesión focalizada de rescate documental con los líderes técnicos y actualizar el repositorio final del proyecto

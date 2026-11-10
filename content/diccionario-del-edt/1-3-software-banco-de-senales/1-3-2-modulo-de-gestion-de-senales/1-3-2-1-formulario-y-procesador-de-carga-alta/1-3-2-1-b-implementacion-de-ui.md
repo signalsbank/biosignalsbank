@@ -1,0 +1,35 @@
+---
+project: BioSignal
+version: 2
+title: "1.3.2.1.B Implementación de UI"
+aliases:
+  - "1.3.2.1.B"
+---
+
+> Paquete: [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-2-modulo-de-gestion-de-senales/1-3-2-1-formulario-y-procesador-de-carga-alta/index|1.3.2.1 Formulario y procesador de carga (alta)]]
+
+- **Código:** 1.3.2.1.B
+- **Actividad:** Implementación de UI
+
+## Alcance
+
+Componente web de carga con arrastrar y soltar, previsualización de metadatos detectados y estados (cargando, éxito, error)
+
+## Estimación y costos
+
+- **Cálculo de tiempo estimado:** Tres valores: (26 + 4·32 + 38) / 6 = 32 h
+- **Tiempo estimado:** 32 h
+- **Costo estimado:** $320.000
+- **Tiempo de prevención:** 3 h
+- **Costo de gestión del riesgo:** $30.000
+- **Tiempo adicional si ocurre:** 10 h
+- **Costo de contingencia si ocurre:** $100.000
+- **Duración total:** 45 h
+- **Costo total:** $450.000
+
+## Gestión del riesgo
+
+- **Riesgo:** Incompatibilidad del arrastrar y soltar entre navegadores
+- **Probabilidad (1-5):** 3
+- **Impacto (1-5):** 3
+- **Mitigación (preventiva):** Usar una librería de componentes probada y probar en al menos 2 navegadores

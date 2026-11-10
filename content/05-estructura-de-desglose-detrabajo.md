@@ -2,7 +2,10 @@
 project: BioSignal
 version: 2
 title: 5. Estructura de Desglose de Trabajo
-aliases: Estructura de Desglose de Trabajo
+aliases:
+  - "Estructura de Desglose de Trabajo"
+  - "EDT"
+  - "WBS"
 ---
 
 ```

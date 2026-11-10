@@ -1,0 +1,35 @@
+---
+project: BioSignal
+version: 2
+title: "1.1.1.A Reunión de inicio y relevamiento"
+aliases:
+  - "1.1.1.A"
+---
+
+> Paquete: [[diccionario-del-edt/1-1-gestion-del-proyecto/1-1-1-acta-de-constitucion-del-proyecto/index|1.1.1 Acta de constitución del proyecto]]
+
+- **Código:** 1.1.1.A
+- **Actividad:** Reunión de inicio y relevamiento
+
+## Alcance
+
+Relevar expectativas preliminares, justificación del proyecto y necesidades iniciales con sponsor y representantes de GAB y UNViMe
+
+## Estimación y costos
+
+- **Cálculo de tiempo estimado:** Estimación tres valores: (TO: 1h + TM: 2h + TP: 3h) / 6 (PERT β)
+- **Tiempo estimado:** 2h
+- **Costo estimado:** 2h x $10.000/h = **$20.000**
+- **Costo de gestión del riesgo:** 0.5h x $10.000/h = **$5.000**
+- **Tiempo adicional si ocurre:** 1.5h
+- **Costo de contingencia si ocurre:** 1.5h x $10.000/h = **$15.000**
+- **Costo total:** **$40.000**
+
+## Gestión del riesgo
+
+- **Riesgo:** Inasistencia de actores clave o falta de alineación en objetivos
+- **Probabilidad (1-5):** 2
+- **Impacto (1-5):** 4
+- **P × I:** 8
+- **Mitigación (preventiva):** Enviar minuta previa con temario y objetivos 48h antes (dedicación: 0.5h)
+- **Respuesta al riesgo:** **Mitigar / Contingencia:** Reprogramar sesión extraordinaria focalizada (1h) con los actores ausentes y validar acuerdos clave vía minuta asincrónica

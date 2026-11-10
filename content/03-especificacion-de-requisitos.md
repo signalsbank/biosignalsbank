@@ -3,7 +3,10 @@ project: BioSignal
 version: 2
 title: 3. Especificación de Requisitos
 aliases:
-  - Especificación de Requisitos
+  - "Especificación de Requisitos"
+  - "Especificación de Requisitos de Software"
+  - "ERS"
+  - "SRS"
 authors: Mateo Astudillo, Ignacio Ávila
 ---
 
@@ -11,7 +14,7 @@ authors: Mateo Astudillo, Ignacio Ávila
 
 Definen los objetivos estratégicos, la justificación institucional y el valor verificable que la solución entrega a la organización.
 
-| ID ^rn    | Requisito                                       | Descripción                                                                                                                                                                                      | Criterio de Aceptación / Métrica (Pasa / No Pasa)                                                                                                                                                                                                                                                                                                                                                                |
+| ID        | Requisito                                       | Descripción                                                                                                                                                                                      | Criterio de Aceptación / Métrica (Pasa / No Pasa)                                                                                                                                                                                                                                                                                                                                                                |
 | --------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **RN-01** | **Soberanía y Gestión Local de Datos**          | La plataforma debe proveer a la UNViMe un repositorio centralizado y autónomo para almacenar, catalogar y gobernar registros de bioseñales generados en actividades de investigación y docencia. | **100% de los datos** alojados y procesados en infraestructura propia o bajo control administrativo directo de la universidad.                                                                                                                                                                                                                                                                                   |
 | **RN-02** | **Ventana de Entrega Operativa**                | El sistema debe encontrarse desplegado, verificado y validado antes del inicio del ciclo lectivo 2027.                                                                                           | Acta formal de homologación y despliegue productivo firmada a más tardar el **15 de febrero de 2027**.                                                                                                                                                                                                                                                                                                           |
@@ -20,7 +23,7 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 
 ## 2. Requisitos de los Interesados
 
-| Interesado ^ri                   | ID        | Necesidad / Expectativa                                                                                                                                                                                                                                                                                                            |
+| Interesado                       | ID        | Necesidad / Expectativa                                                                                                                                                                                                                                                                                                            |
 | -------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Universidad (UNViMe)**         | **RI-01** | Disponer de un desarrollo tecnológico propio con impacto en la comunidad académica que sirva como modelo de extensión y docencia.                                                                                                                                                                                                  |
 | **GAB (Grupo de Bioingeniería)** | **RI-02** | Poder persistir y organizar las bioseñales recolectadas en hospitales e instituciones sanitarias asociadas.                                                                                                                                                                                                                        |
@@ -32,59 +35,59 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 
 ### 3.1. Control de Acceso y Gestión de Perfiles
 
-- **RF-01 (Control de Acceso Basado en Roles - RBAC):** El sistema debe proveer autenticación segura diferenciando dos perfiles: ^rf-01
+- **RF-01 (Control de Acceso Basado en Roles - RBAC):** El sistema debe proveer autenticación segura diferenciando dos perfiles:
 - **Administrador (GAB / Docentes designados):** Carga masiva de señales, edición y curaduría de metadatos, eliminación de archivos, gestión de usuarios y trazabilidad de eventos.
 - **Consultor (Estudiantes / Usuarios autorizados):** Exploración del catálogo, visualización interactiva multicanal, ajuste de escalas y exportación de datos autorizados.
 - **Criterios de sesión y de roles (única):** El sistema tiene exactamente dos perfiles (Administrador y Consultor); roles adicionales (Investigador Clínico, Auditor, Usuario Estándar) quedan fuera de alcance. No existe registro público ni recuperación autónoma de credenciales: las cuentas las crea el Administrador. La sesión se revoca al cerrar el navegador y se bloquea la cuenta tras 5 intentos fallidos (ver RNF-15).
 
-- **RF-02 (Cierre de Sesión por Inactividad):** Toda sesión autenticada con rol Administrador debe expirar automáticamente tras 30 minutos sin interacción. ^rf-02
-- **RF-03 (Acceso Público Demostrativo):** El sistema debe ofrecer una sección pública (sin credenciales) que permita visualizar una señal de demostración (**sintética o anonimizada**) e incluya la vinculación institucional a las carreras de la UNViMe (soporte de RN-04). ^rf-03
+- **RF-02 (Cierre de Sesión por Inactividad):** Toda sesión autenticada con rol Administrador debe expirar automáticamente tras 30 minutos sin interacción.
+- **RF-03 (Acceso Público Demostrativo):** El sistema debe ofrecer una sección pública (sin credenciales) que permita visualizar una señal de demostración (**sintética o anonimizada**) e incluya la vinculación institucional a las carreras de la UNViMe (soporte de RN-04).
 
 ### 3.2. Ingesta, Anonimización y Gestión de Registros
 
-- **RF-04 (Soporte Estándar EDF/EDF+):** El sistema debe procesar la ingesta exclusiva de archivos bajo especificación `.edf` y `.edf+` (European Data Format). ^rf-04
-- **RF-05 (Validación Estructural de Cabecera):** El sistema debe validar que el archivo posea una cabecera binaria válida, comprobando número de señales, duración del registro de datos y especificaciones de transductores antes de confirmar la carga. ^rf-05
-- **RF-06 (Sanitización y Anonimización Irreversible):** Durante la ingesta, el servidor debe sobrescribir o eliminar de forma definitiva e irreversible los datos de identificación personal del paciente en: (a) la cabecera EDF/EDF+, incluidos nombre, documento, identificación local, fecha de nacimiento y cualquier campo que permita identificar al paciente; (b) los canales de anotaciones TAL de EDF+; y (c) los metadatos libres cargados por el administrador. Se conservarán únicamente datos clínicos agregados (por ejemplo, grupo etario) cuando no permitan reidentificación por combinación con patología, institución, equipo o fecha. El proceso debe ser verificado sobre el 100 % de los archivos y garantizar el cumplimiento de la Ley 25.326. ^rf-06
-- **RF-07 (Gestión de Metadatos Académicos):** El Administrador debe poder indexar y modificar la ficha técnica de cada estudio: tipo de señal (ECG, EEG, EMG), patología de referencia, grupo etario del paciente, equipamiento empleado y notas clínicas de orientación académica. ^rf-07
-- **RF-08 (Baja Lógica y Confirmación):** La eliminación de señales debe quedar restringida al Administrador, requiriendo doble confirmación en pantalla y registrándose en el log de auditoría. La **restauración** posterior de registros dados de baja queda reservada al Administrador y también se registra en la auditoría (baja lógica sin restauración visible para el Consultor). ^rf-08
+- **RF-04 (Soporte Estándar EDF/EDF+):** El sistema debe procesar la ingesta exclusiva de archivos bajo especificación `.edf` y `.edf+` (European Data Format).
+- **RF-05 (Validación Estructural de Cabecera):** El sistema debe validar que el archivo posea una cabecera binaria válida, comprobando número de señales, duración del registro de datos y especificaciones de transductores antes de confirmar la carga.
+- **RF-06 (Sanitización y Anonimización Irreversible):** Durante la ingesta, el servidor debe sobrescribir o eliminar de forma definitiva e irreversible los datos de identificación personal del paciente en: (a) la cabecera EDF/EDF+, incluidos nombre, documento, identificación local, fecha de nacimiento y cualquier campo que permita identificar al paciente; (b) los canales de anotaciones TAL de EDF+; y (c) los metadatos libres cargados por el administrador. Se conservarán únicamente datos clínicos agregados (por ejemplo, grupo etario) cuando no permitan reidentificación por combinación con patología, institución, equipo o fecha. El proceso debe ser verificado sobre el 100 % de los archivos y garantizar el cumplimiento de la Ley 25.326.
+- **RF-07 (Gestión de Metadatos Académicos):** El Administrador debe poder indexar y modificar la ficha técnica de cada estudio: tipo de señal (ECG, EEG, EMG), patología de referencia, grupo etario del paciente, equipamiento empleado y notas clínicas de orientación académica.
+- **RF-08 (Baja Lógica y Confirmación):** La eliminación de señales debe quedar restringida al Administrador, requiriendo doble confirmación en pantalla y registrándose en el log de auditoría. La **restauración** posterior de registros dados de baja queda reservada al Administrador y también se registra en la auditoría (baja lógica sin restauración visible para el Consultor).
 
 ### 3.3. Visualización Gráfica Interactiva
 
-- **RF-09 (Despliegue Multicanal Sincronizado):** La interfaz debe mostrar múltiples canales o derivaciones en paralelo compartiendo una escala de tiempo horizontal idéntica. ^rf-09
-- **RF-10 (Paneo Horizontal Fluido):** El usuario debe poder desplazarse hacia adelante y hacia atrás a lo largo de toda la extensión temporal de la señal. ^rf-10
-- **RF-11 (Control de Zoom Independiente y Global):** El visualizador debe admitir zoom temporal (eje X) y zoom de amplitud (eje Y), aplicable a toda la pantalla o de manera individual a un canal específico. ^rf-11
-- **RF-12 (Ajuste de Escalas Clínicas):** La plataforma debe permitir configurar escalas normalizadas de lectura diagnóstica (ej. 25 mm/s y 10 mm/mV para registros de electrocardiografía). ^rf-12
-- **RF-13 (Selector y Organización de Canales):** El usuario debe poder encender, apagar y reordenar canales en pantalla para focalizar el análisis en derivaciones concretas. ^rf-13
+- **RF-09 (Despliegue Multicanal Sincronizado):** La interfaz debe mostrar múltiples canales o derivaciones en paralelo compartiendo una escala de tiempo horizontal idéntica.
+- **RF-10 (Paneo Horizontal Fluido):** El usuario debe poder desplazarse hacia adelante y hacia atrás a lo largo de toda la extensión temporal de la señal.
+- **RF-11 (Control de Zoom Independiente y Global):** El visualizador debe admitir zoom temporal (eje X) y zoom de amplitud (eje Y), aplicable a toda la pantalla o de manera individual a un canal específico.
+- **RF-12 (Ajuste de Escalas Clínicas):** La plataforma debe permitir configurar escalas normalizadas de lectura diagnóstica (ej. 25 mm/s y 10 mm/mV para registros de electrocardiografía).
+- **RF-13 (Selector y Organización de Canales):** El usuario debe poder encender, apagar y reordenar canales en pantalla para focalizar el análisis en derivaciones concretas.
 
 ### 3.4. Exportación y Descarga
 
-- **RF-14 (Descarga):** El sistema debe permitir descargar el archivo `.edf` **sanitizado (anonimizado), íntegro y trazable** (con hash verificable y registro de descargas en auditoría). La exportación a otros formatos (CSV, JSON, MATLAB) queda fuera de alcance; extendirla requiere RFC y actualización del Enunciado del Alcance. ^rf-14
+- **RF-14 (Descarga):** El sistema debe permitir descargar el archivo `.edf` **sanitizado (anonimizado), íntegro y trazable** (con hash verificable y registro de descargas en auditoría). La exportación a otros formatos (CSV, JSON, MATLAB) queda fuera de alcance; extendirla requiere RFC y actualización del [[04-enunciado-del-alance-del-proyecto|Enunciado del Alcance]].
 
 ## 4. Requisitos No Funcionales y Atributos de Calidad
 
 ### 4.1. Eficiencia de Desempeño
 
-- **RNF-01 (Capacidad Concurrente):** El sistema debe mantener su operatividad sin degradación ante un máximo de **100 usuarios concurrentes** visualizando señales simultáneamente. ^rnf-01
-- **RNF-02 (Tiempo de Respuesta en Visualización):** El tiempo transcurrido desde que un usuario solicita una señal hasta que el primer segmento interactivo se despliega en pantalla no debe exceder los **2,5 segundos** en redes con ancho de banda ≥ 10 Mbps. ^rnf-02
+- **RNF-01 (Capacidad Concurrente):** El sistema debe mantener su operatividad sin degradación ante un máximo de **100 usuarios concurrentes** visualizando señales simultáneamente.
+- **RNF-02 (Tiempo de Respuesta en Visualización):** El tiempo transcurrido desde que un usuario solicita una señal hasta que el primer segmento interactivo se despliega en pantalla no debe exceder los **2,5 segundos** en redes con ancho de banda ≥ 10 Mbps.
 - **Método de medición:** se define la métrica **TTIS** (_Time to Interactive Segment_), medida con `PerformanceObserver` sobre el primer frame interactivo del canvas. LCP se conserva como referencia de experiencia web, pero no reemplaza la medición del primer segmento interactivo de la señal. Criterio: **TTIS ≤ 2,5 s** en red ≥ 10 Mbps (validación con Lighthouse y DevTools por release).
-- **RNF-03 (Fluidez de Renderizado):** Las acciones interactivas de paneo y zoom deben sostener una tasa de refresco mínima de **30 cuadros por segundo (FPS)**. ^rnf-03
-- **RNF-04 (Tiempo de Procesamiento de Ingesta):** Para archivos EDF convencionales (menores a 50 MB), el tiempo de validación estructural, sanitización y persistencia no debe superar los **30 segundos**. ^rnf-04
+- **RNF-03 (Fluidez de Renderizado):** Las acciones interactivas de paneo y zoom deben sostener una tasa de refresco mínima de **30 cuadros por segundo (FPS)**.
+- **RNF-04 (Tiempo de Procesamiento de Ingesta):** Para archivos EDF convencionales (menores a 50 MB), el tiempo de validación estructural, sanitización y persistencia no debe superar los **30 segundos**.
 
 ### 4.2. Seguridad y Privacidad
 
-- **RNF-05 (Cumplimiento Legal de Privacidad):** El sistema debe ajustarse a las disposiciones de la **Ley Nacional N° 25.326 de Protección de los Datos Personales** (República Argentina), imposibilitando la reidentificación de los pacientes. ^rnf-05
-- **RNF-06 (Cifrado en Tránsito):** Toda comunicación cliente-servidor debe estar protegida bajo protocolo seguro HTTPS empleando TLS 1.3. ^rnf-06
+- **RNF-05 (Cumplimiento Legal de Privacidad):** El sistema debe ajustarse a las disposiciones de la **Ley Nacional N° 25.326 de Protección de los Datos Personales** (República Argentina), imposibilitando la reidentificación de los pacientes.
+- **RNF-06 (Cifrado en Tránsito):** Toda comunicación cliente-servidor debe estar protegida bajo protocolo seguro HTTPS empleando TLS 1.3.
 
 ### 4.3. Compatibilidad y Portabilidad
 
-- **RNF-07 (Compatibilidad de Navegadores):** La plataforma debe funcionar sin fallas ni plugins adicionales en las dos versiones estables más recientes de los navegadores basados en Chromium (Google Chrome, Microsoft Edge, Brave), Gecko (Mozilla Firefox) y WebKit (Apple Safari). ^rnf-07
-- **RNF-08 (Adaptabilidad a Dispositivos):** ^rnf-08
+- **RNF-07 (Compatibilidad de Navegadores):** La plataforma debe funcionar sin fallas ni plugins adicionales en las dos versiones estables más recientes de los navegadores basados en Chromium (Google Chrome, Microsoft Edge, Brave), Gecko (Mozilla Firefox) y WebKit (Apple Safari).
+- **RNF-08 (Adaptabilidad a Dispositivos):**
   - **Escritorio y Portátiles (ancho de pantalla ≥ 1024 px):** Modo completo multicanal con visualización simultánea de hasta 32 canales.
   - **Dispositivos Móviles (smartphones y tablets con pantallas < 768 px):** Interfaz adaptativa que restrinja por defecto la vista a 1 o 2 canales seleccionados por el usuario, evitando sobrecarga de memoria gráfica y optimizando el espacio visual táctil.
 
 ### 4.4. Usabilidad
 
-- **RNF-09 (Facilidad de Aprendizaje):** Un estudiante sin formación previa en la plataforma debe ser capaz de buscar, abrir y configurar la visualización de una señal en un tiempo menor a 5 minutos. ^rnf-09
+- **RNF-09 (Facilidad de Aprendizaje):** Un estudiante sin formación previa en la plataforma debe ser capaz de buscar, abrir y configurar la visualización de una señal en un tiempo menor a 5 minutos.
 
 ### 4.5. Disponibilidad, Respaldo, Accesibilidad, Auditoría, Mantenibilidad y Seguridad (RNF adicionales)
 
@@ -99,14 +102,14 @@ Definen los objetivos estratégicos, la justificación institucional y el valor 
 
 ## 5. Requisitos de Transición y Preparación Operativa
 
-| ID ^rt    | Requisito                                | Criterio de Aceptación                                                                                                   | Dueño                 | Fecha Objetivo       |
-| --------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | :-------------------- | :------------------- |
-| **RT-01** | **Dataset Semilla**                      | Carga y verificación previa de al menos **30 registros EDF** (ej. 15 registros de ECG y 15 registros de EEG multicanal). | GAB (con QA)          | 15/01/2027 (Hito H4) |
-| **RT-02** | **Despliegue en Servidor de Producción** | Puesta en marcha en los servidores asignados por la UNViMe.                                                              | Infra / Dirección TIC | 12/02/2027 (Hito H7) |
+| ID        | Requisito                                | Criterio de Aceptación                                                                                                   | Dueño                 | Fecha Objetivo                                                                          |
+| --------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | :-------------------- | :-------------------------------------------------------------------------------------- |
+| **RT-01** | **Dataset Semilla**                      | Carga y verificación previa de al menos **30 registros EDF** (ej. 15 registros de ECG y 15 registros de EEG multicanal). | GAB (con QA)          | 15/01/2027 (Hito [[02-acta-de-constitucion#10. Cronograma de Hitos de Aceptación\|H4]]) |
+| **RT-02** | **Despliegue en Servidor de Producción** | Puesta en marcha en los servidores asignados por la UNViMe.                                                              | Infra / Dirección TIC | 12/02/2027 (Hito [[02-acta-de-constitucion#10. Cronograma de Hitos de Aceptación\|H7]]) |
 
 ## 6. Requisitos y Restricciones del Proyecto
 
-| ID ^rp    | Restricción / Requisito                 | Detalle                                                                                                                                                                                               |
+| ID        | Restricción / Requisito                 | Detalle                                                                                                                                                                                               |
 | --------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **RP-01** | **Infraestructura Institucional**       | La Dirección de Informática/TIC de la UNViMe debe proveer credenciales de despliegue, asignación de subdominio institucional (`*.unvime.edu.ar`) y un mínimo de 100 GB de almacenamiento persistente. |
 | **RP-02** | **Cronograma Comprometido (Hito 2027)** | **15 de febrero de 2027**: Fecha límite inamovible de entrega con pruebas de integración superadas para su incorporación en el ciclo lectivo 2027.                                                    |
