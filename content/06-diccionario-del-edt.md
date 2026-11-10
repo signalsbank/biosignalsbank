@@ -1,372 +1,70 @@
 ---
 project: BioSignal
-version: 2
-title: 6. Diccionario del EDT
-aliases: Diccionario del EDT
+version: 2.1
+title: "6. Diccionario del EDT"
+aliases:
+  - "Diccionario del EDT"
 ---
 
 > **Método de estimación:** distribución beta (_PERT_): **E = (TO + 4·TM + TP) / 6**, con desvío estándar σ = (TP – TO) / 6. Los valores publicados son la esperanza de cada actividad (nivel de confianza ≈ 50 % por actividad). Cuando el valor es simétrico, coincide con la media simple; se usa la fórmula PERT como método único.
+>
+> **Contenido:** 19 paquetes de trabajo y 27 actividades con ficha individual. Cada paquete tiene un archivo principal con sus características; los paquetes sin desglose de actividades se listan solo con su archivo principal.
 
 ## 1.1 Gestión del Proyecto
 
-### Paquete de Trabajo: 1.1.1 ^p-111
-
-- **Código:** 1.1.1
-- **Denominación:** Acta de constitución del proyecto
-- **Objetivo:** Autorizar formalmente la existencia del proyecto y conferir al director de proyecto la autoridad para asignar recursos organizacionales.
-- **Descripción:** Documento formal que sintetiza la justificación estratégica, objetivos medibles, requisitos de alto nivel, presupuesto asignado, hitos principales y partes interesadas (_stakeholders_) del sistema de señales biomédicas.
-- **Prerequisitos:**
-- **Actividades:**
-
-| Código      | Actividad                        | Alcance                                                                                                                            | Cálculo de tiempo estimado (Fórmula / Criterio)                     | Tiempo estimado | Costo estimado (h x $)          | Riesgo                                                                 | Probabilidad (1-5) | Impacto (1-5) | P x I | Mitigación (Preventiva)                                                                       | Respuesta al riesgo                                                                                                                                               | Tiempo adicional si ocurre | Costo de gestión del riesgo      | Costo de contingencia si ocurre   | Costo total |
-| :---------- | :------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------ | :-------------- | :------------------------------ | :--------------------------------------------------------------------- | :----------------- | :------------ | :---- | :-------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------- | :-------------------------------- | :---------- |
-| **1.1.1.A** | Reunión de inicio y relevamiento | Relevar expectativas preliminares, justificación del proyecto y necesidades iniciales con sponsor y representantes de GAB y UNViMe | Estimación tres valores:<br>(TO: 1h + TM: 2h + TP: 3h) / 6 (PERT β) | 2h              | 2h x $10.000/h =<br>**$20.000** | Inasistencia de actores clave o falta de alineación en objetivos       | 2                  | 4             | 8     | Enviar minuta previa con temario y objetivos 48h antes (dedicación: 0.5h)                     | **Mitigar / Contingencia:** Reprogramar sesión extraordinaria focalizada (1h) con los actores ausentes y validar acuerdos clave vía minuta asincrónica            | 1.5h                       | 0.5h x $10.000/h =<br>**$5.000** | 1.5h x $10.000/h =<br>**$15.000** | **$40.000** |
-| **1.1.1.B** | Redacción del documento          | Redactar el acta de constitución definiendo propósito, objetivos medibles, supuestos, restricciones e hitos globales               | Estimación por tres valores:<br>(TO: 4h + TM: 6h + TP: 8h) / 3      | 6h              | 6h x $10.000/h =<br>**$60.000** | Ambigüedad en la definición del alcance inicial o criterios de éxito   | 3                  | 3             | 9     | Utilizar plantilla formal de Project Charter con campos normalizados (dedicación: 1h)         | **Mitigar / Contingencia:** Realizar sesión de alineación con sponsor e interesados clave para consensuar criterios de aceptación y redefinir límites del alcance | 2h                         | 1h x $10.000/h =<br>**$10.000**  | 2h x $10.000/h =<br>**$20.000**   | **$90.000** |
-| **1.1.1.C** | Negociación y aprobación         | Revisar observaciones con las partes interesadas, ajustar términos y formalizar la firma del sponsor                               | Estimación tres valores:<br>(TO: 1h + TM: 2h + TP: 3h) / 6 (PERT β) | 2h              | 2h x $10.000/h =<br>**$20.000** | Que no se apruebe por discrepancias en las restricciones o presupuesto | 2                  | 4             | 8     | Enviar borrador 72h antes para resolver observaciones de forma asincrónica (dedicación: 0.5h) | **Negociar / Contingencia:** Conducir mesa de negociación técnica para ajustar supuestos críticos, posponer entregables no esenciales o recalibrar plazos         | 2h                         | 0.5h x $10.000/h =<br>**$5.000** | 2h x $10.000/h =<br>**$20.000**   | **$45.000** |
-
-- **Fechas:** Semana 1 (Hito H1 — Acta aprobada, 02/11/2026).
-- **Criterios de aceptación:** Documento firmado formalmente por el patrocinador con objetivos SMART y presupuesto base ratificado.
-- **Supuestos:** Disponibilidad oportuna de la directiva para revisiones y firmas.
-
-### Paquete de Trabajo: 1.1.2 ^p-112
-
-- **Código:** 1.1.2
-- **Denominación:** Especificación de requisitos de software (SRS)
-- **Objetivo:** Levantar, analizar y documentar formalmente todos los requerimientos funcionales, no funcionales y regulatorios del sistema.
-- **Descripción:** Documento de ingeniería de requisitos bajo estándar IEEE 830 / ISO/IEC/IEEE 29148 que detalla las necesidades técnicas para el manejo de registros biomédicos (ECG, EEG, EMG), formatos de archivo, seguridad, rendimiento y normativas de confidencialidad de datos de salud.
-- **Prerequisitos:** 1.1.1 Acta de constitución del proyecto aprobada.
-- **Actividades:**
-
-| Código      | Actividad                        | Alcance                                                                                                     | Cálculo de tiempo estimado (Fórmula / Criterio)                                             | Tiempo estimado | Costo estimado (h x $)            | Riesgo                                                              | Probabilidad (1-5) | Impacto (1-5) | P x I | Mitigación (Preventiva)                                                                      | Respuesta al riesgo                                                                                                                                                | Tiempo adicional si ocurre | Costo de gestión del riesgo      | Costo de contingencia si ocurre   | Costo total  |
-| :---------- | :------------------------------- | :---------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ | :-------------- | :-------------------------------- | :------------------------------------------------------------------ | :----------------- | :------------ | :---- | :------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------- | :-------------------------------- | :----------- |
-| **1.1.2.A** | Reunión con la UNViMe            | Identificar necesidades de los usuarios institucionales y requisitos funcionales académicos/administrativos | Estimación tres valores:<br>(TO: 1h + TM: 2h + TP: 3h) / 6 (PERT β)                         | 2h              | 2h x $10.000/h =<br>**$20.000**   | Que no tengan las necesidades claras (que se requiera otra reunión) | 3                  | 3             | 9     | Enviar cuestionario de relevamiento y guía de necesidades previa (dedicación: 0.5h)          | **Contingencia:** Ejecutar sesión de relevamiento complementaria con dinámicas guiadas sobre casos de uso específicos y flujos operativos reales                   | 2h                         | 0.5h x $10.000/h =<br>**$5.000** | 2h x $10.000/h =<br>**$20.000**   | **$45.000**  |
-| **1.1.2.B** | Reunión con GAB                  | Relevar requerimientos operativos, de negocio y especificaciones de procesos para la contraparte GAB        | Estimación tres valores:<br>(TO: 1h + TM: 2h + TP: 3h) / 6 (PERT β)                         | 2h              | 2h x $10.000/h =<br>**$20.000**   | Conflictos de prioridad entre requerimientos de GAB y UNViMe        | 2                  | 3             | 6     | Definir matriz de priorización MoSCoW antes de iniciar la sesión (dedicación: 0.5h)          | **Mediar / Contingencia:** Taller conjunto de arbitraje con representantes de ambas partes para ponderar impacto funcional y congelar prioridades consensuadas     | 1.5h                       | 0.5h x $10.000/h =<br>**$5.000** | 1.5h x $10.000/h =<br>**$15.000** | **$40.000**  |
-| **1.1.2.C** | Reunión con Equipo de desarrollo | Analizar viabilidad técnica, arquitectura preliminar, dependencias y esfuerzo de desarrollo                 | Estimación tres valores:<br>(TO: 3h + TM: 4h + TP: 5h) / 6 (PERT β)                         | 4h              | 4h x $10.000/h =<br>**$40.000**   | Subestimación de complejidad técnica o restricciones de integración | 2                  | 4             | 8     | Sesión previa de análisis de infraestructura y stack tecnológico (dedicación: 1h)            | **Mitigar / Contingencia:** Ejecutar prueba de concepto rápida (_spike/PoC_) sobre módulos críticos y recalibrar estimaciones técnicas con el equipo de desarrollo | 2h                         | 1h x $10.000/h =<br>**$10.000**  | 2h x $10.000/h =<br>**$20.000**   | **$70.000**  |
-| **1.1.2.D** | Elaboración del documento        | Redactar la ERS formal con catálogo de requerimientos, criterios de aceptación y matriz de trazabilidad     | Descomposición de tareas:<br>Redacción: 6h + Matriz trazabilidad: 2h + Revisión interna: 2h | 10h             | 10h x $10.000/h =<br>**$100.000** | Especificaciones ambiguas o vacíos en criterios de aceptación       | 3                  | 4             | 12    | Revisión técnica cruzada por pares (peer review) previa al cierre (dedicación: 1h)           | **Corregir / Contingencia:** Taller intensivo de refinamiento y reescritura de requisitos bajo estructura formal (_Given-When-Then_ / criterios SMART) junto al TL | 3h                         | 1h x $10.000/h =<br>**$10.000**  | 3h x $10.000/h =<br>**$30.000**   | **$140.000** |
-| **1.1.2.E** | Aprobación                       | Presentar el documento ante referentes de UNViMe y GAB para firma y congelamiento de línea base             | Estimación tres valores:<br>(TO: 0.5h + TM: 1h + TP: 1.5h) / 6 (PERT β)                     | 1h              | 1h x $10.000/h =<br>**$10.000**   | Que no se apruebe por disconformidad en el alcance acordado         | 2                  | 4             | 8     | Validar actas parciales de requerimientos durante el proceso de redacción (dedicación: 0.5h) | **Negociar / Contingencia:** Revisar observaciones puntuales, transferir requerimientos en disputa a un backlog de fases futuras y proceder a la firma             | 2h                         | 0.5h x $10.000/h =<br>**$5.000** | 2h x $10.000/h =<br>**$20.000**   | **$35.000**  |
-
-- **Fechas:** Semanas 1 a 3 (Hito H2 — Requisitos aprobados, 13/11/2026).
-- **Criterios de aceptación:** Documento SRS aprobado formalmente por los líderes de investigación y equipo técnico sin ambigüedades.
-- **Supuestos:** Acceso directo a profesionales del área biomédica para definir las características clínicas de las señales.
-
-### Paquete de Trabajo: 1.1.3 ^p-113
-
-- **Código:** 1.1.3
-- **Denominación:** Plan para la dirección del proyecto
-- **Objetivo:** Establecer la guía integral para planificar, ejecutar, monitorear, controlar y cerrar el proyecto.
-- **Descripción:** Compendio de planes subsidiarios que consolidan la línea base del alcance (EDT/WBS y diccionario), cronograma maestro, estimación de costos, plan de gestión de calidad, plan de comunicaciones y matriz de gestión de riesgos.
-- **Prerequisitos:** 1.1.1 Acta de constitución y 1.1.2 Especificación de requisitos.
-- **Actividades:**
-
-| Código      | Actividad                                    | Alcance                                                                                                   | Cálculo de tiempo estimado (Fórmula / Criterio)                         | Tiempo estimado | Costo estimado (h x $)          | Riesgo                                                                     | Probabilidad (1-5) | Impacto (1-5) | P x I | Mitigación (Preventiva)                                                                               | Respuesta al riesgo                                                                                                                                                     | Tiempo adicional si ocurre | Costo de gestión del riesgo      | Costo de contingencia si ocurre   | Costo total |
-| :---------- | :------------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------- | :-------------- | :------------------------------ | :------------------------------------------------------------------------- | :----------------- | :------------ | :---- | :---------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------- | :-------------------------------- | :---------- |
-| **1.1.3.A** | Reunión con Equipo de Dirección del Proyecto | Definir estrategia de gestión de alcance, cronograma, costos, calidad, recursos, comunicaciones y riesgos | Estimación tres valores:<br>(TO: 3h + TM: 4h + TP: 5h) / 6 (PERT β)     | 4h              | 4h x $10.000/h =<br>**$40.000** | Falta de acuerdo en roles, responsabilidades o metodologías de trabajo     | 2                  | 3             | 6     | Preparar borrador de matriz RACI y agenda estructurada previa a la sesión (dedicación: 0.5h)          | **Resolver / Contingencia:** Taller de clarificación de gobernanza, renegociación de cargas operativas y ajuste formal de la matriz RACI                                | 2h                         | 0.5h x $10.000/h =<br>**$5.000** | 2h x $10.000/h =<br>**$20.000**   | **$65.000** |
-| **1.1.3.B** | Elaboración del documento de planificación   | Consolidar las líneas base (alcance, tiempo, costo) e integrar los planes de gestión subsidiarios         | Estimación tres valores:<br>(TO: 1h + TM: 2h + TP: 3h) / 6 (PERT β)     | 2h              | 2h x $10.000/h =<br>**$20.000** | Inconsistencias entre las líneas base y los planes subsidiarios de gestión | 2                  | 4             | 8     | Aplicar lista de verificación (checklist) de coherencia entre planes e hitos (dedicación: 0.5h)       | **Corregir / Contingencia:** Conciliación cruzada de dependencias, costos y cronogramas entre planes subsidiarios y actualización de la línea base integrada            | 1.5h                       | 0.5h x $10.000/h =<br>**$5.000** | 1.5h x $10.000/h =<br>**$15.000** | **$40.000** |
-| **1.1.3.C** | Aprobación                                   | Presentación ejecutiva del plan integrado ante el sponsor para autorizar el inicio de la ejecución        | Estimación tres valores:<br>(TO: 0.5h + TM: 1h + TP: 1.5h) / 6 (PERT β) | 1h              | 1h x $10.000/h =<br>**$10.000** | Rechazo u objeciones al cronograma propuesto o a la asignación de recursos | 2                  | 4             | 8     | Realizar reunión preliminar de 30 min para acordar supuestos y restricciones clave (dedicación: 0.5h) | **Ajustar / Contingencia:** Aplicar técnicas de compresión del cronograma (_crashing_ / _fast-tracking_) o nivelación de recursos para presentar una alternativa viable | 1.5h                       | 0.5h x $10.000/h =<br>**$5.000** | 1.5h x $10.000/h =<br>**$15.000** | **$30.000** |
-
-- **Fechas:** Semanas 3 a 4.
-- **Criterios de aceptación:** Plan integral validado por el equipo de desarrollo y aprobado por el comité de proyecto.
-- **Supuestos:** Estabilidad en la asignación del equipo de ingeniería durante el ciclo de vida.
-
-### Paquete de Trabajo: 1.1.4 ^p-114
-
-- **Código:** 1.1.4
-- **Denominación:** Reportes de avance y seguimiento
-- **Objetivo:** Comunicar periódicamente el desempeño del proyecto frente a las líneas base a los interesados.
-- **Descripción:** Informes ejecutivos y operativos emitidos periódicamente que reflejan el avance porcentual, estado de hitos, desempeño del cronograma (SPI), control presupuestal (CPI), riesgos materializados y cambios aprobados.
-- **Prerequisitos:** 1.1.3 Plan para la dirección del proyecto aprobado.
-- **Actividades:**
-
-| Código      | Actividad                             | Alcance                                                                                            | Cálculo de tiempo estimado (Fórmula / Criterio)                                    | Tiempo estimado | Costo estimado (h x $)          | Riesgo                                                                        | Probabilidad (1-5) | Impacto (1-5) | P x I | Mitigación (Preventiva)                                                                               | Respuesta al riesgo                                                                                                                                               | Tiempo adicional si ocurre | Costo de gestión del riesgo      | Costo de contingencia si ocurre | Costo total |
-| :---------- | :------------------------------------ | :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------- | :-------------- | :------------------------------ | :---------------------------------------------------------------------------- | :----------------- | :------------ | :---- | :---------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------- | :------------------------------ | :---------- |
-| **1.1.4.A** | Recopilar información sobre el avance | Recolectar datos de tareas concluidas, horas incurridas y estado de entregables del equipo técnico | Estimación tres valores:<br>(TO: 1h + TM: 2h + TP: 3h) / 6 (PERT β)                | 2h              | 2h x $10.000/h =<br>**$20.000** | Carga incompleta o desactualizada de horas y tareas en el tablero             | 3                  | 3             | 9     | Fijar límite semanal automático para reporte de horas en la herramienta de gestión (dedicación: 0.5h) | **Contingencia:** Conducir sesiones breves 1 a 1 de seguimiento con los miembros rezagados para regularizar la carga de tareas y horas en el sistema              | 1h                         | 0.5h x $10.000/h =<br>**$5.000** | 1h x $10.000/h =<br>**$10.000** | **$35.000** |
-| **1.1.4.B** | Elaborar el reporte de avance         | Calcular métricas de valor ganado (EVM), contrastar cronograma real vs. plan y evaluar desvíos     | Descomposición de tareas:<br>Cálculo de desvíos: 1.5h + Redacción de informe: 1.5h | 3h              | 3h x $10.000/h =<br>**$30.000** | Detección tardía de desviaciones críticas en la ruta principal del cronograma | 2                  | 4             | 8     | Configurar alertas tempranas basadas en umbrales de variación de costo y tiempo (dedicación: 0.5h)    | **Mitigar / Contingencia:** Evaluar el impacto en la ruta crítica y diseñar de inmediato un plan de recuperación con reasignación y paralelización de actividades | 2h                         | 0.5h x $10.000/h =<br>**$5.000** | 2h x $10.000/h =<br>**$20.000** | **$55.000** |
-| **1.1.4.C** | Comunicar el estado del proyecto      | Distribuir el informe ejecutivo y realizar la reunión periódica de estado con los interesados      | Estimación tres valores:<br>(TO: 0.5h + TM: 1h + TP: 1.5h) / 6 (PERT β)            | 1h              | 1h x $10.000/h =<br>**$10.000** | Desinterés o falta de lectura del reporte por parte de los interesados clave  | 2                  | 3             | 6     | Presentar resumen visual de una página (dashboard con semáforos) y solicitar acuse (dedicación: 0.5h) | **Contingencia:** Convocar a una llamada ejecutiva breve (15 min) focalizada exclusivamente en desvíos, bloqueantes y decisiones requeridas                       | 1h                         | 0.5h x $10.000/h =<br>**$5.000** | 1h x $10.000/h =<br>**$10.000** | **$25.000** |
-
-- **Fechas:** Semanas 1 a 15 (Emisión quincenal recurrente).
-- **Criterios de aceptación:** Entrega puntual de reportes con datos trazables y aprobados por la gerencia.
-- **Supuestos:** Los miembros del equipo reportan sus avances y horas dedicadas con precisión.
-
-### Paquete de Trabajo: 1.1.5 ^p-115
-
-- **Código:** 1.1.5
-- **Denominación:** Acta de cierre del proyecto
-- **Objetivo:** Formalizar la culminación contractual, administrativa y operativa del proyecto, liberando los recursos asignados.
-- **Descripción:** Documento de terminación que formaliza la aceptación final de todos los entregables, documenta las lecciones aprendidas del desarrollo del banco de señales, evalúa los resultados y transfiere el sistema al equipo de mantenimiento.
-- **Prerequisitos:** 1.5 Sistema desplegado en producción y 1.4.2 Pruebas de aceptación concluidas.
-- **Actividades:**
-
-| Código      | Actividad               | Alcance                                                                                                        | Cálculo de tiempo estimado (Fórmula / Criterio)                         | Tiempo estimado | Costo estimado (h x $)          | Riesgo                                                                                   | Probabilidad (1-5) | Impacto (1-5) | P x I | Mitigación (Preventiva)                                                                                  | Respuesta al riesgo                                                                                                                                          | Tiempo adicional si ocurre | Costo de gestión del riesgo      | Costo de contingencia si ocurre   | Costo total |
-| :---------- | :---------------------- | :------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------- | :-------------- | :------------------------------ | :--------------------------------------------------------------------------------------- | :----------------- | :------------ | :---- | :------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------- | :-------------------------------- | :---------- |
-| **1.1.5.A** | Verificar el producto   | Comprobar el cumplimiento de criterios de aceptación de entregables, verificar objetivos y auditar compromisos | Estimación tres valores:<br>(TO: 3h + TM: 4h + TP: 5h) / 6 (PERT β)     | 4h              | 4h x $10.000/h =<br>**$40.000** | Identificar actividades pendientes o entregables no conformes                            | 3                  | 4             | 12    | Aplicar checklist de validación previa junto con actas de aceptación parciales (dedicación: 1h)          | **Resolver / Contingencia:** Elaborar lista de observaciones pendientes (_punch list_), acordar tolerancias y ejecutar plan express de subsanación técnica   | 3h                         | 1h x $10.000/h =<br>**$10.000**  | 3h x $10.000/h =<br>**$30.000**   | **$80.000** |
-| **1.1.5.B** | Redacción del documento | Elaborar el documento final de cierre con balance de alcance, costo, tiempo, lecciones aprendidas y archivo    | Estimación tres valores:<br>(TO: 1h + TM: 2h + TP: 3h) / 6 (PERT β)     | 2h              | 2h x $10.000/h =<br>**$20.000** | Omisión de lecciones aprendidas críticas o falta de documentación de soporte             | 2                  | 2             | 4     | Utilizar plantilla normalizada de cierre con sesión previa de retrospectiva (dedicación: 0.5h)           | **Completar / Contingencia:** Conducir sesión focalizada de rescate documental con los líderes técnicos y actualizar el repositorio final del proyecto       | 1h                         | 0.5h x $10.000/h =<br>**$5.000** | 1h x $10.000/h =<br>**$10.000**   | **$35.000** |
-| **1.1.5.C** | Aprobación              | Presentar el acta final y obtener la firma de aceptación definitiva y desvinculación formal del sponsor        | Estimación tres valores:<br>(TO: 0.5h + TM: 1h + TP: 1.5h) / 6 (PERT β) | 1h              | 1h x $10.000/h =<br>**$10.000** | Resistencia de algún interesado en otorgar el cierre formal por disconformidades menores | 2                  | 3             | 6     | Anexar las actas de conformidad parcial firmadas previamente durante el ciclo de vida (dedicación: 0.5h) | **Negociar / Contingencia:** Sesión de mediación con el sponsor para acordar cierre formal condicionado o traspaso de observaciones al soporte/mantenimiento | 1.5h                       | 0.5h x $10.000/h =<br>**$5.000** | 1.5h x $10.000/h =<br>**$15.000** | **$30.000** |
-
-- **Fechas:** Semana 15 (Hito H6/H7 — Cierre del proyecto, 15/02/2027).
-- **Criterios de aceptación:** Firma conjunta de conformidad del cliente/patrocinador y director del proyecto.
-- **Supuestos:** No existen reclamos pendientes ni tickets bloqueantes sin resolver.
+| Código | Paquete                                                                                                | Actividades |
+| :----- | :----------------------------------------------------------------------------------------------------- | :---------- |
+| 1.1.1  | [[1.1.1-acta-de-constitucion-del-proyecto\|Acta de constitución del proyecto]]                         | 3           |
+| 1.1.2  | [[1.1.2-especificacion-de-requisitos-de-software-srs\|Especificación de requisitos de software (SRS)]] | 5           |
+| 1.1.3  | [[1.1.3-plan-para-la-direccion-del-proyecto\|Plan para la dirección del proyecto]]                     | 3           |
+| 1.1.4  | [[1.1.4-reportes-de-avance-y-seguimiento\|Reportes de avance y seguimiento]]                           | 3           |
+| 1.1.5  | [[1.1.5-acta-de-cierre-del-proyecto\|Acta de cierre del proyecto]]                                     | 3           |
 
 ## 1.2 Infraestructura y Entorno
 
-### Paquete de Trabajo: 1.2.1 ^p-121
-
-- **Código:** 1.2.1
-- **Denominación:** Servidores y base de datos configurados
-- **Objetivo:** Proveer la infraestructura de cómputo, almacenamiento seguro de archivos masivos y base de datos optimizada para señales biomédicas.
-- **Descripción:** Aprovisionamiento y configuración de máquinas virtuales/contenedores, repositorios de objetos (S3/MinIO) para archivos binarios de señales, y base de datos relacional/híbrida (PostgreSQL) para indexación de metadatos clínicos con copias de respaldo y certificados TLS/SSL.
-- **Prerequisitos:** 1.1.2 Requisitos no funcionales de arquitectura y almacenamiento aprobados.
-- **Actividades:**
-
-1. Aprovisionar instancias cloud o servidores locales.
-2. Configurar el motor de base de datos y esquemas relacionales.
-3. Habilitar almacenamiento masivo para señales crudas (_raw data_).
-4. Configurar reglas de firewall, puertos seguros y políticas de cifrado en reposo.
-
-- **Fechas:** Semanas 2 a 3.
-- **Criterios de aceptación:** Servidores operativos con monitoreo 24/7, almacenamiento escalable accesible por API y conexión a base de datos con latencia menor a 50 ms.
-- **Supuestos:** Créditos cloud o servidores físicos disponibles a tiempo.
-
-### Paquete de Trabajo: 1.2.2 ^p-122
-
-- **Código:** 1.2.2
-- **Denominación:** Entornos de desarrollo y pruebas
-- **Objetivo:** Establecer ambientes aislados, reproducibles y automatizados para la construcción, integración y verificación continua del software.
-- **Descripción:** Implementación de pipelines de CI/CD (Integración y Despliegue Continuo), entornos de desarrollo local dockerizados y un ambiente de _staging/QA_ que simule producción con datos sintéticos o anonimizados de señales.
-- **Prerequisitos:** 1.2.1 Servidores y base de datos configurados.
-- **Actividades:**
-
-1. Crear imágenes base de Docker para frontend, backend y procesamiento matemático.
-2. Configurar repositorios de código y pipelines de integración continua.
-3. Cargar set de señales biomédicas de prueba anonimizadas en el entorno de pruebas.
-
-- **Fechas:** Semanas 2 a 4.
-- **Criterios de aceptación:** Pipelines automáticos que ejecuten compilación, análisis estático y despliegue en ambiente QA tras cada _merge_.
-- **Supuestos:** Licencias y herramientas DevOps disponibles sin restricciones operativas.
-
-#### Paquete de Trabajo: 1.2.3 ^p-123
-
-- **Código:** 1.2.3
-- **Denominación:** Aprovisionamiento y carga de dataset semilla
-- **Objetivo:** Conformar y cargar el dataset semilla EDF (≥ 30 registros, 15 ECG + 15 EEG) con metadatos y evidencia de anonimización, dejándolo disponible en el catálogo productivo (trazable con RT-01 y EP-06).
-- **Descripción:** Selección/recolección de registros EDF/EDF+ (reales donados por el GAB o de fuentes abiertas/sintéticas como respaldo, según el riesgo R-01), verificación de anonimización irreversible de cabeceras, catalogación con metadatos académicos (RF-07) y carga validada en el repositorio productivo.
-- **Prerequisitos:** 1.2.1 Servidores y base de datos configurados; 1.2.2 Entornos de desarrollo y pruebas; dictamen legal/ético para los datos de origen hospitalario (RP-03).
-- **Actividades:**
-
-1. Acordar con el GAB la fecha de entrega de los EDF aprobados y validar anonimización de cabeceras.
-2. Cargar y catalogar los 30 EDF (15 ECG + 15 EEG) con metadatos (tipo de señal, patología de referencia, grupo etario, equipamiento, notas).
-3. Registrar evidencia de auditoría de la carga y verificar el inventario en base de datos.
-
-- **Fechas:** Semanas 3 a 5 (dataset disponible antes del Hito H4 — 15/01/2027).
-- **Criterios de aceptación:** 30 registros EDF cargados y catalogados (≥ 15 ECG y ≥ 15 EEG); 0 % de PII residual en cabecera, TALs y metadatos; inventario verificado en BD de producción.
-- **Supuestos:** El GAB entrega a tiempo los registros anonimizados; si no, se usa PhysioNet o señales sintéticas desde la semana 1 (riesgo R-01).
+| Código | Paquete                                                                                              | Actividades |
+| :----- | :--------------------------------------------------------------------------------------------------- | :---------- |
+| 1.2.1  | [[1.2.1-servidores-y-base-de-datos-configurados\|Servidores y base de datos configurados]]           | —           |
+| 1.2.2  | [[1.2.2-entornos-de-desarrollo-y-pruebas\|Entornos de desarrollo y pruebas]]                         | —           |
+| 1.2.3  | [[1.2.3-aprovisionamiento-y-carga-de-dataset-semilla\|Aprovisionamiento y carga de dataset semilla]] | —           |
 
 ## 1.3 Software: Banco de Señales
 
 ### 1.3.1 Módulo de autenticación y seguridad
 
-> **Decisión de alcance (Opción A — MVP):** el registro público de usuarios (antiguo 1.3.1.2) y la recuperación autónoma de credenciales (antiguo 1.3.1.3) quedaron **fuera del MVP**; las cuentas las crea el Administrador. El paquete RBAC se renumeró como **1.3.1.2**. Cualquier reincorporación requiere RF y RFC.
-
-#### Paquete de Trabajo: 1.3.1.1 ^p-1311
-
-- **Código:** 1.3.1.1
-- **Denominación:** Interfaz de inicio de sesión
-- **Objetivo:** Permitir el ingreso seguro y controlado de los usuarios a la plataforma mediante verificación de identidad.
-- **Descripción:** Pantalla responsiva de autenticación que valida usuario y contraseña contra el servicio de identidad, emite tokens de sesión seguros (JWT/OAuth2) e implementa mecanismos de protección contra ataques de fuerza bruta.
-- **Prerequisitos:** 1.2.2 Entornos de desarrollo y pruebas disponibles.
-- **Actividades:**
-
-1. Diseñar la interfaz de usuario UI/UX según lineamientos de accesibilidad.
-2. Desarrollar componentes frontend y consumir endpoints de autenticación.
-3. Implementar bloqueo temporal de cuenta tras múltiples intentos fallidos.
-
-- **Fechas:** Semanas 5 a 6 (Hito H3 — 18/12/2026).
-- **Criterios de aceptación:** Tiempo de respuesta de autenticación menor a 1 segundo, tokens transmitidos únicamente por HTTPS y bloqueo efectivo tras 5 intentos erróneos.
-- **Supuestos:** Protocolo de cifrado robusto para contraseñas (Argon2 o bcrypt) estandarizado en backend.
-
-#### Paquete de Trabajo: 1.3.1.2 ^p-1312
-
-- **Código:** 1.3.1.2
-- **Denominación:** Sistema de control de acceso por roles (RBAC)
-- **Objetivo:** Garantizar que los usuarios accedan únicamente a los datos y funciones según su perfil asignado.
-- **Descripción:** Mecanismo de autorización granular que define y aplica permisos para los dos roles aprobados: **Administrador** (GAB / docentes designados) y **Consultor** (estudiantes / usuarios autorizados), asegurando que sólo personal acreditado acceda a datos sensibles. Incluye la creación de cuentas por parte del Administrador (no existe registro público ni recuperación autónoma de credenciales en el MVP).
-- **Prerequisitos:** 1.3.1.1 Interfaz de inicio de sesión terminada.
-- **Actividades:**
-
-1. Diseñar la matriz de roles y permisos granulares.
-2. Implementar middlewares de control de acceso a nivel de API backend y directivas en frontend.
-3. Construir panel de asignación de roles y alta de cuentas exclusivo para administradores.
-
-- **Fechas:** Semanas 6 a 7 (Hito H3 — 18/12/2026).
-- **Criterios de aceptación:** Bloqueo estricto (código HTTP 403 Forbidden) para cualquier acción no permitida por la matriz de roles; aprobación de pruebas de elevación de privilegios.
-- **Supuestos:** Los perfiles institucionales están previamente homologados con las normativas éticas correspondientes.
+| Código  | Paquete                                                                                                | Actividades |
+| :------ | :----------------------------------------------------------------------------------------------------- | :---------- |
+| 1.3.1.1 | [[1.3.1.1-interfaz-de-inicio-de-sesion\|Interfaz de inicio de sesión]]                                 | —           |
+| 1.3.1.2 | [[1.3.1.2-sistema-de-control-de-acceso-por-roles-rbac\|Sistema de control de acceso por roles (RBAC)]] | —           |
 
 ### 1.3.2 Módulo de gestión de señales
 
-#### Paquete de Trabajo: 1.3.2.1 ^p-1321
-
-- **Código:** 1.3.2.1
-- **Denominación:** Formulario y procesador de carga (alta)
-- **Objetivo:** Permitir la carga e ingesta controlada de registros biomédicos al repositorio con extracción automática de características técnicas.
-- **Descripción:** Componente web de carga de archivos (con soporte de arrastrar y soltar) conectado a un motor de procesamiento que valida la integridad del archivo, detecta el formato (exclusivamente EDF/EDF+), extrae canales, frecuencia de muestreo y duración, y almacena el archivo binario y sus metadatos.
-- **Prerequisitos:** 1.2.1 Almacenamiento configurado y 1.3.1.2 Control de roles operativo.
-- **Actividades:**
-
-| Código    | Actividad                 | Alcance                                                                                                                                    | Cálculo de tiempo                                                                                                                                      | Tiempo est. | Costo estimado | Riesgo                                                                            | P   | I   | P×I | Mitigación                                                                  | Tiempo prevención | Costo gestión | Tiempo adicional | Costo contingencia | Duración total | Costo total |
-| --------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | -------------- | --------------------------------------------------------------------------------- | --- | --- | --- | --------------------------------------------------------------------------- | ----------------- | ------------- | ---------------- | ------------------ | -------------- | ----------- |
-| 1.3.2.1.A | Diseño de la página       | Maquetas de la pantalla de carga: zona de arrastrar y soltar, selector de archivo, barra de progreso y mensajes de error                   | Tres valores: (8 + 4·12 + 16) / 6 = 12 h                                                                                                               | 12 h        | $120.000       | Requisitos del flujo de carga poco claros que obligan a rediseñar                 | 3   | 2   | 6   | Validar las maquetas con el equipo/tutor antes de implementar               | 1 h               | $10.000       | 4 h              | $40.000            | 17 h           | $170.000    |
-| 1.3.2.1.B | Implementación de UI      | Componente web de carga con arrastrar y soltar, previsualización de metadatos detectados y estados (cargando, éxito, error)                | Tres valores: (26 + 4·32 + 38) / 6 = 32 h                                                                                                              | 32 h        | $320.000       | Incompatibilidad del arrastrar y soltar entre navegadores                         | 3   | 3   | 9   | Usar una librería de componentes probada y probar en al menos 2 navegadores | 3 h               | $30.000       | 10 h             | $100.000           | 45 h           | $450.000    |
-| 1.3.2.1.C | Funcionalidad de subida   | Procesador backend que valida integridad, detecta el formato (EDF), extrae canales, frecuencia de muestreo y duración, y guarda el binario | Descomposición: validación de integridad 10 h + detección de formato 8 h + extracción de características 12 h + almacenamiento del binario 10 h = 40 h | 40 h        | $400.000       | Archivos de hasta 50 MB que saturan la memoria o superan el tiempo máximo de 30 s | 3   | 5   | 15  | Lectura por streaming/bloques y prueba de carga con un archivo de 50 MB     | 4 h               | $40.000       | 14 h             | $140.000           | 58 h           | $580.000    |
-| 1.3.2.1.D | Funcionalidad de registro | Alta del registro en la base de datos: guarda los metadatos extraídos, los vincula al binario y registra usuario y fecha                   | Tres valores: (24 + 4·30 + 36) / 6 = 30 h                                                                                                              | 30 h        | $300.000       | Inconsistencia entre metadatos y archivo si falla la operación a mitad de camino  | 2   | 4   | 8   | Guardar en una transacción atómica con rollback                             | 2 h               | $20.000       | 8 h              | $80.000            | 40 h           | $400.000    |
-
-- **Fechas:** Semanas 7 a 9 (Hito H4 — Ingesta y sanitización, 15/01/2027).
-- **Criterios de aceptación:** Ingesta exitosa de archivos EDF/EDF+ de **menos de 50 MB en ≤ 30 segundos** (RNF-04), con lectura por streaming, lectura correcta de cabecera y canales.
-- **Supuestos:** Los usuarios proporcionan archivos conformes a especificaciones estándar de señales biomédicas.
-
-#### Paquete de Trabajo: 1.3.2.2 ^p-1322
-
-- **Código:** 1.3.2.2
-- **Denominación:** Interfaz de edición de metadatos (modificación)
-- **Objetivo:** Facilitar la edición, enriquecimiento y categorización clínica de las señales almacenadas.
-- **Descripción:** Interfaz administrativa que permite a los investigadores autorizados modificar datos contextuales de las señales, alineados con RF-07: tipo de señal (ECG, EEG, EMG), patología de referencia, grupo etario del paciente, equipamiento empleado y notas clínicas de orientación académica, registrando auditoría de cada modificación.
-- **Prerequisitos:** 1.3.2.1 Formulario y procesador de carga funcional.
-- **Actividades:**
-
-| Código    | Actividad                             | Alcance                                                                                                                  | Cálculo de tiempo                                                                                                                                              | Tiempo est. | Costo estimado | Riesgo                                                                  | P   | I   | P×I | Mitigación                                                                                         | Tiempo prevención | Costo gestión | Tiempo adicional | Costo contingencia | Duración total | Costo total |
-| --------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------- | ----------------------------------------------------------------------- | --- | --- | --- | -------------------------------------------------------------------------------------------------- | ----------------- | ------------- | ---------------- | ------------------ | -------------- | ----------- |
-| 1.3.2.2.A | Diseño de la página                   | Maqueta del formulario de edición y de la vista de historial de cambios                                                  | Tres valores: (9 + 4·12 + 15) / 6 = 12 h                                                                                                                       | 12 h        | $120.000       | Catálogos de diagnósticos mal definidos que obligan a rehacer el diseño | 3   | 3   | 9   | Definir un catálogo cerrado reducido antes de diseñar                                              | 1 h               | $10.000       | 4 h              | $40.000            | 17 h           | $170.000    |
-| 1.3.2.2.B | Implementar la UI                     | Formulario con selectores de catálogos cerrados, validación de campos y pantalla de historial de modificaciones          | Tres valores: (22 + 4·28 + 34) / 6 = 28 h                                                                                                                      | 28 h        | $280.000       | Formulario con muchos campos que genera retrabajo                       | 3   | 3   | 9   | Reutilizar componentes de 1.3.2.1.B y hacer una revisión intermedia                                | 2 h               | $20.000       | 8 h              | $80.000            | 38 h           | $380.000    |
-| 1.3.2.2.C | Funcionalidad de editar los metadatos | Backend que actualiza metadatos, aplica los catálogos y genera el registro de auditoría (autor, fecha, campo modificado) | Descomposición: actualización de metadatos 14 h + validación contra catálogos 10 h + registro de auditoría 14 h + prueba de integridad del binario 10 h = 48 h | 48 h        | $480.000       | La edición corrompe o reescribe la señal cruda original                 | 2   | 5   | 10  | Metadatos en tabla separada, binario de solo lectura y prueba de integridad (hash) antes y después | 5 h               | $50.000       | 12 h             | $120.000           | 65 h           | $650.000    |
-
-- **Criterios de aceptación:** Cambios reflejados de inmediato en las consultas; generación obligatoria del registro de autor, fecha y campo modificado.
-- **Fechas:** Semanas 9 a 10 (Hito H4 — 15/01/2027).
-- **Supuestos:** La edición de metadatos no corrompe ni reescribe la señal biológica cruda original.
-
-#### Paquete de Trabajo: 1.3.2.3 ^p-1323
-
-- **Código:** 1.3.2.3
-- **Denominación:** Mecanismo de baja lógica (baja)
-- **Objetivo:** Ocultar registros obsoletos o erróneos del catálogo público sin destruir la información física, preservando la trazabilidad.
-- **Descripción:** Lógica de software que implementa la desactivación de registros mediante banderas de estado (`is_deleted = true`, fecha y motivo), excluyéndolos de las búsquedas habituales pero permitiendo su eventual auditoría o restauración por administradores.
-- **Prerequisitos:** 1.3.2.1 Formulario de alta y 1.3.1.2 Roles de usuario configurados.
-- **Actividades:**
-
-| Código    | Actividad                    | Alcance                                                                                                                    | Cálculo de tiempo                                                                                                            | Tiempo est. | Costo estimado | Riesgo                                                      | P   | I   | P×I | Mitigación                                                 | Tiempo prevención | Costo gestión | Tiempo adicional | Costo contingencia | Duración total | Costo total |
-| --------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------- | ----------------------------------------------------------- | --- | --- | --- | ---------------------------------------------------------- | ----------------- | ------------- | ---------------- | ------------------ | -------------- | ----------- |
-| 1.3.2.3.A | Diseño de la página          | Maqueta del botón de baja, el cuadro de confirmación con motivo y la vista de registros dados de baja para administradores | Tres valores: (2 + 4·3 + 4) / 6 = 3 h                                                                                        | 3 h         | $30.000        | Diseño del motivo de baja poco claro (riesgo menor)         | 1   | 2   | 2   | Aceptar; reutilizar el estilo de los diálogos ya diseñados | 0 h               | $0            | 1 h              | $10.000            | 4 h            | $40.000     |
-| 1.3.2.3.B | Implementar la UI            | Botón de baja con confirmación y motivo obligatorio, y listado de bajas con opción de restaurar (solo administradores)     | Tres valores: (6 + 4·8 + 10) / 6 = 8 h                                                                                       | 8 h         | $80.000        | Baja accidental de un registro equivocado                   | 3   | 3   | 9   | Confirmación con motivo obligatorio y opción de restaurar  | 1 h               | $10.000       | 3 h              | $30.000            | 12 h           | $120.000    |
-| 1.3.2.3.C | Funcionalidad de baja lógica | Baja lógica, guarda fecha y motivo, excluye bajas de las búsquedas y permite la restauración por administradores           | Descomposición: bandera y migración 4 h + registro de fecha y motivo 4 h + filtro en búsquedas 5 h + restauración 5 h = 18 h | 18 h        | $180.000       | Registros dados de baja que siguen apareciendo en consultas | 3   | 4   | 12  | Filtro único en la capa de consulta y pruebas de búsqueda  | 2 h               | $20.000       | 4 h              | $40.000            | 24 h           | $240.000    |
-
-- **Fechas:** Semanas 10 a 11 (Hito H4 — 15/01/2027).
-- **Criterios de aceptación:** El registro desaparece inmediatamente de las búsquedas generales pero permanece intacto en base de datos con justificación del borrado.
-- **Supuestos:** Cumplimiento de políticas de retención de datos científicos que prohíben la pérdida irreversible de registros.
+| Código  | Paquete                                                                                                    | Actividades |
+| :------ | :--------------------------------------------------------------------------------------------------------- | :---------- |
+| 1.3.2.1 | [[1.3.2.1-formulario-y-procesador-de-carga-alta\|Formulario y procesador de carga (alta)]]                 | 4           |
+| 1.3.2.2 | [[1.3.2.2-interfaz-de-edicion-de-metadatos-modificacion\|Interfaz de edición de metadatos (modificación)]] | 3           |
+| 1.3.2.3 | [[1.3.2.3-mecanismo-de-baja-logica-baja\|Mecanismo de baja lógica (baja)]]                                 | 3           |
 
 ### 1.3.3 Módulo de consulta y visualización
 
-#### Paquete de Trabajo: 1.3.3.1 ^p-1331
-
-- **Código:** 1.3.3.1
-- **Denominación:** Motor de búsqueda y filtrado por metadatos
-- **Objetivo:** Proveer a los usuarios una herramienta ágil y precisa para localizar registros de señales bajo múltiples criterios.
-- **Descripción:** Mecanismo de consulta avanzada que indexa metadatos y permite filtrar registros biomédicos por tipo de señal (ECG, EEG, EMG), patología asociada, edad, género, frecuencia de muestreo, cantidad de derivaciones y fecha de captura.
-- **Prerequisitos:** 1.3.2.1 y 1.3.2.2 completados con datos indexados.
-- **Actividades:**
-
-1. Crear índices compuestos y de texto completo en la base de datos.
-2. Diseñar la barra de búsqueda y el panel de filtros facetados en el frontend.
-3. Implementar paginación optimizada en backend.
-
-- **Fechas:** Semanas 11 a 12 (Hito H5 — 29/01/2027).
-- **Criterios de aceptación:** Tiempo de respuesta de consulta inferior a 500 ms sobre el catálogo de **30 registros semilla**, con prueba de escalabilidad a 1.000 registros indexados.
-- **Supuestos:** Los metadatos de las señales se encuentran completos y normalizados.
-
-#### Paquete de Trabajo: 1.3.3.2 ^p-1332
-
-- **Código:** 1.3.3.2
-- **Denominación:** Renderizador interactivo de señales
-- **Objetivo:** Visualizar de forma gráfica e interactiva las series temporales de señales biomédicas en el navegador sin retrasos.
-- **Descripción:** Componente web de alto rendimiento basado en Canvas/WebGL que permite visualizar múltiples canales simultáneos, realizar acercamientos (_zoom in/out_), paneos temporales y ajuste de amplitud. Las herramientas de medición/calibradores sobre la señal quedaron **fuera del MVP**.
-- **Prerequisitos:** 1.3.2.1 Procesador de señales y 1.3.3.1 Motor de búsqueda listos.
-- **Actividades:**
-
-1. Implementar algoritmo de submuestreo visual (LTTB - _Largest-Triangle-Three-Buckets_) para reducir la carga de puntos sin alterar la morfología de la señal.
-2. Desarrollar el visor gráfico interactivo con soporte multicanal sincronizado.
-
-- **Fechas:** Semanas 11 a 13 (Hito H5 — 29/01/2027).
-- **Criterios de aceptación:** Visualización fluida a **≥ 30 FPS** (RNF-03) con capacidad de renderizar archivos de menos de 50 MB y hasta 32 canales, sin congelamiento del navegador.
-- **Supuestos:** Los navegadores de los clientes soportan estándares modernos de HTML5 y WebGL.
-
-#### Paquete de Trabajo: 1.3.3.3 ^p-1333
-
-- **Código:** 1.3.3.3
-- **Denominación:** Herramienta de exportación de registros
-- **Objetivo:** Permitir la descarga de señales biomédicas en el formato estándar aprobado (EDF/EDF+ sanitizado), manteniendo la trazabilidad de las descargas.
-- **Descripción:** Servicio de descarga del archivo EDF/EDF+ **sanitizado (anonimizado)** y persistido en el repositorio, con registro de auditoría de cada descarga (usuario, fecha, archivo). Las exportaciones a CSV, JSON o MATLAB quedaron **fuera de alcance**; si se requieren, se tramita un RFC y se actualizan RF-14 y el Enunciado del Alcance.
-- **Prerequisitos:** 1.3.3.1 Motor de búsqueda y 1.3.2.1 Procesador de señales.
-- **Actividades:**
-
-1. Desarrollar el servicio backend de descarga del archivo EDF sanitizado e íntegro (hash verificable).
-2. Integrar registro de descargas en la bitácora de auditoría (RNF-13).
-
-- **Fechas:** Semanas 12 a 14 (Hito H5 — 29/01/2027).
-- **Criterios de aceptación:** Archivo EDF descargado sanitizado, íntegro y trazable (hash verificable); validado con librerías estándar (MNE-Python / WFDB) como **método de verificación** de integridad de la señal.
-- **Supuestos:** Capacidad de almacenamiento temporal en servidor suficiente para la descarga.
+| Código  | Paquete                                                                                            | Actividades |
+| :------ | :------------------------------------------------------------------------------------------------- | :---------- |
+| 1.3.3.1 | [[1.3.3.1-motor-de-busqueda-y-filtrado-por-metadatos\|Motor de búsqueda y filtrado por metadatos]] | —           |
+| 1.3.3.2 | [[1.3.3.2-renderizador-interactivo-de-senales\|Renderizador interactivo de señales]]               | —           |
+| 1.3.3.3 | [[1.3.3.3-herramienta-de-exportacion-de-registros\|Herramienta de exportación de registros]]       | —           |
 
 ## 1.4 Aseguramiento de Calidad
 
-### Paquete de Trabajo: 1.4.1 ^p-141
-
-- **Código:** 1.4.1
-- **Denominación:** Reporte de pruebas unitarias
-- **Objetivo:** Validar el correcto funcionamiento de los componentes algorítmicos y funciones individuales de forma aislada.
-- **Descripción:** Informe técnico que documenta el diseño, ejecución y resultados de las baterías de pruebas automatizadas sobre la lógica de negocio: algoritmos de procesamiento de señales, validadores de formatos, parseo de metadatos y reglas de negocio del RBAC.
-- **Prerequisitos:** Módulos de desarrollo de la sección 1.3 implementados.
-- **Actividades:**
-
-1. Redactar suites de pruebas unitarias con frameworks estándar (PyTest / Jest / JUnit).
-2. Ejecutar análisis de cobertura de código (_code coverage_).
-3. Consolidar métricas y generar el reporte formal de ejecución.
-
-- **Fechas:** Semanas 13 a 14 (cierre antes del Hito H6 — 05/02/2027).
-- **Criterios de aceptación:** Cobertura de código superior al 80% en lógica crítica de negocio y 100% de pruebas unitarias ejecutadas satisfactoriamente (cero fallas).
-- **Supuestos:** Los componentes fueron desarrollados siguiendo principios de código desacoplado y testeable.
-
-### Paquete de Trabajo: 1.4.2 ^p-142
-
-- **Código:** 1.4.2
-- **Denominación:** Reporte de pruebas de integración y aceptación
-- **Objetivo:** Validar el comportamiento de los módulos integrados y certificar la conformidad del sistema frente a las necesidades clínicas y científicas del usuario final.
-- **Descripción:** Informe que certifica la ejecución de pruebas extremo a extremo (E2E), pruebas de estrés y rendimiento, y las pruebas de aceptación de usuario (UAT) realizadas directamente por un grupo de prueba conformado por médicos e investigadores.
-- **Prerequisitos:** 1.4.1 Reporte de pruebas unitarias aprobado y despliegue en entorno de pruebas (1.2.2).
-- **Actividades:**
-
-1. Ejecutar pruebas automatizadas de integración de API y base de datos.
-2. Conducir pruebas de carga para evaluar la respuesta ante múltiples solicitudes de renderizado.
-3. Coordinar sesiones UAT con médicos e investigadores documentando incidencias.
-4. Redactar el reporte final de hallazgos y cierre de observaciones.
-
-- **Fechas:** Semanas 14 a 15 (Hito H6 — QA/UAT cerrado, 05/02/2027).
-- **Criterios de aceptación:** Cero defectos críticos o bloqueantes abiertos, aprobación formal por parte del 100% de los evaluadores UAT designados.
-- **Supuestos:** Disponibilidad del personal clínico para participar en los talleres de prueba.
+| Código | Paquete                                                                                                  | Actividades |
+| :----- | :------------------------------------------------------------------------------------------------------- | :---------- |
+| 1.4.1  | [[1.4.1-reporte-de-pruebas-unitarias\|Reporte de pruebas unitarias]]                                     | —           |
+| 1.4.2  | [[1.4.2-reporte-de-pruebas-de-integracion-y-aceptacion\|Reporte de pruebas de integración y aceptación]] | —           |
 
 ## 1.5 Despliegue Final
 
-### Paquete de Trabajo: 1.5 ^p-15
-
-- **Código:** 1.5
-- **Denominación:** Sistema desplegado en ambiente de producción
-- **Objetivo:** Poner en marcha y dejar en régimen operativo el sistema integral del Banco de Señales Biomédicas accesible para la comunidad usuaria.
-- **Descripción:** Ejecución de la puesta en producción en la infraestructura final, que incluye la migración de bases de datos, verificación de dominios, instalación de certificados de seguridad, configuración de copias de seguridad automáticas, monitoreo de disponibilidad y ejecución de pruebas de humo (_smoke testing_).
-- **Prerequisitos:** 1.2.1 Infraestructura productiva lista y 1.4.2 Pruebas de aceptación formalmente aprobadas.
-- **Actividades:**
-
-1. Ejecutar el pipeline de despliegue a producción de la versión final estable (_release candidate_).
-2. Ejecutar scripts de inicialización y migración definitiva de datos.
-3. Verificar políticas de seguridad, encabezados HTTP y certificados SSL.
-4. Realizar prueba de humo de todos los flujos clave (ingreso, carga, búsqueda, renderizado y descarga).
-
-- **Fechas:** Semanas 14 a 15 (Hito H7 — Puesta en Producción, 12/02/2027).
-- **Criterios de aceptación:** Sistema 100% accesible vía web pública/institucional, tiempo de disponibilidad inicial de 99.9%, sin errores en logs y prueba de humo superada al 100%.
-- **Supuestos:** Disponibilidad de la ventana de mantenimiento y red sin bloqueos perimetrales.
+| Código | Paquete                                                                                            | Actividades |
+| :----- | :------------------------------------------------------------------------------------------------- | :---------- |
+| 1.5    | [[1.5-sistema-desplegado-en-ambiente-de-produccion\|Sistema desplegado en ambiente de producción]] | —           |
 
 ## Registro de Cambios
 
@@ -374,3 +72,4 @@ aliases: Diccionario del EDT
 | :------ | :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :-------- |
 | v1      | —          | Versión inicial                                                                                                                                                                                                                                                                                                         | PM          | Histórico |
 | v2.0    | 29/10/2026 | Alineación con ERS/Alcance: métricas 30 FPS, < 50 MB en ≤ 30 s y solo EDF/EDF+; eliminados registro/recuperación de credenciales, roles extra, calibradores y exportación CSV/JSON/MATLAB; renumeración RBAC → 1.3.1.2; paquete 1.2.3 completado; fórmula PERT corregida; fechas re-mapeadas a la Opción A (15 semanas) | PM + QA     | Aprobado  |
+| v2.1    | 10/11/2026 | Reestructuración del diccionario: índice en 06 y archivos por paquete/actividad; enlaces de trazabilidad actualizados                                                                                                                                                                                                   | PM          | Aprobado  |
