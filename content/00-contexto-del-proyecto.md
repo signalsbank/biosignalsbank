@@ -373,6 +373,7 @@ Se adopta una estrategia de **wiki organizacional + Docs-as-Code**: una wiki cen
 
 - **11 — Matriz de Competencias** cataloga 8 roles (UX/UI, Frontend, Backend, DBA, DevOps, PM, APM, QA) mapeados a 6 personas. Incluye educación, formación, habilidades y experiencia.
 - **13 — Evaluaciones de Desempeño** aplica una evaluación multidimensional 360°: autoevaluación, pares, cliente, responsable del servicio (RDS) y evaluación ascendente del equipo a la dirección, con fichas integrales por integrante.
+- **Plan de Mejora de Competencias** (cierre del 11) define las acciones PM-01…PM-06, sus costos y sus indicadores; la eficacia de cada acción se documenta en `evaluacion-de-planes/`.
 
 > La matriz de competencias **no es una RACI**. La asignación R/A/C/I se gestiona en la matriz RACI del plan integrador. Si esa matriz no está publicada, es una deuda documental.
 
@@ -476,24 +477,24 @@ Si BioSignal fuera un proyecto real, habría que:
 
 ## 14. Mapa de consignas, documentos y PMBOK 7
 
-| Consigna                       | Documento principal                          | Dominio / principio PMBOK 7         | Estado                         |
-| :----------------------------- | :------------------------------------------- | :---------------------------------- | :----------------------------- |
-| 02 — Acta de Constitución      | `02-acta-de-constitucion.md`                 | Interesados, Planificación, Entrega | Publicado                      |
-| 02b — Comunicaciones           | `02b-gestion-de-las-comunicaciones.md`       | Interesados                         | Publicado                      |
-| 02b — Partes Interesadas       | `02b-gestion-de-las-partes-interesadas.md`   | Interesados                         | Publicado                      |
-| 03 — Requisitos                | `03-especificacion-de-requisitos.md`         | Planificación, Entrega              | Publicado                      |
-| 04 — Enunciado del Alcance     | `04-enunciado-del-alance-del-proyecto.md`    | Planificación                       | Publicado                      |
-| 05 — EDT                       | `05-estructura-de-desglose-detrabajo.md`     | Planificación                       | Publicado                      |
-| 06 — Diccionario del EDT       | `06-diccionario-del-edt.md`                  | Planificación, Medición             | Publicado                      |
-| 06b — Actividades en Jira      | Evidencia externa / diccionario              | Trabajo del Proyecto, Planificación | **No versionado en este repo** |
-| 07 — Matriz de Trazabilidad    | `07-matriz-de-trazabilidad-de-requisitos.md` | Planificación, Medición             | Publicado                      |
-| XX — Matriz de Riesgos         | `XX-matriz-de-riesgos.md`                    | Incertidumbre                       | Publicado                      |
-| 08 — Adquisiciones             | `08-gestion-de-adquisiciones.md`             | Trabajo del Proyecto                | Publicado                      |
-| 09 — Cambios y configuración   | `09-gestion-y-control-de-cambios.md`         | Trabajo del Proyecto, Planificación | Publicado                      |
-| 10 — Conocimiento              | `10-gestion-de-conocimiento.md`              | Trabajo del Proyecto, Equipo        | Publicado                      |
-| 11 — Competencias              | `11-matriz-de-competencias.md`               | Equipo                              | Publicado                      |
-| 12 — Calidad                   | `12-gestion-de-calidad.md`                   | Entrega, Medición                   | Publicado                      |
-| 13 — Evaluaciones de desempeño | `13-evaluaciones-de-desempeño.md` + carpeta  | Equipo, Medición                    | Publicado                      |
+| Consigna                       | Documento principal                                      | Dominio / principio PMBOK 7         | Estado                         |
+| :----------------------------- | :------------------------------------------------------- | :---------------------------------- | :----------------------------- |
+| 02 — Acta de Constitución      | `02-acta-de-constitucion.md`                             | Interesados, Planificación, Entrega | Publicado                      |
+| 02b — Comunicaciones           | `02b-gestion-de-las-comunicaciones.md`                   | Interesados                         | Publicado                      |
+| 02b — Partes Interesadas       | `02b-gestion-de-las-partes-interesadas.md`               | Interesados                         | Publicado                      |
+| 03 — Requisitos                | `03-especificacion-de-requisitos.md`                     | Planificación, Entrega              | Publicado                      |
+| 04 — Enunciado del Alcance     | `04-enunciado-del-alance-del-proyecto.md`                | Planificación                       | Publicado                      |
+| 05 — EDT                       | `05-estructura-de-desglose-detrabajo.md`                 | Planificación                       | Publicado                      |
+| 06 — Diccionario del EDT       | `06-diccionario-del-edt.md`                              | Planificación, Medición             | Publicado                      |
+| 06b — Actividades en Jira      | Evidencia externa / diccionario                          | Trabajo del Proyecto, Planificación | **No versionado en este repo** |
+| 07 — Matriz de Trazabilidad    | `07-matriz-de-trazabilidad-de-requisitos.md`             | Planificación, Medición             | Publicado                      |
+| XX — Matriz de Riesgos         | `XX-matriz-de-riesgos.md`                                | Incertidumbre                       | Publicado                      |
+| 08 — Adquisiciones             | `08-gestion-de-adquisiciones.md`                         | Trabajo del Proyecto                | Publicado                      |
+| 09 — Cambios y configuración   | `09-gestion-y-control-de-cambios.md`                     | Trabajo del Proyecto, Planificación | Publicado                      |
+| 10 — Conocimiento              | `10-gestion-de-conocimiento.md`                          | Trabajo del Proyecto, Equipo        | Publicado                      |
+| 11 — Competencias              | `11-matriz-de-competencias.md` + `evaluacion-de-planes/` | Equipo                              | Publicado                      |
+| 12 — Calidad                   | `12-gestion-de-calidad.md`                               | Entrega, Medición                   | Publicado                      |
+| 13 — Evaluaciones de desempeño | `13-evaluaciones-de-desempeño.md` + carpeta              | Equipo, Medición                    | Publicado                      |
 
 ## 15. Estado de avance y deudas documentales
 
@@ -501,20 +502,21 @@ Si BioSignal fuera un proyecto real, habría que:
 
 - Acta, ERS, Alcance, EDT, Diccionario, RTM, Matriz de Riesgos, Adquisiciones, Cambios, Conocimiento, Competencias, Calidad y Evaluaciones.
 - Comunicaciones y Partes Interesadas.
+- Evaluación de planes de mejora: un documento de resultados por cada acción PM-01…PM-06.
 - Índice del sitio.
 
 ### 15.2. Referenciado pero no publicado como documento autónomo
 
-| Artefacto                      | Dónde se menciona                             | Situación                                                                                  |
-| :----------------------------- | :-------------------------------------------- | :----------------------------------------------------------------------------------------- |
-| Plan integrador                | RFC-006; riesgos; calidad                     | Referenciado, sin archivo propio                                                           |
-| Registro de tailoring          | RFC-006; borradores de calidad y competencias | Referenciado; este documento cubre parte del contenido                                     |
-| Matriz RACI                    | 11 Competencias; 12 Calidad                   | Referenciada; no hay archivo RACI                                                          |
-| Registro de riesgos R-01…R-12  | XX Matriz de Riesgos                          | Referenciado; no está el registro completo                                                 |
-| Caso de negocio                | RFC-006                                       | Referenciado; la justificación está en el Acta                                             |
-| Registro de beneficios         | RFC-006; 04 Alcance                           | Referenciado; la tabla B-02/B-03/B-04 está en el Alcance                                   |
-| Evidencia Jira (06b)           | Consigna 06b                                  | No versionada en este repo                                                                 |
-| Plan de mejora de competencias | Consigna 11                                   | Publicado como sección del documento 11 (acciones, responsables e indicadores de eficacia) |
+| Artefacto                      | Dónde se menciona                             | Situación                                                                                                        |
+| :----------------------------- | :-------------------------------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| Plan integrador                | RFC-006; riesgos; calidad                     | Referenciado, sin archivo propio                                                                                 |
+| Registro de tailoring          | RFC-006; borradores de calidad y competencias | Referenciado; este documento cubre parte del contenido                                                           |
+| Matriz RACI                    | 11 Competencias; 12 Calidad                   | Referenciada; no hay archivo RACI                                                                                |
+| Registro de riesgos R-01…R-12  | XX Matriz de Riesgos                          | Referenciado; no está el registro completo                                                                       |
+| Caso de negocio                | RFC-006                                       | Referenciado; la justificación está en el Acta                                                                   |
+| Registro de beneficios         | RFC-006; 04 Alcance                           | Referenciado; la tabla B-02/B-03/B-04 está en el Alcance                                                         |
+| Evidencia Jira (06b)           | Consigna 06b                                  | No versionada en este repo                                                                                       |
+| Plan de mejora de competencias | Consigna 11                                   | Publicado en el documento 11 (acciones, costos e indicadores) y en `evaluacion-de-planes/` (resultados por plan) |
 
 ### 15.3. Inconsistencias a revisar
 

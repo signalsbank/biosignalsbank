@@ -19,6 +19,7 @@ aliases:
 - [[09-gestion-y-control-de-cambios|Plan de Gestión de la Configuración y Control de Cambios]]
 - [[10-gestion-de-conocimiento|Gestión del Conocimiento]]
 - [[11-matriz-de-competencias|Matriz de Competencias]]
+- [[evaluacion-de-planes/index|Evaluación de Planes de Mejora]]
 - [[12-gestion-de-calidad|Gestión de Calidad]]
 - [[13-evaluaciones-de-desempeño|Evaluaciones de desempeño]]
 - [[XX-matriz-de-riesgos|Matriz de Riesgos]]

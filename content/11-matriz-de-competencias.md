@@ -1,6 +1,6 @@
 ---
 project: BioSignal
-version: 1.1
+version: 1.2
 title: 11. Matriz de Competencias
 aliases:
   - "Matriz de Competencias"
@@ -175,15 +175,27 @@ aliases:
 
 ## Plan de Mejora de Competencias
 
-Las brechas se detectan con la matriz anterior y con las evaluaciones de desempeño ([[13-evaluaciones-de-desempeño|documento 13]]). Cada acción tiene un indicador verificable y se revisa en el siguiente hito o en la próxima evaluación 360°.
+Las brechas se detectan con la matriz anterior y con las evaluaciones de desempeño ([[13-evaluaciones-de-desempeño|documento 13]]). Cada acción se identifica como **PM-01…PM-06**, tiene un indicador verificable, un costo estimado y un documento propio de resultados en [[evaluacion-de-planes/index|Evaluación de Planes de Mejora]].
 
-| Brecha detectada                                                                       | Acción de mejora                                                                | Tipo                   | Responsable   | Plazo      | Indicador de eficacia                                      |
-| :------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------ | :--------------------- | :------------ | :--------- | :--------------------------------------------------------- |
-| Germán: demoras en respuestas y revisiones; dificultad para equilibrar desarrollo y QA | Tutoría de priorización y acuerdo interno de revisión en ≤ 48 h                 | Tutoría                | PM + Germán   | 31/12/2026 | 100 % de PR revisadas en ≤ 48 h; próximo RDS ≥ 4,0         |
-| Rocío: autonomía limitada en decisiones de UI                                          | Asignarle un módulo completo con mentoría de UX y revisión semanal              | Tutoría / reasignación | PM + Rocío    | 31/01/2027 | 0 bloqueos por consultas evitables; RDS de autonomía ≥ 4,0 |
-| Eber: documentación previa insuficiente en cambios de esquema                          | Usar plantilla de migración y avisar cambios con 48 h de anticipación           | Capacitación           | Eber + PM     | 31/12/2026 | 100 % de migraciones con up/down y aviso previo registrado |
-| PM: informes de riesgos con poco detalle                                               | Incorporar plantilla mensual de riesgos y dependencias con estado y responsable | Tutoría                | PM + APM      | 30/11/2026 | 100 % de informes con riesgos, dependencias y dueño        |
-| Equipo: cobertura irregular de pruebas de integración                                  | Taller corto de pytest/Testcontainers y revisión en PR                          | Capacitación           | Germán + Eber | 31/01/2027 | Cobertura > 80 % en lógica crítica y 0 fallas en CI        |
-| Equipo: documentación desigual entre áreas                                             | Guía única de documentación y chequeo en la Definition of Done                  | Formación interna      | APM           | 31/12/2026 | 100 % de PR con documentación actualizada                  |
+| ID    | Brecha detectada                                                                       | Acción de mejora                                                                | Tipo                   | Responsable   | Plazo      | Costo (USD caja / ARS interno) | Indicador de eficacia                                      | Resultados                                                                  |
+| :---- | :------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------ | :--------------------- | :------------ | :--------- | :----------------------------- | :--------------------------------------------------------- | :-------------------------------------------------------------------------- |
+| PM-01 | Germán: demoras en respuestas y revisiones; dificultad para equilibrar desarrollo y QA | Tutoría de priorización y acuerdo interno de revisión en ≤ 48 h                 | Tutoría                | PM + Germán   | 31/12/2026 | $0 / ARS 40.000                | 100 % de PR revisadas en ≤ 48 h; próximo RDS ≥ 4,0         | [[evaluacion-de-planes/resultado-plan-01-tutoria-priorizacion-german\|Ver]] |
+| PM-02 | Rocío: autonomía limitada en decisiones de UI                                          | Asignarle un módulo completo con mentoría de UX y revisión semanal              | Tutoría / reasignación | PM + Rocío    | 31/01/2027 | $0 / ARS 120.000               | 0 bloqueos por consultas evitables; RDS de autonomía ≥ 4,0 | [[evaluacion-de-planes/resultado-plan-02-autonomia-ui-rocio\|Ver]]          |
+| PM-03 | Eber: documentación previa insuficiente en cambios de esquema                          | Usar plantilla de migración y avisar cambios con 48 h de anticipación           | Capacitación           | Eber + PM     | 31/12/2026 | $0 / ARS 30.000                | 100 % de migraciones con up/down y aviso previo registrado | [[evaluacion-de-planes/resultado-plan-03-migraciones-esquema-eber\|Ver]]    |
+| PM-04 | PM: informes de riesgos con poco detalle                                               | Incorporar plantilla mensual de riesgos y dependencias con estado y responsable | Tutoría                | PM + APM      | 30/11/2026 | $0 / ARS 60.000                | 100 % de informes con riesgos, dependencias y dueño        | [[evaluacion-de-planes/resultado-plan-04-informes-riesgos-pm\|Ver]]         |
+| PM-05 | Equipo: cobertura irregular de pruebas de integración                                  | Taller corto de pytest/Testcontainers y revisión en PR                          | Capacitación           | Germán + Eber | 31/01/2027 | $0 / ARS 120.000               | Cobertura > 80 % en lógica crítica y 0 fallas en CI        | [[evaluacion-de-planes/resultado-plan-05-pruebas-integradas\|Ver]]          |
+| PM-06 | Equipo: documentación desigual entre áreas                                             | Guía única de documentación y chequeo en la Definition of Done                  | Formación interna      | APM           | 31/12/2026 | $0 / ARS 60.000                | 100 % de PR con documentación actualizada                  | [[evaluacion-de-planes/resultado-plan-06-guia-documentacion\|Ver]]          |
+| —     | **Total**                                                                              | —                                                                               | —                      | —             | —          | **$0 / ARS 430.000**           | —                                                          | —                                                                           |
 
-**Evaluación de eficacia:** al cierre de cada fase, el PM y el APM comparan el indicador con la línea base. Si la acción no alcanza el umbral, se ajusta (otra tutoría, reasignación o capacitación adicional). Si lo alcanza, la brecha se cierra y se deja registro en la ficha del integrante.
+> **Base de costos:** todas las acciones son internas y se ejecutan con herramientas open source o licencias educativas, por lo que la **caja en USD es $0**. El costo interno se valoriza a **ARS 10.000/h** como referencia no erogable (contexto del proyecto, §9.3). Total planificado: **43 h · ARS 430.000 · USD 0**. Los valores ejecutados y la variación están en cada documento de resultados.
+
+### Evaluación de eficacia
+
+Cada plan tiene un documento de resultados con línea base, acciones ejecutadas, evidencia, resultado frente al indicador, costo ejecutado y decisión. El dictamen se rige por esta regla:
+
+- **Eficaz:** cumple el 100 % de los indicadores en el plazo.
+- **Eficaz con desvío:** cumple con demora o costo mayor al planificado.
+- **Parcial:** cumple parte de los indicadores; se ajusta y se reevalúa.
+- **No eficaz:** no cumple; se rediseña la acción.
+
+El tablero consolidado, los seis documentos y las lecciones están en [[evaluacion-de-planes/index|Evaluación de Planes de Mejora]]. Al cierre (15/02/2027) las seis brechas quedaron cerradas: cuatro eficaces, una eficaz tras ajuste y una eficaz con desvío de plazo.
