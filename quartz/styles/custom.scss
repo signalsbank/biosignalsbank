@@ -1,3 +1,47 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+// ---------------------------------------------------------------------------
+// Diagrama de Gantt
+// ---------------------------------------------------------------------------
+// El sitio limita el ancho de lectura (~860 px de columna central). El Gantt
+// necesita más ancho para que las etiquetas y la escala de tiempo se lean.
+// En pantallas ultrawide se amplía la página solo para este documento; en el
+// resto de las pantallas se mantiene el ancho de lectura habitual.
+@media all and (min-width: 1600px) {
+  body[data-slug="xx-diagrama-gant"] #quartz-root.page {
+    max-width: min(2200px, calc(100vw - 6rem));
+  }
+}
+
+// Si el diagrama no entra a lo ancho, se desplaza dentro de su bloque en lugar
+// de comprimirse hasta volverse ilegible.
+body[data-slug="xx-diagrama-gant"] pre:has(> code.mermaid) {
+  overflow-x: auto;
+}
+
+// Los colores de Mermaid se resuelven en tiempo de render y no distinguen
+// tema claro/oscuro. Estas reglas usan las variables del sitio para que los
+// textos del Gantt mantengan contraste en ambos temas.
+.titleText,
+.sectionTitle0,
+.sectionTitle1,
+.sectionTitle2,
+.sectionTitle3 {
+  fill: var(--darkgray) !important;
+}
+
+.taskTextOutside0,
+.taskTextOutside1,
+.taskTextOutside2,
+.taskTextOutside3,
+.taskTextOutsideRight,
+.taskTextOutsideLeft {
+  fill: var(--darkgray) !important;
+}
+
+.grid .tick line {
+  stroke: var(--gray) !important;
+  opacity: 0.35;
+}

@@ -1,6 +1,6 @@
 ---
 project: BioSignal
-version: 2.2
+version: 2.3
 title: "6. Diccionario del EDT"
 aliases:
   - "Diccionario del EDT"
@@ -10,7 +10,7 @@ aliases:
 
 > **Método de estimación:** distribución beta (_PERT_): **E = (TO + 4·TM + TP) / 6**, con desvío estándar σ = (TP – TO) / 6. Los valores publicados son la esperanza de cada actividad (nivel de confianza ≈ 50 % por actividad). Cuando el valor es simétrico, coincide con la media simple; se usa la fórmula PERT como método único.
 >
-> **Contenido:** 19 paquetes de trabajo y 38 actividades con ficha individual. Cada paquete tiene un archivo principal con sus características; los paquetes sin desglose de actividades se listan solo con su archivo principal.
+> **Contenido:** 19 paquetes de trabajo y 66 actividades con ficha individual. Cada paquete tiene un archivo principal con sus características y el desglose de sus actividades.
 
 ## 1.1 Gestión del Proyecto
 
@@ -26,9 +26,9 @@ aliases:
 
 | Código | Paquete                                                                                                                                                      | Actividades |
 | :----- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
-| 1.2.1  | [[diccionario-del-edt/1-2-infraestructura-y-entorno/1-2-1-servidores-y-base-de-datos-configurados/index\|Servidores y base de datos configurados]]           | —           |
-| 1.2.2  | [[diccionario-del-edt/1-2-infraestructura-y-entorno/1-2-2-entornos-de-desarrollo-y-pruebas/index\|Entornos de desarrollo y pruebas]]                         | —           |
-| 1.2.3  | [[diccionario-del-edt/1-2-infraestructura-y-entorno/1-2-3-aprovisionamiento-y-carga-de-dataset-semilla/index\|Aprovisionamiento y carga de dataset semilla]] | —           |
+| 1.2.1  | [[diccionario-del-edt/1-2-infraestructura-y-entorno/1-2-1-servidores-y-base-de-datos-configurados/index\|Servidores y base de datos configurados]]           | 3           |
+| 1.2.2  | [[diccionario-del-edt/1-2-infraestructura-y-entorno/1-2-2-entornos-de-desarrollo-y-pruebas/index\|Entornos de desarrollo y pruebas]]                         | 3           |
+| 1.2.3  | [[diccionario-del-edt/1-2-infraestructura-y-entorno/1-2-3-aprovisionamiento-y-carga-de-dataset-semilla/index\|Aprovisionamiento y carga de dataset semilla]] | 3           |
 
 ## 1.3 Software: Banco de Señales
 
@@ -36,8 +36,8 @@ aliases:
 
 | Código  | Paquete                                                                                                                                                                                                  | Actividades |
 | :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
-| 1.3.1.1 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-1-modulo-de-autenticacion-y-seguridad/1-3-1-1-interfaz-de-inicio-de-sesion/index\|Interfaz de inicio de sesión]]                                 | —           |
-| 1.3.1.2 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-1-modulo-de-autenticacion-y-seguridad/1-3-1-2-sistema-de-control-de-acceso-por-roles-rbac/index\|Sistema de control de acceso por roles (RBAC)]] | —           |
+| 1.3.1.1 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-1-modulo-de-autenticacion-y-seguridad/1-3-1-1-interfaz-de-inicio-de-sesion/index\|Interfaz de inicio de sesión]]                                 | 4           |
+| 1.3.1.2 | [[diccionario-del-edt/1-3-software-banco-de-senales/1-3-1-modulo-de-autenticacion-y-seguridad/1-3-1-2-sistema-de-control-de-acceso-por-roles-rbac/index\|Sistema de control de acceso por roles (RBAC)]] | 4           |
 
 ### 1.3.2 Módulo de gestión de señales
 
@@ -59,14 +59,14 @@ aliases:
 
 | Código | Paquete                                                                                                                                                         | Actividades |
 | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
-| 1.4.1  | [[diccionario-del-edt/1-4-aseguramiento-de-calidad/1-4-1-reporte-de-pruebas-unitarias/index\|Reporte de pruebas unitarias]]                                     | —           |
-| 1.4.2  | [[diccionario-del-edt/1-4-aseguramiento-de-calidad/1-4-2-reporte-de-pruebas-de-integracion-y-aceptacion/index\|Reporte de pruebas de integración y aceptación]] | —           |
+| 1.4.1  | [[diccionario-del-edt/1-4-aseguramiento-de-calidad/1-4-1-reporte-de-pruebas-unitarias/index\|Reporte de pruebas unitarias]]                                     | 3           |
+| 1.4.2  | [[diccionario-del-edt/1-4-aseguramiento-de-calidad/1-4-2-reporte-de-pruebas-de-integracion-y-aceptacion/index\|Reporte de pruebas de integración y aceptación]] | 4           |
 
 ## 1.5 Despliegue Final
 
 | Código | Paquete                                                                                                                                           | Actividades |
 | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :---------- |
-| 1.5    | [[diccionario-del-edt/1-5-despliegue-final/1-5-sistema-desplegado-en-ambiente-de-produccion/index\|Sistema desplegado en ambiente de producción]] | —           |
+| 1.5    | [[diccionario-del-edt/1-5-despliegue-final/1-5-sistema-desplegado-en-ambiente-de-produccion/index\|Sistema desplegado en ambiente de producción]] | 4           |
 
 ## Registro de Cambios
 
@@ -76,3 +76,4 @@ aliases:
 | v2.0    | 29/10/2026 | Alineación con ERS/Alcance: métricas 30 FPS, < 50 MB en ≤ 30 s y solo EDF/EDF+; eliminados registro/recuperación de credenciales, roles extra, calibradores y exportación CSV/JSON/MATLAB; renumeración RBAC → 1.3.1.2; paquete 1.2.3 completado; fórmula PERT corregida; fechas re-mapeadas a la Opción A (15 semanas) | PM + QA     | Aprobado  |
 | v2.1    | 10/11/2026 | Reestructuración del diccionario: índice en 06 y archivos por paquete/actividad; enlaces de trazabilidad actualizados                                                                                                                                                                                                   | PM          | Aprobado  |
 | v2.2    | 10/11/2026 | Desglose de actividades del módulo 1.3.3 (11 actividades en 1.3.3.1, 1.3.3.2 y 1.3.3.3) y actualización de los índices                                                                                                                                                                                                  | PM          | Aprobado  |
+| v2.3    | 11/11/2026 | Desglose de actividades de los paquetes 1.2.1, 1.2.2, 1.2.3, 1.3.1.1, 1.3.1.2, 1.4.1, 1.4.2 y 1.5 (28 actividades) y actualización de los índices                                                                                                                                                                       | PM          | Aprobado  |
