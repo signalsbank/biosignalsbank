@@ -1,7 +1,0 @@
-- plan de mejora de un integrante (parcial)
-- Eficacia de las acciones tomadas (parcial)
-- Si a una persona le falta una habilidad, lo capacitamos ¿Se resolvió?
-- Evaluar la eficacia (asegurar)
-- Métricas y monitoreo
-- Anticiparse a un plan de mediciones para evaluar desviaciones
-- Actividades del EDT (rama elegida) en JIRA, TRELLO o similar
