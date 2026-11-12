@@ -1,7 +1,7 @@
 configuration:
   pageTitle: "Banco de Señales"
   pageTitleSuffix: "grupo: biosignals"
-  enableSPA: true
+  enableSPA: false
   enablePopovers: true
   analytics: null
   locale: es-ES
