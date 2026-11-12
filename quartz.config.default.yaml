@@ -5,6 +5,7 @@ configuration:
   enablePopovers: true
   analytics: null
   locale: es-ES
+  baseUrl: signalsbank.github.io/biosignalsbank
   ignorePatterns:
     - private
     - templates

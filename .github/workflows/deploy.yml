@@ -26,12 +26,6 @@ jobs:
           node-version: 24
       - name: Install Dependencies
         run: npm install
-      - name: Set GitHub Pages baseUrl
-        run: |
-          TARGET_FILE="quartz.config.yaml"
-          [ ! -f "$TARGET_FILE" ] && TARGET_FILE="quartz.config.default.yaml"
-          sed -i '/^baseUrl:/d' "$TARGET_FILE"
-          echo 'baseUrl: "signalsbank.github.io/biosignalsbank"' >> "$TARGET_FILE"
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
