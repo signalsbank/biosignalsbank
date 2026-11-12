@@ -22,5 +22,6 @@ aliases:
 - [[evaluacion-de-planes/index|Evaluación de Planes de Mejora]]
 - [[12-gestion-de-calidad|Gestión de Calidad]]
 - [[13-evaluaciones-de-desempeño|Evaluaciones de desempeño]]
+- [[XX-abreviaciones|Abreviaciones y siglas]]
 - [[XX-matriz-de-riesgos|Matriz de Riesgos]]
 - [[XX-diagrama-gant|Diagrama de Gantt]]

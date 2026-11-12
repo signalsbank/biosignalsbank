@@ -33,10 +33,10 @@ Proyecto C ── docs/ + README + SETUP + ADR + ERROR_LOG
 
 **Qué incluye la estrategia:**
 
-- **Documentación como código:** Markdown, Git, revisión por PR y publicación con Quartz o un generador equivalente.
+- **Documentación como código:** Markdown, Git, revisión por [[XX-abreviaciones#PR|PR]] y publicación con Quartz o un generador equivalente.
 - **Wiki central:** políticas, procesos, plantillas, glosario y activos reutilizables.
 - **Documentación por proyecto:** requisitos, arquitectura, decisiones, pruebas, operación y lecciones.
-- **Captura de conocimiento tácito:** ADR, post-mortems, revisiones de código y sesiones breves de transferencia.
+- **Captura de conocimiento tácito:** [[XX-abreviaciones#ADR|ADR]], post-mortems, revisiones de código y sesiones breves de transferencia.
 - **Búsqueda y recuperación:** índice, etiquetas, identificadores y buscador del sitio.
 
 ## 2. Objetivo
@@ -50,29 +50,29 @@ Resolver cuatro necesidades concretas:
 
 ## 3. Información a gestionar
 
-| Nivel              | Contenido                                                                                        | Ejemplo                                                                             |
-| :----------------- | :----------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
-| **Organizacional** | Políticas, estándares, procesos, plantillas, glosario, componentes reutilizables y activos de IA | Guía de estilo, plantilla de ADR, checklist de PR                                   |
-| **Proyecto**       | Requisitos, alcance, arquitectura, decisiones, pruebas, operación, riesgos y estado              | [[03-especificacion-de-requisitos\|ERS]] de BioSignal, diagrama C4, plan de pruebas |
-| **Operación**      | Runbooks, incidencias, errores conocidos, backups y monitoreo                                    | Procedimiento de restore, error JWT                                                 |
-| **Aprendizaje**    | Lecciones aprendidas, post-mortems y recomendaciones                                             | Qué falló en una migración y cómo evitarlo                                          |
+| Nivel              | Contenido                                                                                                                 | Ejemplo                                                                                                      |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------- |
+| **Organizacional** | Políticas, estándares, procesos, plantillas, glosario, componentes reutilizables y activos de [[XX-abreviaciones#IA\|IA]] | Guía de estilo, plantilla de ADR, checklist de PR                                                            |
+| **Proyecto**       | Requisitos, alcance, arquitectura, decisiones, pruebas, operación, riesgos y estado                                       | [[03-especificacion-de-requisitos\|ERS]] de BioSignal, diagrama [[XX-abreviaciones#C4\|C4]], plan de pruebas |
+| **Operación**      | Runbooks, incidencias, errores conocidos, backups y monitoreo                                                             | Procedimiento de restore, error [[XX-abreviaciones#JWT\|JWT]]                                                |
+| **Aprendizaje**    | Lecciones aprendidas, post-mortems y recomendaciones                                                                      | Qué falló en una migración y cómo evitarlo                                                                   |
 
 **Regla de clasificación:** si sirve para más de un proyecto, va a la wiki central; si es específico, va al repositorio del proyecto. Si es reusable, se enlaza desde la wiki.
 
 ## 4. Herramientas y métodos
 
-| Necesidad                   | Herramienta / método                                           |
-| :-------------------------- | :------------------------------------------------------------- |
-| Redacción y versionado      | Markdown + Git/GitHub                                          |
-| Publicación y búsqueda      | Quartz (u otro generador estático) con índice y etiquetas      |
-| Gestión de tareas y cambios | GitHub Issues/Projects; RFC para cambios de línea base         |
-| Decisiones                  | ADR con contexto, decisión, alternativas y consecuencias       |
-| Errores recurrentes         | Registro `ERROR_LOG` con síntoma, causa, solución y prevención |
-| Lecciones                   | Post-mortem sin culpables y registro de lecciones por hito     |
-| Conocimiento tácito         | Pair programming, revisión de PR y transferencias breves       |
-| Activos de IA               | Prompts y agentes versionados, con dueño y ámbito de uso       |
+| Necesidad                   | Herramienta / método                                                             |
+| :-------------------------- | :------------------------------------------------------------------------------- |
+| Redacción y versionado      | Markdown + Git/GitHub                                                            |
+| Publicación y búsqueda      | Quartz (u otro generador estático) con índice y etiquetas                        |
+| Gestión de tareas y cambios | GitHub Issues/Projects; [[XX-abreviaciones#RFC\|RFC]] para cambios de línea base |
+| Decisiones                  | ADR con contexto, decisión, alternativas y consecuencias                         |
+| Errores recurrentes         | Registro `ERROR_LOG` con síntoma, causa, solución y prevención                   |
+| Lecciones                   | Post-mortem sin culpables y registro de lecciones por hito                       |
+| Conocimiento tácito         | Pair programming, revisión de PR y transferencias breves                         |
+| Activos de IA               | Prompts y agentes versionados, con dueño y ámbito de uso                         |
 
-**Docs-as-Code:** toda documentación técnica vive en el repositorio del proyecto, en Markdown. Una historia o PR no se considera terminada si el cambio de código no actualiza la documentación correspondiente. Las APIs se documentan con OpenAPI/Swagger generado desde el código.
+**Docs-as-Code:** toda documentación técnica vive en el repositorio del proyecto, en Markdown. Una historia o PR no se considera terminada si el cambio de código no actualiza la documentación correspondiente. Las [[XX-abreviaciones#API|APIs]] se documentan con OpenAPI/Swagger generado desde el código.
 
 **Apoyo de IA:** un asistente puede indexar la wiki y responder preguntas, pero **no es la estrategia**: es una interfaz de consulta sobre la misma base de conocimiento. Sus respuestas deben citar el documento fuente y respetar los permisos del usuario.
 
@@ -131,12 +131,12 @@ Cada documento incluye título, dueño, versión, fecha, estado y etiquetas. Los
 
 ## 6. Acceso y consulta
 
-| Nivel            | Quién accede              | Contenido                                                       |
-| :--------------- | :------------------------ | :-------------------------------------------------------------- |
-| **Público**      | Cualquier persona         | Documentación publicada del producto y material de difusión     |
-| **Interno**      | Toda la organización      | Estándares, plantillas, glosario y guías generales              |
-| **Confidencial** | Equipo del proyecto       | Código, arquitectura interna, pruebas y credenciales de staging |
-| **Restringido**  | PM, seguridad y dirección | Contratos, claves de producción, datos personales y auditorías  |
+| Nivel            | Quién accede                                       | Contenido                                                       |
+| :--------------- | :------------------------------------------------- | :-------------------------------------------------------------- |
+| **Público**      | Cualquier persona                                  | Documentación publicada del producto y material de difusión     |
+| **Interno**      | Toda la organización                               | Estándares, plantillas, glosario y guías generales              |
+| **Confidencial** | Equipo del proyecto                                | Código, arquitectura interna, pruebas y credenciales de staging |
+| **Restringido**  | [[XX-abreviaciones#PM\|PM]], seguridad y dirección | Contratos, claves de producción, datos personales y auditorías  |
 
 **Cómo se encuentra la información:**
 
@@ -145,18 +145,18 @@ Cada documento incluye título, dueño, versión, fecha, estado y etiquetas. Los
 3. Consultar el glosario si el término es nuevo.
 4. Si no se encuentra, registrar la pregunta en el FAQ o abrir un issue de documentación.
 
-**Regla de privacidad:** no se almacenan datos personales reales ni credenciales en la wiki. Los EDF de ejemplo son sintéticos o anonimizados.
+**Regla de privacidad:** no se almacenan datos personales reales ni credenciales en la wiki. Los [[XX-abreviaciones#EDF|EDF]] de ejemplo son sintéticos o anonimizados.
 
 ## 7. Responsables
 
-| Rol                                       | Quién                                          | Responsabilidad                                                                   |
-| :---------------------------------------- | :--------------------------------------------- | :-------------------------------------------------------------------------------- |
-| **Dueño del conocimiento organizacional** | PMO / APM de la organización                   | Mantener la wiki central, el glosario, las plantillas y el índice.                |
-| **Dueño del conocimiento del proyecto**   | APM del proyecto (en BioSignal, Ignacio Ávila) | Mantener el índice, la estructura y la vigencia de la documentación del proyecto. |
-| **Autores**                               | Cada integrante                                | Documentar lo que produce y actualizar el documento afectado en el mismo PR.      |
-| **Revisores**                             | PM, líder técnico o Process Owner              | Verificar claridad, vigencia y trazabilidad antes de publicar.                    |
-| **QA**                                    | QA del proyecto                                | Verificar que la documentación forme parte de la Definition of Done.              |
-| **Sponsor / dirección**                   | UNViMe en BioSignal                            | Acceder a los documentos de gobierno y aprobar los que correspondan.              |
+| Rol                                       | Quién                                                                            | Responsabilidad                                                                   |
+| :---------------------------------------- | :------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| **Dueño del conocimiento organizacional** | [[XX-abreviaciones#PMO\|PMO]] / [[XX-abreviaciones#APM\|APM]] de la organización | Mantener la wiki central, el glosario, las plantillas y el índice.                |
+| **Dueño del conocimiento del proyecto**   | APM del proyecto (en BioSignal, Ignacio Ávila)                                   | Mantener el índice, la estructura y la vigencia de la documentación del proyecto. |
+| **Autores**                               | Cada integrante                                                                  | Documentar lo que produce y actualizar el documento afectado en el mismo PR.      |
+| **Revisores**                             | PM, líder técnico o Process Owner                                                | Verificar claridad, vigencia y trazabilidad antes de publicar.                    |
+| **[[XX-abreviaciones#QA\|QA]]**           | QA del proyecto                                                                  | Verificar que la documentación forme parte de la Definition of Done.              |
+| **Sponsor / dirección**                   | [[XX-abreviaciones#UNViMe\|UNViMe]] en BioSignal                                 | Acceder a los documentos de gobierno y aprobar los que correspondan.              |
 
 ## 8. Actualización
 

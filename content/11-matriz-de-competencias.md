@@ -7,20 +7,18 @@ aliases:
   - "Competencias"
 ---
 
-> **Nota de uso:** este documento es un **catálogo (anexo) de perfiles, funciones y competencias**; **no constituye una matriz RACI** y no puede sustituirla. La asignación de responsabilidad por entregable/paquete (quién ejecuta **R**, aprueba **A**, es consultado **C** e informado **I**) se gestiona en la matriz RACI del plan integrador, con los 8 roles mapeados a las 6 personas del equipo y QA independiente del autor del código.
-
 ## Matriz resumen de competencias
 
-| Rol                 | Persona asignada                | Educación                                                                      | Formación                                    | Habilidades                                                 | Experiencia                                                       |
-| :------------------ | :------------------------------ | :----------------------------------------------------------------------------- | :------------------------------------------- | :---------------------------------------------------------- | :---------------------------------------------------------------- |
-| **Diseñador UX/UI** | Rocío Pereyra                   | Formación terciaria/universitaria en diseño, comunicación visual o equivalente | Curso de UX/UI, Figma y accesibilidad WCAG   | Pensamiento visual, empatía, comunicación                   | +1 año en proyectos web; deseable visualización de datos          |
-| **Frontend**        | Rocío Pereyra / Martín Mosainer | Estudiante avanzado o graduado en sistemas, computación o equivalente          | Next.js/React, TypeScript, Canvas/WebGL      | Optimización, resolución de problemas, trabajo colaborativo | +2 años en frontend; deseable gráficos o datos en tiempo real     |
-| **Backend**         | Germán Herrera / Eber Chiecher  | Estudiante avanzado o graduado en sistemas, computación o equivalente          | FastAPI/Python, PostgreSQL y seguridad web   | Lógica, diseño de API, trabajo colaborativo                 | +2 años en backend; deseable datos biomédicos o archivos binarios |
-| **DBA**             | Eber Chiecher                   | Formación afín + base de datos                                                 | PostgreSQL, modelado, backup/restore         | Análisis, rigurosidad, comunicación                         | +3 años en administración o diseño de bases de datos              |
-| **DevOps**          | Eber Chiecher                   | Formación afín + infraestructura                                               | Docker, CI/CD, Linux, TLS                    | Resolución de problemas, proactividad                       | +1 año en despliegue y administración de servidores               |
-| **PM**              | Mateo Astudillo                 | Estudiante avanzado o graduado en ingeniería/sistemas                          | PMBOK 7, riesgos y EVM                       | Liderazgo, negociación, comunicación                        | +3 años en gestión de proyectos de software                       |
-| **APM**             | Ignacio Ávila                   | Estudiante avanzado o graduado en ingeniería/sistemas                          | Gestión documental, Scrum y seguimiento      | Organización, comunicación escrita                          | No excluyente; proyectos académicos o de software                 |
-| **QA**              | Germán Herrera                  | Estudiante avanzado o graduado en sistemas, computación o equivalente          | Testing automatizado, Playwright, k6 y OWASP | Atención al detalle, pensamiento analítico                  | +1 año en testing de aplicaciones web                             |
+| Rol                                             | Persona asignada                | Educación                                                                      | Formación                                                                       | Habilidades                                                           | Experiencia                                                       |
+| :---------------------------------------------- | :------------------------------ | :----------------------------------------------------------------------------- | :------------------------------------------------------------------------------ | :-------------------------------------------------------------------- | :---------------------------------------------------------------- |
+| **Diseñador [[XX-abreviaciones#UX/UI\|UX/UI]]** | Rocío Pereyra                   | Formación terciaria/universitaria en diseño, comunicación visual o equivalente | Curso de UX/UI, Figma y accesibilidad [[XX-abreviaciones#WCAG\|WCAG]]           | Pensamiento visual, empatía, comunicación                             | +1 año en proyectos web; deseable visualización de datos          |
+| **Frontend**                                    | Rocío Pereyra / Martín Mosainer | Estudiante avanzado o graduado en sistemas, computación o equivalente          | Next.js/React, TypeScript, Canvas/WebGL                                         | Optimización, resolución de problemas, trabajo colaborativo           | +2 años en frontend; deseable gráficos o datos en tiempo real     |
+| **Backend**                                     | Germán Herrera / Eber Chiecher  | Estudiante avanzado o graduado en sistemas, computación o equivalente          | FastAPI/Python, PostgreSQL y seguridad web                                      | Lógica, diseño de [[XX-abreviaciones#API\|API]], trabajo colaborativo | +2 años en backend; deseable datos biomédicos o archivos binarios |
+| **[[XX-abreviaciones#DBA\|DBA]]**               | Eber Chiecher                   | Formación afín + base de datos                                                 | PostgreSQL, modelado, backup/restore                                            | Análisis, rigurosidad, comunicación                                   | +3 años en administración o diseño de bases de datos              |
+| **DevOps**                                      | Eber Chiecher                   | Formación afín + infraestructura                                               | Docker, [[XX-abreviaciones#CI/CD\|CI/CD]], Linux, [[XX-abreviaciones#TLS\|TLS]] | Resolución de problemas, proactividad                                 | +1 año en despliegue y administración de servidores               |
+| **[[XX-abreviaciones#PM\|PM]]**                 | Mateo Astudillo                 | Estudiante avanzado o graduado en ingeniería/sistemas                          | [[XX-abreviaciones#PMBOK\|PMBOK]] 7, riesgos y [[XX-abreviaciones#EVM\|EVM]]    | Liderazgo, negociación, comunicación                                  | +3 años en gestión de proyectos de software                       |
+| **[[XX-abreviaciones#APM\|APM]]**               | Ignacio Ávila                   | Estudiante avanzado o graduado en ingeniería/sistemas                          | Gestión documental, Scrum y seguimiento                                         | Organización, comunicación escrita                                    | No excluyente; proyectos académicos o de software                 |
+| **QA**                                          | Germán Herrera                  | Estudiante avanzado o graduado en sistemas, computación o equivalente          | Testing automatizado, Playwright, k6 y [[XX-abreviaciones#OWASP\|OWASP]]        | Atención al detalle, pensamiento analítico                            | +1 año en testing de aplicaciones web                             |
 
 > Los roles se comparten por tratarse de un equipo de 6 personas: una misma persona puede cubrir más de un rol. La asignación es la utilizada en este proyecto y debe validarse con el equipo al inicio de cada fase.
 
@@ -56,15 +54,15 @@ aliases:
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - _Conocimientos:_ HTML5, CSS, JavaScript/TypeScript, framework: Next.js, Canvas/WebGL, Git.
+  - _Conocimientos:_ [[XX-abreviaciones#HTML5|HTML5]], [[XX-abreviaciones#CSS|CSS]], JavaScript/TypeScript, framework: Next.js, Canvas/WebGL, Git.
   - _Habilidades:_ Optimización de rendimiento, resolución de problemas, trabajo colaborativo.
   - _Experiencia:_ +2 años en desarrollo frontend, no excluyente: con gráficos o datos en tiempo real.
 
 ## 3. Programador Backend (semi-senior)
 
-- **Objetivo:** Construir la lógica del servidor: autenticación, ingesta EDF, anonimización y exposición de la API.
+- **Objetivo:** Construir la lógica del servidor: autenticación, ingesta [[XX-abreviaciones#EDF|EDF]], anonimización y exposición de la API.
 - **Responsabilidades:**
-  - Implementar el RBAC y el cierre de sesión a los 30 minutos.
+  - Implementar el [[XX-abreviaciones#RBAC|RBAC]] y el cierre de sesión a los 30 minutos.
   - Garantizar la sanitización irreversible de datos personales (Ley 25.326).
   - Cumplir con el tiempo de ingesta ≤ 30 s para archivos < 50 MB.
 - **Funciones:**
@@ -76,7 +74,7 @@ aliases:
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - _Conocimientos:_ Lenguaje y framework: FastAPI con Python, APIs REST, autenticación/sesiones, seguridad web, formato EDF, Git.
+  - _Conocimientos:_ Lenguaje y framework: FastAPI con Python, APIs [[XX-abreviaciones#REST|REST]], autenticación/sesiones, seguridad web, formato EDF, Git.
   - _Habilidades:_ Lógica, trabajo colaborativo.
   - _Experiencia:_ +2 años en backend; no excluyente: datos biomédicos o archivos binarios.
 
@@ -95,13 +93,13 @@ aliases:
 - **Reporta a:** PM
 - **Supervisa a:** Nadie
 - **Requisitos:**
-  - _Conocimientos:_ SQL, modelado relacional, motor de base de datos: PostgreSQL, backup/recuperación, seguridad de datos.
+  - _Conocimientos:_ [[XX-abreviaciones#SQL|SQL]], modelado relacional, motor de base de datos: PostgreSQL, backup/recuperación, seguridad de datos.
   - _Habilidades:_ Análisis, rigurosidad, comunicación con el backend.
   - _Experiencia:_ +3 años en administración o diseño de bases de datos.
 
 ## 5. DevOps
 
-- **Objetivo:** Automatizar y garantizar el despliegue estable de la plataforma en los servidores de la UNViMe.
+- **Objetivo:** Automatizar y garantizar el despliegue estable de la plataforma en los servidores de la [[XX-abreviaciones#UNViMe|UNViMe]].
 - **Responsabilidades:**
   - Gestionar la infraestructura, el despliegue y la seguridad del entorno.
 - **Funciones:**
@@ -162,7 +160,7 @@ aliases:
   - Emitir el Reporte Consolidado de QA.
 - **Funciones:**
   - Realizar pruebas funcionales, de integración y de regresión.
-  - Realizar pruebas de carga (100 usuarios), latencia (≤ 2,5 s) y fluidez (≥ 30 FPS).
+  - Realizar pruebas de carga (100 usuarios), latencia (≤ 2,5 s) y fluidez (≥ 30 [[XX-abreviaciones#FPS|FPS]]).
   - Realizar pruebas cross-browser y auditoría binaria de las cabeceras EDF.
   - Reportar los defectos y verificar sus correcciones.
 - **Nivel de autoridad:** Puede aprobar o rechazar entregables según los criterios de calidad y recomendar al PM la liberación a producción.
@@ -177,15 +175,15 @@ aliases:
 
 Las brechas se detectan con la matriz anterior y con las evaluaciones de desempeño ([[13-evaluaciones-de-desempeño|documento 13]]). Cada acción se identifica como **PM-01…PM-06**, tiene un indicador verificable, un costo estimado y un documento propio de resultados en [[evaluacion-de-planes/index|Evaluación de Planes de Mejora]].
 
-| ID    | Brecha detectada                                                                       | Acción de mejora                                                                | Tipo                   | Responsable   | Plazo      | Costo (USD caja / ARS interno) | Indicador de eficacia                                      | Resultados                                                                  |
-| :---- | :------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------ | :--------------------- | :------------ | :--------- | :----------------------------- | :--------------------------------------------------------- | :-------------------------------------------------------------------------- |
-| PM-01 | Germán: demoras en respuestas y revisiones; dificultad para equilibrar desarrollo y QA | Tutoría de priorización y acuerdo interno de revisión en ≤ 48 h                 | Tutoría                | PM + Germán   | 31/12/2026 | $0 / ARS 40.000                | 100 % de PR revisadas en ≤ 48 h; próximo RDS ≥ 4,0         | [[evaluacion-de-planes/resultado-plan-01-tutoria-priorizacion-german\|Ver]] |
-| PM-02 | Rocío: autonomía limitada en decisiones de UI                                          | Asignarle un módulo completo con mentoría de UX y revisión semanal              | Tutoría / reasignación | PM + Rocío    | 31/01/2027 | $0 / ARS 120.000               | 0 bloqueos por consultas evitables; RDS de autonomía ≥ 4,0 | [[evaluacion-de-planes/resultado-plan-02-autonomia-ui-rocio\|Ver]]          |
-| PM-03 | Eber: documentación previa insuficiente en cambios de esquema                          | Usar plantilla de migración y avisar cambios con 48 h de anticipación           | Capacitación           | Eber + PM     | 31/12/2026 | $0 / ARS 30.000                | 100 % de migraciones con up/down y aviso previo registrado | [[evaluacion-de-planes/resultado-plan-03-migraciones-esquema-eber\|Ver]]    |
-| PM-04 | PM: informes de riesgos con poco detalle                                               | Incorporar plantilla mensual de riesgos y dependencias con estado y responsable | Tutoría                | PM + APM      | 30/11/2026 | $0 / ARS 60.000                | 100 % de informes con riesgos, dependencias y dueño        | [[evaluacion-de-planes/resultado-plan-04-informes-riesgos-pm\|Ver]]         |
-| PM-05 | Equipo: cobertura irregular de pruebas de integración                                  | Taller corto de pytest/Testcontainers y revisión en PR                          | Capacitación           | Germán + Eber | 31/01/2027 | $0 / ARS 120.000               | Cobertura > 80 % en lógica crítica y 0 fallas en CI        | [[evaluacion-de-planes/resultado-plan-05-pruebas-integradas\|Ver]]          |
-| PM-06 | Equipo: documentación desigual entre áreas                                             | Guía única de documentación y chequeo en la Definition of Done                  | Formación interna      | APM           | 31/12/2026 | $0 / ARS 60.000                | 100 % de PR con documentación actualizada                  | [[evaluacion-de-planes/resultado-plan-06-guia-documentacion\|Ver]]          |
-| —     | **Total**                                                                              | —                                                                               | —                      | —             | —          | **$0 / ARS 430.000**           | —                                                          | —                                                                           |
+| ID    | Brecha detectada                                                                       | Acción de mejora                                                                            | Tipo                   | Responsable   | Plazo      | Costo (USD caja / ARS interno) | Indicador de eficacia                                                                                 | Resultados                                                                  |
+| :---- | :------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ | :--------------------- | :------------ | :--------- | :----------------------------- | :---------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
+| PM-01 | Germán: demoras en respuestas y revisiones; dificultad para equilibrar desarrollo y QA | Tutoría de priorización y acuerdo interno de revisión en ≤ 48 h                             | Tutoría                | PM + Germán   | 31/12/2026 | $0 / ARS 40.000                | 100 % de [[XX-abreviaciones#PR\|PR]] revisadas en ≤ 48 h; próximo [[XX-abreviaciones#RDS\|RDS]] ≥ 4,0 | [[evaluacion-de-planes/resultado-plan-01-tutoria-priorizacion-german\|Ver]] |
+| PM-02 | Rocío: autonomía limitada en decisiones de [[XX-abreviaciones#UI\|UI]]                 | Asignarle un módulo completo con mentoría de [[XX-abreviaciones#UX\|UX]] y revisión semanal | Tutoría / reasignación | PM + Rocío    | 31/01/2027 | $0 / ARS 120.000               | 0 bloqueos por consultas evitables; RDS de autonomía ≥ 4,0                                            | [[evaluacion-de-planes/resultado-plan-02-autonomia-ui-rocio\|Ver]]          |
+| PM-03 | Eber: documentación previa insuficiente en cambios de esquema                          | Usar plantilla de migración y avisar cambios con 48 h de anticipación                       | Capacitación           | Eber + PM     | 31/12/2026 | $0 / ARS 30.000                | 100 % de migraciones con up/down y aviso previo registrado                                            | [[evaluacion-de-planes/resultado-plan-03-migraciones-esquema-eber\|Ver]]    |
+| PM-04 | PM: informes de riesgos con poco detalle                                               | Incorporar plantilla mensual de riesgos y dependencias con estado y responsable             | Tutoría                | PM + APM      | 30/11/2026 | $0 / ARS 60.000                | 100 % de informes con riesgos, dependencias y dueño                                                   | [[evaluacion-de-planes/resultado-plan-04-informes-riesgos-pm\|Ver]]         |
+| PM-05 | Equipo: cobertura irregular de pruebas de integración                                  | Taller corto de pytest/Testcontainers y revisión en PR                                      | Capacitación           | Germán + Eber | 31/01/2027 | $0 / ARS 120.000               | Cobertura > 80 % en lógica crítica y 0 fallas en [[XX-abreviaciones#CI\|CI]]                          | [[evaluacion-de-planes/resultado-plan-05-pruebas-integradas\|Ver]]          |
+| PM-06 | Equipo: documentación desigual entre áreas                                             | Guía única de documentación y chequeo en la Definition of Done                              | Formación interna      | APM           | 31/12/2026 | $0 / ARS 60.000                | 100 % de PR con documentación actualizada                                                             | [[evaluacion-de-planes/resultado-plan-06-guia-documentacion\|Ver]]          |
+| —     | **Total**                                                                              | —                                                                                           | —                      | —             | —          | **$0 / ARS 430.000**           | —                                                                                                     | —                                                                           |
 
 > **Base de costos:** todas las acciones son internas y se ejecutan con herramientas open source o licencias educativas, por lo que la **caja en USD es $0**. El costo interno se valoriza a **ARS 10.000/h** como referencia no erogable (contexto del proyecto, §9.3). Total planificado: **43 h · ARS 430.000 · USD 0**. Los valores ejecutados y la variación están en cada documento de resultados.
 

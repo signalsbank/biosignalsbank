@@ -22,27 +22,27 @@ El formato de cada instrumento sigue el documento [[evaluaciones-de-desempeno/fo
 
 ## 1. Cobertura 360°
 
-| Integrante                | Auto |    Pares    | Cliente | RDS / PMO / Ascendente |
-| :------------------------ | :--: | :---------: | :-----: | :--------------------: |
-| Mateo Astudillo (PM)      |  Sí  |     N/A     |   Sí    |       Ascendente       |
-| Ignacio Ávila (APM / RDS) |  Sí  |     N/A     |   Sí    |    PMO + ascendente    |
-| Germán Herrera            |  Sí  | Sí (Martín) |   N/A   |          RDS           |
-| Martín Mosainer           |  Sí  |  Sí (Eber)  |   N/A   |          RDS           |
-| Rocío Pereyra             |  Sí  | Sí (Germán) |   N/A   |          RDS           |
-| Eber Chiecher             |  Sí  | Sí (Rocío)  |   N/A   |          RDS           |
+| Integrante                                          | Auto |    Pares    | Cliente | [[XX-abreviaciones#RDS\|RDS]] / [[XX-abreviaciones#PMO\|PMO]] / Ascendente |
+| :-------------------------------------------------- | :--: | :---------: | :-----: | :------------------------------------------------------------------------: |
+| Mateo Astudillo ([[XX-abreviaciones#PM\|PM]])       |  Sí  |     N/A     |   Sí    |                                 Ascendente                                 |
+| Ignacio Ávila ([[XX-abreviaciones#APM\|APM]] / RDS) |  Sí  |     N/A     |   Sí    |                              PMO + ascendente                              |
+| Germán Herrera                                      |  Sí  | Sí (Martín) |   N/A   |                                    RDS                                     |
+| Martín Mosainer                                     |  Sí  |  Sí (Eber)  |   N/A   |                                    RDS                                     |
+| Rocío Pereyra                                       |  Sí  | Sí (Germán) |   N/A   |                                    RDS                                     |
+| Eber Chiecher                                       |  Sí  | Sí (Rocío)  |   N/A   |                                    RDS                                     |
 
 > `N/A` significa que el instrumento no aplica al rol en esta etapa. La cobertura se completa con la evaluación ascendente del equipo a la dirección y con la evaluación de jefatura/PMO del APM.
 
 ## 2. Autoevaluaciones
 
-| Integrante      | Rol                        | Archivo                                                      | Promedio | Puntaje |
-| --------------- | -------------------------- | ------------------------------------------------------------ | :------: | :-----: |
-| Mateo Astudillo | Director del Proyecto (PM) | [[evaluaciones-de-desempeno/autoevaluacion-mateo-astudillo]] |   4,00   | 80,0 %  |
-| Ignacio Ávila   | Asistente PM / RDS         | [[evaluaciones-de-desempeno/autoevaluacion-ignacio-avila]]   |   4,10   | 82,0 %  |
-| Germán Herrera  | Backend / QA               | [[evaluaciones-de-desempeno/autoevaluacion-german-herrera]]  |   3,40   | 68,0 %  |
-| Martín Mosainer | Full-Stack / Soporte       | [[evaluaciones-de-desempeno/autoevaluacion-martin-mosainer]] |   3,60   | 72,0 %  |
-| Rocío Pereyra   | Frontend                   | [[evaluaciones-de-desempeno/autoevaluacion-rocio-pereyra]]   |   3,90   | 78,0 %  |
-| Eber Chiecher   | Backend / Infraestructura  | [[evaluaciones-de-desempeno/autoevaluacion-eber-chiecher]]   |   3,90   | 78,0 %  |
+| Integrante      | Rol                                   | Archivo                                                      | Promedio | Puntaje |
+| --------------- | ------------------------------------- | ------------------------------------------------------------ | :------: | :-----: |
+| Mateo Astudillo | Director del Proyecto (PM)            | [[evaluaciones-de-desempeno/autoevaluacion-mateo-astudillo]] |   4,00   | 80,0 %  |
+| Ignacio Ávila   | Asistente PM / RDS                    | [[evaluaciones-de-desempeno/autoevaluacion-ignacio-avila]]   |   4,10   | 82,0 %  |
+| Germán Herrera  | Backend / [[XX-abreviaciones#QA\|QA]] | [[evaluaciones-de-desempeno/autoevaluacion-german-herrera]]  |   3,40   | 68,0 %  |
+| Martín Mosainer | Full-Stack / Soporte                  | [[evaluaciones-de-desempeno/autoevaluacion-martin-mosainer]] |   3,60   | 72,0 %  |
+| Rocío Pereyra   | Frontend                              | [[evaluaciones-de-desempeno/autoevaluacion-rocio-pereyra]]   |   3,90   | 78,0 %  |
+| Eber Chiecher   | Backend / Infraestructura             | [[evaluaciones-de-desempeno/autoevaluacion-eber-chiecher]]   |   3,90   | 78,0 %  |
 
 ## 3. Evaluación de pares
 
@@ -55,10 +55,10 @@ El formato de cada instrumento sigue el documento [[evaluaciones-de-desempeno/fo
 
 ## 4. Evaluación del cliente
 
-| Evaluado        | Evaluador                            | Archivo                                               | Promedio | Puntaje |
-| --------------- | ------------------------------------ | ----------------------------------------------------- | :------: | :-----: |
-| Mateo Astudillo | Ing. Alejandro Rosas (EICA — UNViMe) | [[evaluaciones-de-desempeno/cliente-mateo-astudillo]] |   4,40   | 88,0 %  |
-| Ignacio Ávila   | Ing. Alejandro Rosas (EICA — UNViMe) | [[evaluaciones-de-desempeno/cliente-ignacio-avila]]   |   4,56   | 91,1 %  |
+| Evaluado        | Evaluador                                                                                    | Archivo                                               | Promedio | Puntaje |
+| --------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------- | :------: | :-----: |
+| Mateo Astudillo | Ing. Alejandro Rosas ([[XX-abreviaciones#EICA\|EICA]] — [[XX-abreviaciones#UNViMe\|UNViMe]]) | [[evaluaciones-de-desempeno/cliente-mateo-astudillo]] |   4,40   | 88,0 %  |
+| Ignacio Ávila   | Ing. Alejandro Rosas (EICA — UNViMe)                                                         | [[evaluaciones-de-desempeno/cliente-ignacio-avila]]   |   4,56   | 91,1 %  |
 
 ## 5. Evaluación ascendente del equipo a la dirección
 
