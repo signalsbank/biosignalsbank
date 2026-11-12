@@ -1,6 +1,6 @@
 ---
 project: BioSignal
-version: 1.2
+version: 1.3
 title: 9. Plan de Gestión de la Configuración y Control de Cambios
 aliases:
   - "Plan de Gestión de la Configuración y Control de Cambios"
@@ -140,31 +140,43 @@ El código fuente de BioSignal se gestiona en repositorios Git centralizados baj
 
 ### 3.2. Estrategia de Ramas
 
-Se adopta una adaptación de _GitFlow_ simplificado para garantizar la estabilidad de los entornos:
+Se adopta una adaptación de _GitFlow_ simplificado para garantizar la estabilidad de los entornos. El modelo tiene **tres ramas permanentes** (`main`, `test`, `develop`) y **tres tipos de ramas temporales** (`feature/*`, `bugfix/*` y `hotfix/*`). `feature/*` y `bugfix/*` nacen de `develop` y vuelven a `develop` mediante PR; `hotfix/*` nace de `main`, vuelve a `main` por la ruta de emergencia y se retro-integra a `develop`. El pasaje ordinario a `test` y a `main` ocurre únicamente por las PR de promoción descritas en 3.3.
 
-```
-[main]      ───●──────────────────────────────●──────────►  (Producción estable)
-               │                              ▲
-[test]      ───┼──────────────●───────────────┘            (QA / Staging)
-               │              ▲
-[develop]   ───┼──────●───────┴───────●                    (Integración continua)
-               │      ▲               ▲
-[feature/*] ───┴──●───┘               │                    (Desarrollo funcional)
-                                      │
-[bugfix/*]  ──────────────────────────●                    (Corrección de errores)
+```mermaid
+flowchart LR
+    subgraph TEMP["Ramas temporales"]
+        F["feature/nombre-tarea"]
+        B["bugfix/nombre-error"]
+    end
+    D["develop<br/>integración continua"]
+    T["test<br/>QA / staging"]
+    M["main<br/>producción"]
+    H["hotfix/nombre-error"]
+    F -->|"PR de integración"| D
+    B -->|"PR de integración"| D
+    D -->|"PR · release candidate"| T
+    T -->|"PR · QA + UAT aprobadas"| M
+    M -.->|"se crea desde main"| H
+    H -->|"PR de emergencia<br/>PM + QA + Infra"| M
+    H -.->|"retro-integración"| D
 ```
 
-- **`main`:** Rama protegida de código productivo. Refleja exclusivamente versiones probadas y desplegadas en el servidor institucional.
-- **`test`:** Rama protegida de **QA / staging**. Recibe los _merge_ de `develop` cuando se arma un _release candidate_; se despliega en el entorno de pruebas para ejecutar la regresión, la [[XX-abreviaciones#UAT|UAT]] y las pruebas de carga. Solo pasa a `main` con la aprobación escrita de QA y del PM.
-- **`develop`:** Rama de integración continua donde se consolidan las funcionalidades probadas.
-- **`feature/<nombre-tarea>`:** Ramas temporales creadas para desarrollar una historia de usuario o paquete de trabajo de la EDT (ej. `feature/parser-edf-header`).
-- **`bugfix/<nombre-error>`:** Ramas temporales para resolver incidencias de QA (ej. `bugfix/fix-jwt-expiration`).
+| Rama                     | Tipo                  | Nace desde                      | Se integra hacia                                          | Propósito y regla                                                                                                                                                                                                                 |
+| :----------------------- | :-------------------- | :------------------------------ | :-------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `main`                   | Permanente, protegida | — (línea base productiva)       | —                                                         | Refleja exclusivamente versiones probadas y desplegadas en el servidor institucional. Solo recibe PR desde `test` y, en la ruta de emergencia, desde `hotfix/*`.                                                                  |
+| `test`                   | Permanente, protegida | `develop` (creación inicial)    | `main`                                                    | **QA / staging**. Recibe el _release candidate_ por PR, se despliega en el entorno de pruebas y ejecuta regresión, [[XX-abreviaciones#UAT\|UAT]] y pruebas de carga. Solo pasa a `main` con la aprobación escrita de QA y del PM. |
+| `develop`                | Permanente            | `main` (al iniciar el proyecto) | `test`                                                    | Integración continua: consolida las funcionalidades y correcciones ya revisadas.                                                                                                                                                  |
+| `feature/<nombre-tarea>` | Temporal              | `develop`                       | `develop` (PR)                                            | Desarrolla una historia de usuario o paquete de trabajo de la EDT (ej. `feature/parser-edf-header`). Se elimina una vez integrada.                                                                                                |
+| `bugfix/<nombre-error>`  | Temporal              | `develop`                       | `develop` (PR)                                            | Corrige un defecto detectado en QA, UAT o staging (ej. `bugfix/fix-jwt-expiration`). Se elimina una vez integrada.                                                                                                                |
+| `hotfix/<nombre-error>`  | Temporal              | `main`                          | `main` (PR de emergencia) y `develop` (retro-integración) | Corrige un defecto crítico detectado en producción (ej. `hotfix/fix-carga-edf-50mb`). Se publica como `PATCH`, se etiqueta y se elimina una vez retro-integrada.                                                                  |
+
+> **Cómo circulan `bugfix/*` y `hotfix/*`.** Un `bugfix/*` corrige defectos detectados en QA, UAT o staging: se corta desde `develop`, se integra **de vuelta a `develop`** por PR con revisión cruzada y, si ya había un RC desplegado en `test`, obliga a regenerarlo y repetir la regresión. Un `hotfix/*` corrige un defecto crítico que ya está en producción: se corta desde `main`, se integra a `main` por PR siguiendo la **ruta de emergencia de 1.4** (aprobación de PM + QA + Infra, ratificada por el CCB dentro de las 48 h), se publica y etiqueta como `PATCH` (ver 3.4) y se **retro-integra a `develop`** para que la corrección no se pierda en el próximo release. En ningún caso se hace _merge_ directo sobre `main`, `test` o `develop`.
 
 ### 3.3. Regla del Control Cruzado Obligatorio (_Code Review_ / PRs)
 
 - **Prohibición de Merge Directo:** Queda estrictamente prohibido realizar _push_ o _merge_ directo sobre las ramas `main`, `test` y `develop`.
-- **Mecanismo de Pull Request (PR):** Todo desarrollador debe abrir una PR desde su rama `feature/*` hacia `develop`. El pasaje entre entornos se hace siempre por PR: `develop` → `test` para armar el _release candidate_, y `test` → `main` solo tras la aceptación de QA y UAT.
-- **Revisión por Tercero:** Ningún integrante puede aprobar su propio código. Toda PR requiere obligatoriamente la revisión y aprobación escrita de al menos un integrante diferente al autor, tomado del **pool de revisores** de Backend/Full-stack/Infra (**Germán Herrera**, **Martín Mosainer** o **Eber Chiecher**). Si el autor es uno de ellos, la revisión la realiza otro distinto; **ninguna persona aprueba su propio trabajo**, y la aprobación final de QA la firma el PM.
+- **Mecanismo de Pull Request (PR):** Todo desarrollador debe abrir una PR desde su rama `feature/*` o `bugfix/*` hacia `develop`. El pasaje entre entornos se hace siempre por PR: `develop` → `test` para armar el _release candidate_, y `test` → `main` solo tras la aceptación de QA y UAT. La única PR que puede llegar a `main` sin pasar por `test` es `hotfix/*` → `main`, dentro de la ruta de emergencia (ver 3.2 y 1.4).
+- **Revisión por Tercero:** Ningún integrante puede aprobar su propio código. Toda PR requiere obligatoriamente la revisión y aprobación escrita de al menos un integrante diferente al autor, tomado del **pool de revisores** de Backend/Full-stack/Infra (**Germán Herrera**, **Martín Mosainer** o **Eber Chiecher**). Si el autor es uno de ellos, la revisión la realiza otro distinto; **ninguna persona aprueba su propio trabajo**, y la aprobación final de QA la firma el PM. En un `hotfix/*` la revisión cruzada también es obligatoria, aunque se acorte el plazo.
 - **Criterios de Aceptación de la PR:** Cobertura de pruebas unitarias aprobadas, ausencia de secretos/claves hardcodeadas y paso limpio del pipeline de CI/CD.
 - **Promoción a `test`:** la PR `develop` → `test` exige que el pipeline esté en verde y que el APM registre la versión candidata. Una vez desplegada en staging, QA ejecuta la regresión, la UAT y las pruebas de carga; cualquier defecto vuelve a `develop` por `bugfix/*`. La PR `test` → `main` requiere el informe de QA aprobado y la autorización del PM.
 
@@ -176,7 +188,7 @@ El código fuente aplica **Semantic Versioning ([[XX-abreviaciones#SemVer|SemVer
 - **`MINOR` (Ej. 1.1.0):** Incorporación de nueva funcionalidad compatible hacia atrás (ej. nuevo módulo de catálogo).
 - **`PATCH` (Ej. 1.1.1):** Corrección de errores o parches de seguridad.
 
-**Promoción de releases:** `develop` → `test` genera el _release candidate_ (`vX.Y.Z-rc.N`), que se valida en staging; `test` → `main` promueve la versión estable (`vX.Y.Z`) y dispara el tag y el despliegue a producción. El Change Log registra la versión, la rama de origen y la evidencia de QA.
+**Promoción de releases:** `develop` → `test` genera el _release candidate_ (`vX.Y.Z-rc.N`), que se valida en staging; `test` → `main` promueve la versión estable (`vX.Y.Z`) y dispara el tag y el despliegue a producción. Un `hotfix/*` publicado desde `main` incrementa `PATCH` (`vX.Y.Z+1`), se etiqueta igual que un release estable y se retro-integra a `develop`. El Change Log registra la versión, la rama de origen y la evidencia de QA.
 
 ## 4. Control de Cambios en la Base de Datos
 
@@ -230,12 +242,12 @@ Todo cambio visual en la interfaz debe estar vinculado al ID de la historia de u
 
 ### 5.5. Vinculación de Versiones con el RFC o Ticket
 
-| Elemento           | Herramienta              | Identificador de versión                          | Vínculo con el cambio                                                                            |
-| :----------------- | :----------------------- | :------------------------------------------------ | :----------------------------------------------------------------------------------------------- |
-| **Documentación**  | Markdown + Git           | `version` del frontmatter y fila en el Change Log | `RFC-xxx` en el historial del documento                                                          |
-| **Código fuente**  | Git / GitHub             | SemVer y tag de release                           | Rama `feature/BIOSIG-xx`, commit `BIOSIG-xx: ...` y PR `develop` → `test` → `main` con `RFC-xxx` |
-| **Base de datos**  | PostgreSQL + migraciones | `YYYYMMDDHHMMSS_descripcion`                      | Nombre de migración y PR con `RFC-xxx`                                                           |
-| **Interfaz UI/UX** | Figma                    | `vX.Y` de la página o componente                  | Comentario en Figma y issue `BIOSIG-xx`                                                          |
+| Elemento           | Herramienta              | Identificador de versión                          | Vínculo con el cambio                                                                                                                             |
+| :----------------- | :----------------------- | :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Documentación**  | Markdown + Git           | `version` del frontmatter y fila en el Change Log | `RFC-xxx` en el historial del documento                                                                                                           |
+| **Código fuente**  | Git / GitHub             | SemVer y tag de release                           | Rama `feature/BIOSIG-xx` o `bugfix/*`, commit `BIOSIG-xx: ...` y PR `develop` → `test` → `main` con `RFC-xxx`; en emergencia, `hotfix/*` → `main` |
+| **Base de datos**  | PostgreSQL + migraciones | `YYYYMMDDHHMMSS_descripcion`                      | Nombre de migración y PR con `RFC-xxx`                                                                                                            |
+| **Interfaz UI/UX** | Figma                    | `vX.Y` de la página o componente                  | Comentario en Figma y issue `BIOSIG-xx`                                                                                                           |
 
 **Convención mínima:** todo commit o PR debe empezar con el ID del ticket (`BIOSIG-xx`) y, si aplica, indicar el RFC (`RFC-xxx`). Así se puede reconstruir por qué se cambió un artefacto y qué solicitud lo autorizó.
 
@@ -296,7 +308,7 @@ El Change Log es la referencia única del estado. Las filas de 6.1 conservan el 
 | Documento                          | CI          | Versión vigente | RFC de origen                            | Estado   | Evidencia                            |
 | :--------------------------------- | :---------- | :-------------: | :--------------------------------------- | :------- | :----------------------------------- |
 | 08 — Gestión de Adquisiciones      | `CI-DOC-06` |     `v1.1`      | RFC-015                                  | Aprobado | Registro de cambios del documento 08 |
-| 09 — Cambios y configuración (SCM) | `CI-DOC-07` |     `v1.2`      | RFC-016 (ratifica RFC-010)               | Aprobado | 7 de este documento                  |
+| 09 — Cambios y configuración (SCM) | `CI-DOC-07` |     `v1.3`      | RFC-016 (v1.3: corrección menor)         | Aprobado | 7 de este documento                  |
 | 10 — Gestión del Conocimiento      | `CI-DOC-08` |     `v2.0`      | RFC-011                                  | Aprobado | Registro de cambios del documento 10 |
 | 11 — Matriz de Competencias        | `CI-DOC-09` |     `v1.2`      | RFC-014 (ratifica RFC-009)               | Aprobado | Registro de cambios del documento 11 |
 | 12 — Gestión de Calidad            | `CI-DOC-10` |     `v2.0`      | RFC-013 (reemplaza RFC-008 para Calidad) | Aprobado | Registro de cambios del documento 12 |
@@ -304,8 +316,9 @@ El Change Log es la referencia única del estado. Las filas de 6.1 conservan el 
 
 ## 7. Registro de Cambios de este Documento
 
-| Versión | Fecha      | Cambio                                                                                                                                                                                 | Responsable | Estado    |
-| :------ | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :-------- |
-| v1      | —          | Versión inicial                                                                                                                                                                        | PM          | Histórico |
-| v1.1    | 29/10/2026 | Stack canónico fijado (Next.js/FastAPI/PostgreSQL); ruta documental `content/`; pool de revisores con independencia; gobernanza del CCB; nota de rebaselineo y RFC-004…010 registradas | PM          | Aprobado  |
-| v1.2    | 12/11/2026 | Incorporación de los CI-DOC-06…11, registro de RFC-011…015, tabla de estado vigente de los documentos 08–13 y cierre de consistencia de versiones. Tramitado como **RFC-016**          | PM + APM    | Aprobado  |
+| Versión | Fecha      | Cambio                                                                                                                                                                                                                                                                                       | Responsable | Estado    |
+| :------ | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :-------- |
+| v1      | —          | Versión inicial                                                                                                                                                                                                                                                                              | PM          | Histórico |
+| v1.1    | 29/10/2026 | Stack canónico fijado (Next.js/FastAPI/PostgreSQL); ruta documental `content/`; pool de revisores con independencia; gobernanza del CCB; nota de rebaselineo y RFC-004…010 registradas                                                                                                       | PM          | Aprobado  |
+| v1.2    | 12/11/2026 | Incorporación de los CI-DOC-06…11, registro de RFC-011…015, tabla de estado vigente de los documentos 08–13 y cierre de consistencia de versiones. Tramitado como **RFC-016**                                                                                                                | PM + APM    | Aprobado  |
+| v1.3    | 12/11/2026 | Reescritura de 3.2: diagrama de ramas en Mermaid, tabla de origen/destino de cada rama y circuitos explícitos de `bugfix/*` (desde y hacia `develop`) y de `hotfix/*` (desde `main`, PR de emergencia y retro-integración a `develop`). Corrección menor de redacción, sin cambio de alcance | PM          | Aprobado  |
