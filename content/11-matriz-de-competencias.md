@@ -197,3 +197,11 @@ Cada plan tiene un documento de resultados con línea base, acciones ejecutadas,
 - **No eficaz:** no cumple; se rediseña la acción.
 
 El tablero consolidado, los seis documentos y las lecciones están en [[evaluacion-de-planes/index|Evaluación de Planes de Mejora]]. Al cierre (15/02/2027) las seis brechas quedaron cerradas: cuatro eficaces, una eficaz tras ajuste y una eficaz con desvío de plazo.
+
+## Registro de Cambios
+
+| Versión | Fecha      | Cambio                                                                                                                                                                                          | Responsable | Estado    |
+| :------ | :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :-------- |
+| v1.0    | —          | Versión inicial: catálogo de roles, funciones, responsabilidades y competencias                                                                                                                 | PM          | Histórico |
+| v1.1    | 29/10/2026 | Separación explícita entre el catálogo de competencias y la matriz RACI; aclaración de uso como anexo. Tramitado como **RFC-009**                                                               | APM         | Aprobado  |
+| v1.2    | 11/11/2026 | Incorporación del **Plan de Mejora de Competencias** PM-01…PM-06 con costos, indicadores, criterios de eficacia y documentos de resultados. Tramitado como **RFC-014**, que ratifica el RFC-009 | APM + PM    | Aprobado  |

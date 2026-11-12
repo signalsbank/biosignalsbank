@@ -104,3 +104,10 @@ Cada ficha profundiza **una fuente** (cliente, jefatura/PMO o RDS); no es un pro
 - La evaluación preliminar muestra un equipo con desempeño medio-alto y brechas concentradas en autonomía, anticipación de riesgos y tiempos de respuesta.
 - Las brechas se trasladan al **Plan de Mejora de Competencias** ([[11-matriz-de-competencias|documento 11]]) para que la evaluación no quede solo como registro.
 - La próxima medición 360° se realizará al cierre de la primera fase formal, con la misma escala y la misma regla de cálculo.
+
+## 10. Registro de Cambios
+
+| Versión | Fecha      | Cambio                                                                                                                                                                                                                         | Responsable | Estado    |
+| :------ | :--------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :-------- |
+| v1.0    | —          | Versión inicial: instrumentos de evaluación de desempeño                                                                                                                                                                       | PM          | Histórico |
+| v2.0    | 09/11/2026 | Cobertura 360° completa (autoevaluación, pares, cliente, RDS/PMO y ascendente), resultado consolidado y fichas integrales por integrante; se explicita el alcance preliminar y la próxima medición. Tramitado como **RFC-012** | PM + APM    | Aprobado  |

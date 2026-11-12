@@ -100,3 +100,10 @@ Se selecciona el proceso de **Verificación y QA** porque concentra la evidencia
 | Servicio  | 2 prácticas conformes, 5 parciales y 1 no conforme; formalizar incidencias y SLA antes de la transferencia. |
 | Procesos  | Transición, operación y mantenimiento definidos con evidencia por hito.                                     |
 | Madurez   | Nivel 2 (Gestionado) en Verificación y QA; meta Nivel 3 al cierre.                                          |
+
+## 6. Registro de Cambios
+
+| Versión | Fecha      | Cambio                                                                                                                                                                                                                                         | Responsable | Estado    |
+| :------ | :--------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :-------- |
+| v1.0    | —          | Versión inicial del plan de calidad                                                                                                                                                                                                            | QA + PM     | Histórico |
+| v2.0    | 10/11/2026 | Reestructuración en cuatro dimensiones: producto (ISO/IEC 25010), servicio (ISO/IEC 20000-1), ciclo de vida (ISO/IEC/IEEE 12207) y madurez (ISO/IEC 33000); umbrales, evidencias y criterios de puesta en servicio. Tramitado como **RFC-013** | QA + PM     | Aprobado  |

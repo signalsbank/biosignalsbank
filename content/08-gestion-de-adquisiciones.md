@@ -4,7 +4,7 @@ aliases:
   - "Adquisiciones"
 title: 8. Gestión de Adquisiciones
 project: Banco de Señales Biomédicas ("BioSignalsBank")
-version: 1
+version: 1.1
 ---
 
 ## 1. Lista de Insumos y Productos a Comprar (Análisis de Hacer o Comprar)
@@ -219,3 +219,10 @@ En proyectos como BioSignal, donde la infraestructura principal de servidores y 
 | **Rendimiento de Ingesta (.EDF)**          | Procesamiento y validación binaria de cabecera **≤ 30 segundos** para archivos < 50 MB.               | Logs de auditoría de tiempo de ejecución en backend.                      | Optimización de hilos de ejecución y procesamiento asincrónico.                           |
 | **Tiempo de Respuesta a Incidentes**       | Respuesta técnica inicial **< 2 horas** ante caídas críticas de servidor (24/7).                      | Sistema de tickets con marcas de tiempo automáticas.                      | Escalado directo de soporte a la Dirección de [[XX-abreviaciones#TIC\|TIC]] de la UNViMe. |
 | **Respaldos de Seguridad (_Backups_)**     | Copia de seguridad **diaria automatizada** de base de datos y archivos .edf con retención de 30 días. | Script de verificación de integridad y restauración semanal automatizada. | Generación manual inmediata de snapshot de base de datos.                                 |
+
+## 5. Registro de Cambios
+
+| Versión | Fecha      | Cambio                                                                                                                                                                                                            | Responsable | Estado    |
+| :------ | :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :-------- |
+| v1.0    | —          | Versión inicial: análisis hacer/comprar, matriz de insumos, fichas de compra, circuito de adquisiciones, evaluación de proveedores y SLA con UNViMe                                                               | PM          | Histórico |
+| v1.1    | 12/11/2026 | Matriz de insumos y fichas conciliadas con ERS y EDT; referencias y abreviaciones normalizadas; registro de cambios incorporado. Tramitado como **RFC-015** en el [[09-gestion-y-control-de-cambios\|Change Log]] | PM + APM    | Aprobado  |

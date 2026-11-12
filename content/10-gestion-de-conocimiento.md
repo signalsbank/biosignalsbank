@@ -231,3 +231,10 @@ Cada documento incluye título, dueño, versión, fecha, estado y etiquetas. Los
 | **Cierre de proyecto** | Archivar, extraer activos reutilizables y actualizar la wiki.             | Proyecto archivado y activos enlazados.               |
 
 La estrategia es acumulativa: cada proyecto deja a la organización un estándar, una plantilla o una lección reutilizable. La wiki central no reemplaza la documentación de cada proyecto; la conecta y evita que el conocimiento quede aislado.
+
+## 13. Registro de Cambios
+
+| Versión | Fecha      | Cambio                                                                                                                                                                                                                                                  | Responsable | Estado    |
+| :------ | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------- | :-------- |
+| v1.0    | —          | Versión inicial: estrategia de gestión del conocimiento y estructura de la wiki                                                                                                                                                                         | PM          | Histórico |
+| v2.0    | 09/11/2026 | Reescritura con la estrategia **wiki organizacional + Docs-as-Code**: niveles de información, herramientas, catalogación, identificadores, accesos, actualización, indicadores y aplicación multi-proyecto. Tramitado como **RFC-011** en el Change Log | APM + PM    | Aprobado  |
