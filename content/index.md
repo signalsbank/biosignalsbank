@@ -5,7 +5,7 @@ aliases:
   - "Inicio"
 ---
 
-## Documentos del trabajo práctico
+# Documentos
 
 - [[02-acta-de-constitucion|Acta de Constitución]]
 - [[02b-gestion-de-las-comunicaciones|Gestión de las comunicaciones]]
