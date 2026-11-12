@@ -23,15 +23,15 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
       - name: Set GitHub Pages baseUrl
         run: |
           TARGET_FILE="quartz.config.yaml"
           [ ! -f "$TARGET_FILE" ] && TARGET_FILE="quartz.config.default.yaml"
           sed -i '/^baseUrl:/d' "$TARGET_FILE"
-          echo 'baseUrl: "signalsbanck/biosignalsbank"' >> "$TARGET_FILE"
+          echo 'baseUrl: "signalsbank.github.io/biosignalsbank"' >> "$TARGET_FILE"
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
