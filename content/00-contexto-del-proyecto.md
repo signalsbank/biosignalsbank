@@ -525,6 +525,7 @@ Si BioSignal fuera un proyecto real, habría que:
 - La **matriz de riesgos** promete un registro R-01…R-12 que no está publicado; sin él, la gestión de riesgos queda incompleta.
 - La **matriz de competencias** se declara catálogo y no RACI; si no existe la RACI, la asignación de responsabilidades queda distribuida entre varios documentos.
 - La **evaluación 360°** ya cuenta con cobertura documentada y evaluación ascendente; queda pendiente repetirla al cierre de la primera fase formal.
+- El **EDT y el diccionario** no tienen un paquete específico para adquisiciones ni para la evaluación de proveedores: el circuito del documento 08 se apoya en `1.1.3` sin desagregarse.
 
 > Estas brechas no invalidan el trabajo: son tareas de cierre para que la documentación quede coherente con lo que ella misma declara.
 

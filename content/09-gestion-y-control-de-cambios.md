@@ -1,6 +1,6 @@
 ---
 project: BioSignal
-version: 1.3
+version: 1.4
 title: 9. Plan de Gestión de la Configuración y Control de Cambios
 aliases:
   - "Plan de Gestión de la Configuración y Control de Cambios"
@@ -275,6 +275,7 @@ Toda solicitud de cambio aprobada o rechazada se asienta en la **Matriz Consolid
 | **RFC-014** |   11/11/2026    | `CI-DOC-09` (Competencias)                                               | Plan de Mejora de Competencias PM-01…PM-06 con costos, indicadores, criterios de eficacia y documentos de resultados; ratifica RFC-009                                                                                                                                                                                                                                                                                                                                                         | Ávila Gelbes, I. | PM                         |           **Aprobado**           |       `v1.2`       |             Implementado              |
 | **RFC-015** |   12/11/2026    | `CI-DOC-06` (Adquisiciones)                                              | Matriz de insumos y fichas de compra actualizadas; SLA con UNViMe y evaluación de desempeño de proveedores; referencias a ERS y EDT conciliadas                                                                                                                                                                                                                                                                                                                                                | Astudillo, M.    | Chiecher, E.               |           **Aprobado**           |       `v1.1`       |             Implementado              |
 | **RFC-016** |   12/11/2026    | `CI-DOC-07` (SCM / Cambios)                                              | Incorporación de los CI-DOC-06…11, registro de RFC-011…015 y tabla de estado vigente de los documentos 08–13; ratifica RFC-010                                                                                                                                                                                                                                                                                                                                                                 | Astudillo, M.    | Ávila Gelbes, I.           |           **Aprobado**           |       `v1.2`       |             Implementado              |
+| **RFC-017** |   24/11/2026    | `CI-DOC-06` (Adquisiciones) y 02b (Comunicaciones)                       | Cierre de la devolución del TP 8: evaluación post-compra como etapa 8 (ex-post), historial de proveedores como insumo obligatorio (15% + regla de demora), escalas enteras de 1 a 5 con requisitos excluyentes, ficha y ejemplo de evaluación, termómetro, sanciones y feedback a no seleccionados, y alta de esas comunicaciones en 02b (v1.2)                                                                                                                                                | Astudillo, M.    | Chiecher, E.               |          **Propuesto**           |       `v1.2`       |             Pendiente CCB             |
 
 ### 6.2. Simulación del Recorrido de un Cambio (RFC-001)
 
@@ -305,14 +306,14 @@ Al finalizar cada hito del proyecto, el Asistente del PM y el equipo de QA reali
 
 El Change Log es la referencia única del estado. Las filas de 6.1 conservan el historial y no se reescriben; esta tabla indica la versión que está vigente y el RFC que la autorizó.
 
-| Documento                          | CI          | Versión vigente | RFC de origen                            | Estado   | Evidencia                            |
-| :--------------------------------- | :---------- | :-------------: | :--------------------------------------- | :------- | :----------------------------------- |
-| 08 — Gestión de Adquisiciones      | `CI-DOC-06` |     `v1.1`      | RFC-015                                  | Aprobado | Registro de cambios del documento 08 |
-| 09 — Cambios y configuración (SCM) | `CI-DOC-07` |     `v1.3`      | RFC-016 (v1.3: corrección menor)         | Aprobado | 7 de este documento                  |
-| 10 — Gestión del Conocimiento      | `CI-DOC-08` |     `v2.0`      | RFC-011                                  | Aprobado | Registro de cambios del documento 10 |
-| 11 — Matriz de Competencias        | `CI-DOC-09` |     `v1.2`      | RFC-014 (ratifica RFC-009)               | Aprobado | Registro de cambios del documento 11 |
-| 12 — Gestión de Calidad            | `CI-DOC-10` |     `v2.0`      | RFC-013 (reemplaza RFC-008 para Calidad) | Aprobado | Registro de cambios del documento 12 |
-| 13 — Evaluaciones de Desempeño     | `CI-DOC-11` |     `v2.0`      | RFC-012                                  | Aprobado | Registro de cambios del documento 13 |
+| Documento                          | CI          | Versión vigente | RFC de origen                            | Estado                    | Evidencia                            |
+| :--------------------------------- | :---------- | :-------------: | :--------------------------------------- | :------------------------ | :----------------------------------- |
+| 08 — Gestión de Adquisiciones      | `CI-DOC-06` |     `v1.2`      | RFC-017                                  | Propuesto (pendiente CCB) | Registro de cambios del documento 08 |
+| 09 — Cambios y configuración (SCM) | `CI-DOC-07` |     `v1.4`      | RFC-017 (registro)                       | Aprobado                  | 7 de este documento                  |
+| 10 — Gestión del Conocimiento      | `CI-DOC-08` |     `v2.0`      | RFC-011                                  | Aprobado                  | Registro de cambios del documento 10 |
+| 11 — Matriz de Competencias        | `CI-DOC-09` |     `v1.2`      | RFC-014 (ratifica RFC-009)               | Aprobado                  | Registro de cambios del documento 11 |
+| 12 — Gestión de Calidad            | `CI-DOC-10` |     `v2.0`      | RFC-013 (reemplaza RFC-008 para Calidad) | Aprobado                  | Registro de cambios del documento 12 |
+| 13 — Evaluaciones de Desempeño     | `CI-DOC-11` |     `v2.0`      | RFC-012                                  | Aprobado                  | Registro de cambios del documento 13 |
 
 ## 7. Registro de Cambios de este Documento
 
@@ -322,3 +323,4 @@ El Change Log es la referencia única del estado. Las filas de 6.1 conservan el 
 | v1.1    | 29/10/2026 | Stack canónico fijado (Next.js/FastAPI/PostgreSQL); ruta documental `content/`; pool de revisores con independencia; gobernanza del CCB; nota de rebaselineo y RFC-004…010 registradas                                                                                                       | PM          | Aprobado  |
 | v1.2    | 12/11/2026 | Incorporación de los CI-DOC-06…11, registro de RFC-011…015, tabla de estado vigente de los documentos 08–13 y cierre de consistencia de versiones. Tramitado como **RFC-016**                                                                                                                | PM + APM    | Aprobado  |
 | v1.3    | 12/11/2026 | Reescritura de 3.2: diagrama de ramas en Mermaid, tabla de origen/destino de cada rama y circuitos explícitos de `bugfix/*` (desde y hacia `develop`) y de `hotfix/*` (desde `main`, PR de emergencia y retro-integración a `develop`). Corrección menor de redacción, sin cambio de alcance | PM          | Aprobado  |
+| v1.4    | 24/11/2026 | Alta de **RFC-017**: documento 08 (v1.2) y plan de comunicaciones 02b (v1.2)                                                                                                                                                                                                                 | PM + APM    | Aprobado  |
